@@ -4,7 +4,7 @@ library(readxl)
 library(measurements)
 library(sp)
 
-#### Clean Kudo's iOriginal Table
+#### Clean Kudo's Original Table ####
 
 ## Read Data
 c14raw = read_xlsx("./raw_data/★年代測定データベース学術・関東･東北・北陸・中部・鹿児島181031.xlsx",skip=1)
@@ -57,12 +57,17 @@ c14raw = c14raw[,-which(names(c14raw)%in%c("elim1","elim2","elim3","Note1","Note
 #### PROCESSING ####
 c14db = c14raw
 
-#### Convert Latitude/Longitude into Degree Decimals
+#### Convert Latitude/Longitude into Degree Decimals ####
 c14db$Latitude=as.numeric(char2dms(paste0(c14db$Latitude,"N"),chd='゜',chm="'"))
 c14db$Longitude=as.numeric(char2dms(paste0(c14db$Longitude,"E"),chd='゜',chm="'"))
 
+# Add Here Scripts for checking site coordinates
 
-
+####  Translate Methods
+# Method
+c14db$Method_En = NA
+c14db$Method_En[which(c14db$Method%in%c("β線法","β線","β線法\n"))]="Beta Counting"
+c14db$Method_En[which(c14db$Method=="AMS法")]="AMS"
 
 
 
