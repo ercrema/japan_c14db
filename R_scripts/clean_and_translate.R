@@ -1,8 +1,9 @@
-#### Setup
-setwd("~/gitrepos/ENCOUNTER/encounter_c14db")
+
 library(readxl)
 library(measurements)
 library(sp)
+
+setwd("~/gitrepos/ENCOUNTER/encounter_c14db/")
 
 #### Clean Kudo's Original Table ####
 
@@ -68,6 +69,58 @@ c14db$Longitude=as.numeric(char2dms(paste0(c14db$Longitude,"E"),chd='゜',chm="'
 c14db$Method_En = NA
 c14db$Method_En[which(c14db$Method%in%c("β線法","β線","β線法\n"))]="Beta Counting"
 c14db$Method_En[which(c14db$Method=="AMS法")]="AMS"
+
+
+### Check DB codes ####
+
+# MatericalCode1 & MaterialCode2
+matcode1 = read.csv("./processed_data/materialGeneralCode.csv")
+matcode2 = read.csv("./processed_data/materialDetailsCode.csv")
+
+if (!all(c14db$MaterialCode1%in%matcode1$Code))
+{
+	i=which(!c14db$MaterialCode1%in%matcode1$Code)
+	c14db[i,]
+	c14db$MaterialCode1[i]
+}
+
+
+if (!all(c14db$MaterialCode2%in%matcode2$Code))
+{
+	j=which(!c14db$MaterialCode2%in%matcode2$Code)
+	c14db[j,]
+	c14db$MaterialCode2[j]
+}
+
+
+#### ISSUES
+
+## 1:Specimen 22263 is recorded with lower case for MaterialCode1 but should be upper case.
+c14db$MaterialCode1[i[2]]
+
+#Fix: change to upper case
+
+## 2:Speciments 21704, 28099, 28227 are NA
+c14db$MaterialCode1[i[-2]]
+
+#Fix: 21704 is recorded in MaterialType as 炭化材(ケヤキ), and hence should have MaterialCode1 as "T",.and MaterialCode2 as "d";28099 and 28277 has no information so should be left as NA?
+
+## 3 Several entries have different encoding for "n" in MaterialCode2
+j[which(c14db$MaterialCode2[j]=="ｎ")]
+
+#Fix: recode the terms
+
+## 4 Several entries have NA in MaterialCode2. 
+(k=j[which(is.na(c14db$MaterialCode2[j]))])
+
+#Fix: 21704 should be coded as "d" (se above"), 25600 should be coded as "d"?, and 27001 as "a","b", or "o"? Suggest perhaps a generic bone category?
+
+## 5 Several entries are labelled "e,g":
+
+j[which(c14db$MaterialCode2[j]=="e,g")]
+
+#Fix: recode using just g?
+
 
 
 
