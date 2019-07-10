@@ -1,4 +1,4 @@
-
+library(tidverse)
 library(readxl)
 library(measurements)
 library(sp)
@@ -112,12 +112,44 @@ write.csv(mismatched,"~/gitrepos/ENCOUNTER/encounter_c14db/problems/mismatchsite
 
 
 ### Check Sites with different coordinates
+c14sites<-select(c14db,Prefecture,SiteName,SiteLocation,Latitude,Longitude) %>% unique()
+
+# Sites with different coordinates
+uniqueSitesAndCoords = select(c14sites,SiteName,Latitude,Longitude)%>%unique
+
+dSites = unique(uniqueSitesAndCoords$SiteName[duplicated(uniqueSitesAndCoords$SiteName)])
+
+c14db$RowN=3:(nrow(c14db)+2)
+differentCoordinates<-filter(c14db,SiteName%in%dSites)%>%arrange(SiteName)%>%select(RowN,SiteName,SiteLocation,Latitude,Longitude)
+
+write.csv(differentCoordinates,"~/gitrepos/ENCOUNTER/encounter_c14db/problems/differentCoordinates.csv")
+
+#### Coordinates with Different Sites
+
+# extract coordinates
+coords = select(c14db,Latitude,Longitude)%>%filter(Latitude!=0&Longitude!=0)%>%unique()
+
+index <- numeric()
+
+for (i in 1:nrow(coords))
+{
+	tmp <- filter(c14db,Latitude==coords$Latitude[i]& Longitude==coords$Longitude[i])
+	if (length(unique(tmp$SiteName))>1)
+	{
+		index=c(index,tmp$RowN-2)
+	}
+}
+
+differentSites <- c14db[index,] %>% select(Latitude,Longitude,SiteName,RowN)
+
+write.csv(differentSites,"~/gitrepos/ENCOUNTER/encounter_c14db/problems/differentSites.csv")
+
+
 
 
 
 ####  Translate Methods
-# Method
-c14db$Method_En = NA
+
 c14db$Method_En[which(c14db$Method%in%c("β線法","β線","β線法\n"))]="Beta Counting"
 c14db$Method_En[which(c14db$Method=="AMS法")]="AMS"
 
