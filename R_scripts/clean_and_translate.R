@@ -111,7 +111,7 @@ mismatched=sitecoord[c(i,k),]
 write.csv(mismatched,"~/gitrepos/ENCOUNTER/encounter_c14db/problems/mismatchsite.csv")
 
 
-
+### Check Sites with different coordinates
 
 
 
