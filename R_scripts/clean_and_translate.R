@@ -1,4 +1,4 @@
-library(tidverse)
+library(tidyverse)
 library(readxl)
 library(measurements)
 library(sp)
@@ -11,7 +11,7 @@ setwd("~/gitrepos/ENCOUNTER/encounter_c14db/")
 #### Clean Kudo's Original Table ####
 
 ## Read Data
-c14raw = read_xlsx("./raw_data/★年代測定データベース学術・関東･東北・北陸・中部・鹿児島190423.xlsx",skip=1)
+c14raw = read_xlsx("./raw_data/★年代測定データベース学術・関東･東北・北陸・中部・鹿児島190801.xlsx",skip=1)
 c14raw = as.data.frame(c14raw)
 
 ## Assign New Columns Names
@@ -71,7 +71,7 @@ colnames(pref) = c("Prefecture","PrefectureNameEn","Region")
 
 c14db=plyr::join(c14db,pref,type='left')
 
-# Add Here Scripts for checking site coordinates
+# Check site coordinates
 sitecoord = data.frame(RowN=3:(nrow(c14db)+2),
 		       PrefectureCode=c14db$PrefectureCode,
 		       PrefectureName=c14db$PrefectureNameEn,
@@ -84,7 +84,6 @@ sitecoord = unique(sitecoord)
 ### Are sites within Japan?
 
 jwgs84 = rgdal::readOGR(dsn="~/gitrepos/ENCOUNTER/encounter_c14db/gis",layer='japan_wgs84')
-
 jjgd2000 = rgdal::readOGR(dsn="~/gitrepos/ENCOUNTER/encounter_c14db/gis",layer='japan_jgd2000')
 
 site_wgs84 = sitecoord
@@ -94,35 +93,66 @@ coordinates(site_jgd2000) <- c("Longitude","Latitude")
 proj4string(site_wgs84) <- proj4string(jwgs84)
 proj4string(site_jgd2000) <- proj4string(jjgd2000)
 
+#Extract Prefectures based on coordinates
 sitecoord$extractedWGS84=over(site_wgs84,jwgs84)$prefecture
 sitecoord$extractedJGD2000=over(site_jgd2000,jjgd2000)$prefecture
 
-#Mismatch sites
-# j = which(as.character(sitecoord$extractedWGS84)!=as.character(sitecoord$extractedJGD2000))
-# length(j)
+#Check if there any mismatch between the extracted coordinates
+any(as.character(sitecoord$extractedWGS84)!=as.character(sitecoord$extractedJGD2000),na.rm=T) 
 
+#Check if any site was not assigned to any prefecture
+i1 = which(is.na(sitecoord$extractedJGD2000)) # same result
+i2 = which(is.na(sitecoord$extractedWGS84)) # same result
+all(i1==i2) #are they identical?
 
-i = which(sitecoord$PrefectureName!=as.character(sitecoord$extractedWGS84)) #mismatching sites
+#Report:
+# * Several sites have coordinates of 0,0 ... these should be replaced with NA
+# * SiteLocation of mismatched address is 小笠原村北硫黄島 and 横須賀市猿島. 
+# * 横須賀市猿島 coordinates are correct
+# * 小笠原村北硫黄島 are the same to 横須賀市猿島 and should be corrected.
 
+#Mismatch between extracted sites and assigned sites
+
+i = which(sitecoord$PrefectureName!=as.character(sitecoord$extractedWGS84)&sitecoord$Latitude!=0&sitecoord$Longitude!=0) #mismatching sites
 k = which(is.na(sitecoord$extractedWGS84)) # sites with no coordinates
-
 mismatched=sitecoord[c(i,k),]
 
 write.csv(mismatched,"~/gitrepos/ENCOUNTER/encounter_c14db/problems/mismatchsite.csv")
 
 
-### Check Sites with different coordinates
+
+### Several Sites have different coordinates (due to differently recorded addresses)
+
 c14sites<-select(c14db,Prefecture,SiteName,SiteLocation,Latitude,Longitude) %>% unique()
 
 # Sites with different coordinates
-uniqueSitesAndCoords = select(c14sites,SiteName,Latitude,Longitude)%>%unique
+uniqueSitesAndCoords = select(c14sites,Prefecture,SiteName,Latitude,Longitude)%>%unique
 
 dSites = unique(uniqueSitesAndCoords$SiteName[duplicated(uniqueSitesAndCoords$SiteName)])
 
 c14db$RowN=3:(nrow(c14db)+2)
-differentCoordinates<-filter(c14db,SiteName%in%dSites)%>%arrange(SiteName)%>%select(RowN,SiteName,SiteLocation,Latitude,Longitude)
+differentCoordinates<-filter(c14db,SiteName%in%dSites)%>%arrange(SiteName)%>%select(RowN,SiteName,SiteLocation,Prefecture,Latitude,Longitude)
+
+#for each site compute distance to the furtherest site
+diffCoordSites = unique(data.frame(SiteName=differentCoordinates$SiteName,Prefecture=differentCoordinates$Prefecture)) 
+diffCoordSites = diffCoordSites[!is.na(diffCoordSites$SiteName),]
+differentCoordinates$maxD = NA
+
+for (i in 1:nrow(diffCoordSites))
+{
+	ii = which(differentCoordinates$SiteName==diffCoordSites$SiteName[i]&differentCoordinates$Prefecture==diffCoordSites$Prefecture[i])
+	ccrd = data.frame(lon=differentCoordinates$Longitude[ii],lat=differentCoordinates$Latitude[ii])
+	maxDist=max(spDists(x=as.matrix(ccrd),longlat=TRUE)) 
+	differentCoordinates$maxD[ii] = maxDist
+}
+
+#Eliminate sites with same name from different prefectures:
+differentCoordinates=differentCoordinates[which(differentCoordinates$maxD>0),]
+
+
 
 write.csv(differentCoordinates,"~/gitrepos/ENCOUNTER/encounter_c14db/problems/differentCoordinates.csv")
+
 
 #### Coordinates with Different Sites
 
@@ -147,14 +177,14 @@ write.csv(differentSites,"~/gitrepos/ENCOUNTER/encounter_c14db/problems/differen
 
 
 
+#######################
+####  Translation  ####
+#######################
 
-####  Translate Methods
-
+# Calibration Method
 c14db$Method_En[which(c14db$Method%in%c("β線法","β線","β線法\n"))]="Beta Counting"
 c14db$Method_En[which(c14db$Method=="AMS法")]="AMS"
 
-
-### Check DB codes ####
 
 # MatericalCode1 & MaterialCode2
 matcode1 = read.csv("./processed_data/materialGeneralCode.csv")
@@ -176,7 +206,22 @@ if (!all(c14db$MaterialCode2%in%matcode2$Code))
 }
 
 
+## Period:
+#  periods = unique(data.frame(Period=c14db$Period,PeriodEN=NA))
+#  periods = arrange(periods,Period)
+#  write.csv(periods,file="./translation/periods.csv",row.names=F)
 
+periods = read.csv("./translation/periods.csv")
+c14db=left_join(c14db,periods,by="Period")
+
+## Phases:
+#  phases = unique(data.frame(Phase=c14db$Phase,PhaseEN=NA))
+#  phases = arrange(phases,Phase)
+#  write.csv(phases,file="./translation/phases.csv",row.names=F)
+
+phases  = read.csv("./translation/phases.csv")
+c14db=left_join(c14db,phases,by="Phase")
+ 
 
 
 
