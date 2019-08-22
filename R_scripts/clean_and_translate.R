@@ -11,7 +11,7 @@ setwd("~/gitrepos/ENCOUNTER/encounter_c14db/")
 #### Clean Kudo's Original Table ####
 
 ## Read Data
-c14raw = read_xlsx("./raw_data/★年代測定データベース学術・関東･東北・北陸・中部・鹿児島190801.xlsx",skip=1)
+c14raw = read_xlsx( "./raw_data/current.xlsx", skip=1)
 c14raw = as.data.frame(c14raw)
 
 ## Assign New Columns Names
@@ -212,7 +212,10 @@ if (!all(c14db$MaterialCode2%in%matcode2$Code))
 #  write.csv(periods,file="./translation/periods.csv",row.names=F)
 
 periods = read.csv("./translation/periods.csv")
-c14db=left_join(c14db,periods,by="Period")
+period.tmp=data.frame(Period=unique(as.character(c14db$Period)))
+period.tmp=left_join(period.tmp,periods,by="Period")
+period.tmp$Period=as.character(period.tmp$Period)
+c14db=left_join(x=c14db,y=period.tmp,by="Period")
 
 ## Phases:
 #  phases = unique(data.frame(Phase=c14db$Phase,PhaseEN=NA))
@@ -220,7 +223,10 @@ c14db=left_join(c14db,periods,by="Period")
 #  write.csv(phases,file="./translation/phases.csv",row.names=F)
 
 phases  = read.csv("./translation/phases.csv")
-c14db=left_join(c14db,phases,by="Phase")
+phases.tmp=data.frame(Phase=unique(as.character(c14db$Phase)))
+phases.tmp=left_join(phases.tmp,phases,by="Phase")
+phases.tmp$Phase=as.character(phases.tmp$Phase)
+c14db=left_join(x=c14db,y=phases.tmp,by="Phase")
  
 
 
