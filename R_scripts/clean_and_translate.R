@@ -6,12 +6,10 @@ library(NipponMap)
 library(mapdata)
 library(maptools)
 
-setwd("~/gitrepos/ENCOUNTER/encounter_c14db/")
-
 #### Clean Kudo's Original Table ####
 
 ## Read Data
-c14raw = read_xlsx( "./raw_data/current.xlsx", skip=1)
+c14raw = read_xlsx( "../raw_data/current.xlsx", skip=1)
 c14raw = as.data.frame(c14raw)
 
 ## Assign New Columns Names
@@ -206,7 +204,9 @@ if (!all(c14db$MaterialCode2%in%matcode2$Code))
 }
 
 
-## Period:
+#### Translate Site Chronology ####
+
+## Period
 #  periods = unique(data.frame(Period=c14db$Period,PeriodEN=NA))
 #  periods = arrange(periods,Period)
 #  write.csv(periods,file="./translation/periods.csv",row.names=F)
@@ -228,6 +228,10 @@ phases.tmp=left_join(phases.tmp,phases,by="Phase")
 phases.tmp$Phase=as.character(phases.tmp$Phase)
 c14db=left_join(x=c14db,y=phases.tmp,by="Phase")
  
+#### Transliterate Site Names ####
+sitesWithFurigana<-read.csv("./translation/sitenames.csv")
+c14db=left_join(x=c14db,y=sitesWithFurigana,by="SiteName")
+
 
 
 
