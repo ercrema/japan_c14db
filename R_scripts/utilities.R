@@ -21,8 +21,12 @@ siteNameTranscript<-function(x)
   
   res = data.frame(SiteName=x,MatchedName=NA,partial=NA,Furigana=NA,Romanised=NA,Romanised2=NA)
   
+  pb <- txtProgressBar(min=1, max=length(x), style=3)
+  
+  
   for (k in 1:length(x))
   {
+    setTxtProgressBar(pb, k)
     webpage <- read_html(URLencode(paste0("https://sitereports.nabunken.go.jp/en/search?all=",x[k])))
     
     #extract first search result URL key
@@ -74,5 +78,6 @@ siteNameTranscript<-function(x)
     }
     
   }
+  close(pb) 
   return(res)
 }
