@@ -185,8 +185,8 @@ c14db$Method_En[which(c14db$Method=="AMS法")]="AMS"
 
 
 # MatericalCode1 & MaterialCode2
-matcode1 = read.csv("./processed_data/materialGeneralCode.csv")
-matcode2 = read.csv("./processed_data/materialDetailsCode.csv")
+matcode1 = read.csv("../processed_data/materialGeneralCode.csv")
+matcode2 = read.csv("../processed_data/materialDetailsCode.csv")
 
 if (!all(c14db$MaterialCode1%in%matcode1$Code))
 {
@@ -204,9 +204,12 @@ if (!all(c14db$MaterialCode2%in%matcode2$Code))
 }
 
 
-#### Translate Site Chronology ####
 
-## Period
+
+
+
+# Period
+
 #  periods = unique(data.frame(Period=c14db$Period,PeriodEN=NA))
 #  periods = arrange(periods,Period)
 #  write.csv(periods,file="./translation/periods.csv",row.names=F)
@@ -217,7 +220,8 @@ period.tmp=left_join(period.tmp,periods,by="Period")
 period.tmp$Period=as.character(period.tmp$Period)
 c14db=left_join(x=c14db,y=period.tmp,by="Period")
 
-## Phases:
+# Phases
+
 #  phases = unique(data.frame(Phase=c14db$Phase,PhaseEN=NA))
 #  phases = arrange(phases,Phase)
 #  write.csv(phases,file="./translation/phases.csv",row.names=F)
@@ -227,10 +231,14 @@ phases.tmp=data.frame(Phase=unique(as.character(c14db$Phase)))
 phases.tmp=left_join(phases.tmp,phases,by="Phase")
 phases.tmp$Phase=as.character(phases.tmp$Phase)
 c14db=left_join(x=c14db,y=phases.tmp,by="Phase")
- 
-#### Transliterate Site Names ####
+
+#Laboratory
+# Not Necessary?
+
+#  Site Names
 sitesWithFurigana<-read.csv("./translation/sitenames.csv")
 c14db=left_join(x=c14db,y=sitesWithFurigana,by="SiteName")
+
 
 
 
