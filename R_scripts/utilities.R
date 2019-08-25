@@ -21,12 +21,13 @@ siteNameTranscript<-function(x)
   
   res = data.frame(SiteName=x,MatchedName=NA,partial=NA,Furigana=NA,Romanised=NA,Romanised2=NA)
   
-  pb <- txtProgressBar(min=1, max=length(x), style=3)
+  #pb <- txtProgressBar(min=1, max=length(x), style=3)
   
   
   for (k in 1:length(x))
   {
-    setTxtProgressBar(pb, k)
+    #setTxtProgressBar(pb, k)
+    print(k)
     webpage <- read_html(URLencode(paste0("https://sitereports.nabunken.go.jp/en/search?all=",x[k])))
     
     #extract first search result URL key
@@ -34,13 +35,12 @@ siteNameTranscript<-function(x)
     
     if (length(content)>0)
     {
-      firstRes = html_nodes(content,'div a')[[1]]
-      urlCode <- as.character(firstRes)
-      urlCode <- strsplit(urlCode,'"')[[1]][2]
-      
+      firstRes = html_nodes(content,'a')
+      links = html_attr(firstRes,'href')
+      urlCode <- links[agrep("search/item",links)][1] #extract the first
+
       #extract URL of the first search result
       webpage <- read_html(paste0("https://sitereports.nabunken.go.jp",urlCode))
-      
       
       header <- html_nodes(webpage,'th')
       header <- as.character(header)
@@ -78,6 +78,6 @@ siteNameTranscript<-function(x)
     }
     
   }
-  close(pb) 
+ # close(pb) 
   return(res)
 }
