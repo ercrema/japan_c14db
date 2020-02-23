@@ -8,7 +8,8 @@ library(sp)
 library(NipponMap) 
 library(mapdata)
 library(maptools)
-
+library(stringr)
+library(rebus)
 #### Clean Kudo's Original Table ####
 
 ## Read Data
@@ -71,11 +72,15 @@ refNabunkenLink(x)
   require(rvest)
   require(stringr)
   require(rebus)
+  require(tabulizer)
+  require(stringr)
+  
   # Distinguish Between Single Site Reports and Multi Site Reports ####
   reports = unique(data.frame(SiteName=x$SiteName,Reference=x$Reference,stringsAsFactors = FALSE))
   singleReports =subset(reports,Reference%in%names(which(table(reports$Reference)==1)))
   multiReports = subset(reports,!Reference%in%names(which(table(reports$Reference)==1)))
-  
+  multiReportsUnique = unique(multiReports$Reference)
+    
   # Extract Series Names from References where possible ####                 
   splitSeries = function(x){
     spl = unlist(str_split(x,pattern = "\\s"))
@@ -86,6 +91,7 @@ refNabunkenLink(x)
     } else {return(NA)}
   }
   
+  # Extract Series Number from Full Reference
   getSeriesNumber = function(x){
     spl = unlist(str_split(x,pattern = "\\s"))
     if (any(grepl("集",spl)))
@@ -105,10 +111,9 @@ refNabunkenLink(x)
   
   
   #Iterate through single reports
-  
-  for (i in 1:nrow(sitereports))
+  for (i in 1:nrow(singleReports))
   {
-    webpage <- read_html(URLencode(paste0("https://sitereports.nabunken.go.jp/en/search?all=",as.character(singleReports$SiteName[i]))))
+    webpage <- read_html(URLencode(paste0("https://sitereports.nabunken.go.jp/en/search?all=",as.character(singleReports$SiteName[i])," AND 炭素年代")))
     #extract number of hits:
     n = html_text(html_nodes(webpage,'.page-header .text-right'))
     n <- as.numeric(regmatches(n, gregexpr("[[:digit:]]+", n)))
@@ -118,7 +123,7 @@ refNabunkenLink(x)
       npages = ceiling(n/20) #20 items per page
       for (p in 1:npages)
       {
-        webpage.tmp <- read_html(URLencode(paste0("https://sitereports.nabunken.go.jp/en/search/p/",p,"?all=",as.character(singleReports$SiteName[i]))))
+        webpage.tmp <- read_html(URLencode(paste0("https://sitereports.nabunken.go.jp/en/search/p/",p,"?all=",as.character(singleReports$SiteName[i])," AND 炭素年代")))
         contentlist <- html_nodes(webpage.tmp,'.document_list_item')
         if (length(contentlist)==0){break()} #break if page is empty
         links = html_nodes(contentlist,'.list_title a') #extract link to each site
@@ -135,9 +140,16 @@ refNabunkenLink(x)
           content<-sapply(strsplit(content,"<td>"),function(x){x[2]})
           content<-sapply(strsplit(content,"</td>"),function(x){x[1]})
           content <- content[-2]
-          if (any(header=='Site Name',na.rm=T))
+          pdfLinks = html_attr(html_nodes(reportpage,'.report-attach-file a'),"href") #extract pdf links
+          if (length(pdfLinks)>0)
           {
-            sitenames = content[which(header=='Site Name')]
+          pdfLinks=unique(pdfLinks[!grepl("attach_mobile",pdfLinks)])
+          pdfLinks=paste0("https://sitereports.nabunken.go.jp/",pdfLinks)
+          }
+          
+          if (any(header=='Site Name',na.rm=T)) #If genuine report
+          {
+            sitenames = content[which(header=='Site Name')] #extract site name
             if (any(sitenames==singleReports$SiteName[i]))
             {
               series = (content[which(header=='Series')])
@@ -145,9 +157,19 @@ refNabunkenLink(x)
               if (agrepl(singleReports$Series[i],series)&singleReports$SeriesNumber[i]==as.numeric(content[which(header=='Series Number')]))
               {
                 singleReports$nabunkenURL[i]=html_attr(html_nodes(contentOriginal,'a')[1],'href')
+                break()
+              } else if (length(pdfLinks)>0) #if no match but there is a pdf try scraping 
+              {
+               extractedText = sapply(pdfLinks,extract_text) #extract text from pdf link
+               extractedText = sapply(extractedText, gsub, pattern="[\r\n]",replacement="") #remove end of lines
+               lbc = as.character(x$ID[which(x$Reference==singleReports$Reference[i])])
+               hh = sapply(extractedText, str_detect,pattern=lbc)
+               if (any(hh))
+               {
+                 singleReports$nabunkenURL[i]=html_attr(html_nodes(contentOriginal,'a')[1],'href')
+               }
+               rm(extractedText)
               }
-              # If match is not found, then consider searching in the pdf (code to write)
-              
             }
           }
         }
@@ -155,4 +177,62 @@ refNabunkenLink(x)
     }
   }
   
-}
+  #Iterate through multiple site reports
+  for (i in 1:length(multiReportsUnique))
+  {
+    print(i)
+    sites = multiReports$SiteName[which(multiReports$Reference==multiReportsUnique[i])]
+    for (j in 1:length(sites))
+    {
+      webpage <- read_html(URLencode(paste0("https://sitereports.nabunken.go.jp/en/search?all=",sites[j]," AND 炭素年代")))
+      n = html_text(html_nodes(webpage,'.page-header .text-right'))
+      n <- as.numeric(regmatches(n, gregexpr("[[:digit:]]+", n)))
+      if (length(n)>0) #if any hits
+      {
+        npages = ceiling(n/20) #20 items per page
+        for (p in 1:npages)
+        {
+          webpage.tmp <- read_html(URLencode(paste0("https://sitereports.nabunken.go.jp/en/search/p/",p,"?all=",sites[j]," AND 炭素年代")))
+          contentlist <- html_nodes(webpage.tmp,'.document_list_item')
+          if (length(contentlist)==0){break()} #break if page is empty
+          links = html_nodes(contentlist,'.list_title a') #extract link to each site
+          
+          for (k in 1:length(links)) #iterate through reports
+          {
+            tmpaddress = html_attr(links[k],"href")
+            reportpage = read_html(URLencode(paste0("https://sitereports.nabunken.go.jp",tmpaddress)))
+            header <- html_nodes(reportpage,'th')
+            header <- as.character(header)
+            header<-sapply(strsplit(header,"<th>"),function(x){x[2]})
+            header<-sapply(strsplit(header,"</th>"),function(x){x[1]})
+            contentOriginal <- html_nodes(reportpage,'td')
+            content <- as.character(contentOriginal)
+            content<-sapply(strsplit(content,"<td>"),function(x){x[2]})
+            content<-sapply(strsplit(content,"</td>"),function(x){x[1]})
+            content <- content[-2]
+            pdfLinks = html_attr(html_nodes(reportpage,'.report-attach-file a'),"href") #extract pdf links
+            if (length(pdfLinks)>0)
+            {
+              pdfLinks=unique(pdfLinks[!grepl("attach_mobile",pdfLinks)])
+              pdfLinks=paste0("https://sitereports.nabunken.go.jp/",pdfLinks)
+            }
+            
+            if (any(header=='Site Name',na.rm=T)) #If genuine report
+            {
+              sitenames = content[which(header=='Site Name')] #extract site name
+              {
+                if (all(sites%in%sitenames)) #if all sites are in the list of extracted site names
+                {
+                  multiReports$nabunkenURL[which(multiReports$Reference==multiReportsUnique[i])]=html_attr(html_nodes(contentOriginal,'a')[1],'href')
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  
+  
+  
