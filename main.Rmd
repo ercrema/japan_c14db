@@ -1,0 +1,438 @@
+---
+title: "Japanese Radiocarbon Database Project"
+author: "E.Crema"
+date: "5 March 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+fullMode=FALSE
+# Load required R libraries
+library(tidyverse)
+library(readxl)
+library(measurements)
+library(sp)
+library(NipponMap) 
+library(mapdata)
+library(maptools)
+```
+
+# General Info
+
+This R markdown file documents the cleaning and translation of the [Database of radiocarbon dates published in Japanese archaeological reports](https://www.rekihaku.ac.jp/up-cgi/login.pl?p=param/esrd/db_param) introduced in the following pubblication:
+
+[工藤雄一郎・坂本稔・箱﨑真隆2018「遺跡発掘調査報告書放射性炭素年代測定データベース作成の取り組み」『国立歴史民俗博物館研究報告』212：pp.251-266.](https://www.rekihaku.ac.jp/outline/publication/ronbun/ronbun9/index.html)
+
+## Repository Structure
+
+The repository contains R scripts, raw data, and look-up translation tables that enables the creation of the final CSV file `japanc14db_v01.csv` <!-- yet to be created -->. The table below provides a description of each directory within the repository:
+
+| Directory Name |                                  Description                                  |
+|:---------------|:------------------------------------------------------------------------------|
+| raw            | Contains raw Excel spreadsheets provided by Y.Kudo                            |
+| lookup         | Contains look-up tables for translations                                      |
+| reports        | Contains interim reports listing issues and problems to be reported to Y.Kudo |
+| utility        | Contains R utility functions and scripts                                      |
+| output         | Contains all outputs                                                          |
+| log            | Contains R log files for generating specific outputs                          |
+
+## Workflow and Organisation
+
+The general workflow consists of three distinct processes: **consistency checks** (e.g. identify duplicates, incorrect spatial coordinates, etc.); **translation**; and **augmentation** (e.g. recovery of coordinated from addresses, links to Nabunken database, etc.)
+
+List of consistency checks:
+
+  * [CHECK001](#check_labcode): LabCode as Unique Identifier (handles/reports cases of missing labcodes and duplicates) 
+  * [CHECK002](#check_coordinates):Geographic Coordinates (handles/reports cases of incorrect and missing coordinates)
+
+List of   
+  
+# STEP 1: Reading Data into R and Extracting Relevant Fields
+
+We first read the most up-to-date version of the raw data (currently `c14_raw_v190801.xlsx` corresponding to the original file `★年代測定データベース学術・関東･東北・北陸・中部・鹿児島190801.xlsx`):
+
+```{r}
+options(warn=-1) #suppress warning
+c14raw=read_xlsx( "./raw/c14_raw_v190801.xlsx", skip=1) %>% as.data.frame(stringsAsFactor=FALSE)
+```
+
+and assign new names to the columns
+
+```{r}
+## Assign New Columns Names (comments includes the original names)
+colnames(c14raw)= c("PrefectureCode", #都道府県コード
+		    "Prefecture", #都道府県
+		    "SiteName", #遺跡名
+		    "SiteLocation", #所在地
+		    "SamplingLocation",#サンプル採取地点等
+		    "MaterialType",#試料の種類
+		    "MaterialCode1",#試料コード1
+		    "MaterialCode2",#試料コード2
+		    "Period",#時代
+		    "Phase",#時期
+		    "PeriodCode",#時代コード
+		    "LabCode",#試料番号
+		    "Method",#β線法/AMS法
+		    "CRA",#14C年代
+		    "elim1",#
+		    "CRAError",#14C年代
+		    "CorrectedC14Age",#暦年較正用14C年代
+		    "elim2",#
+		    "CorrectedC14Error",#暦年較正用14C年代
+		    "Delta13C",#δ13CAms
+		    "elim3",#
+		    "Delta13CError",#
+		    "Delta13CIRMS",#δ13C（‰）(IR-MS)
+		    "AnalysedBy",#分析者（著者）
+		    "Laboratory",#測定機関
+		    "PubblicationYear",#刊行年
+		    "ReportTitle",#報告タイトル
+		    "Page",#ページ
+		    "Remarks",#備考
+		    "Reference",#報告書名
+		    "Publisher",#発行者
+		    "Latitude",#緯度
+		    "Longitude",#経度
+		    "Note1",#(非公開）
+		    "Note2",#(非公開）
+		    "Note3",#(非公開）
+		    "Note4",#(非公開）
+		    "Note5")#(非公開）
+```
+
+which allows us to eliminate columns that are not required for the final database
+
+```{r}
+## Eliminate Unecessary Columns
+c14raw = c14raw[,-which(names(c14raw)%in%c("elim1","elim2","elim3","Note1","Note2","Note3","Note4","Note5"))]
+```
+
+It is not possible to assign a unique identifier for each site, but it is possible to do this based on reference:
+
+```{r}
+c14raw$ReferenceID = as.numeric(as.factor(c14raw$Reference))
+```
+
+Finally we add a column indicating whether a specific entry should be retained or eliminated
+```{r}
+c14raw$retain=TRUE
+```
+
+###CHECK001: LabCode and Unique Identifier {#check_labcode}
+
+The field `$LabCode` contains the LabCode of each sample and needs to be unique. First we remove all cases without a LabCode and store them in the report (file: `./reports/missingLabCodes.csv`).
+
+```{r}
+missingLabCodes.index = which(is.na(c14raw$LabCode)|c14raw$LabCode=="不明")
+noNumbers.index = grep("^[A-Za-z]+$",c14raw$LabCode) #LabCodes without Numbers
+noCharacters.index = which(!grep("\\D", c14raw$LabCode))#LabCodes with only Numbers
+labcodeIssues = unique(c(missingLabCodes.index,noNumbers.index,noCharacters.index))
+c14raw.labcodeissue = c14raw[labcodeIssues,]
+c14raw$retain[labcodeIssues] = FALSE 
+
+write.csv(c14raw.labcodeissue,"./reports/missingLabCodes.csv") 
+```
+
+We then check instances of duplicate LabCodes: 
+
+```{r}
+any(duplicated(c14raw$LabCode[-labcodeIssues])) #Check if there are any duplicates even after removing problematic cases
+duplicates=sort(table(c14raw$LabCode[-labcodeIssues])[which(table(c14raw$LabCode[-labcodeIssues])>1)],TRUE)
+```
+
+The result indicates `r nrow(duplicates)` unique LabCodes that have somewhere between `r min(duplicates)-1` to `r max(duplicates)-1` duplicate entries. This might be partly conditioned by the report "弥生農耕の起源と東アジア-炭素14年代測定による高精度編年体系の構築-平成16～20年文部科学省・科学研究費学術創成研究費" which collated several radiocarbon dates from multiple sites. Indeed if we look at the duplicated cases:
+
+```{r}
+duplicates.index = which(c14raw$LabCode%in%names(duplicates))
+duplicates.labcode.c14raw = c14raw[duplicates.index,]
+```
+This specific entry appears `r as.numeric(sort(table(duplicates.labcode.c14raw$Reference),TRUE)[1])` times. The question is whether all entries from this report are duplicated:
+
+```{r}
+c14raw.rekihakuProj = subset(c14raw,retain==TRUE&Reference=="弥生農耕の起源と東アジア-炭素14年代測定による高精度編年体系の構築-平成16～20年文部科学省・科学研究費学術創成研究費　研究成果報告書")
+c14raw.NonRekihakuProj = subset(c14raw,retain==TRUE&Reference!="弥生農耕の起源と東アジア-炭素14年代測定による高精度編年体系の構築-平成16～20年文部科学省・科学研究費学術創成研究費　研究成果報告書")
+all(c14raw.rekihakuProj$LabCode%in%c14raw.NonRekihakuProj$LabCode)
+```
+
+which does not seem to be the case. Indeed the majority (`r length(which(!c14raw.rekihakuProj$LabCode%in%c14raw.NonRekihakuProj$LabCode))` vs `r length(which(c14raw.rekihakuProj$LabCode%in%c14raw.NonRekihakuProj$LabCode))`) seems to actually not be present amongs the rest of the database.
+
+The report `./reports/duplicateLabCodes.csv') contains all instances of duplicates:
+
+```{r}
+for (i in 1:length(duplicates))
+     { 
+  if (i==1)
+     {
+       duplicatedLabcodes = subset(c14raw[-labcodeIssues],LabCode==names(duplicates)[i])
+     }
+  if (i>1)
+  {
+    duplicatedLabcodes=rbind.data.frame(duplicatedLabcodes,subset(c14raw[-labcodeIssues],LabCode==names(duplicates)[i]))
+  }
+}
+write.csv(duplicatedLabcodes,"./reports/duplicateLabCodes.csv") 
+```
+
+Finally the routine below goes through all cases of duplicates and:
+  * in case of all matching critical information (CRA, error, sitename, etc) retain the most recent pubblication as it is likely going to provide more details
+  * in case of mismatch all entries are not retained
+  
+```{r}
+for (i in 1:length(duplicates))
+{ 
+  tmp.index = which(c14raw$LabCode==names(duplicates)[i]) 
+  tmp = c14raw[tmp.index,c("PrefectureCode","SiteName","SiteLocation","SamplingLocation","MaterialType","MaterialCode1","MaterialCode2","PeriodCode","LabCode","Method","CRA","CRAError","CorrectedC14Age","CorrectedC14Error","Delta13C","Delta13CError")] 
+  tmp = c14raw[tmp.index,c("PrefectureCode","MaterialCode1","MaterialCode2","PeriodCode","LabCode","Method","CRA","CRAError")] 
+  
+  # If the dates are different, both should be eliminated
+  if(nrow(unique(tmp))>1){c14raw$retain[tmp.index]=FALSE}
+  
+  # If the dates are the same, retain the most recent pubblication
+  if(nrow(unique(tmp))==1)
+  {
+    c14raw$retain[tmp.index[which.max(c14raw$PubblicationYear[tmp.index])]]=TRUE
+    c14raw$retain[tmp.index[which.min(c14raw$PubblicationYear[tmp.index])]]=FALSE
+  } 
+}
+```
+
+We then compute our final check:
+  
+```{r}
+c14raw.check = subset(c14raw,retain==TRUE)
+anyDuplicated(c14raw.check$LabCode) #if 0 pass
+sum(c14raw$retain)
+```
+
+
+# STEP 2: Handle Spatial Coordinates and Translate Prefecture Names
+
+## Convert Degree Minute Seconds coordinates into Degree Decimals
+```{r}
+c14raw$Latitude=as.numeric(char2dms(paste0(c14raw$Latitude,"N"),chd='゜',chm="'"))
+c14raw$Longitude=as.numeric(char2dms(paste0(c14raw$Longitude,"E"),chd='゜',chm="'"))
+```
+
+## Estimate Coordinates Using Site Address
+```{r,eval=fullMode,echo=fullMode}
+source("./utility/extractCoordinates.R")
+unique.Addresses = unique(c14raw$SiteLocation)
+gmap.coord=extractCoordinates(unique.Addresses)
+colnames(gmap.coord)=c("SiteLocation","Latitude.gmap","Longitude.gmap")
+write.csv(gmap.coord,"./output/gmap.coord.csv",row.names = FALSE)
+c14raw=left_join(c14raw,gmap.coord)
+```
+
+```{r,eval=!fullMode,echo=!fullMode}
+#source("./utility/extractCoordinates.R")
+#unique.Addresses = unique(c14raw$SiteLocation)
+#gmap.coord=extractCoordinates(unique.Addresses[1:10])
+#colnames(gmap.coord)=c("SiteLocation","Latitude.gmap","Longitude.gmap")
+#write.csv("./output/gmap.coord.csv",row.names = FALSE)
+gmap.coord=read.csv(file="./output/gmap.coord.csv")
+c14raw=left_join(c14raw,gmap.coord)
+```
+
+## Translate Prefecture Names
+```{r}
+pref.lookup = read.csv("./lookup/prefectures_translations.csv",stringsAsFactors=FALSE)
+colnames(pref.lookup) = c("Prefecture","PrefectureNameEn","Region")
+c14raw=left_join(c14raw,pref.lookup)
+```
+
+
+
+###CHECK002: Spatial Coordinates {#check_coordinates}
+
+##### 0,0 and Missing Coordinates
+
+Eliminate sites with missing coordinates and coordinates cannot be recovered from their addresses:
+
+```{r}
+missing.coord.index = which(c14raw$Latitude==0 & c14raw$Longitude==0 & is.na(c14raw$Latitude.gmap)&is.na(c14raw$Longitude.gmap))
+c14raw$retain[missing.coord.index]=FALSE
+write.csv(c14raw[missing.coord.index,],"./reports/nocoordinates_and_noreliableaddress.csv") 
+```
+
+##### Mismatch with Prefectures
+
+Check whether the coordinates fall within the designated prefectures using the utility function `checkPrefecture()`, and store them on designated fields:
+
+```{r,eval=fullMode,echo=fullMode}
+source("./utility/checkPrefecture.R")
+original.coord.check = checkPrefecture(lat=c14raw$Latitude,lon=c14raw$Longitude,pref = c14raw$PrefectureNameEn)
+gmap.coord.check = checkPrefecture(lat=c14raw$Latitude.gmap,lon=c14raw$Longitude.gmap,pref = c14raw$PrefectureNameEn)
+save(original.coord.check,gmap.coord.check,file="./output/reverseGeocode.RData")
+c14raw$coord.check=original.coord.check
+c14raw$gmap.coord.check=gmap.coord.check
+```
+
+```{r,eval=!fullMode,echo=!fullMode}
+#source("./utility/checkPrefecture.R")
+#original.coord.check = checkPrefecture(lat=c14raw$Latitude,lon=c14raw$Longitude,pref = c14raw$PrefectureNameEn)
+#gmap.coord.check = checkPrefecture(lat=c14raw$Latitude.gmap,lon=c14raw$Longitude.gmap,pref = c14raw$PrefectureNameEn)
+#save(original.coord.check,gmap.coord.check,file="./output/reverseGeocode.RData")
+load("./output/reverseGeocode.RData")
+c14raw$coord.check=original.coord.check
+c14raw$gmap.coord.check=gmap.coord.check
+```
+
+Determine if there are instances of mismatches. Starting from the provided coordinates:
+```{r}
+tmp.index=which((is.na(c14raw$coord.check)|c14raw$coord.check==FALSE)&c14raw$Latitude!=0&c14raw$Longitude!=0)
+tmp=c14raw[tmp.index,]
+tmp=unique(tmp[,c("Prefecture","SiteName","SiteLocation","Latitude","Longitude","coord.check")])
+```
+
+Manual check in both cases confirm their locations are correct. We thus manually adjust them:
+
+```{r}
+c14raw$coord.check[tmp.index]=TRUE
+```
+
+Now check the google map coordinates
+
+```{r}
+tmp.index=which((is.na(c14raw$gmap.coord.check)|c14raw$gmap.coord.check==FALSE)&!is.na(c14raw$Latitude.gmap)&!is.na(c14raw$Longitude.gmap))
+tmp=c14raw[tmp.index,]
+tmp=unique(tmp[,c("Prefecture","SiteName","SiteLocation","Latitude","Longitude","gmap.coord.check")])
+```
+
+There are `r nrow(tmp)` locations with mismatches, indicating that the original coordinates are probably more reliable. We remove the google coordinates:
+
+```{r}
+c14raw <- subset(c14raw, select = -c(gmap.coord.check,Latitude.gmap,Longitude.gmap))
+```
+
+
+##### SiteIDs and Coordinates
+The database does not provide unique identifier for sites. Thus several sites with different names might refer to the same site, but equally because coordinates were often derived from addresses, multiple sites with different names might have the same spatial coordinate as well. In remote cases the same site might have also different coordinates in different pubblications. 
+
+We first check all cases where the same coordinates are matched to different site names.
+
+```{r}
+#Assign a temporary unique ID to Coordinate Pairs
+c14raw.sitenames=select(c14raw,Prefecture,SiteName,Latitude,Longitude)
+comb <- do.call(paste, c(as.list(c14raw.sitenames[c("Latitude","Longitude")]), sep = "."))
+c14raw.sitenames$coordid <- match(comb, unique(comb))
+
+#If no instances of multiple coordinates there should be no duplicates in id
+c14raw.sitenames.unique=unique(c14raw.sitenames)
+any(duplicated(c14raw.sitenames.unique$id))
+```
+
+The results indicate there are no instances where the same set of coordinates are referring to different sites. We then check all cases where the same site name is matched to different coordinates.
+
+```{r}
+#Assign a temporary unique ID to Prefecture-SiteName pairs
+c14raw.sitenames=select(c14raw,Prefecture,SiteName,Latitude,Longitude)
+comb <- do.call(paste, c(as.list(c14raw.sitenames[c("Prefecture","SiteName")]), sep = "."))
+c14raw.sitenames$id <- match(comb, unique(comb))
+
+#If no instances of multiple coordinates there should be no duplicates in id
+c14raw.sitenames.unique=unique(c14raw.sitenames)
+any(duplicated(c14raw.sitenames.unique$id))
+tmp.index=which(duplicated(c14raw.sitenames.unique$id)) #which index are duplicates
+dup.ids=unique(c14raw.sitenames.unique$id[tmp.index])#what are the temporary ID of those duplicates
+
+for (i in 1:length(dup.ids))
+{
+  tmp.index=which(c14raw.sitenames$id==dup.ids[i])
+  tmp.df=c14raw[tmp.index,]
+  tmp.df=select(tmp.df,Prefecture,SiteName,SiteLocation,Latitude,Longitude,ReferenceID,Reference)
+  tmp.df$rowindex=NA
+  tmp.df=unique(tmp.df)
+  tmp.df$duplicateID=i
+  tmp.df$idistance=NA
+  tmp.df$Latitude.mean=mean(tmp.df$Latitude)
+  tmp.df$Longitude.mean=mean(tmp.df$Longitude)
+
+  for (j in 1:nrow(tmp.df))
+  {
+    #the following stores the row numbers of the original DB
+    row.index = which(c14raw$SiteName==tmp.df$SiteName[j] &
+                                     c14raw$SiteLocation==tmp.df$SiteLocation[j] &
+                                     c14raw$Latitude==tmp.df$Latitude[j] & 
+                                     c14raw$Longitude==tmp.df$Longitude[j] &
+                                     c14raw$ReferenceID==tmp.df$ReferenceID[j])
+    tmp.df$rowindex[j]=paste(row.index,collapse="|")
+  }
+  
+  c14raw$Latitude.new[row.index]
+  
+  idistance=spDists(x=as.matrix(tmp.df[c("Longitude","Latitude")]),longlat=TRUE)
+  if (max(idistance)>0){ #eliminates cases where the differences is just on Reference ID or address
+  tmp.df$idistance=max(idistance)  
+  if (i==1) {d=tmp.df}
+  if (i>1){d=rbind.data.frame(d,tmp.df)}
+  }
+}
+
+write.csv(d,"./reports/samesite_differentcoordinates.csv")
+```
+
+
+# STEP 3: Translations
+
+## Calibration
+```{r}
+c14raw$Method_En[which(c14raw$Method%in%c("β線法","β線","β線法\n"))]="Beta Counting"
+c14raw$Method_En[which(c14raw$Method=="AMS法")]="AMS"
+c14raw$Method_En[which(c14raw$Method=="不明")]=NA
+```
+
+## MatericalCode1 & MaterialCode2
+```{r}
+matcode1 = read.csv("./lookup/materialGeneralCode.csv")
+matcode2 = read.csv("./lookup/materialDetailsCode.csv")
+
+c14raw=left_join(c14raw,matcode1,by=c("MaterialCode1"="Code"))
+c14raw=left_join(c14raw,matcode2,by=c("MaterialCode2"="Code"))
+colnames(c14raw)[which(colnames(c14raw)=="Description.x")]="Material"
+colnames(c14raw)[which(colnames(c14raw)=="Description.y")]="Material_Details" 
+```
+
+## Periods
+
+```{r}
+# read translation lookup file, originally created with the following command:
+# periods = unique(data.frame(Period=c14db$Period,PeriodEN=NA))
+# periods = arrange(periods,Period)
+# write.csv(periods,file="./translation/periods.csv",row.names=F)
+periods = read.csv("./lookup/periods_translation.csv")
+
+# The following step updates the lookup table
+period.tmp=data.frame(Period=unique(as.character(c14raw$Period)),stringsAsFactors = FALSE)
+period.tmp=left_join(period.tmp,periods,by="Period")
+write.csv(period.tmp,file="./translation/periods.csv",row.names=F)
+
+# Before joining this to the main DB
+c14db=left_join(x=c14db,y=period.tmp,by="Period")
+```
+
+## Phases
+<!-- Same as Periods -->
+
+
+## Site Names
+```{r}
+siteList = unique(c14raw$SiteName)
+source("./utility/siteNameTranscript.R")
+sitenames=siteNameTranscript(siteList)
+```
+
+# STEP 4: Link to Nabunken URL
+
+
+
+
+
+
+
+
+
+
+
+
+
