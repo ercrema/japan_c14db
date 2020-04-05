@@ -13,7 +13,7 @@ CapStr <- function(y) {
 
 
 
-siteNameTranscript<-function(x)
+siteNameTranscript<-function(x,n.attempts=1000)
 {
   
   library(rvest)
