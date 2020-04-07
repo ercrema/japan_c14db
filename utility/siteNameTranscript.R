@@ -29,6 +29,8 @@ siteNameTranscript<-function(x,n.attempts=1000)
     print(k)
     candidateSiteName = x[k]
     candidateSiteNameWithoutIseki=ifelse(grepl("遺跡",candidateSiteName),unlist(strsplit(x[k],"遺跡"))[1],NA)
+    candidateSiteNameWithoutIseki = gsub("\\[|\\]|\\(|\\)", "", candidateSiteNameWithoutIseki) #remove brackets
+    
     scenario = 1
     
     
