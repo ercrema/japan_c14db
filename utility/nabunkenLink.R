@@ -18,7 +18,7 @@ refNabunkenLink<-function(site,reference,n.attempts=1000)
   
   #Generate a search list
   uniqueRef=unique(reference)
-  nabunkenURL = retrievedRef = vector("character",length=length(reference))
+  nabunkenURL = DOI = retrievedRef = rep(NA,length=length(reference))
   check = numeric(length(reference))
   
   for (i in 1:length(uniqueRef))
@@ -61,7 +61,8 @@ refNabunkenLink<-function(site,reference,n.attempts=1000)
       content <- content[-2]
       contentOriginal <- contentOriginal[-2]
       
-      nabunkenURL[index]=html_text(contentOriginal[which(header=='DOI')],trim=TRUE)
+      if (any(header=='URL',na.rm=TRUE)){nabunkenURL[index]=html_text(contentOriginal[which(header=='URL')],trim=TRUE)}
+      if (any(header=='DOI',na.rm=TRUE)){DOI[index]=html_text(contentOriginal[which(header=='DOI')],trim=TRUE)}
       retrievedRef[index]=html_text(html_nodes(reportpage,".copy-clipboard-text"))[1]
       check[index]=1 #Scenario 1
     }
@@ -96,7 +97,7 @@ refNabunkenLink<-function(site,reference,n.attempts=1000)
       content <- content[-2]
       contentOriginal <- contentOriginal[-2]
       
-      if (any(header=='Site Name'))
+      if (any(header=='Site Name',na.rm=TRUE))
       {
         foundSiteNames=content[which(header=='Site Name')]
         tmp=FALSE
@@ -115,13 +116,14 @@ refNabunkenLink<-function(site,reference,n.attempts=1000)
         if (tmp)
         {
           check[index]=2 # Assign scenario 2 (manual check required)
-          nabunkenURL[index]=html_text(contentOriginal[which(header=='DOI')],trim=TRUE)
+          if (any(header=='URL',na.rm=TRUE)){nabunkenURL[index]=html_text(contentOriginal[which(header=='URL')],trim=TRUE)}
+          if (any(header=='DOI',na.rm=TRUE)){DOI[index]=html_text(contentOriginal[which(header=='DOI')],trim=TRUE)}
           retrievedRef[index]=html_text(html_nodes(reportpage,".copy-clipboard-text"))[1]
         }
       }
     }
   }
-  return(data.frame(site=site,reference=reference,retrievedRef=retrievedRef,nabunkenURL=nabunkenURL))    
+  return(data.frame(site=site,reference=reference,retrievedRef=retrievedRef,nabunkenURL=nabunkenURL,DOI=DOI))    
 }
 
     
