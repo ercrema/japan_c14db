@@ -23,16 +23,16 @@ refNabunkenLink<-function(site,reference,n.attempts=1000)
   
   for (i in 1:length(uniqueRef))
   {
+    print(i)
     # Matching Site Name(s) and LabCode(s):
     index = which(reference==uniqueRef[i])
     searchSites = unique(site[index])
-    searcLabCode = as.character(labcode[index])
-    
+
     # First Attempt: Search By Full Reference
     webpage <- URLencode(paste0("https://sitereports.nabunken.go.jp/en/search?all=",uniqueRef[i])) %>% GET(.,timeout(500000)) %>% read_html(.)
     n = html_text(html_nodes(webpage,'.page-header .text-right'))
     n = as.numeric(regmatches(n, gregexpr("[[:digit:]]+", n)))
-    
+    if (length(n)==0){n=0}
     if (n==1) #example i=906
     {
       #Single Hit ---> Generally Ok, so retain
@@ -99,10 +99,10 @@ refNabunkenLink<-function(site,reference,n.attempts=1000)
       if (any(header=='Site Name'))
       {
         foundSiteNames=content[which(header=='Site Name')]
-        
+        tmp=FALSE
         if (length(foundSiteNames)==1 & length(searchSites)==1)
         {
-          tmp=agrepl(searchSitesfoundSiteNames)
+          tmp=agrepl(searchSites,foundSiteNames)
         }
         
         if (length(foundSiteNames)>1 & length(searchSites)>1)
