@@ -1,5 +1,5 @@
 ### Nabunken Link
-load("./testSiteNames.RData")
+load("./runc14raw.RData")
 x = c14raw
 x = unique(data.frame(site=x$SiteName,reference=x$Reference))
 x$site=as.character(x$site)
