@@ -8,7 +8,7 @@
 # reference = x$reference
 
 
-refNabunkenLink<-function(site,reference,n.attempts=1000)
+refNabunkenLink<-function(site,reference,n.attempts=1000,maxchar=80)
 {
   require(rvest)
   require(stringr)
@@ -29,9 +29,13 @@ refNabunkenLink<-function(site,reference,n.attempts=1000)
     searchSites = unique(site[index])
 
     # First Attempt: Search By Full Reference
-    webpage <- URLencode(paste0("https://sitereports.nabunken.go.jp/en/search?all=",uniqueRef[i])) %>% GET(.,timeout(500000)) %>% read_html(.)
+    if (nchar(uniqueRef[i])<=maxchar)
+    {
+    webpage <- read_html(URLencode(paste0("https://sitereports.nabunken.go.jp/en/search?all=",uniqueRef[i])))
     n = html_text(html_nodes(webpage,'.page-header .text-right'))
     n = as.numeric(regmatches(n, gregexpr("[[:digit:]]+", n)))
+    } else if (nchar(uniqueRef[i])>maxchar){n=0}
+    
     if (length(n)==0){n=0}
     if (n==1) #example i=906
     {
@@ -121,6 +125,13 @@ refNabunkenLink<-function(site,reference,n.attempts=1000)
           retrievedRef[index]=html_text(html_nodes(reportpage,".copy-clipboard-text"))[1]
         }
       }
+    }
+    
+    if (n==0)
+    {
+      retrievedRef[index]=NA
+      DOI[index]=NA
+      nabunkenURL[index]=NA
     }
   }
   return(data.frame(site=site,reference=reference,retrievedRef=retrievedRef,nabunkenURL=nabunkenURL,DOI=DOI))    
