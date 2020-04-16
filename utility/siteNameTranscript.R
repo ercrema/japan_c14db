@@ -16,9 +16,11 @@ CapStr <- function(y) {
 siteNameTranscript<-function(x,delay=1,ua="Contact Email: erc62@cam.ac.uk")
 {
   
-  library(rvest)
-  library(utils)
-  library(Nippon)
+  require(rvest)
+  require(utils)
+  require(httr)
+  require(Nippon)
+  ua = user_agent(ua) #Define User Agent
   
   res = data.frame(SiteName=x,MatchedName=NA,Furigana=NA,Romanised=NA, Romanised2=NA)
   pb <- txtProgressBar(min=1, max=length(x), style=3)
