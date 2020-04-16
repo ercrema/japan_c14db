@@ -13,7 +13,7 @@ CapStr <- function(y) {
 
 
 
-siteNameTranscript<-function(x,n.attempts=1000)
+siteNameTranscript<-function(x,delay=1,ua="Contact Email: erc62@cam.ac.uk")
 {
   
   library(rvest)
@@ -33,17 +33,11 @@ siteNameTranscript<-function(x,n.attempts=1000)
     
     scenario = 1
     
-    
     # Try First with Scenario 1
     setTxtProgressBar(pb, k)
-    retry=TRUE
-    attempt.count=0
-    while(retry)
-    {
-      webpage <- try(read_html(URLencode(paste0("https://sitereports.nabunken.go.jp/en/search?all=",candidateSiteName))),silent=TRUE)
-      if ((attempt.count>n.attempts)|(class(webpage)[1] != "try-error")){retry=FALSE;attempt.count=attempt.count+1}
-    }
-    
+    Sys.sleep(delay)
+    webpage=read_html(html_session(URLencode(paste0("https://sitereports.nabunken.go.jp/en/search?all=",candidateSiteName)),ua))
+
     #extract first search result URL key
     content <- html_nodes(webpage,'.document_list_item')
     
@@ -52,13 +46,8 @@ siteNameTranscript<-function(x,n.attempts=1000)
     if (length(content)==0&!is.na(candidateSiteNameWithoutIseki))
     {
       scenario = 2
-      retry=TRUE
-      attempt.count=0
-      while(retry)
-      {
-        webpage <- try(read_html(URLencode(paste0("https://sitereports.nabunken.go.jp/en/search?all=",candidateSiteNameWithoutIseki))),silent=TRUE)
-        if ((attempt.count>n.attempts)|(class(webpage)[1] != "try-error")){retry=FALSE;attempt.count=attempt.count+1}
-      }
+      Sys.sleep(delay)
+      webpage=read_html(html_session(URLencode(paste0("https://sitereports.nabunken.go.jp/en/search?all=",candidateSiteNameWithoutIseki)),ua))
       content <- html_nodes(webpage,'.document_list_item')
     }
     
@@ -71,14 +60,8 @@ siteNameTranscript<-function(x,n.attempts=1000)
       firstRes = html_nodes(content,'a')
       links = html_attr(firstRes,'href')
       urlCode <- links[agrep("search/item",links)][1] #extract the first
-      retry=TRUE
-      attempt.count=0
-      while(retry)
-      {
-        webpage <- try(read_html(paste0("https://sitereports.nabunken.go.jp",urlCode)),silent=TRUE)
-        if ((attempt.count>n.attempts)|(class(webpage)[1] != "try-error")){retry=FALSE;attempt.count=attempt.count+1}
-      }
-      
+      Sys.sleep(delay)
+      webpage=read_html(html_session(URLencode(paste0("https://sitereports.nabunken.go.jp",urlCode)),ua))
       
       header <- html_nodes(webpage,'th')
       header <- as.character(header)

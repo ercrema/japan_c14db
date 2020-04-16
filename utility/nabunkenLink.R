@@ -8,13 +8,14 @@
 # reference = x$reference
 
 
-refNabunkenLink<-function(site,reference,n.attempts=1000,maxchar=80)
+refNabunkenLink<-function(site,reference,maxchar=80,delay=1,ua="Contact Email: erc62@cam.ac.uk")
 {
   require(rvest)
   require(stringr)
   require(pdftools)
   require(httr)
   require(magrittr)
+  ua = user_agent(ua) #Define User Agent
   
   #Generate a search list
   uniqueRef=unique(reference)
@@ -29,17 +30,12 @@ refNabunkenLink<-function(site,reference,n.attempts=1000,maxchar=80)
     searchSites = unique(site[index])
 
     # First Attempt: Search By Full Reference
+    Sys.sleep(delay)
     if (nchar(uniqueRef[i])<=maxchar)
     {
-      retry=TRUE
-      attempt.count=0
-      while(retry)
-      {
-        webpage <- try(read_html(URLencode(paste0("https://sitereports.nabunken.go.jp/en/search?all=",uniqueRef[i]))),silent=TRUE)
-        if ((attempt.count>n.attempts)|(class(webpage)[1] != "try-error")){retry=FALSE;attempt.count=attempt.count+1}
-      }
-    n = html_text(html_nodes(webpage,'.page-header .text-right'))
-    n = as.numeric(regmatches(n, gregexpr("[[:digit:]]+", n)))
+      webpage=read_html(html_session(URLencode(paste0("https://sitereports.nabunken.go.jp/en/search?all=",uniqueRef[i])),ua))
+      n = html_text(html_nodes(webpage,'.page-header .text-right'))
+      n = as.numeric(regmatches(n, gregexpr("[[:digit:]]+", n)))
     } else if (nchar(uniqueRef[i])>maxchar){n=0}
     
     if (length(n)==0){n=0}
@@ -49,14 +45,10 @@ refNabunkenLink<-function(site,reference,n.attempts=1000,maxchar=80)
       contentlist <- html_nodes(webpage,'.document_list_item')
       links = html_nodes(contentlist,'.list_title a')
       tmpaddress = html_attr(links[1],"href")
+  
+      Sys.sleep(delay)
+      reportpage=read_html(html_session(URLencode(paste0("https://sitereports.nabunken.go.jp",tmpaddress)),ua))
       
-      retry=TRUE
-      attempt.count=0
-      while(retry)
-      {
-        reportpage <- try(read_html(URLencode(paste0("https://sitereports.nabunken.go.jp",tmpaddress))),silent=TRUE)
-        if ((attempt.count>n.attempts)|(class(reportpage)[1] != "try-error")){retry=FALSE;attempt.count=attempt.count+1}
-      }
       #Extract Key Headers
       header <- html_nodes(reportpage,'th')
       header <- as.character(header)
@@ -86,13 +78,9 @@ refNabunkenLink<-function(site,reference,n.attempts=1000,maxchar=80)
       links = html_nodes(contentlist,'.list_title a')
       tmpaddress = html_attr(links[1],"href")
       
-      retry=TRUE
-      attempt.count=0
-      while(retry)
-      {
-        reportpage <- try(read_html(URLencode(paste0("https://sitereports.nabunken.go.jp",tmpaddress))),silent=TRUE)
-        if ((attempt.count>n.attempts)|(class(reportpage)[1] != "try-error")){retry=FALSE;attempt.count=attempt.count+1}
-      }
+      Sys.sleep(delay)
+      reportpage=read_html(html_session(URLencode(paste0("https://sitereports.nabunken.go.jp",tmpaddress)),ua))
+      
       #Extract Key Headers
       header <- html_nodes(reportpage,'th')
       header <- as.character(header)
