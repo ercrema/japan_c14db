@@ -43,11 +43,11 @@ The general workflow consists of three distinct processes: **consistency checks*
 
 List of consistency checks:
 
-  * [CHECK001](#check_labcode): LabCode as Unique Identifier (handles/reports cases of missing labcodes and duplicates) 
-  * [CHECK002](#check_coordinates):Geographic Coordinates (handles/reports cases of incorrect and missing coordinates)
+* [CHECK001](#check_labcode): LabCode as Unique Identifier (handles/reports cases of missing labcodes and duplicates) 
+* [CHECK002](#check_coordinates):Geographic Coordinates (handles/reports cases of incorrect and missing coordinates)
 
 List of   
-  
+
 # STEP 1: Reading Data into R and Extracting Relevant Fields
 
 We first read the most up-to-date version of the raw data (currently `c14_raw_v190801.xlsx` corresponding to the original file `★年代測定データベース学術・関東･東北・北陸・中部・鹿児島190801.xlsx`):
@@ -62,43 +62,43 @@ and assign new names to the columns
 ```{r}
 ## Assign New Columns Names (comments includes the original names)
 colnames(c14raw)= c("PrefectureCode", #都道府県コード
-		    "Prefecture", #都道府県
-		    "SiteName", #遺跡名
-		    "SiteLocation", #所在地
-		    "SamplingLocation",#サンプル採取地点等
-		    "MaterialType",#試料の種類
-		    "MaterialCode1",#試料コード1
-		    "MaterialCode2",#試料コード2
-		    "Period",#時代
-		    "Phase",#時期
-		    "PeriodCode",#時代コード
-		    "LabCode",#試料番号
-		    "Method",#β線法/AMS法
-		    "CRA",#14C年代
-		    "elim1",#
-		    "CRAError",#14C年代
-		    "CorrectedC14Age",#暦年較正用14C年代
-		    "elim2",#
-		    "CorrectedC14Error",#暦年較正用14C年代
-		    "Delta13C",#δ13CAms
-		    "elim3",#
-		    "Delta13CError",#
-		    "Delta13CIRMS",#δ13C（‰）(IR-MS)
-		    "AnalysedBy",#分析者（著者）
-		    "Laboratory",#測定機関
-		    "PubblicationYear",#刊行年
-		    "ReportTitle",#報告タイトル
-		    "Page",#ページ
-		    "Remarks",#備考
-		    "Reference",#報告書名
-		    "Publisher",#発行者
-		    "Latitude",#緯度
-		    "Longitude",#経度
-		    "Note1",#(非公開）
-		    "Note2",#(非公開）
-		    "Note3",#(非公開）
-		    "Note4",#(非公開）
-		    "Note5")#(非公開）
+                    "Prefecture", #都道府県
+                    "SiteName", #遺跡名
+                    "SiteLocation", #所在地
+                    "SamplingLocation",#サンプル採取地点等
+                    "MaterialType",#試料の種類
+                    "MaterialCode1",#試料コード1
+                    "MaterialCode2",#試料コード2
+                    "Period",#時代
+                    "Phase",#時期
+                    "PeriodCode",#時代コード
+                    "LabCode",#試料番号
+                    "Method",#β線法/AMS法
+                    "CRA",#14C年代
+                    "elim1",#
+                    "CRAError",#14C年代
+                    "CorrectedC14Age",#暦年較正用14C年代
+                    "elim2",#
+                    "CorrectedC14Error",#暦年較正用14C年代
+                    "Delta13C",#δ13CAms
+                    "elim3",#
+                    "Delta13CError",#
+                    "Delta13CIRMS",#δ13C（‰）(IR-MS)
+                    "AnalysedBy",#分析者（著者）
+                    "Laboratory",#測定機関
+                    "PubblicationYear",#刊行年
+                    "ReportTitle",#報告タイトル
+                    "Page",#ページ
+                    "Remarks",#備考
+                    "Reference",#報告書名
+                    "Publisher",#発行者
+                    "Latitude",#緯度
+                    "Longitude",#経度
+                    "Note1",#(非公開）
+                    "Note2",#(非公開）
+                    "Note3",#(非公開）
+                    "Note4",#(非公開）
+                    "Note5")#(非公開）
 ```
 
 which allows us to eliminate columns that are not required for the final database
@@ -112,6 +112,12 @@ It is not possible to assign a unique identifier for each site, but it is possib
 
 ```{r}
 c14raw$ReferenceID = as.numeric(as.factor(c14raw$Reference))
+```
+
+We also want to remove carriage returns and new lines from the references:
+
+```{r}
+c14raw$Reference = gsub("[\r\n]", "", c14raw$Reference)
 ```
 
 Finally we add a column indicating whether a specific entry should be retained or eliminated
@@ -147,6 +153,7 @@ The result indicates `r nrow(duplicates)` unique LabCodes that have somewhere be
 duplicates.index = which(c14raw$LabCode%in%names(duplicates))
 duplicates.labcode.c14raw = c14raw[duplicates.index,]
 ```
+
 This specific entry appears `r as.numeric(sort(table(duplicates.labcode.c14raw$Reference),TRUE)[1])` times. The question is whether all entries from this report are duplicated:
 
 ```{r}
@@ -161,11 +168,11 @@ The report `./reports/duplicateLabCodes.csv') contains all instances of duplicat
 
 ```{r}
 for (i in 1:length(duplicates))
-     { 
+{ 
   if (i==1)
-     {
-       duplicatedLabcodes = subset(c14raw[-labcodeIssues],LabCode==names(duplicates)[i])
-     }
+  {
+    duplicatedLabcodes = subset(c14raw[-labcodeIssues],LabCode==names(duplicates)[i])
+  }
   if (i>1)
   {
     duplicatedLabcodes=rbind.data.frame(duplicatedLabcodes,subset(c14raw[-labcodeIssues],LabCode==names(duplicates)[i]))
@@ -175,9 +182,9 @@ write.csv(duplicatedLabcodes,"./reports/duplicateLabCodes.csv")
 ```
 
 Finally the routine below goes through all cases of duplicates and:
-  * in case of all matching critical information (CRA, error, sitename, etc) retain the most recent pubblication as it is likely going to provide more details
-  * in case of mismatch all entries are not retained
-  
+* in case of all matching critical information (CRA, error, sitename, etc) retain the most recent pubblication as it is likely going to provide more details
+* in case of mismatch all entries are not retained
+
 ```{r}
 for (i in 1:length(duplicates))
 { 
@@ -198,7 +205,7 @@ for (i in 1:length(duplicates))
 ```
 
 We then compute our final check:
-  
+
 ```{r}
 c14raw.check = subset(c14raw,retain==TRUE)
 anyDuplicated(c14raw.check$LabCode) #if 0 pass
@@ -227,7 +234,7 @@ c14raw=left_join(c14raw,gmap.coord)
 ```{r,eval=!fullMode,echo=!fullMode}
 #source("./utility/extractCoordinates.R")
 #unique.Addresses = unique(c14raw$SiteLocation)
-#gmap.coord=extractCoordinates(unique.Addresses[1:10])
+#gmap.coord=extractCoordinates(unique.Addresses)
 #colnames(gmap.coord)=c("SiteLocation","Latitude.gmap","Longitude.gmap")
 #write.csv("./output/gmap.coord.csv",row.names = FALSE)
 gmap.coord=read.csv(file="./output/gmap.coord.csv")
@@ -347,15 +354,15 @@ for (i in 1:length(dup.ids))
   tmp.df$idistance=NA
   tmp.df$Latitude.mean=mean(tmp.df$Latitude)
   tmp.df$Longitude.mean=mean(tmp.df$Longitude)
-
+  
   for (j in 1:nrow(tmp.df))
   {
     #the following stores the row numbers of the original DB
     row.index = which(c14raw$SiteName==tmp.df$SiteName[j] &
-                                     c14raw$SiteLocation==tmp.df$SiteLocation[j] &
-                                     c14raw$Latitude==tmp.df$Latitude[j] & 
-                                     c14raw$Longitude==tmp.df$Longitude[j] &
-                                     c14raw$ReferenceID==tmp.df$ReferenceID[j])
+                        c14raw$SiteLocation==tmp.df$SiteLocation[j] &
+                        c14raw$Latitude==tmp.df$Latitude[j] & 
+                        c14raw$Longitude==tmp.df$Longitude[j] &
+                        c14raw$ReferenceID==tmp.df$ReferenceID[j])
     tmp.df$rowindex[j]=paste(row.index,collapse="|")
   }
   
@@ -363,9 +370,9 @@ for (i in 1:length(dup.ids))
   
   idistance=spDists(x=as.matrix(tmp.df[c("Longitude","Latitude")]),longlat=TRUE)
   if (max(idistance)>0){ #eliminates cases where the differences is just on Reference ID or address
-  tmp.df$idistance=max(idistance)  
-  if (i==1) {d=tmp.df}
-  if (i>1){d=rbind.data.frame(d,tmp.df)}
+    tmp.df$idistance=max(idistance)  
+    if (i==1) {d=tmp.df}
+    if (i>1){d=rbind.data.frame(d,tmp.df)}
   }
 }
 
@@ -399,34 +406,182 @@ colnames(c14raw)[which(colnames(c14raw)=="Description.y")]="Material_Details"
 # read translation lookup file, originally created with the following command:
 # periods = unique(data.frame(Period=c14db$Period,PeriodEN=NA))
 # periods = arrange(periods,Period)
-# write.csv(periods,file="./translation/periods.csv",row.names=F)
+# write.csv(periods,file="./translation/periods_toTranslate.csv",row.names=F)
 periods = read.csv("./lookup/periods_translation.csv")
 
 # The following step updates the lookup table
-period.tmp=data.frame(Period=unique(as.character(c14raw$Period)),stringsAsFactors = FALSE)
-period.tmp=left_join(period.tmp,periods,by="Period")
-write.csv(period.tmp,file="./translation/periods.csv",row.names=F)
+# period.tmp=data.frame(Period=unique(as.character(c14raw$Period)),stringsAsFactors = FALSE)
+# period.tmp=left_join(period.tmp,periods,by="Period")
+# write.csv(period.tmp,file="./lookup/periods_translation.csv",row.names=F)
 
 # Before joining this to the main DB
-c14db=left_join(x=c14db,y=period.tmp,by="Period")
+c14raw=left_join(x=c14raw,y=period.tmp,by="Period")
 ```
 
 ## Phases
-<!-- Same as Periods -->
-
-
-## Site Names
 ```{r}
-siteList = unique(c14raw$SiteName)
-source("./utility/siteNameTranscript.R")
-sitenames=siteNameTranscript(siteList)
+# read translation lookup file, originally created with the following command:
+# phases = unique(data.frame(Phase=c14db$Phase,PhaseEN=NA))
+# phases = arrange(phases,Phase)
+# write.csv(phases,file="./translation/phases_toTranslate.csv",row.names=F)
+phases = read.csv("./lookup/phases_translation.csv")
+
+# The following step updates the lookup table
+# phases.tmp=data.frame(Phase=unique(as.character(c14raw$Phase)),stringsAsFactors = FALSE)
+# phases.tmp=left_join(phases.tmp,phases,by="Phase")
+# write.csv(period.tmp,file="./lookup/periods_translation.csv",row.names=F)
+
+# Before joining this to the main DB
+c14raw=left_join(x=c14raw,y=phases.tmp,by="Phase")
 ```
 
-# STEP 4: Link to Nabunken URL
+## Site Names
+
+Site names have been romanised by first using the Nabunken Site Report Database to automatically extract the _furigana_ of site names in _kanji_, followed by a manual check for fixing potential mismatch and missing _furigana_. Romanisation has been carried out using the `kana2roma()` function from the `Nippon` package. 
+
+```{r,eval=fullMode,echo=fullMode}
+library(Nippon)
+source("./utility/siteNameTranscript.R")
+
+### The following block is executed only in the very first iteration:
+#siteList = unique(c14raw$SiteName)
+#sitenames=siteNameTranscript(siteList)
+##Export for manual editing
+#sitenames$matched=(sitenames$SiteName==sitenames$MatchedName)
+#sitenames$ToCheck = !sitenames$matched | is.na(sitenames$Furigana)
+#sitenames=dplyr::select(sitenames,SiteName,Furigana,ToCheck)
+#write.csv(sitenames,"./lookup/sitenamesTranscript.csv",row.names = FALSE)
+
+###This block is from second iteration onwards
+#Import manually edited file
+sitenames=read.csv("./lookup/sitenamesTranscript.csv")
+siteList = unique(c14raw$SiteName)
+
+# The following step updates the lookup table in case there are some missing sites
+if (!all(unique(siteList)%in%sitenames$SiteName))
+{
+  missingSites = unique(siteList)[which(!unique(siteList)%in%sitenames$SiteName)]
+  additional_sitenames=siteNameTranscript(missingSites)
+  sitenames=rbind.data.frame(sitenames,data.frame(SiteName=additional_sitenames$SiteName,
+                                                      Furigana=additional_sitenames$Furigana,
+                                                      ToCheck=TRUE))
+  write.csv(sitenames,"./lookup/sitenamesTranscript.csv",row.names = FALSE)
+}
+
+# The section reads and merges the sitenames to the main data.frame
+sitenames=read.csv("./lookup/sitenamesTranscript.csv")
+sitenames = sitenames[,1:2]
+sitenames$Romanised = kana2roma(sitenames$Furigana)
+sitenames$Romanised2 = unlist(lapply(strsplit(sitenames$Romanised[1:4],"iseki"),function(x){x[1]}))
+#Merge Back to Main DB
+c14raw=left_join(x=c14raw,y=sitenames,by="SiteName")
+```
+
+```{r,eval=!fullMode,echo=!fullMode}
+# library(Nippon)
+# source("./utility/siteNameTranscript.R")
+
+### The following block is executed only in the very first iteration:
+#siteList = unique(c14raw$SiteName)
+#sitenames=siteNameTranscript(siteList)
+##Export for manual editing
+#sitenames$matched=(sitenames$SiteName==sitenames$MatchedName)
+#sitenames$ToCheck = !sitenames$matched | is.na(sitenames$Furigana)
+#sitenames=dplyr::select(sitenames,SiteName,Furigana,ToCheck)
+#write.csv(sitenames,"./lookup/sitenamesTranscript.csv",row.names = FALSE)
+
+###This block is from second iteration onwards
+#Import manually edited file
+# sitenames=read.csv("./lookup/sitenamesTranscript.csv")
+# siteList = unique(c14raw$SiteName)
+
+# The following step updates the lookup table in case there are some missing sites
+# if (!all(unique(siteList)%in%sitenames$SiteName))
+# {
+#   missingSites = unique(siteList)[which(!unique(siteList)%in%sitenames$SiteName)]
+#   additional_sitenames=siteNameTranscript(missingSites)
+#   sitenames=rbind.data.frame(sitenames,data.frame(SiteName=additional_sitenames$SiteName,
+#                                                       Furigana=additional_sitenames$Furigana,
+#                                                       ToCheck=TRUE))
+#   write.csv(sitenames,"./lookup/sitenamesTranscript.csv",row.names = FALSE)
+# }
+
+# The section reads and merges the sitenames to the main data.frame
+sitenames=read.csv("./lookup/sitenamesTranscript.csv")
+sitenames = sitenames[,1:2]
+sitenames$Romanised = kana2roma(sitenames$Furigana)
+sitenames$Romanised2 = unlist(lapply(strsplit(sitenames$Romanised[1:4],"iseki"),function(x){x[1]}))
+#Merge Back to Main DB
+c14raw=left_join(x=c14raw,y=sitenames,by="SiteName")
+```
+
+<!--
+### More detailed romanisation
+
+* Retain numerals (both roman and arab)
+* Retain brackets with numbers
+* 遺跡群 : add site cluster in brackets
+-->
+
+## STEP 4: Link to Nabunken URL
+
+The `refNabunkenLink()` scrapes and attempts to match references to the Nabunken Site Report Database, returning potential matching URLs and DOIs. These have been manually checked before being joined to the main database. 
+
+```{r,eval=fullMode,echo=fullMode}
+source("./utility/nabunkenLink.R")
+### The following block is executed only in the very first iteration:
+# c14raw.tmp = unique(data.frame(site=c14raw$SiteName,reference=c14raw$Reference))
+# nabunkenRes=refNabunkenLink(site=c14raw.tmp$site,reference=c14raw.tmp$reference)
+# nabunkenRes$toCheck=TRUE
+# write.csv(nabunkenRes,"./lookup/nabunkenURL_linker.csv",row.names = FALSE)
+
+###This block is from second iteration onwards
+#Import manually edited file
+nabunkenRes=read.csv("./lookup/nabunkenURL_linker.csv",stringsAsFactors = FALSE)
+#check if there are any new references TO FINISH
+c14raw.tmp = unique(data.frame(site=c14raw$SiteName,reference=c14raw$Reference,stringsAsFactors = FALSE))
+
+if (any(!c14raw.tmp$reference%in%nabunkenRes$reference))
+{
+  i=which((!c14raw.tmp$reference%in%nabunkenRes$reference))
+  nabunkenRes2add=refNabunkenLink(site=c14raw.tmp$site[i],reference=c14raw.tmp$reference[i])
+  nabunkenRes2add$toCheck=TRUE
+  nabunkenRes=rbind.data.frame(nabunkenRes,nabunkenRes2add)
+}
+write.csv(nabunkenRes,"./lookup/nabunkenURL_linker.csv",row.names = FALSE)
 
 
+nabunkenRes=read.csv("./lookup/nabunkenURL_linker.csv",stringsAsFactors = FALSE)
+c14raw=left_join(x=c14raw,y=nabunkenRes,by=c("Reference"="reference"))
+```
+
+```{r,eval=!fullMode,echo=!fullMode}
+source("./utility/nabunkenLink.R")
+### The following block is executed only in the very first iteration:
+# c14raw.tmp = unique(data.frame(site=c14raw$SiteName,reference=c14raw$Reference))
+# nabunkenRes=refNabunkenLink(site=c14raw.tmp$site,reference=c14raw.tmp$reference)
+# nabunkenRes$toCheck=TRUE
+# write.csv(nabunkenRes,"./lookup/nabunkenURL_linker.csv",row.names = FALSE)
+
+###This block is from second iteration onwards
+# #Import manually edited file
+# nabunkenRes=read.csv("./lookup/nabunkenURL_linker.csv",stringsAsFactors = FALSE)
+# #check if there are any new references TO FINISH
+# c14raw.tmp = unique(data.frame(site=c14raw$SiteName,reference=c14raw$Reference,stringsAsFactors = FALSE))
+# 
+# if (any(!c14raw.tmp$reference%in%nabunkenRes$reference))
+# {
+#   i=which((!c14raw.tmp$reference%in%nabunkenRes$reference))
+#   nabunkenRes2add=refNabunkenLink(site=c14raw.tmp$site[i],reference=c14raw.tmp$reference[i])
+#   nabunkenRes2add$toCheck=TRUE
+#   nabunkenRes=rbind.data.frame(nabunkenRes,nabunkenRes2add)
+# }
+# write.csv(nabunkenRes,"./lookup/nabunkenURL_linker.csv",row.names = FALSE)
 
 
+nabunkenRes=read.csv("./lookup/nabunkenURL_linker.csv",stringsAsFactors = FALSE)
+c14raw=left_join(x=c14raw,y=nabunkenRes,by=c("Reference"="reference"))
+```
 
 
 
