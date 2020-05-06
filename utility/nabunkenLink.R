@@ -61,7 +61,7 @@ refNabunkenLink<-function(site,reference,maxchar=80,delay=1,ua="Contact Email: e
       content<-sapply(strsplit(content,"<td>"),function(x){x[2]})
       content<-sapply(strsplit(content,"</td>"),function(x){x[1]})
       content <- content[-2]
-      contentOriginal <- contentOriginal[-2]
+      #contentOriginal <- contentOriginal[-2]
       
       if (any(header=='URL',na.rm=TRUE)){nabunkenURL[index]=html_text(contentOriginal[which(header=='URL')],trim=TRUE)}
       if (any(header=='DOI',na.rm=TRUE)){DOI[index]=html_text(contentOriginal[which(header=='DOI')],trim=TRUE)}
