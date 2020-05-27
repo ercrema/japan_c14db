@@ -450,11 +450,12 @@ source("./utility/siteNameTranscript.R")
 #sitenames$matched=(sitenames$SiteName==sitenames$MatchedName)
 #sitenames$ToCheck = !sitenames$matched | is.na(sitenames$Furigana)
 #sitenames=dplyr::select(sitenames,SiteName,Furigana,ToCheck)
+#sitenames$Alternative=NA
 #write.csv(sitenames,"./lookup/sitenamesTranscript.csv",row.names = FALSE)
 
 ###This block is from second iteration onwards
 #Import manually edited file
-sitenames=read.csv("./lookup/sitenamesTranscript.csv")
+sitenames=read.csv("./lookup/sitenamesTranscript.csv",stringsAsFactors = FALSE)
 siteList = unique(c14raw$SiteName)
 
 # The following step updates the lookup table in case there are some missing sites
@@ -469,14 +470,67 @@ if (!all(unique(siteList)%in%sitenames$SiteName))
 }
 
 # The section reads and merges the sitenames to the main data.frame
-sitenames=read.csv("./lookup/sitenamesTranscript.csv")
-sitenames = sitenames[,1:2]
+sitenames=read.csv("./lookup/sitenamesTranscript.csv",stringsAsFactors = FALSE)
+
+### Processing Site Type
+sitenames$SiteType=NA
+# 遺跡群
+sitenames$SiteType[grep('いせきぐん',sitenames$Furigana)]='Site Cluster'
+# 遺跡
+sitenames$SiteType[which(is.na(sitenames$SiteType)&grepl('いせき',sitenames$Furigana))]='Site'
+sitenames$SiteType[which(is.na(sitenames$SiteType)&grepl('遺跡',sitenames$SiteName))]='Site'
+
+# 貝塚
+sitenames$SiteType[grep('かいづか',sitenames$Furigana)]='Shell Midden'
+sitenames$SiteType[grep('貝塚',sitenames$SiteName)]='Shell Midden'
+
+# 窯跡群
+sitenames$SiteType[grep('窯跡群',sitenames$SiteName)]='Kiln Cluster'
+# 窯跡
+sitenames$SiteType[which(is.na(sitenames$SiteType)&grepl('窯跡',sitenames$SiteName))]='Kiln'
+sitenames$SiteType[grep('窯跡群',sitenames$SiteName)]='Kiln'
+sitenames$SiteType[grep('窯',sitenames$SiteName)]='Kiln'
+
+# 館跡
+sitenames$SiteType[grep('館跡',sitenames$SiteName)]='Fort'
+# 城跡
+sitenames$SiteType[grep('城跡',sitenames$SiteName)]='Castle'
+# 古墳
+sitenames$SiteType[grep('古墳',sitenames$SiteName)]='Kofun'
+# 洞窟
+sitenames$SiteType[grep('洞窟',sitenames$SiteName)]='Cave'
+sitenames$SiteType[grep('洞穴',sitenames$SiteName)]='Cave'
+# 城
+sitenames$SiteType[grep('城',sitenames$SiteName)]='Castle'
+# 横穴
+sitenames$SiteType[grep('横穴',sitenames$SiteName)]='Side-Hole Burial'
+# 水田址
+sitenames$SiteType[grep('水田址',sitenames$SiteName)]='Paddy Field'
+# 寺跡
+sitenames$SiteType[grep('寺跡',sitenames$SiteName)]='Temple/Shrine'
+# 列石
+sitenames$SiteType[grep('列石',sitenames$SiteName)]='Standing Stones'
+# Everything Else
+sitenames$SiteType[which(is.na(sitenames$SiteType))]='Other'
+
+# Romanise
 sitenames$Romanised = kana2roma(sitenames$Furigana)
-sitenames$Romanised2 = unlist(lapply(strsplit(sitenames$Romanised[1:4],"iseki"),function(x){x[1]}))
+
+# Remove Site Type Terms (experimental)
+sitenames$Romanised2 = gsub("isekigun","",sitenames$Romanised)
+sitenames$Romanised2 = gsub("iseki","",sitenames$Romanised2)
+sitenames$Romanised2 = gsub("kofun","",sitenames$Romanised2)
+sitenames$Romanised2 = gsub("kaizuka","",sitenames$Romanised2)
+
 #Merge Back to Main DB
 c14raw=left_join(x=c14raw,y=sitenames,by="SiteName")
 ```
 
+
+
+
+
+<!-- the code below should be updated -->
 ```{r,eval=!fullMode,echo=!fullMode}
 # library(Nippon)
 # source("./utility/siteNameTranscript.R")
