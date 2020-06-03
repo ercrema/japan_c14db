@@ -544,6 +544,8 @@ c14raw=left_join(x=c14raw,y=sitenames,by="SiteName")
 ## Store Output
 ```{r}
 write.csv(c14raw,file='japanc14db_v01(190801).csv')
+c14db=c14raw
+save(c14db,file='japanc14db_v01(190801).RData')
 ```
 
 
