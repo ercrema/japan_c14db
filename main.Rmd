@@ -125,6 +125,11 @@ Finally we add a column indicating whether a specific entry should be retained o
 c14raw$retain=TRUE
 ```
 
+and create a reference so that original input files can be easily identified
+```{r}
+c14raw$originalRow = 2:(nrow(c14raw)+1)
+```
+
 ###CHECK001: LabCode and Unique Identifier 
 
 The field `$LabCode` contains the Laboratory Code of each sample and needs to be unique. First we remove all cases with missing or incomplete Code and store them in the report (file: `./reports/missingLabCodes.csv`).
@@ -237,7 +242,7 @@ c14raw=left_join(c14raw,gmap.coord)
 #gmap.coord=extractCoordinates(unique.Addresses)
 #colnames(gmap.coord)=c("SiteLocation","Latitude.gmap","Longitude.gmap")
 #write.csv("./output/gmap.coord.csv",row.names = FALSE)
-gmap.coord=read.csv(file="./output/gmap.coord.csv",row.names = FALSE)
+gmap.coord=read.csv(file="./output/gmap.coord.csv")
 c14raw=left_join(c14raw,gmap.coord)
 ```
 
@@ -491,7 +496,7 @@ if (!all(unique(siteList)%in%sitenames$SiteName))
 }
 
 # The section reads and merges the sitenames to the main data.frame
-sitenames=read.csv("./lookup/sitenamesTranscript.csv",stringsAsFactors = FALSE)
+sitenames=read.csv("./lookup/sitenamesTranscript.csv",stringsAsFactors = FALSE,na.strings = '')
 
 ### Processing Site Type ####
 sitenames$SiteType=NA
@@ -539,6 +544,17 @@ sitenames$Romanised = kana2roma(sitenames$Furigana)
 sitenames$Romanised = stringr::str_to_title(sitenames$Romanised)
 #Merge Back to Main DB
 c14raw=left_join(x=c14raw,y=sitenames,by="SiteName")
+
+
+# Report any case of sitenames with suggested correction
+if (any(!is.na(c14raw$Alternative)))
+{
+ fix.names=subset(c14raw,!is.na(Alternative))
+ write.csv(fix.names,file='./reports/sitenames_issues.csv')
+}
+
+
+
 ```
 
 ## Store Output
