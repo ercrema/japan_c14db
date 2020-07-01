@@ -47,7 +47,7 @@ We first read the most up-to-date version of the raw data (currently `c14_raw_v1
 
 ```{r}
 options(warn=-1) #suppress warning
-c14raw=read_xlsx( "./raw/c14_raw_v190801.xlsx", skip=1) %>% as.data.frame(stringsAsFactor=FALSE)
+c14raw=read_xlsx( "./raw/c14_raw_v200130.xlsx", skip=1) %>% as.data.frame(stringsAsFactor=FALSE)
 ```
 
 and assign new names to the columns
@@ -169,7 +169,7 @@ all(c14raw.rekihakuProj$LabCode%in%c14raw.NonRekihakuProj$LabCode)
 
 which does not seem to be the case. Indeed the majority (`r length(which(!c14raw.rekihakuProj$LabCode%in%c14raw.NonRekihakuProj$LabCode))` vs `r length(which(c14raw.rekihakuProj$LabCode%in%c14raw.NonRekihakuProj$LabCode))`) seems to actually not be present amongst the rest of the database.
 
-The report `./reports/duplicateLabCodes.csv') contains all instances of duplicates:
+The report `./reports/duplicateLabCodes.csv' contains all instances of duplicates:
 
 ```{r}
 for (i in 1:length(duplicates))
@@ -203,8 +203,8 @@ for (i in 1:length(duplicates))
   # If the dates are the same, retain the most recent pubblication
   if(nrow(unique(tmp))==1)
   {
+    c14raw$retain[tmp.index]=FALSE
     c14raw$retain[tmp.index[which.max(c14raw$PubblicationYear[tmp.index])]]=TRUE
-    c14raw$retain[tmp.index[which.min(c14raw$PubblicationYear[tmp.index])]]=FALSE
   } 
 }
 ```
@@ -220,31 +220,43 @@ sum(c14raw$retain)
 
 # STEP 2: Handle Spatial Coordinates and Translate Prefecture Names
 
+## Convert Missing Lat-Lon into NA
+```{r}
+c14raw$Latitude[which(c14raw$Latitude=='不明')]=NA
+c14raw$Longitude[which(c14raw$Longitude=='不明')]=NA
+c14raw$retain[which(is.na(c14raw$Latitude)|is.na(c14raw$Longitude))]=FALSE
+```
+
 ## Convert Degree Minute Seconds coordinates into Degree Decimals
 ```{r}
-c14raw$Latitude=as.numeric(char2dms(paste0(c14raw$Latitude,"N"),chd='゜',chm="'"))
-c14raw$Longitude=as.numeric(char2dms(paste0(c14raw$Longitude,"E"),chd='゜',chm="'"))
+nonNAs = which(is.na(c14raw$Latitude)|is.na(c14raw$Longitude))
+c14raw$Latitude[-nonNAs]=as.numeric(char2dms(paste0(c14raw$Latitude[-nonNAs],"N"),chd='゜',chm="'"))
+c14raw$Longitude[-nonNAs]=as.numeric(char2dms(paste0(c14raw$Longitude[-nonNAs],"E"),chd='゜',chm="'"))
+c14raw$Latitude=as.numeric(c14raw$Latitude)
+c14raw$Longitude=as.numeric(c14raw$Longitude)
 ```
+
 
 ## Estimate Coordinates Using Site Address
-```{r,eval=fullMode,echo=fullMode}
+```{r}
 source("./utility/extractCoordinates.R")
 unique.Addresses = unique(c14raw$SiteLocation)
-gmap.coord=extractCoordinates(unique.Addresses)
-colnames(gmap.coord)=c("SiteLocation","Latitude.gmap","Longitude.gmap")
+#Commented section below is for the first run
+#gmap.coord=extractCoordinates(unique.Addresses)
+#colnames(gmap.coord)=c("SiteLocation","Latitude.gmap","Longitude.gmap")
+#write.csv(gmap.coord,"./output/gmap.coord.csv",row.names = FALSE)
+gmap.coord=read.csv(file="./output/gmap.coord.csv",stringsAsFactors = FALSE)
+if (sum(!unique.Addresses%in%gmap.coord$SiteLocation)>0)
+{
+missing.Addresses=unique.Addresses[which(!unique.Addresses%in%gmap.coord$SiteLocation)]
+gmap.coord.extra=extractCoordinates(missing.Addresses)
+colnames(gmap.coord.extra)=c("SiteLocation","Latitude.gmap","Longitude.gmap")
+gmap.coord=rbind.data.frame(gmap.coord,gmap.coord.extra)
 write.csv(gmap.coord,"./output/gmap.coord.csv",row.names = FALSE)
+}
 c14raw=left_join(c14raw,gmap.coord)
 ```
 
-```{r,eval=!fullMode,echo=!fullMode}
-#source("./utility/extractCoordinates.R")
-#unique.Addresses = unique(c14raw$SiteLocation)
-#gmap.coord=extractCoordinates(unique.Addresses)
-#colnames(gmap.coord)=c("SiteLocation","Latitude.gmap","Longitude.gmap")
-#write.csv("./output/gmap.coord.csv",row.names = FALSE)
-gmap.coord=read.csv(file="./output/gmap.coord.csv")
-c14raw=left_join(c14raw,gmap.coord)
-```
 
 ## Translate Prefecture Names
 ```{r}
@@ -271,7 +283,7 @@ write.csv(c14raw[missing.coord.index,],"./reports/nocoordinates_and_noreliablead
 
 Check whether the coordinates fall within the designated prefectures using the utility function `checkPrefecture()`, and store them on designated fields:
 
-```{r,eval=fullMode,echo=fullMode}
+```{r}
 source("./utility/checkPrefecture.R")
 original.coord.check = checkPrefecture(lat=c14raw$Latitude,lon=c14raw$Longitude,pref = c14raw$PrefectureNameEn)
 gmap.coord.check = checkPrefecture(lat=c14raw$Latitude.gmap,lon=c14raw$Longitude.gmap,pref = c14raw$PrefectureNameEn)
@@ -280,27 +292,24 @@ c14raw$coord.check=original.coord.check
 c14raw$gmap.coord.check=gmap.coord.check
 ```
 
-```{r,eval=!fullMode,echo=!fullMode}
-#source("./utility/checkPrefecture.R")
-#original.coord.check = checkPrefecture(lat=c14raw$Latitude,lon=c14raw$Longitude,pref = c14raw$PrefectureNameEn)
-#gmap.coord.check = checkPrefecture(lat=c14raw$Latitude.gmap,lon=c14raw$Longitude.gmap,pref = c14raw$PrefectureNameEn)
-#save(original.coord.check,gmap.coord.check,file="./output/reverseGeocode.RData")
-load("./output/reverseGeocode.RData")
-c14raw$coord.check=original.coord.check
-c14raw$gmap.coord.check=gmap.coord.check
-```
-
 Determine if there are instances of mismatches. Starting from the provided coordinates:
+
 ```{r}
 tmp.index=which((is.na(c14raw$coord.check)|c14raw$coord.check==FALSE)&c14raw$Latitude!=0&c14raw$Longitude!=0)
 tmp=c14raw[tmp.index,]
 tmp=unique(tmp[,c("Prefecture","SiteName","SiteLocation","Latitude","Longitude","coord.check")])
 ```
 
-Manual check in both cases confirm their locations are correct. We thus manually adjust them:
+Manual check. `r tmp$Sitename[3]` is in Kagoshima and `r tmp$Sitename[4]` is in Sapporo, although both are recorded as in Hokkaido. 
 
 ```{r}
-c14raw$coord.check[tmp.index]=TRUE
+c14raw$coord.check[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[1:2]))]=TRUE
+```
+
+These two cases should also have retain set to FALSE:
+
+```{r}
+c14raw$retain[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[3:4]))]=FALSE
 ```
 
 Now check the Google map coordinates
@@ -316,7 +325,6 @@ There are `r nrow(tmp)` locations with mismatches, indicating that the original 
 ```{r}
 c14raw <- subset(c14raw, select = -c(gmap.coord.check,Latitude.gmap,Longitude.gmap))
 ```
-
 
 ##### SiteIDs and Coordinates
 The database does not provide unique identifier for sites. Thus several sites with different names might refer to the same site, but equally because coordinates were often derived from addresses, multiple sites with different names might have the same spatial coordinate as well. In remote cases the same site might have also different coordinates in different publications. 
@@ -373,8 +381,11 @@ for (i in 1:length(dup.ids))
   }
   
   c14raw$Latitude.new[row.index]
-  
-  idistance=spDists(x=as.matrix(tmp.df[c("Longitude","Latitude")]),longlat=TRUE)
+  if (any(is.na(tmp.df[c("Longitude","Latitude")])))
+  {
+    idistance=9999
+  } else {
+  idistance=spDists(x=as.matrix(tmp.df[c("Longitude","Latitude")]),longlat=TRUE)}
   if (max(idistance)>0){ #eliminates cases where the differences is just on Reference ID or address
     tmp.df$idistance=max(idistance)  
     if (i==1) {d=tmp.df}
@@ -410,6 +421,7 @@ for (i in 1:length(RetainUpdateCoordinateIndex))
 
 ## Calibration
 ```{r}
+c14raw$Method_En=NA
 c14raw$Method_En[which(c14raw$Method%in%c("β線法","β線","β線法\n"))]="Beta Counting"
 c14raw$Method_En[which(c14raw$Method=="AMS法")]="AMS"
 c14raw$Method_En[which(c14raw$Method=="不明")]=NA
@@ -436,9 +448,9 @@ colnames(c14raw)[which(colnames(c14raw)=="Description.y")]="Material_Details"
 periods = read.csv("./lookup/periods_translation.csv")
 
 # The following step updates the lookup table
-# period.tmp=data.frame(Period=unique(as.character(c14raw$Period)),stringsAsFactors = FALSE)
-# period.tmp=left_join(period.tmp,periods,by="Period")
-# write.csv(period.tmp,file="./lookup/periods_translation.csv",row.names=F)
+period.tmp=data.frame(Period=unique(as.character(c14raw$Period)),stringsAsFactors = FALSE)
+period.tmp=left_join(period.tmp,periods,by="Period")
+write.csv(period.tmp,file="./lookup/periods_translation_todo.csv",row.names=F)
 
 # Before joining this to the main DB
 c14raw=left_join(x=c14raw,y=periods,by="Period")
@@ -453,9 +465,10 @@ c14raw=left_join(x=c14raw,y=periods,by="Period")
 phases = read.csv("./lookup/phases_translation.csv")
 
 # The following step updates the lookup table
-# phases.tmp=data.frame(Phase=unique(as.character(c14raw$Phase)),stringsAsFactors = FALSE)
-# phases.tmp=left_join(phases.tmp,phases,by="Phase")
-# write.csv(period.tmp,file="./lookup/periods_translation.csv",row.names=F)
+phases.tmp=data.frame(Phase=unique(as.character(c14raw$Phase)),stringsAsFactors = FALSE)
+phases.tmp=left_join(phases.tmp,phases,by="Phase")
+write.csv(phases.tmp,file="./lookup/phases_translation_todo.csv",row.names=F)
+
 
 # Before joining this to the main DB
 c14raw=left_join(x=c14raw,y=phases,by="Phase")
@@ -464,7 +477,7 @@ c14raw=left_join(x=c14raw,y=phases,by="Phase")
 ## Site Names
 
 Site names have been romanised by first using the Nabunken Site Report Database to automatically extract the _furigana_ of site names in _kanji_, followed by a manual check for fixing potential mismatch and missing _furigana_. Romanisation has been carried out using the `kana2roma()` function from the `Nippon` package. 
-
+<!-- stored everything till this point in temp_c14raw.RData -->
 ```{r,eval=fullMode,echo=fullMode}
 library(Nippon)
 source("./utility/siteNameTranscript.R")
