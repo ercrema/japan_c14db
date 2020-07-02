@@ -9,5 +9,5 @@ missingSites = unique(siteList)[which(!unique(siteList)%in%sitenames$SiteName)]
 additional_sitenames=siteNameTranscript(missingSites)
 sitenames=rbind.data.frame(sitenames,data.frame(SiteName=additional_sitenames$SiteName,
                                                 Furigana=additional_sitenames$Furigana,
-                                                ToCheck=TRUE))
+                                                ToCheck=TRUE,Alternative=''))
 write.csv(sitenames,"./lookup/sitenamesTranscript_todo.csv",row.names = FALSE)
