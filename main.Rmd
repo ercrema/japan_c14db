@@ -16,6 +16,7 @@ library(sp)
 library(NipponMap) 
 library(mapdata)
 library(maptools)
+library(Nippon)
 ```
 
 # General Info
@@ -118,6 +119,14 @@ And from site names
 ```{r}
 c14raw$SiteName =  gsub("[\r\n]", "", c14raw$SiteName)
 c14raw$SiteName =  gsub(" ", "", fixed=TRUE, c14raw$SiteName) #remove also white-space
+```
+
+As well as Phases, Periods, and Address
+
+```{r}
+c14raw$Phase = gsub("[\r\n]", "", c14raw$Phase)
+c14raw$Period = gsub("[\r\n]", "", c14raw$Period)
+c14raw$SiteLocation = gsub("[\r\n]", "", c14raw$SiteLocation)
 ```
 
 Finally we add a column indicating whether a specific entry should be retained or eliminated for analyses.
@@ -249,7 +258,7 @@ gmap.coord=read.csv(file="./output/gmap.coord.csv",stringsAsFactors = FALSE)
 if (sum(!unique.Addresses%in%gmap.coord$SiteLocation)>0)
 {
 missing.Addresses=unique.Addresses[which(!unique.Addresses%in%gmap.coord$SiteLocation)]
-gmap.coord.extra=extractCoordinates(missing.Addresses)
+gmap.coord.extra=extractCoordinates(missing.Addresses,api = 'AIzaSyBgQGevFZ4GhdUOoZOWYK8SM_b1b3WRo8I')
 colnames(gmap.coord.extra)=c("SiteLocation","Latitude.gmap","Longitude.gmap")
 gmap.coord=rbind.data.frame(gmap.coord,gmap.coord.extra)
 write.csv(gmap.coord,"./output/gmap.coord.csv",row.names = FALSE)
@@ -402,6 +411,7 @@ Set `$Retain` to FALSE when the coordinate mismatch is above 5km:
 NotRetainIndex = as.numeric(unlist(strsplit(d$rowindex[which(d$idistance>=5)],"[|]")))
 c14raw$retain[NotRetainIndex]=FALSE
 ```
+
 Update coordinates to mean latitude and longitude when mismatch is below 5km
 ```{r}
 RetainUpdateCoordinateIndex = which(d$idistance<5)
@@ -445,13 +455,15 @@ colnames(c14raw)[which(colnames(c14raw)=="Description.y")]="Material_Details"
 # periods = unique(data.frame(Period=c14db$Period,PeriodEN=NA))
 # periods = arrange(periods,Period)
 # write.csv(periods,file="./lookup/periods_toTranslate.csv",row.names=F)
-periods = read.csv("./lookup/periods_translation.csv")
+periods = unique(read.csv("./lookup/periods_translation.csv"))
 
 # The following step updates the lookup table
+if (any(!unique(as.character(c14raw$Period))%in%periods$Period))
+{
 period.tmp=data.frame(Period=unique(as.character(c14raw$Period)),stringsAsFactors = FALSE)
 period.tmp=left_join(period.tmp,periods,by="Period")
 write.csv(period.tmp,file="./lookup/periods_translation_todo.csv",row.names=F)
-
+}
 # Before joining this to the main DB
 c14raw=left_join(x=c14raw,y=periods,by="Period")
 ```
@@ -464,6 +476,9 @@ c14raw=left_join(x=c14raw,y=periods,by="Period")
 # write.csv(phases,file="./translation/phases_toTranslate.csv",row.names=F)
 phases = read.csv("./lookup/phases_translation.csv")
 
+
+
+if (any(!unique(as.character(c14raw$Phase))%in%phases$Phase))
 # The following step updates the lookup table
 phases.tmp=data.frame(Phase=unique(as.character(c14raw$Phase)),stringsAsFactors = FALSE)
 phases.tmp=left_join(phases.tmp,phases,by="Phase")
@@ -477,8 +492,7 @@ c14raw=left_join(x=c14raw,y=phases,by="Phase")
 ## Site Names
 
 Site names have been romanised by first using the Nabunken Site Report Database to automatically extract the _furigana_ of site names in _kanji_, followed by a manual check for fixing potential mismatch and missing _furigana_. Romanisation has been carried out using the `kana2roma()` function from the `Nippon` package. 
-<!-- stored everything till this point in temp_c14raw.RData -->
-```{r,eval=fullMode,echo=fullMode}
+```{r}
 library(Nippon)
 source("./utility/siteNameTranscript.R")
 
@@ -572,9 +586,9 @@ if (any(!is.na(c14raw$Alternative)))
 
 ## Store Output
 ```{r}
-write.csv(c14raw,file='japanc14db_v01(190801).csv')
+write.csv(c14raw,file='japanc14db_v02(200130).csv')
 c14db=c14raw
-save(c14db,file='japanc14db_v01(190801).RData')
+save(c14db,file='japanc14db_v02(200130).RData')
 ```
 
 

@@ -1,12 +1,12 @@
 Phase,PhaseEN
-,NA
+　,NA
 _,NA
 〜9世紀前半,Up to 9th century [First Half]
 (TK47〜MT15期),(TK47 - MT15)
 (月影Ⅰ式),(Tsukikage I)
 (猫橋式)(白江式),(Nekobashi) (Shiroe)
-(磯部式～)戸水式,(Isobe - ) Tomizu 
 (磯部式～）戸水式,(Isobe - ) Tomizu
+(磯部式～)戸水式,(Isobe - ) Tomizu 
 1.7万〜1.6万年前,"17,000 - 16,000 years ago"
 10〜11世紀,10th century - 11th century
 10〜12世紀,10th century - 12th century
@@ -50,6 +50,7 @@ _,NA
 10世紀後半〜15世紀前半,10th century [Second Half] - 15th century [First Half]
 10世紀後半以降,After 10th century [Second Half]
 10世紀後葉,10th century [Late]
+10世紀末〜11世紀前半,10th century [Final] - 11th century [First Half]
 10世紀第1四半期〜中葉,10th century [First Quarter - Middle]
 10世紀第1四半期頃,10th century [First Quarter ca.]
 10世紀第2四半期以降,After 10th century [Second Quarter]
@@ -57,6 +58,7 @@ _,NA
 10世紀頃,10th century [ca.]
 11〜12世紀,11th century - 12th century
 11〜13世紀,11th century - 13th century
+1143年金堂焼失,1143 AD [Kondo burned down]
 11世紀,11th century
 11世紀〜12世紀,11th century - 12th century
 11世紀〜12世紀前半,11th century - 12th century [First Half]
@@ -68,17 +70,22 @@ _,NA
 11世紀前半,11th century [First Half]
 11世紀前半〜12世紀中頃,11th century [First Half] - 12th century [Middle ca.]
 11世紀前半〜12世紀半ば,11th century [First Half] - 12th century [Middle]
+11世紀前半以降,After 11th century [First Half]
 11世紀半ば〜12世紀後半,11th century [First Half] - 12th century [Second Half]
 11世紀後半〜12世紀,11th century [Second Half] - 12th century
 11世紀後半〜12世紀中葉頃,11th century [Second Half] - 12th century [Middle ca.]
 11世紀後半〜12世紀代,11th century [Second Half] - 12th century [ca.]
 11世紀後半〜13世紀初頭,11th century [Second Half] - 13th century [Initial]
 11世紀頃,11th century [ca.] 
+12〜13世紀･土師器･須恵器,12th century - 13th century [Hajiki / Sueki]
+12〜14世紀,12th century - 14th century 
 12〜15世紀,12th century - 15th century
 12〜16世紀,12th century - 16th century
 12世紀,12th century 
+12世紀、15世紀後半〜16世紀,"12th century, 15th century [Second Half] - 16th century"
 12世紀?,12th century?
 12世紀中頃,12th century [Middle ca.]
+12世紀代,12th century [ca.]
 12世紀前半,12th century [First Half]
 12世紀後半,12th century [Second Half]
 12世紀後半〜13世紀,12th century [Second Half] - 13th century
@@ -100,6 +107,7 @@ _,NA
 13〜14世紀頃,13th century - 14th century [ca.]
 13〜15世紀,13th century - 15th century
 13〜16世紀,13th century - 16th century
+13〜17世紀,13th century - 17th century 
 13000年前,13000 years ago
 1360年銘の板碑,1360 AD (Inscription)
 1361年の正平(康安)地震に伴う?,Contemporary to the 1361 Shouhei (Kouan) earthquake? 
@@ -125,6 +133,7 @@ _,NA
 13世紀後葉〜末葉,13th century [Late - Final]
 13世紀末〜14世紀,13th century [Final] - 14th century
 14〜15世紀,14th century - 15th century
+14〜16世紀,14th century - 16th century
 14〜17世紀,14th century - 17th century
 1471年(文明ボラ降下)直前ごろ,Immediately before Bunmei Bora in 1471 AD [ca.] 
 14世紀,14th century
@@ -144,11 +153,14 @@ _,NA
 14世紀後半〜15世紀,14th century [Second Half] - 15th century
 14世紀後半〜15世紀前半,14th century [Second Half] - 15th century [First Half]
 14世紀後半〜15世紀後半,14th century [Second Half] - 15th century [Second Half]
+14世紀後半〜16世紀後半,14th century [Second Half] - 16th century [Second Half]
 14世紀後葉〜15世紀前半,14th century [Late] - 15th century [First Half]
+14世紀後葉以降･龍泉窯系青磁椀,After 14th century / Longquan celadon type bowl
 14世紀末〜15世紀前半,14th century [Final] - 15th century [First Half]
 14世紀末～15世紀前半,14th century [Final] - 15th century [First Half]
 14世紀頃,14th century [ca.]
 15〜16世紀,15th century - 16th century
+15〜16世紀代,15th century - 16th century [ca.]
 15〜16世紀頃,15th century - 16th century [ca.]
 15〜18世紀代,15th century - 18th century [ca.]
 15～16世紀,15th century - 16th century
@@ -158,6 +170,7 @@ _,NA
 15世紀〜16世紀前半,15th century - 16th century [First Half]
 15世紀?,15th century?
 15世紀中葉,15th century [Middle]
+15世紀中葉〜16世紀初頭,15th century [Middle] - 16th century [Initial]
 15世紀中頃〜15世紀末,15th century [Middle ca. - Final]
 15世紀中頃〜後半,15th century [Middle ca. - Second Half]
 15世紀代,15th century [ca.]
@@ -168,9 +181,10 @@ _,NA
 15世紀後半,15th century [Second Half]
 15世紀後半〜16世紀中頃,15th century [Second Half] - 16th century [Middle ca.]
 15世紀後半〜16世紀代,15th century [Second Half] - 16th century [ca.]
+15世紀後半〜16世紀初め頃･備前焼壺,15th century [Second Half] - 16th century [Initial ca.] / Bizenware jar
 15世紀後半〜16世紀前半,15th century [Second Half] - 16th century [First Half]
 15世紀後半〜17世紀半ば,15th century [Second Half] - 17th century [Middle]
-15世紀末〜17世紀前葉,15th century [Final] - 17th century [Early]
+15世紀末〜17世紀前葉　,NA
 15世紀終わり〜16世紀初め,15th century [Final] - 16th century [Initial]
 16〜17世紀中頃,16th century - 17th century [Middle ca.]
 1636年〜18世紀前半,1636 - 18th century [First Half]
@@ -181,6 +195,7 @@ _,NA
 16世紀中葉,16th century [Middle]
 16世紀中頃,16th century [Middle ca.]
 16世紀中頃〜17世紀中頃,16th century [Middle ca.] - 17th century [Middle ca.]
+16世紀中頃前後,16th century [Middle ca.]
 16世紀代,16th century [ca.]
 16世紀以前,Before 16th century 
 16世紀以降,After 16th century
@@ -191,23 +206,30 @@ _,NA
 16世紀前半頃,16th century [First Half ca.]
 16世紀前後,16th century [ca.]
 16世紀前葉,16th century [Early]
+16世紀前葉〜17世紀初頭,16th century [Early] - 17th century [Initial]
 16世紀半ば〜後半もしくはそれ以前,16th century [Middle - Second Half or Before]
 16世紀後半,16th century [Second Half]
 16世紀後半〜17世紀初頭,16th century [Second Half] - 17th century [Initial]
+16世紀後半･白磁･輸入磁器等,16th century [Second Half] / Dehua porcelain / Imported pottery etc. 
 16世紀末〜17世紀初頭,16th century [Final] - 17th century [Initial]
 16世紀末〜17世紀前半,16th century [Final] - 17th century [First Half]
 16世紀末以降,After 16th century [Final]
 16世紀頃から17世紀頃,16th century [ca.] - 17th century [ca.] 
 1740〜1752年,1740 - 1752 AD
+17C後半以降,After 17th century [Second Half]
+17C末以降,After 17th century [Final]
 17世紀,17th century
 17世紀〜19世紀以降,17th century - After 19th century
 17世紀中〜後半,17th century [Middle - Second Half]
 17世紀中頃〜20世紀中頃,17th century [Middle ca.] - 20th century [Middle ca.]
 17世紀前半,17th century [First Half]
+17世紀前半〜19世紀代･肥前陶磁器,17th century [First Half] - 19th century [ca.] / Bizen Ware 
+17世紀前半〜後半･肥前陶磁器他,17th century [First Half - Second Half ] / Bizen Ware etc. 
 17世紀前半以降,After 17th century [First Half]
 17世紀前葉〜中葉以前,17th century [Early - Before Middle]
 17世紀前葉以降,After 17th century [Middle]
 17世紀後〜18世紀代,17th century - 18th century [ca.] 
+17世紀後半,17th century [Second Half]
 17世紀後半〜18世紀,17th century [Second Half] - 18th century
 17世紀後半〜18世紀前半,17th century [Second Half] - 18th century [First Half]
 17世紀後半頃と18世紀後葉頃,17th century [Second Half ca.] and 18th century [Late ca.]
@@ -225,6 +247,7 @@ _,NA
 18世紀後半以前,Before 18th century [Second Half]
 18世紀後半以降,After 18th century [Second Half]
 18世紀第3四半期頃,18th century [3rd Quarter ca.]
+19〜20世紀･染付椀･青磁椀他,19th century - 20th century / Sometsuke ware / Celadon-wan etc. 
 1966年8月31日採取,NA
 1966年8月31日採取　上田,NA
 1966年9月3日採取　上田,NA
@@ -241,6 +264,7 @@ _,NA
 2世紀中葉〜4世紀前葉,2nd century [Middle] - 4th century [Early]
 2世紀前半〜3世紀前半,2nd century [First Half] - 3rd century [First Half]
 2世紀前後,2nd century [ca.]
+3〜5世紀,3rd century - 5th century 
 3万年前以前,"Before 30,000 years ago"
 3世紀,3rd century
 3世紀〜5世紀初頭,3rd century - 5th century [Initial]
@@ -256,6 +280,8 @@ _,NA
 4〜5世紀代,4th century - 5th century [ca.]
 4世紀,4th century
 4世紀〜7世紀,4th century - 7th century
+4世紀中頃〜6世紀初頭,4th century [Middle ca.] - 6th century [Initial]
+4世紀代,4th century [ca.]
 4世紀初頭〜前葉,4th century [Initial - Early]
 4世紀前半,4th century [First Half]
 4世紀前半〜5世紀前半,4th century [First Half] - 5th century [First Half]
@@ -263,7 +289,11 @@ _,NA
 4世紀後半,4th century [Second Half]
 4世紀後半〜5世紀前葉,4th century [Second Half] - 5th century [Early]
 4世紀後葉,4th century [Late]
+4世紀末〜5世紀中頃,4th century [Final] - 5th century [Middle ca.]
+4世紀末〜5世紀前葉,4th century [Final] - 5th century [Early]
 4世紀頃,4th century [ca.]
+5〜6世紀,5th century - 6th century 
+5〜6世紀中頃,5th century - 6th century [Middle]
 5000年前〜5500年前の火山灰,Tephra of 5000 - 5500 years ago
 5000年前〜5500年前の火山灰下層,Below Tephra of 5000 - 5500 years ago
 5万年前以上,"More than 50,000 years ago"
@@ -271,36 +301,48 @@ _,NA
 5世紀中葉,5th century [Middle]
 5世紀中葉〜6世紀前半,5th century [Middle] - 6th century [First Half]
 5世紀中頃,5th century [Middle]
+5世紀中頃〜後半,5th century [Middle - Second Half]
 5世紀初頭〜6世紀前半,5th century [Initial] - 6th century [First Half]
 5世紀前半,5th century [First Half] 
 5世紀前半〜6世紀前半,5th century [First Half] - 6th century [First Half]
+5世紀前半〜中葉,5th century [First Half - Middle]
 5世紀前葉,5th century [Early] 
 5世紀前葉〜6世紀前葉,5th century [Early] - 6th century [Early]
 5世紀後半,5th century [Second Half]
 5世紀後半〜6世紀,5th century [Second Half] - 6th century
 5世紀後半〜6世紀前半頃,5th century [Second Half] - 6th century [First Half ca.]
+5世紀後半〜末,5th century [Second Half - Final]
 5世紀後葉,5th century [Late]
 5世紀末〜6世紀前半,5th century [Final] - 6th century [First Half]
 5世紀末から6世紀初頭,5th century [Final] - 6th century [Initial]
 5世紀末葉〜6世紀初頭,5th century [Final] - 6th century [Initial]
+5世紀頃,5th century [ca.]
 6〜7世紀,6th century - 7th century
 ６〜7世紀,6th century - 7th century
+6〜8世紀,6th century - 8th century 
+6C後半〜7C初頭･須恵器杯身,6th century [Second Half] - 7th century [Initial] / Sue Pottery
 6世紀,6th century
+6世紀〜13世紀,6th century - 13th century 
 6世紀の第4半期,6th century [Final Quarter]
 6世紀中葉〜7世紀初頭,6th century [Middle] - 7th century [Initial]
 6世紀中葉〜後葉,6th century [Middle - Late]
 6世紀中葉、7世紀後葉,"6th century [Middle], 7th century [Late]"
+6世紀中頃,6th century [Middle ca.]
 6世紀代,6th century [ca.]
+6世紀代か,6th century ?
+6世紀初頭,6th century [Initial]
 6世紀前〜中葉,6th century [Early - Middle]
 6世紀前半,6th century [First Half]
 6世紀前半代,6th century [First Half ca.]
 6世紀前葉,6th century [Early]
 6世紀後半,6th century [Second Half] 
 6世紀後半〜7世紀中頃,6th century [Second Half] - 7th century [Middle ca.]
+6世紀後半〜末,6th century [Second Half - Final] 
 6世紀後半頃,6th century [Second Half ca.]
 6世紀後葉,6th century [Late] 
 6世紀後葉〜7世紀前葉,6th century [Late] - 7th century [Early]
 6世紀末-7世紀,6th century [Final] - 7th century
+6世紀末〜7世紀初頭,6th century [Final] - 7th century [Initial]
 6世紀末〜7世紀前半,6th century [Final] - 7th century [First Half]
 6世紀末から7世紀前半,6th century [Final] - 7th century [First Half]
 6世紀末葉,6th century [Final]
@@ -324,10 +366,13 @@ _,NA
 7世紀中頃〜後半,7th century [Middle ca.- Second Half]
 7世紀代,7th century [ca.] 
 7世紀代〜8世紀初頭,7th century [ca.] - 8th century [Initial]
+7世紀代･須恵器,7th century [ca.] / Sue pottery
 7世紀以降,After 7th century
 7世紀前半,7th century [First Half]
 7世紀前半頃,7th century [First Half ca.]
+7世紀前後,7th century [ca.]
 7世紀前葉,7th century [Early]
+7世紀前葉前後、6〜8世紀･兼久式土器,"7th century [Early ca.], 6th century - 8th century / Kaneku pottery"
 7世紀半ば,7th century [Middle] 
 7世紀半ば〜8世紀半ば,7th century [Middle] - 8th century [Middle]
 7世紀後半,7th century [Second Half] 
@@ -342,6 +387,7 @@ _,NA
 7世紀末〜8世紀初頭,7th century [Final] - 8th century [Initial]
 7世紀末〜8世紀前半,7th century [Final] - 8th century [First Half]
 7世紀末〜8世紀前葉,7th century [Final] - 8th century [Early]
+7世紀末〜9世紀初頭,7th century [Final] - 9th century [Initial]
 7世紀末以降,After 7th century [Final]
 7世紀第3四半期頃,7th century [Third Quarter ca.]
 7世紀第4四半期〜8世紀第1四半期頃,7th century [Final Quarter] - 8th century [First Quarter ca.]
@@ -356,19 +402,23 @@ _,NA
 8世紀〜10世紀,8th century - 10th century
 8世紀〜12世紀,8th century - 12th century
 8世紀〜9世紀,8th century - 9th century
+8世紀か,8th century ?
 8世紀中〜9世紀頃,8th century - 9th century [ca.]
 8世紀中葉,8th century [Middle]
 8世紀中葉から9世紀,8th century [Middle] - 9th century
 8世紀中葉から9世紀前半,8th century [Middle] - 9th century [First Half]
+8世紀中頃,8th century [Middle ca.]
 8世紀中頃〜後半,8th century [Middle - Late]
 8世紀中頃から8世紀後半代,8th century [Middle - Second Half ca.]
 8世紀代,8th century [ca.]
 8世紀代前半,8th century [First Half ca.]
+8世紀代後半〜9世紀代前半,8th century [Second Half] - 9th century [FIrst Half]
 8世紀初頭,8th century [Initial]
 8世紀前半,8th century [First Half]
 8世紀前半〜9世紀後半,8th century [First Half] - 9th century [Second Half]
 8世紀前半〜中頃,8th century [First Half - Middle ca.]
 8世紀前半頃,8th century [First Half ca.]
+8世紀前後,8th century [ca.]
 8世紀前葉,8th century [Early]
 8世紀前葉〜中葉,8th century [Early - Middle]
 8世紀後半,8th century [Second Half]
@@ -414,8 +464,10 @@ _,NA
 9世紀中葉から後半,9th century [Middle - Second Half]
 9世紀中頃,9th century [Middle ca.]
 9世紀中頃〜11世紀初頭,9th century [Middle ca.] - 11th century [Initial]
+9世紀中頃〜後半,9th century [Middle - Second Half]
 9世紀中頃以前,Before 9th century [Middle ca.]
 9世紀代,9th century [ca.]
+9世紀代前半･土師器,9th century [First Half] / Haji ware
 9世紀以前,Before 9th century 
 9世紀以降,After 9th century 
 9世紀初頭,9th century [Initial]
@@ -430,6 +482,7 @@ _,NA
 9世紀前葉〜中葉,9th century [early - middle]
 9世紀半ばすぎ,9th century [later than Middle]
 9世紀半ば原11世紀後半,9th century [Middle] - 11trh century [Second Half]
+9世紀土器,9th century pottery 
 9世紀後半,9th century [Second Half]
 9世紀後半〜10世紀,9th century [Second Half] - 10th century
 9世紀後半〜10世紀初頭,9th century [Second Half] - 10th century [Initial]
@@ -437,6 +490,7 @@ _,NA
 9世紀後半〜11世紀前半,9th century [Second Half] - 11th century [First Half]
 9世紀後半〜B-Tm降下前,9th century [Second Half] - B-Tm Tephra [Before] 
 9世紀後半〜末葉,9th century [Second Half - Final]
+9世紀後半･越州窯青磁水注,9th century [Second Half] / Esshuyou Seijisuichu pottery
 9世紀後半?,9th century [Second Half?]
 9世紀後半(紫コラ),9th century [Second Half] (Purple Kora Layer) 
 9世紀後半から10世紀初頭,9th century [Second Half] - 10th century [Initial]
@@ -452,6 +506,7 @@ _,NA
 9世紀末〜10世紀中頃,9th century [Final] - 10th century [Middle ca.]
 9世紀末〜10世紀初め,9th century [Final] - 10th century [Initial]
 9世紀末〜10世紀初頭,9th century [Final] - 10th century [Initial]
+9世紀末〜10世紀初頭･越州窯系青磁の椀Ⅰ類･須恵器甕,9th century [Final] - 10th century [Initial] / Esshuyou type Seiji-wan  I / Sue kame
 9世紀末〜10世紀前半,9th century [Final] - 10th century [First Half]
 9世紀末〜10世紀前半頃,9th century [Final] - 10th century [First Half ca.]
 9世紀末〜10世紀末,9th century [Final] - 10th century [Final]
@@ -472,7 +527,9 @@ A.D.200〜300,200 - 300 AD
 A.D.3〜4世紀,3rd century - 4th century AD
 As-YP上位,Above As-YP 
 ATより上位,Above AT
+AT降灰以前,Before AT Tephra
 AT降灰前後,AT Tephra [ca.]
+AT降灰後,After AT Tephra
 B-Tm降灰時期(947年),B-Tm Tephra (947 AD) 
 Ⅰ-1,I-1
 Ⅰ-1?,I-1?
@@ -512,6 +569,8 @@ B-Tm降灰時期(947年),B-Tm Tephra (947 AD)
 Ⅰ期古,I [Early]
 I群5類東海系北裏CⅡ式,Group 1 - 5 Tokai Type Kitaura CII 
 K-Ah降下以降,After K-Ah [Tephra?]
+K-Ah降灰以降,After K-Ah [Tephra?]
+NA,NA
 TK73型式期,TK73 Type
 V-1～九重式,V-1 - Kujyu 
 Ⅴ-2様式,V-2 Style
@@ -521,11 +580,15 @@ V-4期(庄内式）,V-4 (Shonai)
 V後葉,V [Late]
 Ⅴ期,V 
 V末～庄内,V [Final] - Shonai
+アカホヤ火山灰の下位,Below Akahoya Tephra
+カヤウチバンタ式類似土器,Similar to Kayauchi Banda type ceramic 
 ナイフ型石器文化期,Knife-shaped stone culture
 ホッケ澗〜堂林式,Hokkema - Dobayashi
 ホッケ澗式,Hokkema
 一条突帯文土器,Ichijotottaimon
 三万田式,Sanmanda
+三万田式前後？,Sanmanda [ca.]?
+三万田式期,Sanmanda
 三十稲場式,Sanjuinaba
 三十稲場式新段階,Sanjuinaba [Late Stage] 
 上ノ国式（大洞B-C式併行）,Kaminokuni (Parallel to Oobora B - Oobra C)
@@ -536,6 +599,7 @@ V末～庄内,V [Final] - Shonai
 上山田式,Kamiyamada
 上山田式～天神山式,Kamiyamada - Tenjinyama
 上山田系,Kamiyamada Type 　
+上水流タイプ,Kamizuru Type
 上菅生B～下黒野式,Kamisugou B - Shimogurono
 上菅生Ｂ式古,Kamisugou B [Early]
 上菅生B式直前,Immediately before Kamisugou
@@ -561,8 +625,10 @@ V末～庄内,V [Final] - Shonai
 不明(船元Ⅲ式),NA (Funamoto III) 
 不明(船元Ⅳ～里木Ⅰ式),NA (Funamoto IV - Satogi I)
 不明船元新式),NA (Funamoto Late) 
+並木式･阿髙式,Namiki / Adaka
 中ノ沢式,Nakanosawa 
 中世の攪乱あり,Contamination of Medieval Deposit
+中世陶磁器？須恵器甕片,Medieval ceramics? Sueki-kame piece 
 中屋3式,Nakaya 3
 中屋3式(南522b),Nakaya 3 (Minamo 522b)
 中屋Ⅱ式,Nakaya II
@@ -584,6 +650,7 @@ V末～庄内,V [Final] - Shonai
 中津野式,Nakatsuno
 中津野式・上熊野式,Nakatsuno / Kamikumano
 中津野式土器,Nakatsuno
+中溝式,Nakamizo
 中越式,Nakakoshi
 中道式,Nakamichi
 中里式,Nakazato
@@ -591,12 +658,13 @@ V末～庄内,V [Final] - Shonai
 串田新Ⅰ式,Kushidashin I  
 丸尾式（北久根～西平式併行）,Maruo (Parallel to Kitakune - Nishihira) 
 丸尾式土器,Maruo
-久ヶ原式,Kugahara
 久ケ原式,Kugahara
+久ヶ原式,Kugahara
 久浜衛尾根式,Kyuubeione
 九重式,Kue 
 亀ノ甲Ⅱ式,Kamenoko II
 亀ノ甲Ⅰ式,Kamenoko II
+亀ノ甲式,Kamenoko
 亀ノ甲式古,Kamenoko [Early]
 亀ノ甲式古（板付Ⅱa併行）,Kamenoko [Early] (Parallel to Itatsuke IIa)
 亀川上層式,Upper Kemenoko
@@ -645,13 +713,12 @@ V末～庄内,V [Final] - Shonai
 元住吉山Ⅰ式,Motosumiyoshiyama I
 元刈谷式,Motokariya
 元刈谷式（新）,Motokariya [Late]
+免田式長頸壺,Menda Choukeiko Jar
 入佐式,Irisa
 入佐式土器,Irisa
 入来Ⅱ式,Iriki II
 入来Ⅱ式土器,Iriki II
-"入来Ⅰ式　
-甕形土器","Iriki I　
-Kamegata "
+入来Ⅰ式　甕形土器,NA
 入来式,Iriki
 入来式土器,Iriki
 入海～上ノ山式,Irimi - Uenoyama
@@ -667,20 +734,14 @@ Kamegata "
 八日市新保式,Youkaichishimbo
 八日市新保式〜御経塚式,Youkaichishimbo - Okyouzuka
 八辺4式,Yappe 4
+六ツ木火砕流,Mutsgi pyroclastic flow 
 兼久式,Kaneku
-"兼久式土器
-5世紀前半〜6世紀中頃","Kaneku
-5th century [First Half] - 6th century [Middle ca.]"
-"兼久式土器
-6世紀中頃〜6世紀末","Kaneku
-6th century [Middle] - 6th century [Final]"
-"兼久式土器
-6世紀中頃〜7世紀前半","Kaneku
-6th century [Middle] - 7th century [First Half]"
-"兼久式土器
-6世紀前半〜7世紀前半","Kaneku
-6th century [First Half] - 7th century [First Half]"
-兼久式土器　4世紀中頃,"Kaneku, 4th century [Middle ca.]
+兼久式土器,Kaneku
+兼久式土器5世紀前半〜6世紀中頃,Kaneku (first half 5th century - middle 6th century)
+兼久式土器6世紀中頃〜6世紀末,Kaneku (middle 6th century -end of 6th century)
+兼久式土器6世紀中頃〜7世紀前半,Kaneku (middle 6th century -first half of 7th century)
+兼久式土器6世紀前半〜7世紀前半,Kaneku (first half of 6th century -first half of 7th century)
+兼久式土器　4世紀中頃,"Kaneku (4th century [Middle ca.])
 "
 円形粘土帯土器,Enkeinendotai
 円筒上2a式段階,Upper Ento 2a Stage 
@@ -732,17 +793,15 @@ Kamegata "
 円筒下層d式か,Lower Ento d?
 円筒下層d式期,Lower Ento d
 円筒下層式,Lower Ento
-最花,Saibana
-最花～大木10,Saibana - Daigi 10
-最花式,Saibana
-最花式、大木10式,Saibana - Daigi 10
-最花式期,Saibana
 判ノ木山西式,Hannokiyamanishi 
+刺突文土器,Shitotsumon
+刻目凸帯付土器･板付式類似丹塗磨研壺,Kizamime tottaitsuki / Ninurimaken jar similar to Itatsuke type
 刻目突帯文土器,Kizamimetottaimon
 前期,Early 
 前期円筒下層d,Lower Ento d [Early]
-前期最古,Early [Earliest] 
 前期前葉,Early [Early]
+前期後半,Early [Second Half]
+前期最古,Early [Earliest] 
 前池式,Maeike
 前池式併行,Maeike [Parallel to]
 前浦式,Maeura
@@ -826,8 +885,8 @@ Kamegata "
 勝坂？,Katsuzaka?
 勝坂1,Katsuzaka 1
 "勝坂12〜3,焼町",Katsuzaka 1 - Katsuzaka 3 / Yakemachi
-勝坂1式,Katsuzaka 1
 勝坂１式,Katsuzaka 1
+勝坂1式,Katsuzaka 1
 勝坂1式新期,Katsuzaka 1 [Late]
 勝坂2,Katsuzaka 2
 勝坂2a式期,Katsuzaka 2a
@@ -855,6 +914,7 @@ Kamegata "
 勝坂式終末,Katsuzaka [Final]
 勝坂期,Katsuzaka
 北久根山式,Kitakuneyama
+北前式,Kitamae
 北大Ⅰ,Hokudai I
 北大Ⅱ式,Hokudai II
 北大Ⅰ式,Hokudai I
@@ -908,6 +968,7 @@ Kamegata "
 南小泉Ⅱ式,Minamikoizumi II
 南小泉式,Minamikoizumi  
 南福寺式,Nanpukuji
+南福寺式土器,Nanpukuji
 原山式,Harayama
 原山式（山の寺式新）,Harayama (Yamanotera [Late])
 原山式（板付Ⅰ式新併行）,Harayama (Parallel to Itatsuke I [Late])
@@ -915,9 +976,13 @@ Kamegata "
 口酒井式,Kuchisakai
 古串田新式,Kokushidashin
 古和田台,Kowadadai
+古墳前期後葉,Early Kofun [Late]
+古墳時代前期初頭,Early Kofun [Initial]
 古墳終末,Kofun [Final]
 古府Ⅱ式,Kobu II
 古府式,Kobu  
+古式土師器,Hajiki [Old]
+台形様石器,Trapezoid stone tool
 吉田式,Yoshida
 吹上I中,Fukiage I [Middle]
 吹上I古,Fukiage I [Early]
@@ -926,17 +991,27 @@ Kamegata "
 和泉式土器伴出,Excavated with Izumi
 和泉式期，6世紀,"Izumi, 6th century"
 咲畑式,Sakihata
+嘉徳Ⅰ･Ⅱ式,Katoku I / II
 嘉徳式土器,Katoku
+土師器,Hajiki
+土師器･5世紀前半〜中葉,Hajiki / 5th century [First Half - Middle]
+土師器･7世紀,Hajiki / 7th century
+土師器･須恵器,Hajiki / Sueki
+土師器･須恵器･製塩土器･9世紀後半〜11世紀,Hajiki / Sueki / Seien / 9th century [Second Half] - 11th century
+土師器･須恵器･黒色土器A類･墨書土器･製塩土器･越州窯青磁(第Ⅱ類)･緑釉陶器(洛西型9世紀第3四半期)･9世紀後半〜11世紀),Hajiki / Sueki / Kokushoku A / Bokusho / Seien / Esshu Seiji (II) / Ryokuyu (Rakusei type 9th century [3rd quarter] / 9th century [Second Half] - 11th century
+土師器､須恵器、瓦質土器、青磁、白磁、近世陶磁器,Hajiki / Sueki / Gashitsu / Seiji / Hakuji / Early modern pottery 
 地蔵池式（須和田式併行）,Jizouike (Parallel to Suwada) 
+坂の下式,Sakanoshita
 城ノ越～須玖Ⅰ式,Jonokoshi - Sugu I
 城ノ越式,Jonokoshi
 城の越式または須玖Ⅰ式古,Jonokoshi - Sugu I [Early]
 城ノ越式併行,Jonokoshi [Parallel to]
+城ノ越式期,Jonokoshi
 堀之内1式,Horinouchi 1
 堀之内1式?,Horinouchi 1?
 堀之内1式(古）,Horinouchi 1 [Early]
-堀之内1式（新),Horinouchi 1 [Late]
 堀之内1式（新）,Horinouchi 1 [Late]
+堀之内1式（新),Horinouchi 1 [Late]
 堀之内1式～2式(新）,Horinouchi 1 - Horinouchi 2 [Late]
 堀之内1式並行期,Horinouchi 1 [Parallel to]
 堀之内1式期,Horinouchi 1
@@ -959,12 +1034,19 @@ Kamegata "
 堀之内期,Horinouchi
 堂林式,Dorin
 塚田式,Tsukada
+塞ノ神B,Sainokami B
 塞ノ神Bｄ式,Sainokami Bd
+塞ノ神B式,Sainokami B
+塞ノ神B式土器,Sainokami B
+塞ノ神式,Sainokami
+塞ノ神式土器,Sainokami
 塩屋式,Shiotani
+墨書土器,Bokusho
 変形工字文　（下大隈式新）,Henkeikoujimon (Shimookuma [Late])
 夏島Ⅱ式,Natsushima II
 多縄文,Tajomon
 多縄文系土器,Tajomon Type 
+夜臼･板付I式共伴,Yuusu / Itatsuke I
 夜臼Ⅱa式,Yuusu IIa
 夜臼Ⅱａ式,Yuusu IIa
 夜臼Ⅱa式？,Yuusu IIa?
@@ -975,6 +1057,9 @@ Kamegata "
 夜臼Ⅱ式,Yuusu II
 夜臼Ⅰ式,Yuusu I
 夜臼Ⅰ式新,Yuusu I [Late]
+夜臼式,Yuusu
+夜臼式単純,Yuusu 
+夜臼式土器,Yuusu 
 大和1-2a期,Yamato 1 - Yamato 2a
 大和Ⅰ-1-a期,Yamato I-1a
 大和Ⅰ-1期,Yamato I-1  
@@ -1020,6 +1105,8 @@ Kamegata "
 大木10式期,Daigi 10
 大木10新,Daigi 10 [Late]
 大木10新式,Daigi 10 [Late]
+大木1式,Daigi 1
+大木1式併行,Daigi 1 [Parallel to]
 大木2a式,Daigi 2a
 大木2a式並行,Daigi 2a [Parallel to]
 大木2式,Daigi 2
@@ -1034,6 +1121,7 @@ Kamegata "
 大木5または6式,Daigi 5 or Daigi 6
 大木5式,Daigi 5
 大木5式?,Daigi 5?
+大木5式期,Daigi 5
 大木6〜7a式,Daigi 6 - Daigi 7a
 大木6式,Daigi 6
 大木6式(新）,Daigi 6 [Late]
@@ -1048,7 +1136,11 @@ Kamegata "
 大木7b～8a式併行,Daigi 7b - Daigi 8a [Parallel to]
 大木7b～大木8a式,Daigi 7b - Daigi 8a
 大木7b式,Daigi 7b
+大木7ｂ式,Daigi 7b
 大木7b式（古）,Daigi 7b [Late]
+大木7b式~8a式,Daigi 7b - Daigi 8a
+大木7ｂ式期,Daigi 7b
+大木7b式期,Daigi 7b
 大木7b敷,Daigi 7b 
 大木8〜9式,Daigi 8 - Daigi 9
 大木8a･b式,Daigi 8a / Daigi 8b
@@ -1148,8 +1240,9 @@ Kamegata "
 大洞C2式古,Oobora C2 [Early]
 大洞式,Oobora
 大浦山,Ourayama
-大畑G式,Ohata G
-大畑G式期,Ohata G
+大畑G式,Oohata G
+大畑G式併行,Oohata G [Parallel to]
+大畑G式期,Oohata G
 天城式,Amangusuku
 天王山式,Tennozan
 天王山式期,Tennozan
@@ -1157,16 +1250,18 @@ Kamegata "
 天神原式,Tenjinhara
 天神山式,Tenjinyama
 天神山式併行,Tenjinyama [Parallel to]
+太郎迫式,Tarozako
 奈良,Nara
 奈良時代,Nara
 女鳥羽川式,Metobagawa 
 姥山Ⅲ式（安行3c式）,Ubayama III (Angyo 3c)
 姥山Ⅱ式期,Ubayama II
-"姶良火砕流時
-ナイフ形石器",Knife-shaped Stone Tool (Aira pyroclastic flow)
+姶良火砕流時ナイフ形石器,NA
 子母口式土器,Shibokuchi
-孔列文のある二条刻目突帯文土器,Njyoukizamimeｔottaimon with Kouretsumon
+孔列文のある二条刻目突帯文土器　,NA
+宇宿上層式･喜念Ⅰ式･条痕文土器･研磨土器,Upper Ushuku / Kinen I / Jokonmon / Kenma 
 宇津ノ台式,Utsunodai
+安国寺式袋状口縁壺,Ankokuji (Fukurojoukouen Jar)
 安行1式,Angyo 1
 安行3a-3b,Angyo 3a - Angyo 3b
 安行3a-3b式,Angyo 3a - Angyo 3b
@@ -1195,11 +1290,13 @@ Kamegata "
 宮戸3a式,Miyato 3a
 宮戸Ⅰb式,Miyato Ib
 宮滝式,Miyataki
-寺の沢式,Teranosawa
 寺ノ沢式,Teranosawa
+寺の沢式,Teranosawa
 寿能式,Jyunou
 山ノ口Ⅱ式,Yamanokuchi II
+山ノ口式,Yamanokuchi   
 山の寺式,Yamanotera
+山ノ寺式,Yamanotera
 山の寺式新,Yamanotera [Late]
 山の寺新？上菅生式新,Yamanotera [Late]? Kamisugou [Late]
 山ノ神式,Yamanokami
@@ -1232,6 +1329,9 @@ Kamegata "
 布留0新～布留1,Furu 0 [Late] - Furu 1
 布留0新～布留1古,Furu 0 [Late] - Furu 1 [Early]
 布留1,Furu1
+布留1〜2式,Furu1-2
+布留1式,Furu1
+布留Ⅰ〜Ⅱ式土器,Furu I-II
 布留Ⅱ式,Furu II
 布留Ⅱ式併行,Furu II [Parallel to]
 布留Ⅰ式,Furu I
@@ -1242,8 +1342,14 @@ Kamegata "
 布留式土器,Furu
 布留系,Furu Type
 布目式,Nunome
+常世1世,Tokoyo 1st generation
+常世1世式,Tokoyo 1st generation
+常世2世式,Tokoyo 2nd generation
+常世2式(32に同じ),Tokoyo 2nd generation (same as 32)
 常世Ⅱ式,Tokoyo II
 平安時代以降,After Heian
+平栫式,Hiragakoi
+平栫式･塞ノ神式,Hiragakoi / Senokan
 平栫式土器,Hiragakoi
 庄内0,Shonai 0
 庄内1,Shonai 1
@@ -1258,6 +1364,15 @@ Kamegata "
 廻間Ⅰ式,Hazama I
 廻間Ⅰ式期,Hazama I
 弥栄平2式,Iyasakadaira 2
+弥生中期中葉,Middle Yayoi [Middle]
+弥生中期前葉,Middle Yayoi [Early]
+弥生中期末葉,Middle Yayoi [Final]
+弥生前期,Early Yayoi
+弥生土器,Yayoi
+弥生後期前葉,Late Yayoi [Early]
+弥生後期土器,Late Yayoi
+弥生後期後葉,Late Yayoi [Late]
+弥生後期末葉,Late Yayoi [Final]
 弥生町期,Yayoichou
 彦崎K1式,Hikozaki K1
 彦崎K2式,HIkozaki K2
@@ -1271,12 +1386,15 @@ Kamegata "
 後葉条痕文土器,Late Jokonmon
 御径塚2式,Okyouzuka 2
 御径塚3式,Okyouzuka 3
+御手洗A式,Mitarai A
 "御経塚,B1式",Okyouzuka B1
 御経塚2式,Okyouzuka 2
 御経塚3式,Okyouzuka 3
 御経塚B1式,Okyouzuka B1
 御経塚式,Okyouzuka
+御領式,Goryou
 御領式･上加世田期,Goryou / Uekaseda
+御領式土器,Goryou
 志風頭式,Shikazegashira
 愛媛Ⅱ－１,Ehime II-1 
 愛媛Ⅱ－１～Ⅱ－２,Ehime II-1 - Ehime II-2
@@ -1285,15 +1403,20 @@ Kamegata "
 成川式土器,Narikawa
 戸沢川代段階,Tozawakawadai Stage
 戸沢川代段階から二枚橋式,Tozawakawadai Stage - Nimaibashi
+手捏土器･土師器･須恵器,Tezukune / Hajiki / Sueki 
 打越式,Otsukoshi
 打越式新～神ノ木台式古,Otsukoshi [Late] - Kaminokidai [Early]
 押圧状文,Ouatsujoumon
 押圧縄文,Ouatsujoumon
 押型文,Oshigatamon
+押型文･隆帯文,Oshigaramon / Ryutaimon
 押型文土器,Oshigatamon
+押型文土器･撚糸文土器,Oshigatamon / Yoriitomon 
 押型文期,Oshigatamon
+押型文系土器,Oshigatamon
 押形文土器併行,Oshigatamon [Parallel to] 
 指宿式,Ibusuki
+指宿式､三万田式,"Ibusuki, Sanmanda"
 指宿式土器,Ibusuki 
 指宿式土器･堀之内1式段階,Ibusuki / Horiuchinai 1 Stage 
 摂津Ⅰ-1期,Settsu I-1
@@ -1314,11 +1437,16 @@ Kamegata "
 新巻類系,Aramaki Type
 新道式,Aramichi
 新道式新相〜藤内式，阿玉台Ⅱ式,"Aramichi [Late] - Tounai, Otamadai II "
+日向前B式,Hinatamae B
 早期土器,Early 
+早期後葉,Early [Late]
+早期後葉~末葉,Early [Late - Final]
+早期末条痕文土器,Early [Final] Joukonmon
+早期末葉,Early [Final]
 早稲田5類または表館遺跡Ⅻ群土器相当,Waseda 5 or Omotedate Group XII equivalent
 早稲田6c類,Waseda 6c
-早稲田6類,Waseda 6 
 早稲田６類,Waseda 6 
+早稲田6類,Waseda 6 
 春日式,Kasuga
 春日式土器,Kasuga
 晩期前葉～中葉,Final [Early] - Middle
@@ -1345,10 +1473,16 @@ Kamegata "
 曽利式,Sori
 曽畑式,Sobata
 曽畑式土器,Sobata 
+曽畑式土器･轟B式系土器,Sobata / Todoroki B Type
 曽谷〜安行3a式,Soya - Angyo 3a
 曽谷式,Soya
 曽谷式～（安行3a）,Soya - (Angyo 3a)
 曽谷式～安行1式,Soya - Angyo 1
+最花,Saibana
+最花～大木10,Saibana - Daigi 10
+最花式,Saibana
+最花式、大木10式,Saibana - Daigi 10
+最花式期,Saibana
 月崎下層式,Lower Tsukizaki
 月影Ⅱ式,Tsukikage II
 有尾式,Ario
@@ -1370,14 +1504,19 @@ Kamegata "
 朝日町式,Asahicho
 木島,Kijima
 木島式,Kijima
+本野タイプ,Honno Type
 条痕文,Joukonmon
 条痕文土器,Joukonmon 
 条痕紋,Joukonmon
 東原式土器,Agaribaru
 松川堂Ⅱ式,Matsukawado II
 松木田式,Matsukida
+松永3･4期,Matsunaga 3 - Matsunaga 4
+松永4･5期,Matsunaga 4 - Matsunaga 5
+松永5･6期,Matsunaga 5 - Matsunaga 6
 松河戸Ⅰ式,Matsukawado I
 松添式,Matsuzoe
+板付Ⅰ･Ⅱ式土器,Itatsuke I / II
 板付Ⅰ（新）～Ⅱb式,Itatsuke I [Late] - Itatsuke IIb
 板付Ⅰb〜Ⅱa式,Itatsuke Ib - Itatsuke IIa
 板付Ⅰb～Ⅱa式,Itatsuke Ib - Itatsuke IIa
@@ -1392,16 +1531,22 @@ Kamegata "
 板付Ⅱb～Ⅱc式,Itatsuke IIb - Itatsuke IIc
 板付Ⅱb式,Itatsuke IIb
 板付Ⅱｂ式,Itatsuke IIb
+板付Ⅱb式併行かやや下る時期,Itatsuke IIb or earlier 
 板付Ⅱc～城の越式,Itatsuke IIc - Shironokoshi
 板付Ⅱc～城ノ越式,Itatsuke IIc - Shironokoshi
 板付Ⅱc式,Itatsuke IIc
 板付Ⅱc式，城ノ越式,Itatsuke IIc - Shironokoshi
+板付Ⅱc式併行,Itatsuke IIc [Parallel to]
 板付Ⅱ式？,Itatsuke IIc?
 板付Ⅱ式併行,Itatsuke II [Parallel to]
 板付Ⅰ併行,Itatsuke I [Parallel to]
 板付Ⅰ併行（擬孔列文）,Itatsuke I [Parallel to] (Gikouretsumon)
 板付Ⅰ式,Itatsuke I 
+板付Ⅰ式Aタイプ,Itatsuke I A type
 板付Ⅰ式併行,Itatsuke I [Parallel to]
+板付Ⅰ式古〜板付Ⅱa式,Itatsuke I [Early] - Itatsuke IIa
+板付Ⅰ式土器,Itatsuke I
+柏原式土器,Kashiwara
 柴山出村Ⅰ式（氷Ⅰ式)Ⅰ期,Shibayamademura I（Kori I) I
 栗林1式古,Kuribayashi 1 [Early]
 栗林2〜3式,Kuribayashi 2 - Kuribayashi 3
@@ -1488,14 +1633,18 @@ Kamegata "
 滋賀里Ⅳ式,Shigasato IV - Nagahara
 滋賀里式（船橋式）,Shigasato (Funabashi)
 滋賀里式/船橋式,Shigasato / Funabashi 
-漆町10群期,Urushimachi Group 10
+漆町10群期,Mumon
 漆町5･6群期,Urushimachi Group 5 / Urushimachi Group 6
 漆町8群期,Urushimachi Group 8
 漆町期,Urushimachi 
-瀬戸内系撚糸文土器,Setonaikaikeiyoriitomon
+瀨戸内系土器,Setouchi type
+瀬戸内系撚糸文土器,Yoriitomon (Seto Inner sea type)
+無刻目突帯文土器(黒川式新),Mukizamimetottaimon (Kurokwa [Late])
 無文,Mumon
+無文･押型文,Mumon / Oshigatamon
 無文C群,Mumon Group C
 無文土器,Mumon
+無文土器(工具ミガキ),Mumon (Kogu Migaki) 
 無紋,Mumon
 焼町古式,Yakimachi [Early]
 焼町土器,Yakimachi
@@ -1514,6 +1663,8 @@ Kamegata "
 王江式,Tamae
 瓜郷上層第3様式,Upper Urigou 3rd Style
 瓜郷下層式並行,Lower Urigo [Parallel to] 
+田戸下層式,Lower Tado
+田村式(早水台Ⅱ期),Tamura (Souzudai II)
 田舎館式,Inakadate
 畿内第Ⅱ様式併行,Kinai II Style [Parallel to]
 畿内第Ⅰ様式(新)～第Ⅱ様式,Kinai I Style [Late] - Kinai II
@@ -1523,6 +1674,7 @@ Kamegata "
 白浜式期,Shirahama
 的場式,Matoba
 真脇式,Mawaki
+知覧式土器,Chiran
 石坂Ⅰ・Ⅱ式,Ishizaka I / Ishizaka II
 石坂Ⅰ･Ⅱ式,Ishizaka I / Ishizaka II
 石坂Ⅰ式,Ishizaka I
@@ -1531,6 +1683,8 @@ Kamegata "
 砂沢式,Sunazawa
 砂沢式併行,Sunazawa [Parallel to]
 砂沢期,Sunazawa 
+磨消縄文土器,Surikeshi Jomon
+磨研壺,Maken-ko
 磯の森式,Isonomori 
 神ノ木台式併行,Kaminokidai [Parallel to]
 神ノ木式,Kaminoki  
@@ -1547,6 +1701,7 @@ Kamegata "
 福浦下層北白川下層Ⅱb式,Lower Fukuura Lower Kitashirakawa IIb
 福浦下層式,Lower Fukuura
 福浦下層式，諸磯a式,"Lower Fukuura, Moroiso a"
+福田C式･船元式,Fukuda C / Funamoto
 福田K2式,Fukuda K2
 福田KⅢ式,Fukdua KIII
 称名寺1,Shomyoji 1
@@ -1561,10 +1716,12 @@ Kamegata "
 称名寺式,Shomyoji
 称名寺期,Shomyoji
 稲荷台式,Inaridai
+稲荷山式,Inariyama
 突帯文,Tottaimon
 突帯文（前池式併行）,Tottaimon (Parallel to Maeike)
 突帯文併行,Tottaimon [Parallel to] 
 突帯文又は弥生前期末,Totaimon or Early Yayoi [Final]
+突帯文甕,Tottaimon kame pot
 突帯文系,Tottaimon Type 
 突帯紋土器,Tottaimon
 立川ロームⅤ･Ⅵ層相当,Tachikawa Loam V Layer / Tachikawa Loam VI Layer equivalent
@@ -1573,7 +1730,9 @@ Kamegata "
 第1文化層,1st Cultural Layer
 第1様式新,1st Style [Late]
 第1様式末,1st Style [Final]
+第1群土器,1st Group 
 第2-3様式,2nd Style - 3rd Style
+第2･3群土器,2nd / 3rd Group
 第2文化層,2nd Cultural Layer
 第2様式(高田式),2nd Style (Takada)
 第2様式新,2nd Style [Late]
@@ -1593,23 +1752,25 @@ Kamegata "
 篠原式,Shinohara
 篠原式中段階,Shinohara [Middle Stage]
 篭原Ⅰ式,Kagohara I 
+粗製土器,Coarse-ware
+粗製土器(鐘崎式？),Coarse-ware (Kanezaki?)
 粗製浅鉢土器,Asabachi (Coarse-ware)
 粗製深鉢,Fukabachi (Coarse-ware)
+糸条痕文土器,Itojyoukonmon
 紀元前1世紀中頃〜紀元後1世紀中頃,BC 1st century [Middle ca.] - AD 1st century [Middle ca.]
 紀元前2世紀後半〜紀元後1世紀初頭,BC 2nd century [Second Half] - AD 1st century [Initial]
 紀元前4世紀中頃〜2世紀後半,BC 4th century [Middle] - 2nd century [Second Half]
-"紀元前8世紀前半〜紀元前6世紀後半
-鉢形土器","BC 8th century [First Half] - BC 6th century [Second Half] 
-Hachigata 
-"
+紀元前8世紀前半〜紀元前6世紀後半鉢形土器,NA
 紀元前9世紀初頭〜8世紀初頭,BC 9th century [Initial] - 8th century [Initial]
 "約15,000年前","15,000 years ago [ca.]"
 約2200年前,"2,200 years ago [ca,]"
 約2600年前,"2,600 years ago [ca.]"
 約3.2万年前〜2.4万年前,"32,000 years ago [ca.] - 24,000 years ago "
+納曽3式,Nouso 3
 細石刃文化,Saisekijin Culture
 細石刃文化期,Saisekijin Culture 
 細石器文化期〜縄文時代草創期,Saisekki Culture - Incipient Jomon
+組織痕土器,Soshikikon
 絡条体圧痕文,Rakujyoutaiakkonmon
 綱取１式,Amitori 1
 綱取式,Amitori
@@ -1618,6 +1779,7 @@ Hachigata
 縁帯文,Entaimon
 縁帯文成立期,Entaimon
 縄文土器,Jomon
+縄文土器･須恵器,Jomon / Sueki
 縄文時代中期大木8b式,Middle Jomon Daigi 8b
 縄文時代中期末葉加曽利EⅢ式〜EⅣ式,Middle Jomon [Final] Kasori EIII - Kasori EIV
 縄文時代円筒上層d式期,Jomon Upper Ento d 
@@ -1625,7 +1787,11 @@ Hachigata
 縄文時代大洞BC〜C1式,Jomon Oobora BC - Oobora C1
 縄文時代早期土器,Incipient Jomon
 縄文時代晩期後葉〜弥生時代前期,Final Jomon [Late] - Early Yayoi
+縄文晩期中葉,Final Jomon [Middle]
+縄文晩期後葉,Final Jomon [Late]
+縄文晩期末葉,Final Jomon [Final]
 縄文晩期浅鉢,Final Jomon Asabachi
+縄文条痕文土器,Jomon Jokonmon
 羽島下層Ⅱ式,Lower Toba II
 羽島下層Ⅱ式/北白川下層Ⅰa式,Lower Toba II / Lower Kitashirakawa Ia 
 羽島下層式,Lower Toba
@@ -1645,7 +1811,10 @@ Hachigata
 船橋式,Funabashi   
 花ノ湖Ⅱ式,Hananoko II
 花積下層式,Lower Hanazumi
+花積下層式併行,Lower Hamazumi [Parallel to]
+花積下層式併行期,Lower Hamazumi [Parallel to]
 花積下層期,Lower Hanazumi
+苦浜？,Kubama? 
 茅山上層期,Upper Kayama
 茅山下層式,Lower Kayama
 茅山下層期,Lower Kayama
@@ -1653,6 +1822,7 @@ Hachigata
 草創期最後の段階,Incipient [Final Stage]
 荒海式,Arami
 葛原沢Ⅱ式併行,Kuzuharazawa II [Parallel to]
+薄手無文土器,Usudemumon
 藤内1式,Tounai 1
 藤内Ⅱ式,Tounai II
 藤内Ⅰ式,Tounai I 
@@ -1687,6 +1857,7 @@ Hachigata
 諸磯式,Moroiso 
 諸磯式並行,Moroiso [Parallel to]
 谷尻式,Tanijiri
+貝殻円筒形土器(下剥峯式土器),Kaigaraentokei (Shimohagimine)
 貝殻条痕文土器,Kaigarajoukonmon
 貝田町1,Kaidacho 1
 貝田町2,Kaidacho 2
@@ -1700,10 +1871,17 @@ Hachigata
 赤御堂式新～早稲田5類,Akamido [Late] - Waseda 5
 赤穴式,Akaana
 赤穴式期,Akaana
+越高式土器,Koshidaka
 踊場式（新）,Odoriba [Late]
 轟２式,Todoroki 2
+轟4式,Todoroki 4
+轟5式,Todoroki 5
+轟A,Todoroki A
 轟B式,Todoroki B
 轟B式土器,Todoroki B
+轟式土器,Todoroki
+轟式系土器,Todoroki type
+轟系？,Todoroki type?
 辛川式,Karakawa
 近江Ⅳ様式,Oumi IV Style
 近江Ⅳ様式(古）,Oumi IV Style [Early]
@@ -1718,6 +1896,9 @@ Hachigata
 釈迦堂ZⅢ期,Shakadou ZIII
 里木Ⅱ式,Satogi II
 野島式,Nojima 
+野島式・槻木1式,Nojima / Tsukinoki 1
+野島式・槻木2式,Nojima / Tsukinoki 2
+鐘崎式土器･市来式土器,Kanezaki / Ichiku
 長原,Nagahara
 長原式,Nagahara
 長原式（新）,Nagahara [Late]
@@ -1750,22 +1931,43 @@ Hachigata
 阿玉台式土器伴出,Excavated with Otamadai 
 阿玉台式系,Otamadai Type
 阿高式,Adaka
+阿高式(系)？,Adaka (type)?
+阿高式(系)？･中津式土器,Adaka (type)? / Nakatsu 
+阿高式土器,Adaka
+阿高式系？,Adaka type?
+阿髙式土器,Adaka   
 隆帯文,Ryutaimon
 隆帯文土器,Ryutaimon
+隆帯文土器2類,Ryutaimon 2 
+隆帯文期,Ryutaimon
 隆線文,Ryuusenmon
 隆線文土器,Ryuusenmon
+隆起文,Ryuukimon 
+隆起文(無紋),Ryuukimon (Mumon)
 隆起線文,Ryuukisenmon
 隆起線文土器,Ryuukisenmon
+霧島御池テフラ,Kirishima Miike Tephra 
 青山式,Aoyama
 青木畑式,Aokihata
 青木畑式?,Aokihata?
 青木畑式～山王Ⅲ層式,Aokihata - Sannou III Layer
+面縄西洞式,Omonawaseido
 韮窪式,Nirakubo
 須久Ⅰ式,Sugu I 
 須久Ⅰ式またはⅡ式,Sugu I or Sugu II
 須和田式併行,Suwada (Parallel to)
+須恵器,Sueki
+須恵器･8〜10世紀,Sueki/ 8th century - 10th century
+須恵器･8〜9世紀,Sueki / 8th century - 9th century
+須恵器･土師器･6世紀半,Sueki / Hajiki / 6th century [Middle]
+須恵器･土師器窯,Sueki / Hajiki  
+須恵器･須志器,Sueki / 
+須恵器壺･土師器坏,Sueki / Hajiki 
 須玖Ⅰ～Ⅱ式,Sugu I - Sugu II
+須玖Ⅱ,Sugu II 
 須玖Ⅱ～高三潴式,Sugu II - Takamizuma
+須玖Ⅱ中〜後,Sugu II [Middle - Late]
+須玖Ⅱ併行,Sugu II [Parallel to]
 須玖Ⅱ式,Sugu II
 須玖Ⅱ式～高三潴式併行,Sugu II - Takamizuma (Parallel to)
 須玖Ⅱ式中,Sugu II [Middle]
@@ -1775,9 +1977,14 @@ Hachigata
 須玖Ⅱ式古～中,Sugu II [Early - Middle]
 須玖Ⅱ式新,Sugu II [Late]
 須玖Ⅰ式,Sugu I
+須玖Ⅰ式　,Sugu I
 須玖Ⅰ式古,Sugu I [Early]
+須玖Ⅰ式古段階,Sugu I [Early]
+須玖Ⅰ式土器,Sugu I   
 須玖Ⅰ式新,Sugu I [Late]
 須玖Ⅰ式新～須玖Ⅱ式新,Sugu I [Late] - Sugu II [Late]
+須玖Ⅰ式末,Sugu I [Final]
+須玖Ⅰ新,Sugu I [Late]   
 須玖式甕棺,Sugu Kamekan
 馬場野Ⅱ式,Babano II
 馬替式(加曽利B1式後半）,Magae (Kasori B1 [Second Half])
@@ -1788,6 +1995,7 @@ Hachigata
 馬高式,Umataka
 高三潴式,Takamizuma
 高三潴式併行,Takamizuma [Parallel to to]
+高三瀦,Takamizuma
 高井東式,Takaihigashi
 高橋Ⅱ式（板付Ⅱb式併行）,Takahashi II (Parallel to Itazuke IIb） 
 高蔵,Takakura
@@ -1816,6 +2024,7 @@ Hachigata
 黒川式,Kurokawa
 黒川式古,Kurokawa [Early]
 黒川式土器,Kurokawa
+黒川式土器･松添式土器,Kurokawa / Matsuzoe 
 黒川式新,Kurokawa [Late]
 黒川式新～山の寺式,Kurokawa - Yamanotera
 黒浜〜諸磯a式期,Kurohama - Moroiso a
@@ -1826,4 +2035,5 @@ Hachigata
 黒浜式期古段階,Kurohama [Early Stage]
 黒浜式期新段階,Kurohama [Late Stage]
 黒浜期初頭,Kurohama [Initial]
-NA,NA
+黒色磨研土器様式･三万田式並行期,Kokushokumaken type / Sanmanda [Parallel to]
+黒色磨研土器様式の古閑式以降,Kokushokumaken type / After Koga 
