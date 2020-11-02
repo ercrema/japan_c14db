@@ -584,11 +584,19 @@ if (any(!is.na(c14raw$Alternative)))
 
 ```
 
+## Assign retain to FALSE for impossible dates and NA dates
+```{r}
+c14raw$retain[which(c14raw$CRA>55000|c14raw$CRA<0)]=FALSE
+c14raw$retain[which(is.na(c14raw$CRA)|is.na(c14raw$CRAError))]=FALSE
+```
+
+
+
 ## Store Output
 ```{r}
-write.csv(c14raw,file='japanc14db_v02(200130).csv')
+write.csv(c14raw,file='japanc14db_v03(200130).csv')
 c14db=c14raw
-save(c14db,file='japanc14db_v02(200130).RData')
+save(c14db,file='japanc14db_v03(200130).RData')
 ```
 
 
