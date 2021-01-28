@@ -599,13 +599,23 @@ c14raw$retain[grep('\\？',c14raw$LabCode)]=FALSE
 c14raw$retain[grep('\\?',c14raw$LabCode)]=FALSE
 ```
 
+## Eliminate Any Duplicates
+```{r}
+# All Duplicates
+c14raw = unique(c14raw)
+# Duplicated LabCode
+tmp = subset(c14raw,retain==TRUE)
+dupllab=names(table(tmp$LabCode))[which(table(tmp$LabCode)>1)]
+## Manual Fix ###
+c14raw[which(c14raw$LabCode%in%c(dupllab))[c(1,3,5)],'retain']=FALSE
+```
 
 
 ## Store Output 
 ```{r}
-write.csv(c14raw,file='japanc14db_v02.2(200130).csv')
+write.csv(c14raw,file='japanc14db_v02.3(200130).csv')
 c14db=c14raw
-save(c14db,file='japanc14db_v02.2(200130).RData')
+save(c14db,file='japanc14db_v02.3(200130).RData')
 ```
 
 
