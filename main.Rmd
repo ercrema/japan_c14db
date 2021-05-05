@@ -1,7 +1,7 @@
 ---
 title: "Japanese Radiocarbon Database Project"
 author: "E.Crema"
-date: "5 March 2020"
+date: "12 April 2021"
 output: html_document
 ---
 
@@ -44,11 +44,11 @@ The main workflow consists of three distinct processes: **consistency checks** (
 
 # STEP 1: Reading Data into R and Extracting Relevant Fields
 
-We first read the most up-to-date version of the raw data (currently `c14_raw_v190801.xlsx` corresponding to the original file `★年代測定データベース学術・関東･東北・北陸・中部・鹿児島190801.xlsx`):
+We first read the most up-to-date version of the raw data (currently `c14_raw_v210218.xlsx` corresponding to the original file `★＜公開中＞年代測定データベース学術・関東･東北・北陸・中部・九州・北海道・四国20210218.xlsx`):
 
 ```{r}
 options(warn=-1) #suppress warning
-c14raw=read_xlsx( "./raw/c14_raw_v200130.xlsx", skip=1) %>% as.data.frame(stringsAsFactor=FALSE)
+c14raw=read_xlsx( "./raw/c14_raw_v210218.xlsx", skip=1) %>% as.data.frame(stringsAsFactor=FALSE)
 ```
 
 and assign new names to the columns
@@ -146,8 +146,9 @@ The field `$LabCode` contains the Laboratory Code of each sample and needs to be
 ```{r}
 missingLabCodes.index = which(is.na(c14raw$LabCode)|c14raw$LabCode=="不明")
 noNumbers.index = grep("^[A-Za-z]+$",c14raw$LabCode) #LabCodes without Numbers
-noCharacters.index = which(!grep("\\D", c14raw$LabCode))#LabCodes with only Numbers
-labcodeIssues = unique(c(missingLabCodes.index,noNumbers.index,noCharacters.index))
+noCharacters.index = which(!grepl("\\D", c14raw$LabCode))#LabCodes with only Numbers
+questionMarks.index = grep("\\?", c14raw$LabCode) #LabCodes with questionmarks
+labcodeIssues = unique(c(missingLabCodes.index,noNumbers.index,noCharacters.index,questionMarks.index))
 c14raw.labcodeissue = c14raw[labcodeIssues,]
 c14raw$retain[labcodeIssues] = FALSE 
 
@@ -209,7 +210,7 @@ for (i in 1:length(duplicates))
   # If the dates are different, both should be eliminated
   if(nrow(unique(tmp))>1){c14raw$retain[tmp.index]=FALSE}
   
-  # If the dates are the same, retain the most recent pubblication
+  # If the dates are the same, retain the most recent publication
   if(nrow(unique(tmp))==1)
   {
     c14raw$retain[tmp.index]=FALSE
@@ -309,16 +310,26 @@ tmp=c14raw[tmp.index,]
 tmp=unique(tmp[,c("Prefecture","SiteName","SiteLocation","Latitude","Longitude","coord.check")])
 ```
 
-Manual check. `r tmp$Sitename[3]` is in Kagoshima and `r tmp$Sitename[4]` is in Sapporo, although both are recorded as in Hokkaido. 
-
+Manual check.
 ```{r}
-c14raw$coord.check[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[1:2]))]=TRUE
-```
-
-These two cases should also have retain set to FALSE:
-
-```{r}
-c14raw$retain[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[3:4]))]=FALSE
+#東京 石野遺跡 is ok
+c14raw$coord.check[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[1]))]=TRUE
+#神奈川   猿島洞穴遺跡 is ok
+c14raw$coord.check[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[2]))]=TRUE
+# 熊本         荘貝塚 (should be Kagoshima)
+c14raw$coord.check[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[3]))]=FALSE
+# 熊本       鞠智城跡 (coodinate in Hokkaido)
+c14raw$coord.check[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[4]))]=FALSE
+# 北海道      山越2遺跡 is ok
+c14raw$coord.check[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[5]))]=TRUE
+# 北海道     落部１遺跡 (coodinate in Aichi)
+c14raw$coord.check[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[6]))]=FALSE
+# 北海道      山越4遺跡 is ok
+c14raw$coord.check[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[7]))]=TRUE
+# 北海道      山越4遺跡 (coodinate in Shizuoka)
+c14raw$coord.check[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[8]))]=FALSE
+# 北海道      山越4遺跡 (coodinate in Aichi)
+c14raw$coord.check[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[8]))]=FALSE
 ```
 
 Now check the Google map coordinates
@@ -336,7 +347,7 @@ c14raw <- subset(c14raw, select = -c(gmap.coord.check,Latitude.gmap,Longitude.gm
 ```
 
 ##### SiteIDs and Coordinates
-The database does not provide unique identifier for sites. Thus several sites with different names might refer to the same site, but equally because coordinates were often derived from addresses, multiple sites with different names might have the same spatial coordinate as well. In remote cases the same site might have also different coordinates in different publications. 
+The database does not provide unique identifier for sites. Thus several sites with different names might refer to the same site, but equally because coordinates were often derived from addresses, multiple sites with different names might have the same spatial coordinate as well. In some rare cases the same site might have also different coordinates in different publications. 
 
 We first check all cases where the same coordinates are matched to different site names.
 
@@ -477,13 +488,13 @@ c14raw=left_join(x=c14raw,y=periods,by="Period")
 phases = read.csv("./lookup/phases_translation.csv")
 
 
-
 if (any(!unique(as.character(c14raw$Phase))%in%phases$Phase))
+{
 # The following step updates the lookup table
 phases.tmp=data.frame(Phase=unique(as.character(c14raw$Phase)),stringsAsFactors = FALSE)
 phases.tmp=left_join(phases.tmp,phases,by="Phase")
 write.csv(phases.tmp,file="./lookup/phases_translation_todo.csv",row.names=F)
-
+}
 
 # Before joining this to the main DB
 c14raw=left_join(x=c14raw,y=phases,by="Phase")
@@ -518,7 +529,8 @@ if (!all(unique(siteList)%in%sitenames$SiteName))
   additional_sitenames=siteNameTranscript(missingSites)
   sitenames=rbind.data.frame(sitenames,data.frame(SiteName=additional_sitenames$SiteName,
                                                       Furigana=additional_sitenames$Furigana,
-                                                      ToCheck=TRUE))
+                                                      ToCheck=TRUE,
+                                                      Alternative=NA))
   write.csv(sitenames,"./lookup/sitenamesTranscript.csv",row.names = FALSE)
 }
 
@@ -613,9 +625,9 @@ c14raw[which(c14raw$LabCode%in%c(dupllab))[c(1,3,5)],'retain']=FALSE
 
 ## Store Output 
 ```{r}
-write.csv(c14raw,file='japanc14db_v02.3(200130).csv')
+write.csv(c14raw,file='japanc14db_v03.0(210218).csv')
 c14db=c14raw
-save(c14db,file='japanc14db_v02.3(200130).RData')
+save(c14db,file='japanc14db_v03.0(210218).RData')
 ```
 
 
