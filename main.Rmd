@@ -484,7 +484,7 @@ c14raw=left_join(x=c14raw,y=periods,by="Period")
 # read translation lookup file, originally created with the following command:
 # phases = unique(data.frame(Phase=c14db$Phase,PhaseEN=NA))
 # phases = arrange(phases,Phase)
-# write.csv(phases,file="./translation/phases_toTranslate.csv",row.names=F)
+# write.csv(phases,file="./lookup/phases_toTranslate.csv",row.names=F)
 phases = read.csv("./lookup/phases_translation.csv")
 
 
@@ -499,6 +499,35 @@ write.csv(phases.tmp,file="./lookup/phases_translation_todo.csv",row.names=F)
 # Before joining this to the main DB
 c14raw=left_join(x=c14raw,y=phases,by="Phase")
 ```
+
+## Material Details [In Progress]
+```{r}
+# read translation lookup file, originally created with the following command:
+material_details = unique(data.frame(Material_Details_JPN=c14db$MaterialType,Material_Details2=NA))
+material_details = arrange(material_details,Material_Details_JPN)
+write.csv(material_details,file="./lookup/material_details_toTranslate.csv",row.names=F)
+```
+
+## Period Codes
+
+```{r}
+# periodcode = unique(data.frame(Code=c14db$PeriodCode,PeriodCodeEn=NA))
+# periodcode = arrange(periodcode,Code)
+# write.csv(periodcode,file="./lookup/periodcode.csv",row.names=F)
+periodcode = read.csv("./lookup/periodcode.csv")
+
+if (any(!unique(as.character(c14raw$PeriodCode))%in%periodcode$Code))
+{
+# The following step updates the lookup table
+code.tmp=data.frame(Code=unique(as.character(c14raw$PeriodCode)),stringsAsFactors = FALSE)
+periodcode.tmp=left_join(code.tmp,periodcode,by="Code")
+write.csv(periodcode.tmp,file="./lookup/periodcode_to_do.csv",row.names=F)
+}
+
+c14raw=left_join(x=c14raw,y=periodcode,by=c("PeriodCode"="Code")
+```
+
+
 
 ## Site Names
 
@@ -595,6 +624,7 @@ if (any(!is.na(c14raw$Alternative)))
 
 
 ```
+
 
 ## Assign retain to FALSE for impossible dates and NA dates
 ```{r}
