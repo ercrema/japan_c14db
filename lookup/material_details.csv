@@ -1,0 +1,3555 @@
+"Material_Classification","Material_Details_JPN","Material_Details_EN","inconsistent"
+"Other Charred Remains","(土壌混じり)炭化物",NA,FALSE
+"Other Charred Remains","(粉状)炭化物",NA,FALSE
+"Wood","AM2250(編物)",NA,FALSE
+"Soil","humic clay",NA,FALSE
+"Soil","humic sand",NA,FALSE
+"Soil","humic slit",NA,FALSE
+"Peat","organic sediment",NA,TRUE
+"Soil","organic sediment",NA,TRUE
+"Peat","peat",NA,FALSE
+"Wood","plant fragment",NA,FALSE
+"Wood","plant material",NA,FALSE
+"Seed","アカガシ亜属(堅果類）",NA,FALSE
+"Seed","アカガシ亜属果実",NA,FALSE
+"Shell","アゲマキ",NA,FALSE
+"Shell","アサリ",NA,FALSE
+"Shell","アサリ、カキ",NA,FALSE
+"Shell","アサリ、クボガイ",NA,FALSE
+"Shell","アサリ貝殻",NA,FALSE
+"Fish bone","アシカ骨　雄右尺骨",NA,FALSE
+"Fish bone","アシカ骨　雌左脛骨",NA,FALSE
+"Seed","アズキ",NA,TRUE
+"Charred Seed","アズキ",NA,TRUE
+"Wood","アスナロ",NA,FALSE
+"Other unknown samples","アスファルト?",NA,FALSE
+"Shell","アワビ",NA,FALSE
+"Charred Seed","アワ炭化胚乳",NA,FALSE
+"Shell","イガイ",NA,FALSE
+"Shell","イシガイ類？の殻皮",NA,FALSE
+"Seed","イチイガシ",NA,FALSE
+"Seed","イチイガシ?(堅果)",NA,FALSE
+"Seed","イチイガシ(堅果)",NA,FALSE
+"Seed","イチイガシ子葉",NA,FALSE
+"Seed","イチイガシ果実",NA,FALSE
+"Animal Bone","イヌ　大腿骨　左",NA,FALSE
+"Animal Bone","イヌ　環椎",NA,FALSE
+"Animal Bone","イヌ　腰椎",NA,FALSE
+"Wood","イヌエンジュ",NA,FALSE
+"Wood","イヌガヤ",NA,FALSE
+"Seed","イヌガヤ?種子",NA,FALSE
+"Seed","イヌガヤ種子",NA,FALSE
+"Animal Bone","イヌ上腕骨",NA,FALSE
+"Animal Bone","イヌ下顎骨",NA,FALSE
+"Seed","イネ",NA,TRUE
+"Charred Seed","イネ",NA,TRUE
+"Seed","イネの果実類",NA,FALSE
+"Seed","イネモミ",NA,FALSE
+"Charred Seed","イネ炭化種子",NA,FALSE
+"Charred Seed","イネ炭化胚乳",NA,FALSE
+"Charred Seed","イネ科B炭化種子",NA,FALSE
+"Wood","イネ科稈",NA,FALSE
+"Seed","イネ胚乳",NA,FALSE
+"Animal Bone","イノシシ　下顎骨",NA,FALSE
+"Animal Bone","イノシシ　下顎骨　右",NA,FALSE
+"Animal Bone","イノシシ　右下顎骨･第三後臼歯",NA,FALSE
+"Animal Bone","イノシシ　右橈骨",NA,FALSE
+"Animal Bone","イノシシ　右第三後臼歯",NA,FALSE
+"Animal Bone","イノシシ　右第二後臼歯",NA,FALSE
+"Animal Bone","イノシシの歯",NA,FALSE
+"Animal Bone","イノシシ中足骨",NA,FALSE
+"Fish bone","イルカ脊椎骨",NA,FALSE
+"Seed","ウキヤガラ近似種(種実)",NA,FALSE
+"Animal Bone","ウサギ歯",NA,FALSE
+"Animal Bone","ウマ(上顎歯:歯の内部のエナメル質)",NA,FALSE
+"Animal Bone","ウマの臼歯",NA,FALSE
+"Animal Bone","ウマ臼歯",NA,FALSE
+"Animal Bone","ウマ臼歯　上顎歯牙",NA,FALSE
+"Animal Bone","ウマ臼歯　左上顎歯牙",NA,FALSE
+"Seed","ウメ核",NA,FALSE
+"Lacquer","ウルシ",NA,FALSE
+"Seed","エゴノキ種子",NA,FALSE
+"Wood","エノキ",NA,FALSE
+"Shell","オオタニシ",NA,FALSE
+"Shell","オオノガイ",NA,FALSE
+"Seed","オオムギ胚乳",NA,FALSE
+"Shell","オキシジミ貝殻",NA,FALSE
+"Seed","オニグルミ",NA,FALSE
+"Seed","オニグルミ　殻",NA,FALSE
+"Seed","オニグルミ(種子)",NA,FALSE
+"Seed","オニグルミ内果皮",NA,FALSE
+"Seed","オニグルミ堅果",NA,FALSE
+"Seed","オニグルミ核",NA,FALSE
+"Seed","オニグルミ殻",NA,FALSE
+"Charred Seed","オニグルミ炭化核",NA,FALSE
+"Charred Seed","オニグルミ炭化核?",NA,FALSE
+"Soil","オリーブ色シルト質粘土（貝混じり）",NA,FALSE
+"Soil","オリーブ褐色土層",NA,FALSE
+"Wood","カエデ属",NA,FALSE
+"Shell","カガミガイ",NA,FALSE
+"Shell","カキ",NA,FALSE
+"Shell","カキ、オキシジミガイ",NA,FALSE
+"Shell","カキ、クボガイ",NA,FALSE
+"Shell","カキ、コシダカガンガラ",NA,FALSE
+"Shell","カキ、コシダカガンガラ、クボガイ",NA,FALSE
+"Shell","カキ①",NA,FALSE
+"Shell","カキ②",NA,FALSE
+"Shell","カキ③",NA,FALSE
+"Shell","カキO1",NA,FALSE
+"Shell","カキO2",NA,FALSE
+"Shell","カキ貝",NA,FALSE
+"Wood","カゴ状炭化物",NA,FALSE
+"Wood","カシ類",NA,FALSE
+"Animal Bone","カモ亜科　烏口骨",NA,FALSE
+"Seed","カヤツリグサ科(種実)",NA,FALSE
+"Other Charred Remains","カヤ状炭化物",NA,FALSE
+"Terrestrial mollusc","カワシンジュガイ",NA,FALSE
+"Terrestrial mollusc","カワシンジュガイ腹縁",NA,FALSE
+"Shell","カワニナ",NA,FALSE
+"Animal Bone","カワハギ科腰帯",NA,FALSE
+"Animal Bone","ガン亜科　上腕　左",NA,FALSE
+"Seed","キカラスウリ(種子)",NA,FALSE
+"Seed","キカラスウリ種子",NA,FALSE
+"Shell","キクザルガイ",NA,FALSE
+"Wood","キセル・羅宇",NA,FALSE
+"Wood","キハダ",NA,TRUE
+"Charred Seed","キハダ",NA,TRUE
+"Shell","クジラ目腰椎",NA,FALSE
+"Fish bone","クジラ類",NA,FALSE
+"Other Charred Remains","クッキー状炭化物",NA,FALSE
+"Wood","クヌギ",NA,TRUE
+"Seed","クヌギ",NA,TRUE
+"Seed","クヌギ(堅果)",NA,FALSE
+"Seed","クヌギ節果実",NA,FALSE
+"Animal Bone","クマ　中手/中足",NA,FALSE
+"Animal Bone","クマ　大腿骨　右　遠位",NA,FALSE
+"Animal Bone","クマ犬歯",NA,FALSE
+"Wood","クリ",NA,FALSE
+"Wood","クリ?",NA,FALSE
+"Seed","クリ(種子)",NA,FALSE
+"Seed","クリの実",NA,FALSE
+"Seed","クリ子葉",NA,FALSE
+"Wood","クリ材",NA,FALSE
+"Seed","クリ果実",NA,FALSE
+"Seed","クリ果皮",NA,FALSE
+"Charred Seed","クリ炭化子葉",NA,FALSE
+"Seed","クリ皮",NA,FALSE
+"Seed","クリ種実",NA,FALSE
+"Seed","クリ種皮",NA,FALSE
+"Wood","クリ近似種",NA,FALSE
+"Seed","クルミ",NA,TRUE
+"Charred Seed","クルミ",NA,TRUE
+"Seed","クルミ（未炭化）",NA,FALSE
+"Seed","クルミの殻",NA,FALSE
+"Seed","クルミ属内果皮",NA,FALSE
+"Charred Seed","クルミ属堅果",NA,FALSE
+"Seed","クルミ果皮",NA,FALSE
+"Seed","クルミ核片",NA,FALSE
+"Seed","クルミ殻",NA,TRUE
+"Charred Seed","クルミ殻",NA,TRUE
+"Seed","クルミ種子",NA,TRUE
+"Charred Seed","クルミ種子",NA,TRUE
+"Wood","ケヤキ",NA,FALSE
+"Wood","ケヤキ根",NA,FALSE
+"Wood","コナラ属",NA,FALSE
+"Seed","コナラ属(堅果）",NA,FALSE
+"Seed","コナラ属アカガシ亜属果実",NA,FALSE
+"Seed","コナラ属果実",NA,FALSE
+"Wood","コナラ属樹皮",NA,FALSE
+"Charred Seed","コナラ属炭化子葉",NA,FALSE
+"Seed","コナラ殻斗",NA,FALSE
+"Seed","コムギ",NA,FALSE
+"Human Bone","コラーゲン(人骨)",NA,FALSE
+"Wood","サクラ類",NA,FALSE
+"Fish bone","サメ椎体",NA,FALSE
+"Shell","サルボウ",NA,FALSE
+"Animal Bone","シカ　下顎骨　右",NA,FALSE
+"Animal Bone","シカ　右大腿骨",NA,FALSE
+"Animal Bone","シカ(右前頭骨)",NA,FALSE
+"Animal Bone","シカの歯",NA,FALSE
+"Animal Bone","シカの角",NA,FALSE
+"Animal Bone","シカ大腿骨",NA,FALSE
+"Animal Bone","シカ角",NA,FALSE
+"Animal Bone","シカ距骨",NA,FALSE
+"Animal Bone","シカ頸椎骨",NA,FALSE
+"Soil","シルト",NA,FALSE
+"Soil","シルト混じり細砂",NA,FALSE
+"Soil","シルト質粘土",NA,FALSE
+"Wood","スギ",NA,FALSE
+"Wood","スサ材",NA,FALSE
+"Fish bone","スズキ",NA,FALSE
+"Other Charred Remains","スス状炭化物",NA,FALSE
+"Wood","スダジイ",NA,FALSE
+"Other unknown samples","その他,",NA,FALSE
+"Wood","その他,アシ,",NA,FALSE
+"Wood","その他,ウツギ,",NA,FALSE
+"Other unknown samples","その他,不明
+,",NA,FALSE
+"Soil","その他,土壌,",NA,FALSE
+"Wood","その他,松葉,",NA,FALSE
+"Wood","その他,植物繊維,",NA,FALSE
+"Wood","その他,植物遺体,",NA,FALSE
+"Other Charred Remains","その他,炭化物,",NA,FALSE
+"Other unknown samples","その他,砥石付着物,胴外",NA,FALSE
+"Wood","その他,竹皮,",NA,FALSE
+"Wood","その他,繊維,",NA,FALSE
+"Metal","その他,鉄,袋部",NA,FALSE
+"Metal","その他,鉄,袋部刃先近く",NA,FALSE
+"Wood","ソバの茎",NA,FALSE
+"Wood","タケ",NA,FALSE
+"Wood","タケ亜科稈",NA,FALSE
+"Wood","タケ類",NA,FALSE
+"Animal Bone","タヌキ下顎骨",NA,FALSE
+"Seed","ツバキ種子",NA,FALSE
+"Seed","トウヒ毬果",NA,FALSE
+"Charred Remain","トクサ",NA,FALSE
+"Seed","トチ",NA,FALSE
+"Wood","トチノキ",NA,FALSE
+"Seed","トチノキ子葉",NA,FALSE
+"Seed","トチノキ果実",NA,FALSE
+"Seed","トチノキ果皮",NA,FALSE
+"Charred Seed","トチノキ炭化種子",NA,FALSE
+"Seed","トチノキ種子",NA,FALSE
+"Seed","トチノキ種皮",NA,FALSE
+"Seed","トチノキ種皮片",NA,FALSE
+"Seed","トチの実",NA,FALSE
+"Seed","トチの実の殻",NA,FALSE
+"Seed","トチの実の皮?",NA,FALSE
+"Seed","トチ種子",NA,FALSE
+"Seed","トチ種実",NA,FALSE
+"Seed","トチ種皮",NA,FALSE
+"Wood","トネリコ類",NA,FALSE
+"Organic Residue from Pottery","トリベ付着物",NA,FALSE
+"Seed","ドングリ",NA,TRUE
+"Charred Seed","ドングリ",NA,TRUE
+"Seed","ドングリの果皮",NA,FALSE
+"Wood","ドングリ木片(Ⅺ層)",NA,FALSE
+"Seed","ドングリ果皮",NA,FALSE
+"Charred Seed","ドングリ炭化種子",NA,FALSE
+"Seed","ドングリ種実",NA,FALSE
+"Seed","ドングリ類種子",NA,FALSE
+"Animal Bone","ナウマン象　骨化石",NA,FALSE
+"Shell","ナミマガシワ･カガミガイ他",NA,FALSE
+"Wood","ナラ",NA,FALSE
+"Seed","ナラガシワ(堅果)",NA,FALSE
+"Wood","ナラ類",NA,FALSE
+"Animal Bone","ニホンジカ　大腿骨",NA,FALSE
+"Animal Bone","ニホンジカまたはニホンイノシシ下顎骨下端部",NA,FALSE
+"Animal Bone","ニホンジカ上顎骨",NA,FALSE
+"Animal Bone","ニホンジカ肩甲骨",NA,FALSE
+"Animal Bone","ニホンジカ角",NA,FALSE
+"Animal Bone","ニホンジカ足根骨",NA,FALSE
+"Seed","ニワトコ種子",NA,FALSE
+"Wood","ヌルデ",NA,FALSE
+"Animal Bone","ネコ脛骨",NA,FALSE
+"Shell","ハイガイ",NA,FALSE
+"Shell","ハイガイ(H1)",NA,FALSE
+"Shell","ハイガイ(H2)",NA,FALSE
+"Shell","ハイガイ(H3)",NA,FALSE
+"Shell","ハイガイ①",NA,FALSE
+"Shell","ハイガイ②",NA,FALSE
+"Shell","ハイガイ③",NA,FALSE
+"Shell","ハイガイH1",NA,FALSE
+"Shell","ハイガイH2",NA,FALSE
+"Shell","ハイガイH3",NA,FALSE
+"Shell","バカガイ",NA,FALSE
+"Shell","ハマグリ",NA,FALSE
+"Shell","ハマグリ･カキ",NA,FALSE
+"Shell","ハマグリ右殻",NA,FALSE
+"Shell","ハマグリ貝殻",NA,FALSE
+"Wood","ハンノキ属",NA,FALSE
+"Wood","ハンノキ属幹",NA,FALSE
+"Seed","ハンノキ属果序",NA,FALSE
+"Seed","ハンノキ属果鱗",NA,FALSE
+"Seed","ハンノキ属鱗片",NA,FALSE
+"Seed","ハンノキ果実　果実鱗片",NA,FALSE
+"Seed","ハンノキ果実、イヌシデ果実、アサダ果実",NA,FALSE
+"Seed","ハンノキ果実鱗片",NA,FALSE
+"Wood","ハンノキ類",NA,FALSE
+"Peat","ピート",NA,FALSE
+"Seed","ヒエ",NA,TRUE
+"Charred Seed","ヒエ",NA,TRUE
+"Seed","ヒシ種子",NA,FALSE
+"Human Bone","ヒトの歯",NA,FALSE
+"Human Bone","ヒトの歯(上顎右第2乳臼歯)",NA,FALSE
+"Human Bone","ヒト下顎骨",NA,FALSE
+"Human Bone","ヒト右上顎第2大臼歯",NA,FALSE
+"Human Bone","ヒト左下顎第3大臼歯",NA,FALSE
+"Human Bone","ヒト腓骨",NA,FALSE
+"Human Bone","ヒト遊離歯",NA,FALSE
+"Human Bone","ヒト頭蓋骨",NA,FALSE
+"Human Bone","ヒト頭骨側頭骨",NA,FALSE
+"Seed","ヒメグルミ核",NA,FALSE
+"Seed","ひょうたん",NA,FALSE
+"Seed","ひょうたんの皮",NA,FALSE
+"Seed","ヒョウタン果実",NA,FALSE
+"Seed","ヒョウタン類(種子)",NA,FALSE
+"Fish bone","ヒラメ椎骨",NA,FALSE
+"Animal Bone","ブタ第2後臼歯",NA,FALSE
+"Seed","ブドウ属種子",NA,FALSE
+"Charred Seed","ブドウ科種子",NA,FALSE
+"Seed","ブナ果実",NA,FALSE
+"Humic substances ","フルボ酸",NA,FALSE
+"Other Charred Remains","フローテーション採集資料",NA,FALSE
+"Shell","ヘビ貝",NA,FALSE
+"Soil","ボーリングコア",NA,FALSE
+"Shell","ホタテガイ",NA,FALSE
+"Seed","ホタルイ属果実",NA,FALSE
+"Fish bone","マイルカ　頭蓋骨",NA,FALSE
+"Fish bone","マイルカ骨",NA,FALSE
+"Shell","マガキ",NA,FALSE
+"Shell","マガキ貝殻",NA,FALSE
+"Shell","マグロ属腹椎",NA,FALSE
+"Seed","マクワ･シロウリ型種子",NA,FALSE
+"Peat","マコモ層",NA,FALSE
+"Wood","マツ類",NA,FALSE
+"Shell","マテガイ",NA,FALSE
+"Seed","マメもしくはドングリ子葉",NA,FALSE
+"Seed","マメ類",NA,FALSE
+"Seed","ミクリ属果実",NA,FALSE
+"Wood","ムクロジ",NA,FALSE
+"Seed","もみがら",NA,FALSE
+"Seed","モモ核",NA,FALSE
+"Seed","モモ核(内果実)",NA,FALSE
+"Seed","モモ種子",NA,FALSE
+"Wood","ヤナギ属",NA,FALSE
+"Wood","ヤナギ属幹",NA,FALSE
+"Wood","ヤナギ類",NA,FALSE
+"Animal Bone","ヤベオオツノジカ",NA,FALSE
+"Wood","ヤマグワ",NA,FALSE
+"Shell","ヤマトシジミ",NA,FALSE
+"Shell","ヤマトシジミ貝殻",NA,FALSE
+"Charred Seed","ヤマブドウ種子",NA,FALSE
+"Shell","ユキガイ貝殻",NA,FALSE
+"Other Charred Remains","ユリ科鱗茎",NA,FALSE
+"Soil","ローム試料",NA,FALSE
+"Charred Remain","ワラ状炭化物",NA,FALSE
+"Human Bone","上腕骨",NA,FALSE
+"Other unknown samples","不明",NA,TRUE
+"Other Charred Remains","不明",NA,TRUE
+"Other unknown samples","不明(花粉分析試料)",NA,FALSE
+"Wood","不明植物遺体(数点)",NA,FALSE
+"Charred Seed","不明炭化子葉",NA,FALSE
+"Seed","不明種子",NA,TRUE
+"Charred Seed","不明種子",NA,TRUE
+"Wood","両端加工材(ヌルデ)",NA,FALSE
+"Wood","両端加工材(ムラサキシキブ属)",NA,FALSE
+"Wood","丸太杭",NA,FALSE
+"Wood","丸木材",NA,FALSE
+"Wood","丸木杭(エゴノキ属)",NA,FALSE
+"Wood","丸木杭(クリ)",NA,FALSE
+"Wood","丸木杭(クロモジ属)",NA,FALSE
+"Wood","丸木杭(チドリノキ)",NA,FALSE
+"Wood","丸木杭(ヌルデ)",NA,FALSE
+"Wood","丸木杭(モモ)",NA,FALSE
+"Wood","丸木杭(ヤナギ属)",NA,FALSE
+"Wood","丸木舟1号(ヒノキ属)",NA,FALSE
+"Wood","丸木舟2号(ヒノキ属)",NA,FALSE
+"Wood","乾燥木材",NA,FALSE
+"Shell","二枚貝",NA,FALSE
+"Shell","二枚貝(アリソガイ)",NA,FALSE
+"Shell","二枚貝(オオノガイ)",NA,FALSE
+"Shell","二枚貝(サビシラトリガイ)",NA,FALSE
+"Shell","二枚貝(ヤマトシジミ)",NA,FALSE
+"Other Charred Remains","亜炭",NA,FALSE
+"Charred Remain","亜炭？",NA,FALSE
+"Human Bone","人骨",NA,FALSE
+"Human Bone","人骨　",NA,FALSE
+"Human Bone","人骨　四肢骨片",NA,FALSE
+"Human Bone","人骨　大腿骨片",NA,FALSE
+"Human Bone","人骨　尺骨",NA,FALSE
+"Human Bone","人骨　左上顎切歯歯根部",NA,FALSE
+"Human Bone","人骨　左大腿骨",NA,FALSE
+"Human Bone","人骨　臼歯",NA,FALSE
+"Human Bone","人骨　頭骨片",NA,FALSE
+"Human Bone","人骨　頸骨",NA,FALSE
+"Human Bone","人骨　骨盤",NA,FALSE
+"Human Bone","人骨(下腿骨)",NA,FALSE
+"Human Bone","人骨（下顎歯破片）",NA,FALSE
+"Human Bone","人骨(右大腿骨)",NA,FALSE
+"Human Bone","人骨(四肢骨)",NA,FALSE
+"Human Bone","人骨(四肢骨片）",NA,FALSE
+"Human Bone","人骨(大腿骨)",NA,FALSE
+"Human Bone","人骨（大腿骨片）",NA,FALSE
+"Human Bone","人骨（左肋骨片）",NA,FALSE
+"Human Bone","人骨（手の指、基節骨）",NA,FALSE
+"Human Bone","人骨(椎骨)",NA,FALSE
+"Human Bone","人骨(歯)",NA,FALSE
+"Human Bone","人骨(焼骨)　肋骨",NA,FALSE
+"Human Bone","人骨(肋骨･手骨)",NA,FALSE
+"Human Bone","人骨(肋骨･椎骨)",NA,FALSE
+"Human Bone","人骨(肋骨)",NA,FALSE
+"Human Bone","人骨(長骨)",NA,FALSE
+"Human Bone","人骨（頭蓋片、眼窩上部の破片）",NA,FALSE
+"Human Bone","人骨(頭骨)",NA,FALSE
+"Human Bone","人骨(骨片)",NA,FALSE
+"Human Bone","人骨片(部位不明)",NA,FALSE
+"Charred Remain","住居内採取炭化物　炭化材（クリ）",NA,FALSE
+"Other Charred Remains","住居内採取炭化物　炭質物",NA,FALSE
+"Wood","倒木(ヤマグワ)",NA,FALSE
+"Animal Bone","偶蹄類臼歯",NA,FALSE
+"Wood","先端加工材(イヌガヤ)",NA,FALSE
+"Wood","先端加工材(ウメ)",NA,FALSE
+"Humic substances ","全腐植",NA,FALSE
+"Wood","出土木（枝）",NA,FALSE
+"Wood","出土木（葉）",NA,FALSE
+"Wood","出土木製品（軸）",NA,FALSE
+"Soil","分解の進んだ植物遺体（草本）",NA,FALSE
+"Peat","分解質泥炭",NA,FALSE
+"Wood","割り木",NA,FALSE
+"Wood","割枕",NA,FALSE
+"Wood","加工材(クヌギ節)",NA,FALSE
+"Wood","加工材(モモ)",NA,FALSE
+"Animal Bone","動物歯牙（キツネ下顎犬歯）",NA,FALSE
+"Animal Bone","動物遺存体　ウマ　右大腿骨骨頭",NA,FALSE
+"Animal Bone","動物骨",NA,FALSE
+"Fish bone","動物骨　クジラ目イルカ類?　肋骨",NA,FALSE
+"Animal Bone","動物骨(シカ中手骨)",NA,FALSE
+"Animal Bone","動物骨片",NA,FALSE
+"Charred Remain","単子葉植物(イネ科)",NA,FALSE
+"Charred Remain","単子葉植物茎",NA,FALSE
+"Human Bone","右大腿骨",NA,TRUE
+NA,"右大腿骨",NA,TRUE
+NA,"右肋骨",NA,FALSE
+"Human Bone","右腓骨",NA,FALSE
+NA,"右骨盤",NA,FALSE
+"Animal Bone","哺乳類四肢骨骨幹部",NA,FALSE
+"Animal Bone","四肢骨片(ウシ）",NA,FALSE
+"Soil","土",NA,FALSE
+"Soil","土(根少量混入)",NA,FALSE
+"Organic Residue from Pottery","土付き炭化物",NA,FALSE
+"Organic Residue from Pottery","土器に付く炭化物",NA,FALSE
+"Organic Residue from Pottery","土器に付着した炭化物",NA,FALSE
+"Organic Residue from Pottery","土器付着スス",NA,FALSE
+"Wood","土器付着木質",NA,FALSE
+"Lacquer","土器付着漆",NA,FALSE
+"Lacquer","土器付着漆?",NA,FALSE
+"Lacquer","土器付着漆膜",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物　内面（おこげ）試料を採取した土器：個体番号No.2",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物　炭質物",NA,FALSE
+"Charred Seed","土器付着炭化物(アサ種実)",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（スス）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（内外面）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物(内面)",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物(内面底部)",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（口縁外）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（口縁部内面）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（口縁部外面）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物(吹きこぼれの可能性大)",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（外面　後期初頭）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物(外面)",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（底内）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（底部付近外面）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（底部内面）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（復元No.遺10）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（復元No.遺2）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（復元No.遺5）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（深鉢　口縁部外面）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（深鉢　胴部外面）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（深鉢・胴部内面）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（深鉢・胴部外面）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（深鉢口縁内）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（深鉢口縁外）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（深鉢口縁部外面）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（深鉢外面口縁部）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（深鉢底内）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（深鉢胴内）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（深鉢胴外）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（深鉢胴外口縁部）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（深鉢胴部外面）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物(焦)",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物(煤)",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物(煤類)",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（胴下部～底部内面）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（胴外）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（胴部内面）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（胴部外面）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（貝殻文尖底　口縁部外面）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物（貝殻文平底　口縁部外面）",NA,FALSE
+"Organic Residue from Pottery","土器付着炭化物深鉢（口縁内）",NA,FALSE
+"Organic Residue from Pottery","土器付着煤",NA,FALSE
+"Organic Residue from Pottery","土器付着煤状炭化物",NA,FALSE
+"Organic Residue from Pottery","土器付着物",NA,TRUE
+"Other unknown samples","土器付着物",NA,TRUE
+"Organic Residue from Pottery","土器付着物　口縁内",NA,FALSE
+"Organic Residue from Pottery","土器付着物　口縁外",NA,FALSE
+"Organic Residue from Pottery","土器付着物　口縁外,胴内",NA,FALSE
+"Organic Residue from Pottery","土器付着物　口縁外,胴外",NA,FALSE
+"Organic Residue from Pottery","土器付着物　有機物(胎土混じり)",NA,FALSE
+"Organic Residue from Pottery","土器付着物　樹脂?",NA,FALSE
+"Lacquer","土器付着物　漆",NA,FALSE
+"Lacquer","土器付着物　漆?",NA,FALSE
+"Organic Residue from Pottery","土器付着物　炭化物",NA,FALSE
+"Organic Residue from Pottery","土器付着物　胴内",NA,FALSE
+"Organic Residue from Pottery","土器付着物　胴外",NA,FALSE
+"Organic Residue from Pottery","土器付着物・内面(おこげ)",NA,FALSE
+"Organic Residue from Pottery","土器付着物･内面(おこげ)",NA,FALSE
+"Organic Residue from Pottery","土器付着物･内面（おこげ）",NA,FALSE
+"Seed","土器付着物･内面(クルミ属核破片)",NA,FALSE
+"Organic Residue from Pottery","土器付着物・外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物･外面(ふきこぼれ)",NA,FALSE
+"Organic Residue from Pottery","土器付着物,",NA,FALSE
+"Organic Residue from Pottery","土器付着物,コメ,胴外上",NA,FALSE
+"Organic Residue from Pottery","土器付着物,ドングリ,底部内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,上位・外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,不明,",NA,FALSE
+"Organic Residue from Pottery","土器付着物,不明,不明",NA,FALSE
+"Organic Residue from Pottery","土器付着物,内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,口縁下",NA,FALSE
+"Organic Residue from Pottery","土器付着物,口縁下外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,口縁内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,口縁内下",NA,FALSE
+"Organic Residue from Pottery","土器付着物,口縁外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,口縁外・胴外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,口縁外上",NA,FALSE
+"Organic Residue from Pottery","土器付着物,口縁外下",NA,FALSE
+"Organic Residue from Pottery","土器付着物,口縁外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,口縁突帯下部",NA,FALSE
+"Organic Residue from Pottery","土器付着物,口縁部・内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,口縁部・外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,口縁部下外面（口外）",NA,FALSE
+"Organic Residue from Pottery","土器付着物,口縁部下面・外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,口縁部内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,口縁部外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,口胴外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,吹,",NA,FALSE
+"Organic Residue from Pottery","土器付着物,吹,口縁外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,吹,口縁外・胴外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,吹,口縁外・胴外上",NA,FALSE
+"Organic Residue from Pottery","土器付着物,吹,口縁外・胴外下",NA,FALSE
+"Organic Residue from Pottery","土器付着物,吹,口縁外上",NA,FALSE
+"Organic Residue from Pottery","土器付着物,吹,口縁部外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,吹,口胴外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,吹，煤,胴部中位外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,吹,胴内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,吹,胴外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,吹,胴外上",NA,FALSE
+"Organic Residue from Pottery","土器付着物,吹,胴外中",NA,FALSE
+"Organic Residue from Pottery","土器付着物,吹,胴部中位外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,吹,胴部外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,吹,身内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,吹,頸部外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,吹?,口縁外・胴外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,吹?,口縁部外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,吹?,胴外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,吹?,胴部最大径下位・外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,坏屈曲部",NA,FALSE
+"Organic Residue from Pottery","土器付着物,坏部内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,埋甕",NA,FALSE
+"Organic Residue from Pottery","土器付着物,壺棺スス,胴部上半外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,外面（試料は２点）",NA,FALSE
+"Organic Residue from Pottery","土器付着物,外面付着",NA,FALSE
+"Organic Residue from Pottery","土器付着物,屈曲部上位外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,底部下位・外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,底部内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,底部外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,炭化物,口縁外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,炭化物,口縁外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,炭化物,底部内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,炭化物,胴外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,炭化物,胴部上位・外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,炭化物,胴部外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,口内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,口内外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,口外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,口縁内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,口縁内・胴内上",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,口縁内,胴内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,口縁内，胴内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,口縁内、胴内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,口縁内下，胴内中",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,口縁内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,口縁外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,口縁外・口縁内・胴内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,口縁外・胴外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,口縁外，胴内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,口胴内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦，吹,胴内外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,底部内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦，煤,胴内，胴外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,胴下内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,胴下内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,胴下外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,胴下部外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,胴内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,胴内上",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,胴内下",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,胴内下中",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,胴内下部",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,胴内中",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,胴内部外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,胴内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,胴外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,胴外，胴内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,胴外上",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,胴外下",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,胴部内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,胴部内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,胴部内面中部",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,胴部外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,脚底部内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,蓋内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦,頸内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦：米粒,胴内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦：米粒痕,胴内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦（アスファルト？）,胴内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,焦（アワ状）,胴内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煮焦げ,坏部内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煮焦げ,底部内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煮焦げ,胴内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煮焦げ,胴部内面（胴下位内面）",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煮焦げ,脚部内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,口～胴外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,口内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,口外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,口縁内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,口縁内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,口縁外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,口縁外・胴外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,口縁外・胴外上",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,口縁外・胴外下",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,口縁外，胴内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,口縁外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,口縁部・外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,口縁部～胴部上位・外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,口縁部外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤，吹,口縁外・胴外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤，吹,口縁外,胴外中",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,坏",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,屈曲部外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,底部下位・外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,底部内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,底部外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴上位・外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴下半外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴下部外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴内上",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴外，底部外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴外（頸）",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴外上",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴外下",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴外中",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴外中上",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴部上位〜中位・外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴部上位・外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴部上位外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴部上位外面（胴上外）",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴部下位・外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴部下位外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴部中位・外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴部中位外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴部内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴部最大径・外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴部外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴部外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴部外面破片",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴部破片",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,胴部破片・外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,頚外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,頚部外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,頸外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,頸外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,頸部・外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,頸部外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤,頸部外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤?,口縁内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤?,口縁外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤?,口縁外下",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤?,胴外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤?,胴外上",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤?,胴外下",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤（アスファルト？）,胴外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤（漆？）,口縁外・胴外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤状,胴外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,煤状,胴部中位外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胎土食込炭化物,内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴・内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴上外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴内上",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴外，胴内",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴外上",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴外下",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴外中～下",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴部上位",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴部上位・内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴部上位・外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴部上位外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴部下位・内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴部下位・外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴部下位内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴部下位外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴部下半下外面（胴中外）",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴部中位・内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴部中位・外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴部内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴部最大径部・外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴部外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴部外面より採取",NA,FALSE
+"Organic Residue from Pottery","土器付着物,胴部突帯下",NA,FALSE
+"Organic Residue from Pottery","土器付着物,膜状,胴部中位外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,頚外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,頸外",NA,FALSE
+"Organic Residue from Pottery","土器付着物,頸部",NA,FALSE
+"Organic Residue from Pottery","土器付着物,頸部外面",NA,FALSE
+"Organic Residue from Pottery","土器付着物,鱗茎状,底部内面",NA,FALSE
+"Other unknown samples","土器付着物(アスファルト?)",NA,FALSE
+"Organic Residue from Pottery","土器付着物(お焦げ)",NA,FALSE
+"Organic Residue from Pottery","土器付着物（内面口縁）",NA,FALSE
+"Organic Residue from Pottery","土器付着物（内面口縁～胴上半）",NA,FALSE
+"Organic Residue from Pottery","土器付着物（内面口縁部）",NA,FALSE
+"Organic Residue from Pottery","土器付着物（内面胴下半）",NA,FALSE
+"Organic Residue from Pottery","土器付着物（外面口縁）",NA,FALSE
+"Organic Residue from Pottery","土器付着物（外面口縁部）",NA,FALSE
+"Organic Residue from Pottery","土器付着物（外面胴下半）",NA,FALSE
+"Organic Residue from Pottery","土器付着物（外面頸部）",NA,FALSE
+"Organic Residue from Pottery","土器付着物（外面頸部～胴上半）",NA,FALSE
+"Organic Residue from Pottery","土器付着物（深鉢口縁内）",NA,FALSE
+"Lacquer","土器付着物(漆塗膜)",NA,FALSE
+"Organic Residue from Pottery","土器付着物（焦・口縁内）",NA,FALSE
+"Organic Residue from Pottery","土器付着物（煤類）",NA,FALSE
+"Organic Residue from Pottery","土器付着物吹口縁外・胴外",NA,FALSE
+"Organic Residue from Pottery","土器付着物吹胴外",NA,FALSE
+"Organic Residue from Pottery","土器付着物焦口縁内",NA,FALSE
+"Organic Residue from Pottery","土器付着物焦底部内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物焦胴内",NA,FALSE
+"Organic Residue from Pottery","土器付着物焦胴内，底部内面",NA,FALSE
+"Organic Residue from Pottery","土器付着物焦胴内下",NA,FALSE
+"Organic Residue from Pottery","土器付着物煤口縁外",NA,FALSE
+"Organic Residue from Pottery","土器付着物煤胴外",NA,FALSE
+"Organic Residue from Pottery","土器内付着炭化物",NA,FALSE
+"Organic Residue from Pottery","土器内面付着炭化物",NA,FALSE
+"Organic Residue from Pottery","土器内面付着物",NA,FALSE
+"Organic Residue from Pottery","土器内面付着物（口縁部）",NA,FALSE
+"Organic Residue from Pottery","土器内面付着物（口縁部下部）",NA,FALSE
+"Organic Residue from Pottery","土器口縁内面に付着",NA,FALSE
+"Organic Residue from Pottery","土器外面付着炭化物",NA,FALSE
+"Soil","土壌",NA,TRUE
+"Wood","土壌",NA,TRUE
+"Humic substances ","土壌　灰･炭(フミン)",NA,FALSE
+"Humic substances ","土壌　灰･炭(フミン酸)",NA,FALSE
+"Soil","土壌・炭化物",NA,FALSE
+"Soil","土壌(Humin)",NA,FALSE
+"Soil","土壌(ヒューミンを抽出)",NA,FALSE
+"Soil","土壌(地山)",NA,FALSE
+"Soil","土壌(暗褐色砂混じり粘土質)",NA,FALSE
+"Soil","土壌(暗青灰色土)",NA,FALSE
+"Soil","土壌(暗黒色土)",NA,FALSE
+"Soil","土壌(有機質粘土)",NA,FALSE
+"Peat","土壌(未分解草本質泥炭)",NA,FALSE
+"Soil","土壌(炭化物混)",NA,FALSE
+"Soil","土壌(炭化物混じりの粘土)",NA,FALSE
+"Charred Remain","土壌(炭化物混じりの粘土)･炭化材(スダジイ)",NA,FALSE
+"Soil","土壌(焼土)",NA,FALSE
+"Soil","土壌(腐植土)",NA,FALSE
+"Soil","土壌(腐植層)",NA,FALSE
+"Soil","土壌(腐植質シルト)",NA,FALSE
+"Soil","土壌(貝混)",NA,FALSE
+"Soil","土壌(黒色土)",NA,FALSE
+"Soil","土壌(黒色泥)",NA,FALSE
+"Soil","土壌(黒色泥質土)",NA,FALSE
+"Soil","土壌(黒色砂混じりシルト)",NA,FALSE
+"Soil","土壌(黒色砂質土)",NA,FALSE
+"Soil","土壌(黒色腐植土)",NA,FALSE
+"Soil","土壌(黒褐色土)",NA,FALSE
+"Soil","土壌(黒褐色砂)",NA,FALSE
+"Soil","土壌(黒褐色砂質シルト)",NA,FALSE
+"Soil","土壌に含まれる有機物",NA,FALSE
+"Soil","土壌に含まれる木片",NA,FALSE
+"Soil","土壌に含まれる炭化物",NA,FALSE
+NA,"土壌中炭化物",NA,FALSE
+"Other Charred Remains","土壌化炭化物",NA,FALSE
+"Soil","土壌有機物",NA,FALSE
+"Other Charred Remains","土壌混じりの炭化物",NA,FALSE
+"Soil","土壌混炭化物",NA,FALSE
+"Soil","土壌腐植",NA,FALSE
+"Soil","土層（黒色土）",NA,FALSE
+"Charred Remain","土混じり木炭片",NA,FALSE
+"Organic Residue from Pottery","土製品付着炭化物",NA,FALSE
+"Charred Remain","地下茎(クワイ)",NA,FALSE
+"Soil","地積物",NA,FALSE
+"Wood","埋もれ木",NA,FALSE
+"Soil","埴土",NA,FALSE
+"Human Bone","基節骨（手）",NA,FALSE
+"Charred Seed","堅果",NA,FALSE
+"Seed","堅果(イチイガシ)",NA,FALSE
+"Seed","堅果(オニグルミ)",NA,FALSE
+"Seed","堅果(クヌギ)",NA,FALSE
+"Seed","堅果(クルミ)",NA,FALSE
+"Charred Seed","堅果（クルミ属内果皮）",NA,FALSE
+"Seed","堅果(コナラ属アカガシ亜属)",NA,FALSE
+"Seed","堅果(トチ)",NA,FALSE
+"Seed","堅果(ドングリ)",NA,FALSE
+"Seed","堅果(ナラガシワ)",NA,FALSE
+"Seed","堅果(ナラガシワ）",NA,FALSE
+"Seed","堅果(ナラガシワ)　",NA,FALSE
+"Charred Seed","堅果（炭化クルミ？）",NA,FALSE
+"Charred Seed","堅果（炭化コナラ？）",NA,FALSE
+"Charred Seed","堅果（炭化核、1片）",NA,FALSE
+"Seed","堅果果皮",NA,FALSE
+"Seed","堅果類",NA,FALSE
+"Seed","堅果類(イチイガシ)",NA,FALSE
+"Seed","堅果類(オニグルミ)",NA,FALSE
+"Soil","堆積土",NA,FALSE
+"Soil","堆積土(貝層)",NA,FALSE
+"Soil","堆積土壌",NA,FALSE
+"Soil","堆積物",NA,FALSE
+"Soil","堆積物:未分解の植物遺体を多く含む中粒砂混じり有機質細粒砂質シルト",NA,FALSE
+"Soil","堆積物:未分解植物遺体混じり有機質極細粒砂質シルト",NA,FALSE
+"Soil","堆積物:植物遺体･極細粒砂混じりシルト",NA,FALSE
+"Soil","堆積物:植物遺体混じりシルト",NA,FALSE
+"Soil","堆積物:植物遺体混じりシルト質細粒砂",NA,FALSE
+"Soil","堆積物:植物遺体混じり極細粒砂質シルト",NA,FALSE
+"Soil","堆積物(土壌)",NA,FALSE
+"Soil","堆積物(暗灰色粘土)",NA,FALSE
+"Soil","堆積物(黒色土)",NA,FALSE
+"Soil","堆積物(黒褐色土)",NA,FALSE
+"Lacquer","塗膜",NA,FALSE
+"Other unknown samples","塗膜(赤色顔料)",NA,FALSE
+"Lacquer","塗膜片",NA,FALSE
+"Lacquer","塗膜片(漆?)",NA,FALSE
+"Human Bone","大腿骨",NA,TRUE
+NA,"大腿骨",NA,TRUE
+"Human Bone","大腿骨片",NA,FALSE
+"Seed","子葉(コナラ)",NA,FALSE
+"Other Charred Remains","容器付着物",NA,FALSE
+"Fish bone","小型イルカ　椎骨",NA,FALSE
+"Wood","小枝",NA,FALSE
+"Wood","小枝材",NA,FALSE
+"Human Bone","尺骨",NA,FALSE
+"Human Bone","左上腕骨",NA,TRUE
+NA,"左上腕骨",NA,TRUE
+"Human Bone","左下顎M1歯",NA,FALSE
+"Human Bone","左側頭骨",NA,FALSE
+NA,"左大腿骨",NA,FALSE
+NA,"左肋骨",NA,FALSE
+"Shell","巻貝･二枚貝",NA,FALSE
+"Shell","巻貝(イボウミニナ)",NA,FALSE
+"Soil","布?土壌?",NA,FALSE
+"Wood","常緑広葉樹　葉片および木材化石",NA,FALSE
+"Wood","建築部材",NA,FALSE
+"Other Charred Remains","微粒炭",NA,FALSE
+"Other Charred Remains","微細な植物遺体",NA,FALSE
+"Other Charred Remains","微細な炭化物",NA,FALSE
+"Wood","微細植物片",NA,FALSE
+"Wood","掘り棒",NA,FALSE
+"Other unknown samples","方解石",NA,FALSE
+"Other unknown samples","昆虫化石(ヒメコガネ上翅)",NA,FALSE
+"Soil","明褐灰色粘土",NA,FALSE
+"Soil","暗灰色シルト",NA,FALSE
+"Soil","暗灰色の土壌",NA,FALSE
+"Soil","暗灰色粘土",NA,FALSE
+"Soil","暗灰色腐植質シルト",NA,FALSE
+"Soil","暗灰色腐植質泥",NA,FALSE
+"Soil","暗色帯土壌",NA,FALSE
+"Soil","暗褐色シルト",NA,FALSE
+"Peat","暗褐色砂混じり腐植質シルト",NA,FALSE
+"Soil","暗褐色粘土",NA,FALSE
+"Soil","暗褐色腐植質シルト土壌",NA,FALSE
+"Soil","有機土壌",NA,FALSE
+"Peat","有機堆積物",NA,TRUE
+"Soil","有機堆積物",NA,TRUE
+"Soil","有機性堆積物",NA,FALSE
+"Peat","有機物",NA,TRUE
+"Other unknown samples","有機物",NA,TRUE
+"Soil","有機物片",NA,FALSE
+"Other unknown samples","有機物細片",NA,FALSE
+"Soil","有機物質土壌",NA,FALSE
+"Peat","有機質シルト",NA,TRUE
+"Soil","有機質シルト",NA,TRUE
+"Peat","有機質土",NA,TRUE
+"Soil","有機質土",NA,TRUE
+"Soil","有機質土(黒色土壌)",NA,FALSE
+"Peat","有機質土壌",NA,TRUE
+"Soil","有機質土壌",NA,TRUE
+"Peat","有機質堆積物",NA,TRUE
+"Soil","有機質堆積物",NA,TRUE
+"Soil","有機質年土",NA,FALSE
+"Peat","有機質泥",NA,TRUE
+"Soil","有機質泥",NA,TRUE
+"Peat","有機質片",NA,FALSE
+"Peat","有機質砂質シルト",NA,FALSE
+"Peat","有機質粘土",NA,TRUE
+"Soil","有機質粘土",NA,TRUE
+"Other unknown samples","有機質製品",NA,FALSE
+"Wood","木",NA,FALSE
+"Wood","木(カエデ属)",NA,FALSE
+"Wood","木(クリ)",NA,FALSE
+"Wood","木(ケヤキ)",NA,FALSE
+"Wood","木(コナラ属コナラ亜属クヌギ節)",NA,FALSE
+"Wood","木(トウヒ属)",NA,FALSE
+"Wood","木(トネリコ属)",NA,FALSE
+"Wood","木(ムクノキ)",NA,FALSE
+"Wood","木（倒木）",NA,FALSE
+"Wood","木(広葉樹)",NA,FALSE
+"Wood","木（杭）",NA,FALSE
+"Wood","木（柵の縦木）",NA,FALSE
+"Wood","木（細杭）",NA,FALSE
+"Seed","木の実(クルミ)",NA,FALSE
+"Seed","木の実(トチ)",NA,FALSE
+"Peat","木本泥炭",NA,FALSE
+"Charred Remain","木本炭化物",NA,FALSE
+"Peat","木本質泥炭",NA,FALSE
+"Peat","木本質泥炭〜草本質泥炭",NA,FALSE
+"Wood","木本遺体屑",NA,FALSE
+"Wood","木材",NA,TRUE
+"Charred Remain","木材",NA,TRUE
+"Wood","木材　ウルシ",NA,FALSE
+"Wood","木材,",NA,FALSE
+"Wood","木材，J-Cal",NA,FALSE
+"Wood","木材，ウイグルマッチング，",NA,FALSE
+"Wood","木材，ウイグルマッチング，-20",NA,FALSE
+"Wood","木材，ウイグルマッチング，-30",NA,FALSE
+"Wood","木材，ウイグルマッチング，-90",NA,FALSE
+"Wood","木材，ウイグルマッチング，0",NA,FALSE
+"Wood","木材，ウイグルマッチング，1",NA,FALSE
+"Wood","木材，ウイグルマッチング，1-5",NA,FALSE
+"Wood","木材，ウイグルマッチング，1〜5",NA,FALSE
+"Wood","木材，ウイグルマッチング，10",NA,FALSE
+"Wood","木材，ウイグルマッチング，11-15",NA,FALSE
+"Wood","木材，ウイグルマッチング，1年輪目",NA,FALSE
+"Wood","木材，ウイグルマッチング，20",NA,FALSE
+"Wood","木材，ウイグルマッチング，21-25",NA,FALSE
+"Wood","木材，ウイグルマッチング，30",NA,FALSE
+"Wood","木材，ウイグルマッチング，31",NA,FALSE
+"Wood","木材，ウイグルマッチング，31〜35",NA,FALSE
+"Wood","木材，ウイグルマッチング，36〜39",NA,FALSE
+"Wood","木材，ウイグルマッチング，40",NA,FALSE
+"Wood","木材，ウイグルマッチング，41",NA,FALSE
+"Wood","木材，ウイグルマッチング，45",NA,FALSE
+"Wood","木材，ウイグルマッチング，50",NA,FALSE
+"Wood","木材，ウイグルマッチング，61",NA,FALSE
+"Wood","木材，ウイグルマッチング，70",NA,FALSE
+"Wood","木材，ウイグルマッチング，クスノキ,",NA,FALSE
+"Wood","木材，ウイグルマッチング，クスノキ,内から105層",NA,FALSE
+"Wood","木材，ウイグルマッチング，クスノキ,内から25層",NA,FALSE
+"Wood","木材，ウイグルマッチング，クスノキ,内から45層",NA,FALSE
+"Wood","木材，ウイグルマッチング，クスノキ,内から5層",NA,FALSE
+"Wood","木材，ウイグルマッチング，クスノキ,内から65層",NA,FALSE
+"Wood","木材，ウイグルマッチング，クスノキ,内から85層",NA,FALSE
+"Wood","木材，ウイグルマッチング，ムクロジ,外から11年目",NA,FALSE
+"Wood","木材，ウイグルマッチング，ムクロジ,外から1年目",NA,FALSE
+"Wood","木材，ウイグルマッチング，ムクロジ,外から21年目",NA,FALSE
+"Wood","木材，ウイグルマッチング，ムクロジ,外から31年目",NA,FALSE
+"Wood","木材，ウイグルマッチング，ムクロジ,外から41年目",NA,FALSE
+"Wood","木材，ウイグルマッチング，ムクロジ,外から51年目",NA,FALSE
+"Wood","木材，ウイグルマッチング，モミ属,最外11年目",NA,FALSE
+"Wood","木材，ウイグルマッチング，モミ属,最外1年目",NA,FALSE
+"Wood","木材，ウイグルマッチング，モミ属,最外21年目",NA,FALSE
+"Wood","木材，ウイグルマッチング，中心から16年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，中心から26年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，中心から36年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，中心から46年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，中心から6年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，中間30層目",NA,FALSE
+"Wood","木材，ウイグルマッチング，最も内側",NA,FALSE
+"Wood","木材，ウイグルマッチング，最内60層目",NA,FALSE
+"Wood","木材，ウイグルマッチング，最内から100層目",NA,FALSE
+"Wood","木材，ウイグルマッチング，最内から10層目",NA,FALSE
+"Wood","木材，ウイグルマッチング，最内から110層目",NA,FALSE
+"Wood","木材，ウイグルマッチング，最内から20層目",NA,FALSE
+"Wood","木材，ウイグルマッチング，最内から30層目",NA,FALSE
+"Wood","木材，ウイグルマッチング，最内から40層目",NA,FALSE
+"Wood","木材，ウイグルマッチング，最内から50層目",NA,FALSE
+"Wood","木材，ウイグルマッチング，最内から60層目",NA,FALSE
+"Wood","木材，ウイグルマッチング，最内から70層目",NA,FALSE
+"Wood","木材，ウイグルマッチング，最内から80層目",NA,FALSE
+"Wood","木材，ウイグルマッチング，最内から90層目",NA,FALSE
+"Wood","木材，ウイグルマッチング，最外1層目",NA,FALSE
+"Wood","木材，ウイグルマッチング，最外から1-5",NA,FALSE
+"Wood","木材，ウイグルマッチング，最外から11-15",NA,FALSE
+"Wood","木材，ウイグルマッチング，最外から11年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，最外から21-25",NA,FALSE
+"Wood","木材，ウイグルマッチング，最外から21年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，最外から26-29",NA,FALSE
+"Wood","木材，ウイグルマッチング，最外から26-30",NA,FALSE
+"Wood","木材，ウイグルマッチング，最外から31-35",NA,FALSE
+"Wood","木材，ウイグルマッチング，最外から31年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，最外から41年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，最外から49年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，最外から5年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から1-5年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から101輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から11-15年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から11-20年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から111-115年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から11年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から11年輪目",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から121-130年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から131-135年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から131年輪目",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から151-160年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から16-20年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から191-200年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から1年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から1年輪目",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から21-25年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から21年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から21年輪目",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から231-240年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から26-30年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から31-35年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から31年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から31年輪目",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から36-40年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から41-45年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から41年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から41年輪目",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から51-55年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から51-60年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から51年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から51年輪目",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から6-10年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から61年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から61年輪目",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から71-75年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から71年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から81年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から91-100年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から91-95年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から91年輪",NA,FALSE
+"Wood","木材，ウイグルマッチング，外から91年輪目",NA,FALSE
+"Wood","木材，ウイグルマッチング，柱材,外から1-5層",NA,FALSE
+"Wood","木材，ウイグルマッチング，柱材,外から106-110層",NA,FALSE
+"Wood","木材，ウイグルマッチング，柱材,外から121-125層",NA,FALSE
+"Wood","木材，ウイグルマッチング，柱材,外から16-20層",NA,FALSE
+"Wood","木材，ウイグルマッチング，柱材,外から31-35層",NA,FALSE
+"Wood","木材，ウイグルマッチング，柱材,外から46-50層",NA,FALSE
+"Wood","木材，ウイグルマッチング，柱材,外から61-65層",NA,FALSE
+"Wood","木材，ウイグルマッチング，柱材,外から76-80層",NA,FALSE
+"Wood","木材，ウイグルマッチング，柱材,外から91-95層",NA,FALSE
+"Wood","木材,ウルシ,",NA,FALSE
+"Wood","木材,クスノキ,",NA,FALSE
+"Wood","木材,クヌギ節,",NA,FALSE
+"Wood","木材,クリ,",NA,FALSE
+"Wood","木材,クリ？,",NA,FALSE
+"Wood","木材,コナラ属コナラ亜属コナラ節,",NA,FALSE
+"Wood","木材,コナラ節,",NA,FALSE
+"Wood","木材,ゴヨウマツ,樹皮直下内側最外縁",NA,FALSE
+"Wood","木材,サクラ属,",NA,FALSE
+"Wood","木材,スギ,",NA,FALSE
+"Wood","木材,スギ,中心から180年輪目",NA,FALSE
+"Wood","木材,スギ,中心から202年輪目",NA,FALSE
+"Wood","木材,スギ,中心から230年輪目",NA,FALSE
+"Wood","木材,スギ,外から140年輪目",NA,FALSE
+"Wood","木材,スギ,外から190年輪目",NA,FALSE
+"Wood","木材,タケ,胴外",NA,FALSE
+"Wood","木材,ニレ属,",NA,FALSE
+"Wood","木材,ヒノキ,",NA,FALSE
+"Wood","木材,ムクノキ,外から1年目",NA,FALSE
+"Wood","木材,ヤマグワ,",NA,FALSE
+"Wood","木材,不明",NA,FALSE
+"Wood","木材,不明,不明",NA,FALSE
+"Wood","木材,内側",NA,FALSE
+"Wood","木材,内周",NA,FALSE
+"Wood","木材,最外",NA,FALSE
+"Wood","木材,最外縁",NA,FALSE
+"Wood","木材,外から2年輪",NA,FALSE
+"Wood","木材,外側",NA,FALSE
+"Wood","木材,外周",NA,FALSE
+"Wood","木材,外皮付き最外",NA,FALSE
+"Wood","木材,広葉樹,樹皮直下内側最外縁",NA,FALSE
+"Wood","木材,木胎",NA,FALSE
+"Wood","木材,木胎部",NA,FALSE
+"Wood","木材,木製品柄",NA,FALSE
+"Wood","木材,板材最外縁",NA,FALSE
+"Wood","木材,表面5年輪",NA,FALSE
+"Wood","木材,裏面",NA,FALSE
+"Wood","木材,針葉樹（スギ）,不明",NA,FALSE
+"Wood","木材(アオキ)",NA,FALSE
+"Wood","木材(アカガシ亜属)",NA,FALSE
+"Wood","木材(アカマツ)",NA,FALSE
+"Wood","木材(アカメガシワ)",NA,FALSE
+"Wood","木材(アサダ)",NA,FALSE
+"Wood","木材(アスナロ)",NA,FALSE
+"Wood","木材(アワブキ属)",NA,FALSE
+"Wood","木材(イイギリ属)",NA,FALSE
+"Wood","木材(イスノキ)",NA,FALSE
+"Wood","木材(イスノキ）",NA,FALSE
+"Wood","木材（イスノキ）",NA,FALSE
+"Wood","木材(イチイガシ)",NA,FALSE
+"Wood","木材(イヌエンジュ)",NA,FALSE
+"Wood","木材（イヌエンジュ）",NA,FALSE
+"Wood","木材(イヌガヤ)",NA,FALSE
+"Wood","木材(イヌシデ節)",NA,FALSE
+"Wood","木材(イヌビワ属)",NA,FALSE
+"Wood","木材(イネ科)",NA,FALSE
+"Wood","木材(ウツギ属)",NA,FALSE
+"Wood","木材(ウメ)",NA,FALSE
+"Wood","木材(ウメorモモ)",NA,FALSE
+"Wood","木材(ウルシ)",NA,FALSE
+"Wood","木材(エゴノキ属)",NA,FALSE
+"Wood","木材(エゴノキ科エゴノキ属)",NA,FALSE
+"Wood","木材(エノキ属)",NA,FALSE
+"Wood","木材(オニグルミ)",NA,FALSE
+"Wood","木材(カエデ属)",NA,FALSE
+"Wood","木材(カキノキ属)",NA,FALSE
+"Wood","木材(カシ類)",NA,FALSE
+"Wood","木材(カツラ)",NA,FALSE
+"Wood","木材(カツラ属)",NA,FALSE
+"Wood","木材(カバノキ属)",NA,FALSE
+"Wood","木材(ガマズミ属)",NA,FALSE
+"Wood","木材(カマツカ)",NA,FALSE
+"Wood","木材(カヤ)",NA,FALSE
+"Wood","木材(カラスザンショウ)",NA,FALSE
+"Wood","木材(カラマツ属)",NA,FALSE
+"Wood","木材(キハダ)",NA,FALSE
+"Wood","木材(キハダ属)",NA,FALSE
+"Wood","木材(クスノキ)",NA,TRUE
+"Charred Remain","木材(クスノキ)",NA,TRUE
+"Wood","木材(クスノキ科)",NA,FALSE
+"Wood","木材(クヌギ節)",NA,FALSE
+"Wood","木材(クマシデ属)",NA,FALSE
+"Wood","木材(クマシデ属イヌシデ節)",NA,FALSE
+"Wood","木材(クマノミズキ類)",NA,FALSE
+"Wood","木材(クマヤナギ属)",NA,FALSE
+"Wood","木材(クリ)",NA,FALSE
+"Wood","木材(クリ）",NA,FALSE
+"Wood","木材（クリ）",NA,FALSE
+"Wood","木材(クリ近似種)",NA,FALSE
+"Wood","木材(クルミ属)",NA,FALSE
+"Wood","木材(クロマツ)",NA,FALSE
+"Wood","木材(クワ属)",NA,FALSE
+"Wood","木材(クワ科クワ属)",NA,FALSE
+"Wood","木材(ケヤキ)",NA,FALSE
+"Wood","木材(ケンポナシ)",NA,FALSE
+"Wood","木材(ケンポナシ属)",NA,FALSE
+"Wood","木材(コウヤマキ)",NA,FALSE
+"Wood","木材(コナラ)",NA,FALSE
+"Wood","木材(コナラ亜属)",NA,FALSE
+"Wood","木材(コナラ亜属クヌギ節)",NA,FALSE
+"Wood","木材(コナラ属)",NA,FALSE
+"Wood","木材(コナラ属アカガシ亜属)",NA,TRUE
+"Charred Remain","木材(コナラ属アカガシ亜属)",NA,TRUE
+"Wood","木材(コナラ属クヌギ節)",NA,FALSE
+"Wood","木材(コナラ属コナラ亜属)",NA,FALSE
+"Wood","木材(コナラ属コナラ亜属クヌギ)",NA,FALSE
+"Wood","木材(コナラ属コナラ亜属クヌギ節)",NA,FALSE
+"Wood","木材(コナラ属コナラ亜属コナラ節)",NA,FALSE
+"Wood","木材(コナラ属コナラ節)",NA,FALSE
+"Wood","木材(コナラ節)",NA,FALSE
+"Wood","木材(ゴヨウマツ)",NA,FALSE
+"Wood","木材(サイカチ近似種)",NA,FALSE
+"Wood","木材(サカキ)",NA,FALSE
+"Wood","木材(サクラ属､17年輪目)",NA,FALSE
+"Wood","木材(サクラ属､1年輪目)",NA,FALSE
+"Wood","木材(サクラ属)",NA,FALSE
+"Wood","木材(サワグルミ)",NA,FALSE
+"Wood","木材(サワラ)",NA,FALSE
+"Wood","木材(シイ属)",NA,FALSE
+"Wood","木材（シイ属）",NA,FALSE
+"Wood","木材(シキミ)",NA,FALSE
+"Wood","木材(シャシャンボ)",NA,FALSE
+"Wood","木材(スギ)",NA,FALSE
+"Wood","木材(スダジイ)",NA,TRUE
+"Charred Remain","木材(スダジイ)",NA,TRUE
+"Wood","木材(センダン)",NA,FALSE
+"Wood","木材(タイミンタチバナ)",NA,FALSE
+"Wood","木材(タケ亜科)",NA,FALSE
+"Wood","木材(タブノキ)",NA,FALSE
+"Wood","木材（タブノキ）",NA,FALSE
+"Wood","木材(タブノキ属)",NA,FALSE
+"Wood","木材(ツガ)",NA,FALSE
+"Wood","木材(ツバキ属)",NA,FALSE
+"Wood","木材(ツブラジイ)",NA,FALSE
+"Wood","木材（ツブラジイ）",NA,FALSE
+"Wood","木材(ツワラ)",NA,FALSE
+"Wood","木材(トウヒ属)",NA,FALSE
+"Wood","木材(トチノキ)",NA,FALSE
+"Wood","木材(トチノキとアカガシ亜属)",NA,FALSE
+"Wood","木材(トネリコ属)",NA,FALSE
+"Wood","木材（トネリコ属）",NA,FALSE
+"Wood","木材(トネリコ属シオジ節)",NA,FALSE
+"Wood","木材(トネリコ属の一種)",NA,FALSE
+"Wood","木材(トネリコ属近似種)",NA,FALSE
+"Wood","木材(ナナカマド属)",NA,FALSE
+"Wood","木材(ナラ類)",NA,FALSE
+"Wood","木材(ニガキ)",NA,FALSE
+"Wood","木材(ニレ属)",NA,FALSE
+"Wood","木材(ヌルデ)",NA,FALSE
+"Wood","木材(ネジキ)",NA,FALSE
+"Wood","木材(ネズコ)",NA,FALSE
+"Wood","木材(ノグルミ)",NA,FALSE
+"Wood","木材(ハイノキ属ハイノキ節)",NA,FALSE
+"Wood","木材(ハイノキ節)",NA,FALSE
+"Wood","木材(バラ属)",NA,FALSE
+"Wood","木材(バラ属）",NA,FALSE
+"Wood","木材(バラ科ナシ亜科)",NA,FALSE
+"Wood","木材(ハリギリ)",NA,FALSE
+"Wood","木材(ハンノキ)",NA,FALSE
+"Wood","木材(ハンノキ亜属)",NA,FALSE
+"Wood","木材(ハンノキ属)",NA,FALSE
+"Wood","木材(ハンノキ属の一種)",NA,FALSE
+"Wood","木材(ハンノキ属ハンノキ亜属?)",NA,FALSE
+"Wood","木材(ハンノキ属ハンノキ亜属)",NA,FALSE
+"Wood","木材(ハンノキ属ヤシャブシ亜属)",NA,FALSE
+"Wood","木材(ハンノキ節)",NA,FALSE
+"Wood","木材(ヒサカキ)",NA,FALSE
+"Wood","木材(ヒサカキ）",NA,FALSE
+"Wood","木材(ヒトツバタゴ)",NA,FALSE
+"Wood","木材(ヒノキ)",NA,FALSE
+"Wood","木材(ヒノキ属)",NA,FALSE
+"Wood","木材(ヒノキ属の一種)",NA,FALSE
+"Wood","木材(ヒノキ科)",NA,FALSE
+"Wood","木材(ブナ)",NA,FALSE
+"Wood","木材(ブナ属)",NA,FALSE
+"Wood","木材(ホルトノキ属)",NA,FALSE
+"Wood","木材(マキ属)",NA,FALSE
+"Wood","木材(マツ)",NA,FALSE
+"Wood","木材(マツ属orクリ)",NA,FALSE
+"Wood","木材(マツ属単維管束亜属)",NA,FALSE
+"Wood","木材(マツ属複維官束亜属",NA,FALSE
+"Wood","木材(マツ属複維束亜属)",NA,FALSE
+"Wood","木材(マツ属複維管束亜属)",NA,FALSE
+"Wood","木材(マツ複維管束亜属)",NA,FALSE
+"Wood","木材(マユミ)",NA,FALSE
+"Wood","木材(ミズキ)",NA,FALSE
+"Wood","木材(ミズキ属)",NA,FALSE
+"Wood","木材(ムクノキ)",NA,FALSE
+"Wood","木材(ムクロジ)",NA,FALSE
+"Wood","木材(ムラサキシキブ属)",NA,FALSE
+"Wood","木材(モクレン属)",NA,FALSE
+"Wood","木材(モミ)",NA,FALSE
+"Wood","木材(モミ属)",NA,FALSE
+"Wood","木材(ヤナギ)",NA,FALSE
+"Wood","木材(ヤナギ属)",NA,FALSE
+"Wood","木材(ヤブツバキ)",NA,FALSE
+"Wood","木材(ヤブニッケイ)",NA,TRUE
+"Charred Remain","木材(ヤブニッケイ)",NA,TRUE
+"Wood","木材(ヤマグワ、カラスザンショウ)",NA,FALSE
+"Wood","木材(ヤマグワ)",NA,FALSE
+"Wood","木材(ユズリハ属)",NA,FALSE
+"Wood","木材(リンボク)",NA,FALSE
+"Wood","木材(丸木舟:センダン)",NA,FALSE
+"Wood","木材(大:スダジイ)",NA,FALSE
+"Wood","木材(小:シキミ)",NA,FALSE
+"Wood","木材(広葉樹･環孔材)",NA,FALSE
+"Wood","木材(広葉樹)",NA,FALSE
+"Wood","木材（広葉樹）",NA,FALSE
+"Wood","木材（広葉樹枝）",NA,FALSE
+"Wood","木材(広葉樹環孔材)",NA,FALSE
+"Wood","木材(散孔材)",NA,FALSE
+"Wood","木材(木杭:広葉樹)",NA,FALSE
+"Wood","木材(柱材:ハイノキ属)",NA,FALSE
+"Wood","木材(樹木)",NA,FALSE
+"Wood","木材(樹皮)",NA,FALSE
+"Wood","木材(環孔材)",NA,FALSE
+"Wood","木材(竹)",NA,FALSE
+"Wood","木材（臼･クスノキ）",NA,FALSE
+"Wood","木材(舟)",NA,FALSE
+"Wood","木材(落葉広葉樹)",NA,FALSE
+"Wood","木材(針葉樹･スギ?)",NA,FALSE
+"Wood","木材(針葉樹)",NA,FALSE
+"Wood","木材(針葉樹の樹皮)",NA,FALSE
+"Wood","木材と泥炭",NA,FALSE
+"Wood","木材樹皮(広葉樹)",NA,FALSE
+"Wood","木材片",NA,FALSE
+"Wood","木材片,炭化材片",NA,FALSE
+"Wood","木材遺体(モクレン属)",NA,FALSE
+"Wood","木杭",NA,FALSE
+"Wood","木杭(K20011)",NA,FALSE
+"Wood","木杭(K22666)",NA,FALSE
+"Wood","木杭(ハイノキ属)",NA,FALSE
+"Wood","木杭(マツ属)",NA,FALSE
+"Wood","木杭K20011",NA,FALSE
+"Wood","木杭K22666",NA,FALSE
+"Wood","木杭№2",NA,FALSE
+"Wood","木杭№3",NA,FALSE
+"Wood","木枝片",NA,FALSE
+"Wood","木柱",NA,FALSE
+"Wood","木株",NA,FALSE
+"Charred Remain","木炭",NA,FALSE
+"Charred Remain","木炭・木片",NA,FALSE
+"Charred Remain","木炭・炭化物",NA,FALSE
+"Charred Remain","木炭(アサダ)",NA,FALSE
+"Charred Remain","木炭(アスナロ属)",NA,FALSE
+"Charred Remain","木炭(エノキ属)",NA,FALSE
+"Charred Remain","木炭(カバノキ属)",NA,FALSE
+"Charred Remain","木炭(クヌギ節)",NA,FALSE
+"Charred Remain","木炭(クリ、ハリギリ)",NA,FALSE
+"Charred Remain","木炭(クリ)",NA,FALSE
+"Charred Remain","木炭(クリ属)",NA,FALSE
+"Charred Remain","木炭(コナラ亜属クヌギ節)",NA,FALSE
+"Charred Remain","木炭(コナラ亜属コナラ節)",NA,FALSE
+"Charred Remain","木炭（コナラ亜属コナラ節）",NA,FALSE
+"Charred Remain","木炭(コナラ属?）",NA,FALSE
+"Charred Remain","木炭(コナラ属クヌギ節)",NA,FALSE
+"Charred Remain","木炭(コナラ属コナラ亜属クヌギ節)",NA,FALSE
+"Charred Remain","木炭(コナラ属コナラ亜属コナラ節)",NA,FALSE
+"Charred Remain","木炭(シキミ)",NA,FALSE
+"Charred Remain","木炭(ススキ属･タケ亜科)",NA,FALSE
+"Charred Remain","木炭（トネリコ属）",NA,FALSE
+"Charred Remain","木炭(トネリコ属シオジ節)",NA,FALSE
+"Charred Remain","木炭(バラ科ナシ亜科)",NA,FALSE
+"Charred Remain","木炭(ハリギリ)",NA,FALSE
+"Charred Remain","木炭(ヒノキ属)",NA,FALSE
+"Charred Remain","木炭(ブナ属)",NA,FALSE
+"Charred Remain","木炭(モクレン属、クリ属)",NA,FALSE
+"Charred Remain","木炭(モクレン属)",NA,FALSE
+"Charred Remain","木炭（土器内部の土から検出）",NA,FALSE
+"Charred Seed","木炭（炭化クルミ片）",NA,FALSE
+"Charred Remain","木炭（炭化材）",NA,FALSE
+"Charred Remain","木炭(針葉樹,　ツガまたはモミ)",NA,FALSE
+"Charred Remain","木炭片",NA,FALSE
+"Charred Remain","木炭粒",NA,FALSE
+"Wood","木片",NA,TRUE
+"Soil","木片",NA,TRUE
+"Wood","木片(アスナロ)",NA,FALSE
+"Wood","木片(イスノキ)",NA,FALSE
+"Wood","木片(イチイガシ)",NA,FALSE
+"Wood","木片（イチイ科カヤ属カヤ）",NA,FALSE
+"Wood","木片(ウツギ属)",NA,FALSE
+"Wood","木片(ウルシ科ウルシ属)",NA,FALSE
+"Wood","木片(エゴノキ属)",NA,FALSE
+"Wood","木片(エノキ属)",NA,FALSE
+"Wood","木片(オニグルミ)",NA,FALSE
+"Wood","木片（オニグルミ）",NA,FALSE
+"Wood","木片(カエデ属)",NA,FALSE
+"Wood","木片(カエデ科カエデ属)",NA,FALSE
+"Wood","木片(カツラ)",NA,FALSE
+"Wood","木片(カヤ)",NA,FALSE
+"Wood","木片(カラマツ属)",NA,FALSE
+"Wood","木片(キハダ)",NA,FALSE
+"Charred Remain","木片(クスノキ)",NA,TRUE
+"Wood","木片(クスノキ)",NA,TRUE
+"Wood","木片(クスノキ科)",NA,FALSE
+"Wood","木片（クスノキ科タブノキ属）",NA,FALSE
+"Wood","木片(クヌギ)",NA,FALSE
+"Wood","木片(クヌギ節)",NA,FALSE
+"Wood","木片(クリ)",NA,FALSE
+"Wood","木片(クリ）",NA,FALSE
+"Wood","木片(クワ属)",NA,FALSE
+"Wood","木片（クワ科クワ属？）",NA,FALSE
+"Wood","木片(ケヤキ)",NA,FALSE
+"Wood","木片（ケヤキ）",NA,FALSE
+"Wood","木片(ケンポナシ属)",NA,FALSE
+"Wood","木片(コナラ亜属)",NA,FALSE
+"Wood","木片(コナラ属コナラ亜属クヌギ節)",NA,FALSE
+"Wood","木片(コナラ属コナラ亜属コナラ節)",NA,FALSE
+"Wood","木片(コナラ節)",NA,FALSE
+"Wood","木片(サカキ)",NA,FALSE
+"Wood","木片(サクラ属)",NA,FALSE
+"Wood","木片(サワグルミ近似種)",NA,FALSE
+"Wood","木片(サワラ)",NA,FALSE
+"Wood","木片(シキミ)",NA,FALSE
+"Wood","木片(シナノキ属)",NA,FALSE
+"Wood","木片(スギ)",NA,FALSE
+"Wood","木片(スダジイ)",NA,FALSE
+"Wood","木片（センダン科センダン属センダン）",NA,FALSE
+"Wood","木片(タケ亜科)",NA,FALSE
+"Wood","木片(ツガ)",NA,FALSE
+"Wood","木片（ツバキ科ツバキ属）",NA,FALSE
+"Wood","木片(ツブラジイ)",NA,FALSE
+"Wood","木片(トチノキ)",NA,FALSE
+"Wood","木片(トネリコ属)",NA,FALSE
+"Wood","木片（トネリコ属）",NA,FALSE
+"Wood","木片(ハンノキ亜属)",NA,FALSE
+"Wood","木片(ハンノキ属ハンノキ節)",NA,FALSE
+"Wood","木片(ヒノキ)",NA,FALSE
+"Charred Remain","木片(ヒノキ属類似）",NA,FALSE
+"Wood","木片(ヒノキ科)",NA,FALSE
+"Wood","木片(ヒノキ科アスナロ属)",NA,FALSE
+"Wood","木片(フジ)",NA,FALSE
+"Wood","木片(ブナ属)",NA,FALSE
+"Wood","木片(ブナ科クリ属クリ)",NA,FALSE
+"Wood","木片（ブナ科クリ属クリ）",NA,FALSE
+"Wood","木片（ブナ科コナラ属アカガシ亜属）",NA,FALSE
+"Wood","木片(ブナ科コナラ属コナラ亜属コナラ節)",NA,FALSE
+"Wood","木片（ブナ科シイ属）",NA,FALSE
+"Wood","木片(マツ属単維管属亜属)",NA,FALSE
+"Wood","木片(マツ属複維管束亜属)",NA,FALSE
+"Wood","木片（マツ科モミ属）",NA,FALSE
+"Wood","木片（マンサク科イスノキ属イスノキ）",NA,FALSE
+"Wood","木片(ムクノキ)",NA,FALSE
+"Wood","木片(ムクロジ)",NA,FALSE
+"Wood","木片(モミ属)",NA,FALSE
+"Wood","木片(ヤナギ属)",NA,FALSE
+"Wood","木片(ヤマグワ)",NA,FALSE
+"Wood","木片(ヤマザクラ)",NA,FALSE
+"Wood","木片(ユズリハ属)",NA,FALSE
+"Wood","木片(枝)",NA,FALSE
+"Wood","木片(柱根片)",NA,FALSE
+"Wood","木片(根株:クスノキ)",NA,FALSE
+"Wood","木片（樹皮）",NA,FALSE
+"Wood","木片(針葉樹)",NA,FALSE
+"Wood","木版",NA,FALSE
+"Wood","木皮",NA,FALSE
+"Wood","木胎",NA,FALSE
+"Lacquer","木胎漆器",NA,FALSE
+"Wood","木葉",NA,FALSE
+"Wood","木製品",NA,FALSE
+"Wood","木製品(容器未製品)",NA,FALSE
+"Wood","木製品（木杭）（広葉樹）",NA,FALSE
+"Wood","木製品（柱）",NA,FALSE
+"Wood","木製品①",NA,FALSE
+"Wood","木製遺物",NA,FALSE
+"Wood","木質",NA,FALSE
+"Seed","未炭化ナデシコ科・未炭化アカザ属",NA,FALSE
+"Seed","未炭化ブドウ属種子",NA,FALSE
+"Wood","未炭化植物片",NA,FALSE
+"Wood","材",NA,FALSE
+"Wood","材(アカガシ亜属)",NA,FALSE
+"Wood","材(イヌガヤ)",NA,FALSE
+"Wood","材(カラマツ)",NA,FALSE
+"Wood","材(カラマツ／トウヒ)",NA,FALSE
+"Wood","材(クマシデ属)",NA,FALSE
+"Wood","材(クリ)",NA,FALSE
+"Wood","材(クリ樹幹)",NA,FALSE
+"Wood","材(ケンポナシ)",NA,FALSE
+"Wood","材(コナラ属コナラ亜属クヌギ節)",NA,FALSE
+"Wood","材(コナラ属コナラ亜属コナラ節)",NA,FALSE
+"Wood","材(コナラ節)",NA,FALSE
+"Wood","材(スダジイ)",NA,FALSE
+"Wood","材(ニレ属)",NA,FALSE
+"Wood","材(ハリグワ)",NA,FALSE
+"Wood","材(ハンノキ属ハンノキ亜属)",NA,FALSE
+"Wood","材(ヒノキ属の一種)",NA,FALSE
+"Wood","材(マツ属の一種)",NA,FALSE
+"Wood","材(マツ属単維管束亜属)",NA,FALSE
+"Wood","材(マツ科の一種)",NA,FALSE
+"Wood","材(モミ属)",NA,FALSE
+"Wood","材(ヤナギ属の一種)",NA,FALSE
+"Wood","材(広葉樹　環孔材)",NA,FALSE
+"Wood","材(散孔材･広葉樹)",NA,FALSE
+"Wood","材(枝)",NA,FALSE
+"Wood","材(環孔材)",NA,FALSE
+"Wood","材化石",NA,FALSE
+"Wood","材化石(キハダ)",NA,FALSE
+"Wood","材化石(クリ)",NA,FALSE
+"Wood","材化石(コナラ属コナラ亜属コナラ節)",NA,FALSE
+"Wood","材化石(トネリコ属)",NA,FALSE
+"Wood","材化石(マツ複維管束亜属)",NA,FALSE
+"Wood","材密集部材",NA,FALSE
+"Wood","材片",NA,FALSE
+"Wood","材片(バラ属)",NA,FALSE
+"Wood","材片(バラ科ナシ亜科)",NA,FALSE
+"Wood","材片(ヒトツバタゴ)",NA,FALSE
+"Wood","杭",NA,FALSE
+"Wood","杭(クリ)",NA,FALSE
+"Wood","杭(タケ亜科)",NA,FALSE
+"Wood","杭(木材:クリ)",NA,FALSE
+"Wood","杭(木材:コナラ属アカガシ亜属)",NA,FALSE
+"Wood","杭材(イヌガヤ)",NA,FALSE
+"Wood","杭材（クリ）",NA,FALSE
+"Wood","杭材(コナラ属アカガシ亜属)",NA,FALSE
+"Wood","杭材(スギ)",NA,FALSE
+"Wood","杭材(ツブラジイ)",NA,FALSE
+"Wood","杭材(マキ属)",NA,FALSE
+"Wood","杭材(ムクノキ属:根材)",NA,FALSE
+"Organic Residue from Pottery","東釧路Ⅱ式土器",NA,FALSE
+"Wood","板材(ハンノキ亜属)",NA,FALSE
+"Wood","板材⑱",NA,FALSE
+"Wood","板状木製品",NA,FALSE
+"Wood","板状製品",NA,FALSE
+"Fish bone","板鰓類椎骨",NA,FALSE
+"Seed","果実",NA,FALSE
+"Seed","果実(イチイガシ）",NA,FALSE
+"Seed","果実(ヒョウタン皮)",NA,FALSE
+"Seed","果実片",NA,FALSE
+"Seed","果皮",NA,FALSE
+"Seed","果皮(ひょうたん）",NA,FALSE
+"Wood","枝",NA,FALSE
+"Wood","枝材片",NA,FALSE
+"Wood","柱(カヤ)",NA,FALSE
+"Wood","柱材",NA,FALSE
+"Wood","柱根",NA,FALSE
+"Wood","根",NA,FALSE
+"Wood","植物",NA,FALSE
+"Wood","植物(ヤダケ？)",NA,FALSE
+"Wood","植物片",NA,TRUE
+"Soil","植物片",NA,TRUE
+"Wood","植物片(タケ亜科)",NA,FALSE
+"Wood","植物片(トネリコ属)",NA,FALSE
+"Wood","植物片(マダケ属？)",NA,FALSE
+"Wood","植物片(ヨシ)",NA,FALSE
+"Wood","植物片(単子葉類の茎)",NA,FALSE
+"Wood","植物片(微小な草本質植物)",NA,FALSE
+"Charred Remain","植物片(炭化物)",NA,FALSE
+"Wood","植物片(茎または根)",NA,FALSE
+"Wood","植物片(草本?)",NA,FALSE
+"Wood","植物片(葉)",NA,FALSE
+"Seed","植物種子(ヒシの実含む)",NA,FALSE
+"Seed","植物種子(ミクリ属)",NA,FALSE
+"Seed","植物種実",NA,FALSE
+"Wood","植物素材束(ツヅラフジ)",NA,FALSE
+"Wood","植物細片",NA,FALSE
+"Wood","植物繊維",NA,FALSE
+"Wood","植物繊維(コケ)",NA,FALSE
+"Soil","植物質土壌",NA,FALSE
+NA,"植物質遺物",NA,FALSE
+"Wood","植物遺体",NA,TRUE
+"Other Charred Remains","植物遺体",NA,TRUE
+NA,"植物遺体",NA,TRUE
+"Wood","植物遺体(1a層)",NA,FALSE
+"Seed","植物遺体(イネ)",NA,TRUE
+"Wood","植物遺体(イネ)",NA,TRUE
+"Wood","植物遺体(イネ属)",NA,FALSE
+"Wood","植物遺体(イネ科?)",NA,FALSE
+"Wood","植物遺体(イネ科炭化稈)",NA,FALSE
+"Wood","植物遺体(シュロ)",NA,FALSE
+"Seed","植物遺体(ブナ殻斗)",NA,FALSE
+"Wood","植物遺体(単子葉類の茎)",NA,FALSE
+"Wood","植物遺体(木の芽)",NA,FALSE
+"Wood","植物遺体(根)",NA,FALSE
+"Other unknown samples","植物遺体(植物根？)",NA,FALSE
+"Wood","植物遺体(炭化イネ科稈)",NA,FALSE
+"Wood","植物遺体(草本)",NA,FALSE
+"Wood","植物遺体(草本類)",NA,FALSE
+"Wood","植物遺体(草本類茎)",NA,FALSE
+"Wood","植物遺体(葉)",NA,FALSE
+"Wood","植物遺体(虫えい)",NA,FALSE
+"Seed","植物遺体（複数破片、炭化未炭化）",NA,FALSE
+"Peat","植物遺体まじり砂",NA,FALSE
+"Peat","植物遺体を含む粘土",NA,FALSE
+"Peat","植物遺体含む粘土",NA,FALSE
+"Peat","植物遺体混じり有機質土壌",NA,FALSE
+"Wood","植物遺物",NA,FALSE
+"Fish bone","椎骨(マグロ)",NA,FALSE
+"Wood","構築材(ガマズミ属)",NA,FALSE
+"Wood","構築材(クリ)",NA,FALSE
+"Wood","構造部材(カヤ)",NA,FALSE
+"Wood","樹木",NA,FALSE
+"Wood","樹木(イスノキ)",NA,FALSE
+"Wood","樹木(コナラ属コナラ節)",NA,FALSE
+"Wood","樹木(シャシャンボ)",NA,FALSE
+"Wood","樹木（生木樹皮の内側年輪）",NA,FALSE
+"Wood","樹木の葉",NA,FALSE
+"Wood","樹木片",NA,FALSE
+"Wood","樹木片(コナラ属アカガシ亜属)",NA,FALSE
+"Wood","樹木片(コナラ属コナラ節)",NA,FALSE
+"Wood","樹木片(ヒイラギ)",NA,FALSE
+"Wood","樹木片(ユクノキ)",NA,FALSE
+"Wood","樹根",NA,FALSE
+"Wood","樹皮",NA,FALSE
+"Wood","樹皮（ほとんど未炭化）",NA,FALSE
+"Wood","樹皮（一部未炭化）",NA,FALSE
+"Wood","樹皮（内側）",NA,FALSE
+"Human Bone","橈骨",NA,FALSE
+"Human Bone","歯",NA,FALSE
+"Animal Bone","歯（シカ）",NA,FALSE
+"Human Bone","歯(ヒト臼歯)",NA,FALSE
+"Seed","毬果",NA,FALSE
+"Soil","泥流",NA,FALSE
+"Peat","泥炭",NA,FALSE
+"Peat","泥炭(木本質)",NA,FALSE
+"Peat","泥炭(炭化材:コナラ属コナラ節)",NA,FALSE
+"Peat","泥炭に含まれる植物片",NA,FALSE
+"Peat","泥炭または泥炭質粘土",NA,FALSE
+"Peat","泥炭中の未分解の植物体",NA,FALSE
+"Peat","泥炭及び腐植質シルト",NA,FALSE
+"Peat","泥炭質シルト",NA,TRUE
+"Soil","泥炭質シルト",NA,TRUE
+"Peat","泥炭質土",NA,FALSE
+"Peat","泥炭質土壌",NA,FALSE
+"Peat","泥炭質堆積物",NA,FALSE
+"Peat","泥炭質粘土",NA,TRUE
+"Soil","泥炭質粘土",NA,TRUE
+"Wood","流木",NA,FALSE
+"Wood","流木片",NA,FALSE
+"Lacquer","漆",NA,FALSE
+"Lacquer","漆,",NA,FALSE
+"Lacquer","漆,アスファルト？,底部内面",NA,FALSE
+"Lacquer","漆,口縁内",NA,FALSE
+"Lacquer","漆,塗膜,胴内",NA,FALSE
+"Lacquer","漆,塗膜,胴外",NA,FALSE
+"Lacquer","漆,底部内面",NA,FALSE
+"Lacquer","漆,漆？,胴内",NA,FALSE
+"Lacquer","漆,漆？,胴内全",NA,FALSE
+"Lacquer","漆,漆？,胴外",NA,FALSE
+"Lacquer","漆,漆片,",NA,FALSE
+"Lacquer","漆,漆片,胴内",NA,FALSE
+"Lacquer","漆,漆片,胴外・胴内",NA,FALSE
+"Lacquer","漆,漆膜,",NA,FALSE
+"Lacquer","漆,漆膜,口縁内",NA,FALSE
+"Lacquer","漆,漆膜,口縁外・口縁内",NA,FALSE
+"Lacquer","漆,漆膜,底部内面",NA,FALSE
+"Lacquer","漆,漆膜,胴内",NA,FALSE
+"Lacquer","漆,漆膜,胴外",NA,FALSE
+"Lacquer","漆,生漆,口縁内",NA,FALSE
+"Lacquer","漆,生漆,底部内面",NA,FALSE
+"Lacquer","漆,生漆,胴内",NA,FALSE
+"Lacquer","漆,胴下部",NA,FALSE
+"Lacquer","漆,胴内",NA,FALSE
+"Lacquer","漆,胴内・胴外",NA,FALSE
+"Lacquer","漆,胴内，底部内面",NA,FALSE
+"Lacquer","漆,胴内下",NA,FALSE
+"Lacquer","漆,赤漆,口縁外・内",NA,FALSE
+"Lacquer","漆,黒漆？,口縁外",NA,FALSE
+"Lacquer","漆(木胎部)",NA,FALSE
+"Lacquer","漆の塊?",NA,FALSE
+"Lacquer","漆丸盆塗膜片",NA,FALSE
+"Wood","漆器(ブナ属)",NA,FALSE
+"Lacquer","漆器の塗膜",NA,FALSE
+"Lacquer","漆器塗膜",NA,FALSE
+"Wood","漆器椀(ブナ属)",NA,FALSE
+"Lacquer","漆器椀塗膜",NA,FALSE
+"Lacquer","漆塊",NA,FALSE
+"Lacquer","漆塗り土器の漆膜(赤褐色)",NA,FALSE
+"Lacquer","漆塗椀片",NA,FALSE
+"Lacquer","漆塗膜",NA,FALSE
+"Lacquer","漆塗膜片",NA,FALSE
+"Lacquer","漆塗膜片（No.6804小刀付着）",NA,FALSE
+"Lacquer","漆椀",NA,FALSE
+"Lacquer","漆椀塗膜片",NA,FALSE
+"Lacquer","漆様炭化物(黒目うるし)",NA,FALSE
+"Lacquer","漆樹液",NA,FALSE
+"Lacquer","漆液",NA,FALSE
+"Lacquer","漆漆？胴外",NA,FALSE
+"Lacquer","漆皮膜",NA,FALSE
+"Lacquer","漆紐",NA,FALSE
+"Lacquer","漆紙",NA,FALSE
+"Lacquer","漆紙文書",NA,FALSE
+"Lacquer","漆紙様資料",NA,FALSE
+"Lacquer","漆膜",NA,FALSE
+"Lacquer","漆膜片",NA,FALSE
+"Lacquer","漆膜片(漆)",NA,FALSE
+"Other Charred Remains","灰状物質(稲藁由来の灰)",NA,FALSE
+"Soil","灰色シルト",NA,FALSE
+"Soil","灰色砂質シルト",NA,FALSE
+"Soil","灰色粘土質シルト",NA,FALSE
+"Soil","灰色腐植混じりシルト",NA,FALSE
+"Soil","灰色腐植混じり粘土知るシルト",NA,FALSE
+"Soil","灰褐色粘土質シルト",NA,FALSE
+"Soil","炉址内採集土",NA,FALSE
+"Charred Remain","炭",NA,TRUE
+"Other Charred Remains","炭",NA,TRUE
+"Charred Seed","炭",NA,TRUE
+"Charred Remain","炭(№19)",NA,FALSE
+"Charred Remain","炭(エノキ属)",NA,FALSE
+"Charred Remain","炭(コナラ属コナラ亜属クヌギ節)",NA,FALSE
+"Charred Seed","炭化?種実(不明種実)",NA,FALSE
+"Wood","炭化イネ",NA,TRUE
+"Charred Seed","炭化イネ",NA,TRUE
+"Charred Seed","炭化イネ胚乳",NA,FALSE
+"Charred Seed","炭化オオムギ種子",NA,FALSE
+"Charred Seed","炭化オニグルミ内果皮",NA,FALSE
+"Seed","炭化クリ子葉",NA,TRUE
+"Charred Seed","炭化クリ子葉",NA,TRUE
+"Charred Seed","炭化クルミ",NA,FALSE
+"Charred Seed","炭化クルミ属内果皮",NA,FALSE
+"Charred Seed","炭化クルミ属内果皮片",NA,FALSE
+"Charred Seed","炭化クルミ属堅果片",NA,FALSE
+"Charred Remain","炭化クルミ材",NA,FALSE
+"Charred Seed","炭化クルミ片",NA,FALSE
+"Charred Seed","炭化コナラ属子葉",NA,FALSE
+"Charred Seed","炭化コメ",NA,FALSE
+"Charred Remain","炭化したスダレ状植物製品",NA,FALSE
+"Charred Seed","炭化タデ科種子",NA,FALSE
+"Charred Seed","炭化ヒエ",NA,FALSE
+"Charred Seed","炭化ブドウ",NA,FALSE
+"Charred Seed","炭化ブドウ属種子",NA,FALSE
+"Charred Remain","炭化丸木材(クヌギ・コナラ)",NA,FALSE
+"Charred Seed","炭化内果皮(オニグルミ)",NA,FALSE
+"Charred Seed","炭化堅果",NA,FALSE
+"Charred Seed","炭化堅果(コナラ属)",NA,FALSE
+"Charred Seed","炭化堅果(トチノキ)",NA,FALSE
+"Charred Seed","炭化子葉(イチイガシ)",NA,FALSE
+"Charred Seed","炭化子葉(クヌギ近似類)",NA,FALSE
+"Charred Seed","炭化子葉(コナラ属)",NA,FALSE
+"Charred Remain","炭化小枝",NA,FALSE
+"Charred Remain","炭化広葉樹樹皮",NA,FALSE
+"Charred Remain","炭化建材？",NA,FALSE
+"Charred Remain","炭化建材（消失材）",NA,FALSE
+"Charred Remain","炭化木",NA,FALSE
+"Charred Remain","炭化木(ブナ？)",NA,FALSE
+"Charred Remain","炭化木(マツ)",NA,FALSE
+"Charred Remain","炭化木片",NA,FALSE
+"Charred Remain","炭化木片（カラマツ属）",NA,FALSE
+"Charred Remain","炭化木片など",NA,FALSE
+"Charred Remain","炭化木細粒",NA,FALSE
+"Charred Remain","炭化材",NA,FALSE
+"Charred Remain","炭化材
+(カヤ
+コナラ属アカガシ亜属　広葉樹(散孔材)　
+広葉樹(樹皮))",NA,FALSE
+"Charred Remain","炭化材
+(コナラ属アカガシ亜属　シイノキ属　
+広葉樹(散孔材))",NA,FALSE
+"Charred Remain","炭化材 (コナラ属コナラ亜属クヌギ節)",NA,FALSE
+"Charred Remain","炭化材 (スギ)",NA,FALSE
+"Charred Remain","炭化材 (ツブラジイ)",NA,FALSE
+"Charred Remain","炭化材 (ミズキ)",NA,FALSE
+"Charred Remain","炭化材　コナラ亜属コナラ節　エゴノキ属",NA,FALSE
+"Charred Remain","炭化材　スノコ状？",NA,FALSE
+"Charred Remain","炭化材　土器内面付着",NA,FALSE
+"Charred Remain","炭化材　土留め板？",NA,FALSE
+"Charred Remain","炭化材　樹皮",NA,FALSE
+"Charred Seed","炭化材･ヒメグルミ核",NA,FALSE
+"Charred Remain","炭化材,",NA,FALSE
+"Charred Remain","炭化材,アカガシ亜種,",NA,FALSE
+"Charred Remain","炭化材,カエデ属,",NA,FALSE
+"Charred Remain","炭化材,クヌギ属?,",NA,FALSE
+"Charred Remain","炭化材,クヌギ節,",NA,FALSE
+"Charred Remain","炭化材,クリ,",NA,FALSE
+"Charred Remain","炭化材,クリ,11年目",NA,FALSE
+"Charred Remain","炭化材,クリ,21年目",NA,FALSE
+"Charred Remain","炭化材,クリ,31年目",NA,FALSE
+"Charred Remain","炭化材,クリ,最外",NA,FALSE
+"Charred Remain","炭化材,クリ?
+,部位不明
+",NA,FALSE
+"Charred Remain","炭化材,クリ?,",NA,FALSE
+"Charred Remain","炭化材,コナラ属,",NA,FALSE
+"Charred Remain","炭化材,コナラ属コナラ亜属コナラ節,",NA,FALSE
+"Charred Remain","炭化材,タケ亜科,",NA,FALSE
+"Charred Remain","炭化材,ブドウ科,",NA,FALSE
+"Charred Remain","炭化材,ブナ科コナラ属,",NA,FALSE
+"Charred Remain","炭化材,モミ属,",NA,FALSE
+"Charred Remain","炭化材,不明",NA,FALSE
+"Charred Remain","炭化材,最外1年輪",NA,FALSE
+"Charred Remain","炭化材,最外縁",NA,FALSE
+"Charred Remain","炭化材,外から10年輪",NA,FALSE
+"Charred Remain","炭化材,外から11年目",NA,FALSE
+"Charred Remain","炭化材,外から1年目",NA,FALSE
+"Charred Remain","炭化材,外から20年輪",NA,FALSE
+"Charred Remain","炭化材,外から21年目",NA,FALSE
+"Charred Remain","炭化材,外から21年輪",NA,FALSE
+"Charred Remain","炭化材,外から31年目",NA,FALSE
+"Charred Remain","炭化材,外から31年輪",NA,FALSE
+"Charred Remain","炭化材,外から35年目",NA,FALSE
+"Charred Remain","炭化材,外側",NA,FALSE
+"Charred Remain","炭化材,広葉樹,",NA,FALSE
+"Charred Remain","炭化材,木炭,",NA,FALSE
+"Charred Remain","炭化材,樹幹材,",NA,FALSE
+"Charred Remain","炭化材,炭,",NA,FALSE
+"Charred Remain","炭化材,炭化物,",NA,FALSE
+"Charred Remain","炭化材,炭化物,土壌中",NA,FALSE
+"Charred Remain","炭化材,炭化物,樹幹",NA,FALSE
+"Charred Remain","炭化材,網代状繊維,",NA,FALSE
+"Charred Remain","炭化材,針葉樹,",NA,FALSE
+"Charred Remain","炭化材?",NA,FALSE
+"Charred Remain","炭化材？",NA,FALSE
+"Charred Remain","炭化材？(コナラ属クヌギ節)",NA,FALSE
+"Charred Remain","炭化材？(マツ属複維管束亜属)",NA,FALSE
+"Charred Remain","炭化材(1-5y)",NA,FALSE
+"Charred Remain","炭化材(11-15y)",NA,FALSE
+"Charred Remain","炭化材(12年輪･ツツジ科)",NA,FALSE
+"Charred Remain","炭化材(16-20y)",NA,FALSE
+"Charred Remain","炭化材(2〜3年輪分)",NA,FALSE
+"Charred Remain","炭化材(21-25y)",NA,FALSE
+"Charred Remain","炭化材(26-30?y)",NA,FALSE
+"Charred Remain","炭化材(2年輪？:アカガシ亜属)",NA,FALSE
+"Charred Remain","炭化材(2片分割)",NA,FALSE
+"Charred Remain","炭化材(3年輪:針葉樹A)",NA,FALSE
+"Charred Remain","炭化材(3年輪)",NA,FALSE
+"Charred Remain","炭化材(4分の1割材･オオバギ近似種)",NA,FALSE
+"Charred Remain","炭化材(6-10y)",NA,FALSE
+"Charred Remain","炭化材(6年輪:マツ属)",NA,FALSE
+"Charred Remain","炭化材(アオキ)",NA,FALSE
+"Charred Remain","炭化材(アカガシ亜属，より外側〜5年輪分)",NA,FALSE
+"Charred Remain","炭化材(アカガシ亜属、シキミ)",NA,FALSE
+"Charred Remain","炭化材(アカガシ亜属)",NA,FALSE
+"Charred Remain","炭化材（アカガシ亜属）",NA,FALSE
+"Charred Remain","炭化材(アカガシ亜属またはクヌギ節)",NA,FALSE
+"Charred Remain","炭化材(アカマツ)",NA,FALSE
+"Charred Remain","炭化材(アカメガシワ)",NA,FALSE
+"Charred Remain","炭化材(アサダ、コナラ節、ケヤキ、カエデ属)",NA,FALSE
+"Charred Remain","炭化材(アサダ、ブナ属、モクレン属、トチノキ)",NA,FALSE
+"Charred Remain","炭化材(アサダ)",NA,FALSE
+"Charred Remain","炭化材(アジサイ属)",NA,FALSE
+"Charred Remain","炭化材(アスナロ，コナラ属コナラ節)",NA,FALSE
+"Charred Remain","炭化材(アスナロ)",NA,FALSE
+"Charred Remain","炭化材(アスナロ属)",NA,FALSE
+"Charred Remain","炭化材(アマネザサ等)",NA,FALSE
+"Charred Remain","炭化材(アワブキ､アワブキ科)",NA,FALSE
+"Charred Remain","炭化材(アワブキ)",NA,FALSE
+"Charred Remain","炭化材(アワブキ属)",NA,FALSE
+"Charred Remain","炭化材(アワブキ属アカガシ亜属)",NA,FALSE
+"Charred Remain","炭化材(アワブキ科アワブキ属)",NA,FALSE
+"Charred Remain","炭化材(イイギリ)",NA,FALSE
+"Charred Remain","炭化材(イスノキ)",NA,FALSE
+"Charred Remain","炭化材(イスノキ近似種)",NA,FALSE
+"Charred Remain","炭化材(イチイガシ)",NA,FALSE
+"Charred Remain","炭化材(イヌエンジュ)",NA,FALSE
+"Charred Remain","炭化材(イヌガヤ･スダジイ)",NA,FALSE
+"Charred Remain","炭化材(イヌガヤ)",NA,FALSE
+"Charred Remain","炭化材(イヌザンショウ)",NA,FALSE
+"Charred Remain","炭化材(イヌシデ節)",NA,FALSE
+"Charred Remain","炭化材(イネ科)",NA,FALSE
+"Charred Remain","炭化材(イネ科タケ亜科)",NA,FALSE
+"Charred Remain","炭化材（イネ科タケ亜科）",NA,FALSE
+"Charred Remain","炭化材(イネ科タケ亜科)、炭化種実(不明種実)",NA,FALSE
+"Charred Remain","炭化材(イネ科タケ亜科の一種)",NA,FALSE
+"Charred Remain","炭化材(イネ科稈)",NA,FALSE
+"Charred Remain","炭化材(イネ科茎)",NA,FALSE
+"Charred Remain","炭化材(イボタノキ属)",NA,FALSE
+"Charred Remain","炭化材(ウコギ属)",NA,FALSE
+"Charred Remain","炭化材(ウコギ科)",NA,FALSE
+"Charred Remain","炭化材(ウツギ属)",NA,FALSE
+"Charred Remain","炭化材(ウルシ?)",NA,FALSE
+"Charred Remain","炭化材(ウルシ属)",NA,FALSE
+"Charred Remain","炭化材(エゴノキ属, モミ属)",NA,FALSE
+"Charred Remain","炭化材(エゴノキ属?)",NA,FALSE
+"Charred Remain","炭化材(エゴノキ属)",NA,FALSE
+"Charred Remain","炭化材(エゴノキ属近似種)",NA,FALSE
+"Charred Remain","炭化材(エノキ属)",NA,FALSE
+"Charred Remain","炭化材（エノキ属）",NA,FALSE
+"Charred Remain","炭化材(オニグルミ･クリ)",NA,FALSE
+"Charred Remain","炭化材(オニグルミ、カエデ属、ケンポナシ属)",NA,FALSE
+"Charred Remain","炭化材(オニグルミ、カエデ属、トネリコ属)",NA,FALSE
+"Charred Remain","炭化材(オニグルミ、クリ)",NA,FALSE
+"Charred Remain","炭化材（オニグルミ(5)）",NA,FALSE
+"Charred Remain","炭化材(オニグルミ)",NA,FALSE
+"Charred Remain","炭化材（オニグルミ）",NA,FALSE
+"Charred Remain","炭化材(オニグルミ近似種)",NA,FALSE
+"Charred Remain","炭化材(カエデ属、ブナ属)",NA,FALSE
+"Charred Remain","炭化材（カエデ属(5)）",NA,FALSE
+"Charred Remain","炭化材(カエデ属)",NA,FALSE
+"Charred Remain","炭化材（カエデ属）",NA,FALSE
+"Charred Remain","炭化材(カエデ属の一種)",NA,FALSE
+"Charred Remain","炭化材(カエデ科カエデ属)",NA,FALSE
+"Charred Remain","炭化材(カキノキ属)",NA,FALSE
+"Charred Remain","炭化材(カシノキ属)",NA,FALSE
+"Charred Remain","炭化材(カツラ)",NA,FALSE
+"Charred Remain","炭化材(カバノキ属)",NA,FALSE
+"Charred Remain","炭化材(カバノキ科)",NA,FALSE
+"Charred Remain","炭化材(ガマズミ属)",NA,FALSE
+"Charred Remain","炭化材(カマツカ)",NA,FALSE
+"Charred Remain","炭化材（カマド内）",NA,FALSE
+"Charred Remain","炭化材(カヤ)",NA,FALSE
+"Charred Remain","炭化材（カヤ）",NA,FALSE
+"Charred Remain","炭化材(カラマツまたはトウヒ属)",NA,FALSE
+"Charred Remain","炭化材(カラマツ属)",NA,FALSE
+"Charred Remain","炭化材(カラマツ属orトウヒ属)",NA,FALSE
+"Charred Remain","炭化材(カラマツ属またはトウヒ属)",NA,FALSE
+"Charred Remain","炭化材(キハダ)",NA,FALSE
+"Charred Remain","炭化材（キハダ）",NA,FALSE
+"Charred Remain","炭化材(キハダ属)",NA,FALSE
+"Charred Remain","炭化材(キハダ近似種)",NA,FALSE
+"Charred Remain","炭化材(キリ)",NA,FALSE
+"Charred Remain","炭化材(クサギ)",NA,FALSE
+"Charred Remain","炭化材(クスノキ)",NA,FALSE
+"Charred Remain","炭化材（クスノキ）",NA,FALSE
+"Charred Remain","炭化材(クスノキ科)",NA,FALSE
+"Charred Remain","炭化材（クスノキ科）",NA,FALSE
+"Charred Remain","炭化材(クスノキ科クスノキ属ヤブニッケイ)",NA,FALSE
+"Charred Remain","炭化材(クスノキ科シロダモ属)",NA,FALSE
+"Charred Remain","炭化材(クヌギ･コナラ?)",NA,FALSE
+"Charred Remain","炭化材(クヌギ･コナラ)",NA,FALSE
+"Charred Remain","炭化材(クヌギ節,4年輪)",NA,FALSE
+"Charred Remain","炭化材(クヌギ節:1年輪)",NA,FALSE
+"Charred Remain","炭化材(クヌギ節:2年輪)",NA,FALSE
+"Charred Remain","炭化材(クヌギ節:3年輪)",NA,FALSE
+"Charred Remain","炭化材(クヌギ節:4年輪)",NA,FALSE
+"Charred Remain","炭化材(クヌギ節)",NA,FALSE
+"Charred Remain","炭化材（クヌギ節）",NA,FALSE
+"Charred Remain","炭化材(クヌギ節の一種)",NA,FALSE
+"Charred Remain","炭化材(クヌギ類)",NA,FALSE
+"Charred Remain","炭化材(クマシデ属)",NA,FALSE
+"Charred Remain","炭化材(クマシデ属イヌシデ節,クリ)",NA,FALSE
+"Charred Remain","炭化材(クマシデ属イヌシデ節)",NA,FALSE
+"Charred Remain","炭化材(クマシデ属クマシデ設)",NA,FALSE
+"Charred Remain","炭化材(クマシデ節)",NA,FALSE
+"Charred Remain","炭化材(クマノミズキ類)",NA,FALSE
+"Charred Remain","炭化材(グミ)",NA,FALSE
+"Charred Remain","炭化材(グミ属)",NA,FALSE
+"Charred Remain","炭化材(クリ-コナラ属コナラ節)",NA,FALSE
+"Charred Remain","炭化材(クリ-コナラ節)",NA,FALSE
+"Charred Remain","炭化材(クリ･イネ科タケ亜科)",NA,FALSE
+"Charred Remain","炭化材(クリ･キハダ)",NA,FALSE
+"Charred Remain","炭化材(クリ･スノキ属)(部位不明)",NA,FALSE
+"Charred Remain","炭化材(クリ･タケ亜科)",NA,FALSE
+"Charred Remain","炭化材(クリ, ケンポナシ属)",NA,FALSE
+"Charred Remain","炭化材(クリ, コナラ)",NA,FALSE
+"Charred Remain","炭化材(クリ, 広葉樹)",NA,FALSE
+"Charred Remain","炭化材(クリ,カエデ属)",NA,FALSE
+"Charred Remain","炭化材(クリ,ブナ属)",NA,FALSE
+"Charred Remain","炭化材(クリ、カエデ属)",NA,FALSE
+"Charred Remain","炭化材(クリ、サクラ属、カエデ属、ブナ属)",NA,FALSE
+"Charred Remain","炭化材(クリ、マツ属複維管束亜属)",NA,FALSE
+"Charred Remain","炭化材(クリ、ヤマグワ)",NA,FALSE
+"Charred Remain","炭化材（クリ、最終形成年輪、外側4年輪分）",NA,FALSE
+"Charred Remain","炭化材(クリ、広葉樹)",NA,FALSE
+"Charred Remain","炭化材(クリ、散孔材)",NA,FALSE
+"Charred Remain","炭化材(クリ、樹皮)",NA,FALSE
+"Charred Remain","炭化材(クリ:1年輪分)",NA,FALSE
+"Charred Remain","炭化材(クリ?)",NA,FALSE
+"Charred Remain","炭化材(クリ)",NA,FALSE
+"Charred Remain","炭化材(クリ）",NA,FALSE
+"Charred Remain","炭化材（クリ）",NA,FALSE
+"Charred Remain","炭化材(クリ)　2年輪",NA,FALSE
+"Charred Remain","炭化材(クリ)･土壌",NA,FALSE
+"Charred Remain","炭化材(クリ−シイノキ属)",NA,FALSE
+"Charred Remain","炭化材(クリまたはコナラ節)",NA,FALSE
+"Charred Remain","炭化材(クリまたはシイノキ属)",NA,FALSE
+"Charred Remain","炭化材(クリまたはシイ属)",NA,FALSE
+"Charred Remain","炭化材(クリ材)",NA,FALSE
+"Charred Remain","炭化材(クリ近似種)",NA,FALSE
+"Charred Remain","炭化材(クリ類似種)",NA,FALSE
+"Charred Remain","炭化材(クルミ属)",NA,FALSE
+"Charred Remain","炭化材(クロモジ属)",NA,FALSE
+"Charred Remain","炭化材(クワ)",NA,FALSE
+"Charred Remain","炭化材(クワ属)",NA,FALSE
+"Charred Remain","炭化材(クワ属＆クマシデ属)",NA,FALSE
+"Charred Remain","炭化材(ケヤキ、シキミ)",NA,FALSE
+"Charred Remain","炭化材(ケヤキ)",NA,FALSE
+"Charred Remain","炭化材（ケヤキ）",NA,FALSE
+"Charred Remain","炭化材(ケンポナシ)",NA,FALSE
+"Charred Remain","炭化材(ケンポナシ属)",NA,FALSE
+"Charred Remain","炭化材(コウヤマキ)",NA,FALSE
+"Charred Remain","炭化材(コクサギ)",NA,FALSE
+"Charred Remain","炭化材(コジイ)",NA,FALSE
+"Charred Remain","炭化材(コナラ)",NA,FALSE
+"Charred Remain","炭化材（コナラ）",NA,FALSE
+"Charred Remain","炭化材(コナラ亜属)",NA,FALSE
+"Charred Remain","炭化材(コナラ亜属クヌギ節)",NA,FALSE
+"Charred Remain","炭化材(コナラ亜属コナラ節)",NA,FALSE
+"Charred Remain","炭化材(コナラ属)",NA,FALSE
+"Charred Remain","炭化材（コナラ属）",NA,FALSE
+"Charred Remain","炭化材(コナラ属アカガシ亜属, クスノキ科. イネ科)",NA,FALSE
+"Charred Remain","炭化材(コナラ属アカガシ亜属、サクラ属、ユズリハ属)",NA,FALSE
+"Charred Remain","炭化材(コナラ属アカガシ亜属?)",NA,FALSE
+"Charred Remain","炭化材(コナラ属アカガシ亜属)",NA,FALSE
+"Charred Remain","炭化材(コナラ属アカガシ亜属•1年輪)",NA,FALSE
+"Charred Remain","炭化材(コナラ属アカガシ亜属•1年輪未満)",NA,FALSE
+"Charred Remain","炭化材(コナラ属アカガシ亜属•4年輪？)",NA,FALSE
+"Charred Remain","炭化材（コナラ属アカガシ亜属ブナ科）",NA,FALSE
+"Charred Remain","炭化材(コナラ属クヌギ)",NA,FALSE
+"Charred Remain","炭化材(コナラ属クヌギ節)",NA,FALSE
+"Charred Remain","炭化材(コナラ属クヌギ節とヒノキ属)",NA,FALSE
+"Charred Remain","炭化材(コナラ属コナラ亜属)",NA,FALSE
+"Charred Remain","炭化材(コナラ属コナラ亜属クヌギ節･クリ)",NA,FALSE
+"Charred Remain","炭化材(コナラ属コナラ亜属クヌギ節)",NA,FALSE
+"Charred Remain","炭化材（コナラ属コナラ亜属クヌギ節）",NA,FALSE
+"Charred Remain","炭化材(コナラ属コナラ亜属コナラ節、ニレ属)",NA,FALSE
+"Charred Remain","炭化材(コナラ属コナラ亜属コナラ節?)",NA,FALSE
+"Charred Remain","炭化材(コナラ属コナラ亜属コナラ節)",NA,FALSE
+"Charred Remain","炭化材（コナラ属コナラ亜属コナラ節）",NA,FALSE
+"Charred Remain","炭化材(コナラ属コナラ亜属の一種:ブナ科)",NA,FALSE
+"Charred Remain","炭化材(コナラ属コナラ亜科)",NA,FALSE
+"Charred Remain","炭化材(コナラ属コナラ亜科クヌギ節)",NA,FALSE
+"Charred Remain","炭化材(コナラ属コナラ亜科コナラ節･エゴノキ属)",NA,FALSE
+"Charred Remain","炭化材(コナラ属コナラ亜科コナラ節)",NA,FALSE
+"Charred Remain","炭化材(コナラ属コナラ亜種クヌギ節)",NA,FALSE
+"Charred Remain","炭化材(コナラ属コナラ亜種コナラ節)",NA,FALSE
+"Charred Remain","炭化材(コナラ属コナラ節？)",NA,FALSE
+"Charred Remain","炭化材(コナラ属コナラ節)",NA,FALSE
+"Charred Remain","炭化材（コナラ属コナラ節）",NA,FALSE
+"Charred Remain","炭化材(コナラ属コナラ節コナラ節)",NA,FALSE
+"Charred Remain","炭化材(コナラ族アカガシ亜属)",NA,FALSE
+"Charred Remain","炭化材(コナラ節, クリ)",NA,FALSE
+"Charred Remain","炭化材(コナラ節,4年輪)",NA,FALSE
+"Charred Remain","炭化材(コナラ節、エゴノキ属、ガマズミ属、サクラ属)",NA,FALSE
+"Charred Remain","炭化材(コナラ節)",NA,FALSE
+"Charred Remain","炭化材（コナラ節）",NA,FALSE
+"Charred Remain","炭化材(ゴンズイ)",NA,FALSE
+"Charred Remain","炭化材(サカキ)",NA,FALSE
+"Charred Remain","炭化材(サクラ属､ケヤキ、タケ類)",NA,FALSE
+"Charred Remain","炭化材(サクラ属)",NA,FALSE
+"Charred Remain","炭化材(サクラ属）",NA,FALSE
+"Charred Remain","炭化材(サワラ)",NA,FALSE
+"Charred Remain","炭化材(サンショウ属)",NA,FALSE
+"Charred Remain","炭化材(シイノキ属，より外側〜4年輪分)",NA,FALSE
+"Charred Remain","炭化材(シイノキ属，より外側〜5年輪分)",NA,FALSE
+"Charred Remain","炭化材(シイノキ属，最外？〜5年輪分)",NA,FALSE
+"Charred Remain","炭化材(シイノキ属)",NA,FALSE
+"Charred Remain","炭化材(シイノキ属)中心部",NA,FALSE
+"Charred Remain","炭化材(シイノキ属近似種)",NA,FALSE
+"Charred Remain","炭化材(シイ属､ブナ科)",NA,FALSE
+"Charred Remain","炭化材(シイ属)",NA,FALSE
+"Charred Remain","炭化材(シキミ?)",NA,FALSE
+"Charred Remain","炭化材(シキミ)",NA,FALSE
+"Charred Remain","炭化材(シナノキ属?)",NA,FALSE
+"Charred Remain","炭化材(シナノキ属)",NA,FALSE
+"Charred Remain","炭化材(シャシャンボ)",NA,FALSE
+"Charred Remain","炭化材(シラキ)",NA,FALSE
+"Charred Remain","炭化材(シラキ属)",NA,FALSE
+"Charred Remain","炭化材(シロダモ属)",NA,FALSE
+"Charred Remain","炭化材(シロモジ節､クスノキ科)",NA,FALSE
+"Charred Remain","炭化材(スギ )",NA,FALSE
+"Charred Remain","炭化材(スギ?)",NA,FALSE
+"Charred Remain","炭化材(スギ)",NA,FALSE
+"Charred Remain","炭化材(スギ)　1-5年輪",NA,FALSE
+"Charred Remain","炭化材(スギ)　11-15年輪",NA,FALSE
+"Charred Remain","炭化材(スギ)　21-24年輪",NA,FALSE
+"Charred Remain","炭化材(ススキ属:直径3㎜)",NA,FALSE
+"Charred Remain","炭化材(ススキ属)",NA,FALSE
+"Charred Remain","炭化材(スダジイ)",NA,FALSE
+"Charred Remain","炭化材(スノキ属)",NA,FALSE
+"Charred Remain","炭化材(スノキ属)(部位不明)",NA,FALSE
+"Charred Remain","炭化材(センダン)",NA,FALSE
+"Charred Remain","炭化材(タイミンタチバナ)",NA,FALSE
+"Charred Remain","炭化材(タカノツメ)",NA,FALSE
+"Charred Remain","炭化材(タケ)",NA,FALSE
+"Charred Remain","炭化材(タケ亜科)",NA,FALSE
+"Charred Remain","炭化材(タニウツギ属)",NA,FALSE
+"Charred Remain","炭化材(タブノキ)",NA,FALSE
+"Charred Remain","炭化材(タブノキ属)",NA,FALSE
+"Charred Remain","炭化材(タラノキ)",NA,FALSE
+"Charred Remain","炭化材(チドリノキ)",NA,FALSE
+"Charred Remain","炭化材(ツガ属)",NA,FALSE
+"Charred Remain","炭化材(ツクバネウツギ属)",NA,FALSE
+"Charred Remain","炭化材(ツゲ属)",NA,FALSE
+"Charred Remain","炭化材(ツツジ属)",NA,FALSE
+"Charred Remain","炭化材(ツバキ属)",NA,FALSE
+"Charred Remain","炭化材(ツバキ属近似種)",NA,FALSE
+"Charred Remain","炭化材(ツバキ科ツバキ属)",NA,FALSE
+"Charred Remain","炭化材(ツブラジイ)",NA,FALSE
+"Charred Remain","炭化材(ツブラジイ−コナラ属)",NA,FALSE
+"Charred Remain","炭化材(ツルウメモドキ属)",NA,FALSE
+"Charred Remain","炭化材(つる植物)",NA,FALSE
+"Charred Remain","炭化材(トウヒ属-カラマツ属)",NA,FALSE
+"Charred Remain","炭化材(トウヒ属?）",NA,FALSE
+"Charred Remain","炭化材(トウヒ属？の一種)",NA,FALSE
+"Charred Remain","炭化材(トウヒ属)",NA,FALSE
+"Charred Remain","炭化材(トウヒ属バラモミ節の一種)",NA,FALSE
+"Charred Remain","炭化材(トウヒ属またはカラマツ属)",NA,FALSE
+"Charred Remain","炭化材(トガサワラ)",NA,FALSE
+"Charred Remain","炭化材(トチノキ)",NA,FALSE
+"Charred Remain","炭化材(トネリコ)",NA,FALSE
+"Charred Remain","炭化材（トネリコ）",NA,FALSE
+"Charred Remain","炭化材(トネリコ属)",NA,FALSE
+"Charred Remain","炭化材（トネリコ属）",NA,FALSE
+"Charred Remain","炭化材(トネリコ属シオジ節)",NA,FALSE
+"Charred Remain","炭化材（トネリコ節）最終形成年輪、3年輪分",NA,FALSE
+"Charred Remain","炭化材(トネリコ類)",NA,FALSE
+"Charred Remain","炭化材(ナシ亜属)",NA,FALSE
+"Charred Remain","炭化材(ナシ亜科)",NA,FALSE
+"Charred Remain","炭化材(ナツツバキ属)",NA,FALSE
+"Charred Remain","炭化材(ナナカマド属)",NA,FALSE
+"Charred Remain","炭化材(ナナカマド近似種)",NA,FALSE
+"Charred Remain","炭化材(ナラ)",NA,FALSE
+"Charred Remain","炭化材(ナラ類)",NA,FALSE
+"Charred Remain","炭化材(ニガキ)",NA,FALSE
+"Charred Remain","炭化材(ニシキギ属)",NA,FALSE
+"Charred Remain","炭化材（ニレ属(5)）",NA,FALSE
+"Charred Remain","炭化材(ニレ属)",NA,FALSE
+"Charred Remain","炭化材（ニレ属）",NA,FALSE
+"Charred Remain","炭化材(ニレ科)",NA,FALSE
+"Charred Remain","炭化材(ニレ科エノキ属)",NA,FALSE
+"Charred Remain","炭化材(ニレ科ケヤキ属)",NA,FALSE
+"Charred Remain","炭化材(ニレ科ニレ属)",NA,FALSE
+"Charred Remain","炭化材(ニワトコ)",NA,FALSE
+"Charred Remain","炭化材(ヌルデ)",NA,FALSE
+"Charred Remain","炭化材(ネジキ)",NA,FALSE
+"Charred Remain","炭化材(ネズコ?)",NA,FALSE
+"Charred Remain","炭化材(ネズコ)",NA,FALSE
+"Charred Remain","炭化材(ネムノキ)",NA,FALSE
+"Charred Remain","炭化材（ネムノキ)",NA,FALSE
+"Charred Remain","炭化材(ハイノキ)",NA,FALSE
+"Charred Remain","炭化材(ハイノキ属)",NA,FALSE
+"Charred Remain","炭化材(ハイノキ属サワフタギ節)",NA,FALSE
+"Charred Remain","炭化材(ハイノキ属ハイノキ節)",NA,FALSE
+"Charred Remain","炭化材(ハイノキ節)",NA,FALSE
+"Charred Remain","炭化材(ハコヤナギ属)",NA,FALSE
+"Charred Remain","炭化材（ハコヤナギ属）",NA,FALSE
+"Charred Remain","炭化材(ハシドイ)",NA,FALSE
+"Charred Remain","炭化材(ハシバミ属)",NA,FALSE
+"Charred Remain","炭化材(ハゼノキorヤマハゼ?)",NA,FALSE
+"Charred Remain","炭化材(ハゼノキ類)",NA,FALSE
+"Charred Remain","炭化材(ハマビワ､クスノキ科)",NA,FALSE
+"Charred Remain","炭化材(バラ属)",NA,FALSE
+"Charred Remain","炭化材(バラ科)",NA,FALSE
+"Charred Remain","炭化材(バラ科サクラ属)",NA,FALSE
+"Charred Remain","炭化材(バラ科ナシ亜属)",NA,FALSE
+"Charred Remain","炭化材(バラ科ナシ亜科)",NA,FALSE
+"Charred Remain","炭化材(ハリギリ)",NA,FALSE
+"Charred Remain","炭化材(ハルニレ)",NA,FALSE
+"Charred Remain","炭化材(ハンノキ亜属)",NA,FALSE
+"Charred Remain","炭化材（ハンノキ亜属）",NA,FALSE
+"Charred Remain","炭化材(ハンノキ属)",NA,FALSE
+"Charred Remain","炭化材(ハンノキ属ハンノキ亜属、クリ)",NA,FALSE
+"Charred Remain","炭化材(ハンノキ属ハンノキ亜属)",NA,FALSE
+"Charred Remain","炭化材(ハンノキ属ハンノキ節)",NA,FALSE
+"Charred Remain","炭化材(ハンノキ属ヤシャブシ亜属)",NA,FALSE
+"Charred Remain","炭化材(ハンノキ節)",NA,FALSE
+"Charred Remain","炭化材(ヒサカキ)",NA,FALSE
+"Charred Remain","炭化材(ヒサカキ属)",NA,FALSE
+"Charred Remain","炭化材(ヒノキ)",NA,FALSE
+"Charred Remain","炭化材(ヒノキorスギ)",NA,FALSE
+"Charred Remain","炭化材(ヒノキ属, クリ)",NA,FALSE
+"Charred Remain","炭化材(ヒノキ属、カエデ属)",NA,FALSE
+"Charred Remain","炭化材(ヒノキ属、クリ、エゴノキ属)",NA,FALSE
+"Charred Remain","炭化材(ヒノキ属)",NA,FALSE
+"Charred Remain","炭化材(ヒノキ科、カエデ属)",NA,FALSE
+"Charred Remain","炭化材(ヒノキ科)",NA,FALSE
+"Charred Remain","炭化材(ヒノキ科アスナロ属)",NA,FALSE
+"Charred Remain","炭化材(ヒバ)",NA,FALSE
+"Charred Remain","炭化材(ヒメバラモミ)",NA,FALSE
+"Charred Remain","炭化材(ふいごの羽口付)(コナラ属アカガシ亜属)",NA,FALSE
+"Charred Remain","炭化材(フジキ属)",NA,FALSE
+"Charred Remain","炭化材(フタバガキ科)",NA,FALSE
+"Charred Remain","炭化材(ブナ属、クリ、コナラ属コナラ亜属コナラ節)",NA,FALSE
+"Charred Remain","炭化材(ブナ属、コナラ属コナラ亜属クヌギ節)",NA,FALSE
+"Charred Remain","炭化材(ブナ属、コナラ属コナラ亜属コナラ節)",NA,FALSE
+"Charred Remain","炭化材(ブナ属、トネリコ属、カツラ)",NA,FALSE
+"Charred Remain","炭化材(ブナ属)",NA,FALSE
+"Charred Remain","炭化材(ブナ科　クリ、シイ属、コナラ属コナラ節のいずれか)",NA,FALSE
+"Charred Remain","炭化材(ブナ科)",NA,FALSE
+"Charred Remain","炭化材（ブナ科クリ属）",NA,FALSE
+"Charred Remain","炭化材(ブナ科クリ属クリ)",NA,FALSE
+"Charred Remain","炭化材(ブナ科コナラ属アカガシ亜属)",NA,FALSE
+"Charred Remain","炭化材(ブナ科シイ属ツブラジイ)",NA,FALSE
+"Charred Remain","炭化材(ブナ科ブナ属)",NA,FALSE
+"Charred Remain","炭化材(マキ属)",NA,FALSE
+"Charred Remain","炭化材(マダケ)",NA,FALSE
+"Charred Remain","炭化材(マタタビ属)",NA,FALSE
+"Charred Remain","炭化材(マツ?)",NA,FALSE
+"Charred Remain","炭化材(マツ)",NA,FALSE
+"Charred Remain","炭化材(マツ属?)",NA,FALSE
+"Charred Remain","炭化材(マツ属)",NA,FALSE
+"Charred Remain","炭化材(マツ属の根材)",NA,FALSE
+"Charred Remain","炭化材(マツ属複維官束亜属)",NA,FALSE
+"Charred Remain","炭化材(マツ属複維管属亜属)",NA,FALSE
+"Charred Remain","炭化材(マツ属複維管束亜属･半径25mm)",NA,FALSE
+"Charred Remain","炭化材(マツ属複維管束亜属, サクラ属)",NA,FALSE
+"Charred Remain","炭化材(マツ属複維管束亜属, モミ属)",NA,FALSE
+"Charred Remain","炭化材(マツ属複維管束亜属、クスノキ科、モチノキ属近似種)",NA,FALSE
+"Charred Remain","炭化材(マツ属複維管束亜属)",NA,FALSE
+"Charred Remain","炭化材(マツ属複維管束亜属の一種)",NA,FALSE
+"Charred Remain","炭化材(マツ科)",NA,FALSE
+"Charred Remain","炭化材(マツ科マツ属)",NA,FALSE
+"Charred Remain","炭化材(マツ複維管属亜属)",NA,FALSE
+"Charred Remain","炭化材(マツ複維管束亜属)",NA,FALSE
+"Charred Remain","炭化材(マテバシイ)",NA,FALSE
+"Charred Remain","炭化材(マメ科サイカチ属サイカチ)",NA,FALSE
+"Charred Remain","炭化材(マンサク属)",NA,FALSE
+"Charred Remain","炭化材(ミカン科キハダ属キハダ)",NA,FALSE
+"Charred Remain","炭化材(ミズキ、モミ属)",NA,FALSE
+"Charred Remain","炭化材(ミズキ属?)",NA,FALSE
+"Charred Remain","炭化材(ミズキ属)",NA,FALSE
+"Charred Remain","炭化材(ミツバウツギ科)",NA,FALSE
+"Charred Remain","炭化材(ムクノキ)",NA,FALSE
+"Charred Remain","炭化材(ムクノキ•2年輪)",NA,FALSE
+"Charred Remain","炭化材(ムクロジ)",NA,FALSE
+"Charred Remain","炭化材(ムクロジ近似種)",NA,FALSE
+"Charred Remain","炭化材(ムラサキシキブ属)",NA,FALSE
+"Charred Remain","炭化材(メダケ属ネザサ節)",NA,FALSE
+"Charred Remain","炭化材(モクレン)",NA,FALSE
+"Charred Remain","炭化材(モクレン属、イネ科タケ亜科)",NA,FALSE
+"Charred Remain","炭化材(モクレン属)",NA,FALSE
+"Charred Remain","炭化材(モクレン科モクレン属)",NA,FALSE
+"Charred Remain","炭化材(モチノキ属)",NA,FALSE
+"Charred Remain","炭化材(モチノキ科モチノキ属)",NA,FALSE
+"Charred Remain","炭化材(モミ属)",NA,FALSE
+"Charred Remain","炭化材（モミ属）　樹種同定白滝-84と同一個体",NA,FALSE
+"Charred Remain","炭化材(モモ)",NA,FALSE
+"Charred Remain","炭化材(ヤクシマサルスベリ)",NA,FALSE
+"Charred Remain","炭化材（ヤナギ）",NA,FALSE
+"Charred Remain","炭化材(ヤナギ属、コナラ属コナラ亜属コナラ節、クリ、トネリコ属)",NA,FALSE
+"Charred Remain","炭化材(ヤナギ属、モクレン属)",NA,FALSE
+"Charred Remain","炭化材（ヤナギ属(4)）",NA,FALSE
+"Charred Remain","炭化材(ヤナギ属)",NA,FALSE
+"Charred Remain","炭化材（ヤナギ属）",NA,FALSE
+"Charred Remain","炭化材（ヤナギ枝？）",NA,FALSE
+"Charred Remain","炭化材(ヤナギ科)",NA,FALSE
+"Charred Remain","炭化材(ヤブツバキ)",NA,FALSE
+"Charred Remain","炭化材（ヤブツバキ）",NA,FALSE
+"Charred Remain","炭化材(ヤマウルシ)",NA,FALSE
+"Charred Remain","炭化材(ヤマウルシ様環孔材)",NA,FALSE
+"Charred Remain","炭化材(ヤマガキ)",NA,FALSE
+"Charred Remain","炭化材(ヤマグワ)",NA,FALSE
+"Charred Remain","炭化材（ヤマグワ）",NA,FALSE
+"Charred Remain","炭化材(ヤマグワ近似種)",NA,FALSE
+"Charred Remain","炭化材(ヤマビワ､アワブキ科)",NA,FALSE
+"Charred Remain","炭化材(ユズリハ属)",NA,FALSE
+"Charred Remain","炭化材(リョウブ)",NA,FALSE
+"Charred Remain","炭化材(リンボク)",NA,FALSE
+"Charred Remain","炭化材（上屋）",NA,FALSE
+"Charred Remain","炭化材(不明)",NA,FALSE
+"Charred Remain","炭化材(不明散孔材)",NA,FALSE
+"Charred Remain","炭化材(不明環孔材)",NA,FALSE
+"Charred Remain","炭化材（丸木）",NA,FALSE
+"Charred Remain","炭化材(丸材か)",NA,FALSE
+"Charred Remain","炭化材(仮材)",NA,FALSE
+"Charred Remain","炭化材(最外年輪)",NA,FALSE
+"Charred Remain","炭化材（最外年輪）",NA,FALSE
+"Charred Remain","炭化材（最外年輪である可能性高いが不確実）",NA,FALSE
+"Charred Remain","炭化材（最終形成年輪）",NA,FALSE
+"Charred Remain","炭化材（最終形成年輪以外。樹皮に近い部分を採取）",NA,FALSE
+"Charred Remain","炭化材(双子葉植物)",NA,FALSE
+"Charred Remain","炭化材（垂木？）",NA,FALSE
+"Charred Remain","炭化材(塊状)",NA,FALSE
+"Charred Remain","炭化材（外側2年輪分）",NA,FALSE
+"Charred Remain","炭化材（外側6年輪分）",NA,FALSE
+"Charred Remain","炭化材(大径:アカガシ亜属)",NA,FALSE
+"Charred Remain","炭化材(小径:アカガシ亜属)",NA,FALSE
+"Charred Remain","炭化材(小片複数)",NA,FALSE
+"Charred Remain","炭化材（広葉樹・タケ亜科・樹皮等）",NA,FALSE
+"Charred Remain","炭化材(広葉樹･散孔材)",NA,FALSE
+"Charred Remain","炭化材(広葉樹･樹皮)",NA,FALSE
+"Charred Remain","炭化材(広葉樹･環孔材)",NA,FALSE
+"Charred Remain","炭化材(広葉樹:環孔材)",NA,FALSE
+"Charred Remain","炭化材(広葉樹?)",NA,FALSE
+"Charred Remain","炭化材(広葉樹？)",NA,FALSE
+"Charred Remain","炭化材(広葉樹(散孔材))",NA,FALSE
+"Charred Remain","炭化材(広葉樹(環孔材))",NA,TRUE
+"Wood","炭化材(広葉樹(環孔材))",NA,TRUE
+"Charred Remain","炭化材(広葉樹)",NA,FALSE
+"Charred Remain","炭化材（広葉樹）",NA,FALSE
+"Charred Remain","炭化材(広葉樹•1年輪未満)",NA,FALSE
+"Charred Remain","炭化材(広葉樹の節)",NA,FALSE
+"Charred Remain","炭化材(広葉樹散孔材)",NA,FALSE
+"Charred Remain","炭化材(広葉樹樹幹の材片)",NA,FALSE
+"Charred Remain","炭化材(広葉樹環孔材?)",NA,FALSE
+"Charred Remain","炭化材(広葉樹節)",NA,FALSE
+"Charred Remain","炭化材(散孔材･環孔材)",NA,FALSE
+"Charred Remain","炭化材(散孔材，2年輪分)",NA,FALSE
+"Charred Remain","炭化材(散孔材:5年輪)",NA,FALSE
+"Charred Remain","炭化材(散孔材?)",NA,FALSE
+"Charred Remain","炭化材(散孔材？)",NA,FALSE
+"Charred Remain","炭化材(散孔材)",NA,FALSE
+"Charred Remain","炭化材（散孔材）",NA,FALSE
+"Charred Remain","炭化材(散孔材2)",NA,FALSE
+"Charred Remain","炭化材(散孔材5年輪(外側))",NA,FALSE
+"Charred Remain","炭化材(散孔材の一種)",NA,FALSE
+"Charred Remain","炭化材（木材）",NA,FALSE
+"Charred Remain","炭化材（木炭・住居建築材）",NA,FALSE
+"Charred Remain","炭化材（木炭・木釘状の細い枝）",NA,FALSE
+"Charred Remain","炭化材（木炭・柱材外周部）",NA,FALSE
+"Charred Remain","炭化材（木炭）",NA,FALSE
+"Charred Remain","炭化材(木炭粒)",NA,FALSE
+"Charred Remain","炭化材(木片)",NA,FALSE
+"Charred Remain","炭化材(未同定)",NA,FALSE
+"Charred Remain","炭化材(杭？)",NA,FALSE
+"Charred Remain","炭化材(板材)",NA,FALSE
+"Charred Remain","炭化材(板目板状マツ属複維管束亜属)",NA,FALSE
+"Charred Remain","炭化材（枝材・木炭（0.58g））",NA,FALSE
+"Charred Remain","炭化材(枝材)",NA,FALSE
+"Charred Remain","炭化材（棟木？）",NA,FALSE
+"Charred Remain","炭化材（構築材？）",NA,FALSE
+"Charred Remain","炭化材(樹木類)",NA,FALSE
+"Charred Remain","炭化材(樹皮)",NA,FALSE
+"Charred Remain","炭化材（樹皮）",NA,FALSE
+"Charred Remain","炭化材(樹種不明)",NA,FALSE
+"Charred Remain","炭化材（樹種同定分析No.15、コナラ属コナラ亜属コナラ節）",NA,FALSE
+"Charred Remain","炭化材（樹種同定分析No.9、樹皮＝ハンノキ属）",NA,FALSE
+"Charred Remain","炭化材(灰質)",NA,FALSE
+"Charred Remain","炭化材（炭化樹皮・住居建築材）",NA,FALSE
+"Charred Remain","炭化材(環孔材?)",NA,FALSE
+"Charred Remain","炭化材（環孔材。つる性木本）",NA,FALSE
+"Charred Remain","炭化材(環孔材)",NA,FALSE
+"Charred Remain","炭化材（環孔材）",NA,FALSE
+"Charred Remain","炭化材(環孔材広葉樹)",NA,FALSE
+"Charred Remain","炭化材(環孔材類似)",NA,FALSE
+"Charred Remain","炭化材（細材）",NA,FALSE
+"Charred Remain","炭化材(薄板材)",NA,FALSE
+"Charred Remain","炭化材(角または丸材)",NA,FALSE
+"Charred Remain","炭化材（遺物番号　炭1）",NA,FALSE
+"Charred Remain","炭化材（遺物番号　炭17）",NA,FALSE
+"Charred Remain","炭化材（遺物番号　炭18）",NA,FALSE
+"Charred Remain","炭化材（遺物番号　炭3）",NA,FALSE
+"Charred Remain","炭化材（遺物番号　炭4）",NA,FALSE
+"Charred Remain","炭化材（遺物番号　炭6）",NA,FALSE
+"Charred Remain","炭化材（遺物番号　炭73）",NA,FALSE
+"Charred Remain","炭化材(部位不明)",NA,FALSE
+"Charred Remain","炭化材(針葉樹、カエデ属、トネリコ属、環孔材)",NA,FALSE
+"Charred Remain","炭化材(針葉樹、コナラ属)",NA,FALSE
+"Charred Remain","炭化材(針葉樹:小枝)",NA,FALSE
+"Charred Remain","炭化材(針葉樹？)",NA,FALSE
+"Charred Remain","炭化材(針葉樹)",NA,FALSE
+"Charred Remain","炭化材（針葉樹）",NA,FALSE
+"Charred Remain","炭化材(針葉樹4年輪分)",NA,FALSE
+"Charred Remain","炭化材(針葉樹フシ部約2〜3年輪分)",NA,FALSE
+"Charred Remain","炭化材2(コナラ属コナラ亜科コナラ節)",NA,FALSE
+"Charred Remain","炭化材A(ニレ科ニレ属)･炭化材B(ブナ科コナラ属アカガシ亜属)",NA,FALSE
+"Charred Remain","炭化材No.104（キハダ、内側から10年輪目）",NA,FALSE
+"Charred Remain","炭化材No.104（キハダ、内側から17年輪目）",NA,FALSE
+"Charred Remain","炭化材No.104（キハダ、内側から1年輪目）",NA,FALSE
+"Charred Remain","炭化材No.104（キハダ、内側から5年輪目）",NA,FALSE
+"Charred Remain","炭化材No.310（トドマツ、内側から10年輪目）",NA,FALSE
+"Charred Remain","炭化材No.310（トドマツ、内側から15年輪目）",NA,FALSE
+"Charred Remain","炭化材No.310（トドマツ、内側から1年輪目）",NA,FALSE
+"Charred Remain","炭化材No.310（トドマツ、内側から20年輪目）",NA,FALSE
+"Charred Remain","炭化材No.310（トドマツ、内側から28年輪目）",NA,FALSE
+"Charred Remain","炭化材No.310（トドマツ、内側から5年輪目）",NA,FALSE
+"Charred Remain","炭化材W1(ハンノキ節)",NA,FALSE
+"Charred Remain","炭化材コナラ属コナラ亜属コナラ節",NA,FALSE
+"Charred Remain","炭化材サクラ属",NA,FALSE
+"Charred Remain","炭化材トネリコ属",NA,FALSE
+"Charred Remain","炭化材一括(コナラ属コナラ亜科コナラ節)",NA,FALSE
+"Soil","炭化材含む土壌",NA,FALSE
+"Charred Remain","炭化材広葉樹",NA,FALSE
+"Charred Remain","炭化材広葉樹（環孔材）",NA,FALSE
+"Charred Remain","炭化材散孔材",NA,FALSE
+"Charred Remain","炭化材片",NA,FALSE
+"Charred Remain","炭化材片･炭化物片",NA,FALSE
+"Charred Remain","炭化材片(シイ属)",NA,FALSE
+"Charred Remain","炭化材片(ヤマモモ)",NA,FALSE
+"Charred Remain","炭化材片（針葉樹）最終形成年輪以外部位不明",NA,FALSE
+"Charred Remain","炭化材環孔材",NA,FALSE
+"Charred Remain","炭化材等",NA,FALSE
+"Charred Seed","炭化果実",NA,FALSE
+"Charred Seed","炭化果実(エゴマ)",NA,FALSE
+"Charred Seed","炭化栗",NA,FALSE
+"Charred Seed","炭化核(オニグルミ)",NA,FALSE
+"Charred Remain","炭化植物",NA,TRUE
+"Other Charred Remains","炭化植物",NA,TRUE
+"Charred Remain","炭化植物(イネ科)",NA,FALSE
+"Peat","炭化植物(ピート)",NA,FALSE
+"Charred Remain","炭化植物(草本類)",NA,FALSE
+"Charred Remain","炭化植物片(エノキ属、タケ亜科)",NA,FALSE
+"Charred Remain","炭化植物片(クリ、イネ科)",NA,FALSE
+"Charred Remain","炭化植物片(タケ･ササ類)",NA,FALSE
+"Charred Remain","炭化植物片（花柱または柱頭）",NA,FALSE
+"Charred Remain","炭化植物遺体",NA,TRUE
+"Other Charred Remains","炭化植物遺体",NA,TRUE
+"Charred Remain","炭化植物遺体･草本？",NA,FALSE
+"Charred Remain","炭化植物遺体(イネ科)",NA,FALSE
+"Wood","炭化植物遺体(イネ科稈)",NA,FALSE
+"Charred Remain","炭化植物遺体(イネ科草本)",NA,FALSE
+"Charred Remain","炭化植物遺体(タケ)",NA,FALSE
+"Charred Remain","炭化植物遺体（タケ亜科）",NA,FALSE
+"Charred Remain","炭化植物遺体(ヨシ属茎)",NA,FALSE
+"Charred Remain","炭化植物遺体（単子葉類）",NA,FALSE
+"Charred Remain","炭化植物遺体（双子葉類）",NA,FALSE
+"Charred Remain","炭化植物遺体(稈)(イネ科)",NA,FALSE
+"Charred Remain","炭化植物遺体(草本)",NA,FALSE
+"Charred Remain","炭化植物遺体（草本）",NA,FALSE
+"Charred Remain","炭化植物遺体(草本)　",NA,FALSE
+"Charred Remain","炭化植物遺体(草本植物)",NA,FALSE
+"Charred Remain","炭化植物遺体(部位不明)",NA,FALSE
+"Charred Remain","炭化樹皮",NA,FALSE
+"Charred Remain","炭化樹皮（壁材もしくは屋根材）",NA,FALSE
+"Other Charred Remains","炭化物",NA,TRUE
+"Wood","炭化物",NA,TRUE
+"Charred Remain","炭化物",NA,TRUE
+"Soil","炭化物",NA,TRUE
+"Other Charred Remains","炭化物
+",NA,FALSE
+NA,"炭化物･土壌",NA,FALSE
+"Charred Remain","炭化物・材",NA,FALSE
+"Charred Remain","炭化物･材",NA,FALSE
+"Charred Remain","炭化物・材　クルミ",NA,FALSE
+"Charred Remain","炭化物・材（クリ）",NA,FALSE
+"Charred Remain","炭化物・材（コナラ節）",NA,FALSE
+"Charred Remain","炭化物･材(シイノキ属)",NA,FALSE
+"Charred Remain","炭化物・材（ハンノキ亜属）",NA,FALSE
+"Charred Remain","炭化物・材（ブドウ属）",NA,FALSE
+"Charred Remain","炭化物・材（小枝）",NA,FALSE
+"Charred Remain","炭化物・材（枝）",NA,FALSE
+"Charred Remain","炭化物・材（樹皮）",NA,FALSE
+"Charred Remain","炭化物・材（節）",NA,FALSE
+"Charred Remain","炭化物・材（針葉樹）",NA,FALSE
+"Charred Remain","炭化物・植物遺体（タケ亜科、稈）",NA,FALSE
+"Charred Remain","炭化物・植物遺体（単子葉類）",NA,FALSE
+"Charred Seed","炭化物・種子",NA,FALSE
+"Charred Seed","炭化物･種子(イネ)",NA,FALSE
+"Charred Seed","炭化物・種実",NA,FALSE
+"Charred Seed","炭化物･種実(オニグルミ核)",NA,FALSE
+"Charred Seed","炭化物・種実（クルミ）",NA,FALSE
+"Charred Seed","炭化物・種実（ブドウ）",NA,FALSE
+"Other Charred Remains","炭化物?",NA,FALSE
+"Other Charred Remains","炭化物？",NA,TRUE
+"Charred Remain","炭化物？",NA,TRUE
+"Organic Residue from Pottery","炭化物（ⅡB５土器付着）",NA,FALSE
+"Organic Residue from Pottery","炭化物（ⅢB２土器付着）",NA,FALSE
+"Other Charred Remains","炭化物(№109)",NA,FALSE
+"Charred Seed","炭化物（アズキ）",NA,FALSE
+"Charred Remain","炭化物(アスナロ)",NA,FALSE
+"Charred Remain","炭化物(イチイ)",NA,FALSE
+"Charred Remain","炭化物(イネ属)",NA,FALSE
+"Charred Remain","炭化物(イネ科)",NA,FALSE
+"Charred Remain","炭化物（イネ科）",NA,FALSE
+"Charred Remain","炭化物(イネ科稈)",NA,FALSE
+"Charred Remain","炭化物（ウルシ科）",NA,FALSE
+"Charred Remain","炭化物(オニグルミ)",NA,TRUE
+"Charred Seed","炭化物(オニグルミ)",NA,TRUE
+"Other Charred Remains","炭化物（カーボン）",NA,FALSE
+"Charred Remain","炭化物(カエデ属)",NA,FALSE
+"Charred Remain","炭化物（カエデ属）",NA,FALSE
+"Charred Remain","炭化物(カツラ)",NA,FALSE
+"Charred Seed","炭化物（キハダ種子）",NA,FALSE
+"Charred Seed","炭化物（キビ）",NA,FALSE
+"Charred Seed","炭化物(クリ･クルミ)",NA,FALSE
+"Charred Seed","炭化物(クリ？)",NA,FALSE
+"Charred Remain","炭化物(クリ)",NA,TRUE
+"Charred Seed","炭化物(クリ)",NA,TRUE
+"Charred Seed","炭化物（クルミ？）",NA,FALSE
+"Charred Seed","炭化物(クルミ)",NA,TRUE
+"Charred Remain","炭化物(クルミ)",NA,TRUE
+"Charred Seed","炭化物(クルミほか)",NA,FALSE
+"Charred Seed","炭化物（クルミ属）",NA,FALSE
+"Charred Seed","炭化物（クルミ属内果皮）",NA,FALSE
+"Charred Seed","炭化物（クルミ核片）",NA,FALSE
+"Charred Seed","炭化物(クルミ殻)",NA,FALSE
+"Charred Remain","炭化物(ケヤキ)",NA,FALSE
+"Charred Remain","炭化物（コナラ属）",NA,FALSE
+"Charred Remain","炭化物(コナラ属アカガシ亜属)",NA,FALSE
+"Charred Remain","炭化物(コナラ属クヌギ節)",NA,FALSE
+"Charred Remain","炭化物(コナラ属コナラ亜属クヌギ節)",NA,FALSE
+"Charred Remain","炭化物(コナラ属コナラ節)",NA,FALSE
+"Charred Seed","炭化物（コナラ属子葉）",NA,FALSE
+"Charred Remain","炭化物（コナラ節）",NA,FALSE
+"Charred Seed","炭化物（コムギ）",NA,FALSE
+"Charred Remain","炭化物(サクラ属)",NA,FALSE
+"Charred Remain","炭化物(サクラ属)　",NA,FALSE
+"Charred Remain","炭化物(タケ亜科)",NA,FALSE
+"Charred Remain","炭化物(トウヒ属カラマツ)",NA,FALSE
+"Charred Seed","炭化物(トチノキ種子)",NA,FALSE
+"Charred Seed","炭化物(トチノキ種子他)",NA,FALSE
+"Charred Remain","炭化物(トネリコ属)",NA,FALSE
+"Charred Seed","炭化物(ドングリ)",NA,FALSE
+"Other Charred Remains","炭化物（ニレ科：エノキ属またはケヤキ）",NA,FALSE
+"Charred Remain","炭化物(ハンノキ亜属)",NA,FALSE
+"Charred Seed","炭化物（ブドウ科）",NA,FALSE
+"Charred Remain","炭化物(ブナ科)",NA,FALSE
+"Charred Remain","炭化物(マツ属)",NA,FALSE
+"Other Charred Remains","炭化物（マツ属）",NA,FALSE
+"Charred Remain","炭化物(マツ属複維管束亜属)",NA,FALSE
+"Charred Remain","炭化物(モクレン属)",NA,FALSE
+"Charred Remain","炭化物(モミ属)",NA,FALSE
+"Charred Remain","炭化物(ヤナギ属)",NA,FALSE
+"Other Charred Remains","炭化物（ヤブツバキ）",NA,FALSE
+"Charred Remain","炭化物(ヤマグワ)",NA,FALSE
+"Charred Seed","炭化物(ユリ科鱗茎)",NA,FALSE
+"Charred Remain","炭化物(ワラビ炭化葉柄)",NA,FALSE
+"Other Charred Remains","炭化物(不明)",NA,FALSE
+"Other Charred Remains","炭化物（不明）",NA,FALSE
+"Charred Remain","炭化物（冬芽）",NA,FALSE
+"Charred Seed","炭化物(分類群不明果実核)",NA,FALSE
+"Other Charred Remains","炭化物(動物の脂?)",NA,FALSE
+"Organic Residue from Pottery","炭化物（土器内付着）",NA,FALSE
+"Organic Residue from Pottery","炭化物（土器内底部付着物）",NA,FALSE
+"Organic Residue from Pottery","炭化物（土器口縁に付着）",NA,FALSE
+"Other Charred Remains","炭化物(土塊)",NA,FALSE
+"Other Charred Remains","炭化物(土壌混じり)",NA,FALSE
+"Charred Seed","炭化物（堅果）",NA,FALSE
+"Other Charred Remains","炭化物(大)",NA,FALSE
+"Other Charred Remains","炭化物（広葉樹：ニレ科やヤマグワ？）",NA,FALSE
+"Charred Remain","炭化物（材）",NA,FALSE
+"Charred Remain","炭化物（材）　フローテーション採集資料",NA,FALSE
+"Other Charred Remains","炭化物(植物片)",NA,FALSE
+"Charred Seed","炭化物(植物遺体)",NA,FALSE
+"Charred Remain","炭化物(樹木片)",NA,FALSE
+"Charred Remain","炭化物(樹皮)",NA,FALSE
+"Organic Residue from Pottery","炭化物（深鉢型土器1の底部に付着したスス）",NA,FALSE
+"Human Bone","炭化物(火葬人骨)",NA,FALSE
+"Other Charred Remains","炭化物(灰質炭化物)",NA,FALSE
+"Charred Remain","炭化物（炭化材と種実遺体（ヤマグワ、オニグルミ）が混在）",NA,FALSE
+"Charred Remain","炭化物（炭化材と種実遺体（広葉樹オニグルミ）が混在）",NA,FALSE
+NA,"炭化物(炭化種実？)",NA,FALSE
+"Charred Seed","炭化物(炭化米)",NA,FALSE
+NA,"炭化物(炭素量不足の為､周囲土壌を含めて測定)",NA,FALSE
+"Other Charred Remains","炭化物(由来不明)",NA,FALSE
+"Other Charred Remains","炭化物(石器付着)",NA,FALSE
+"Charred Seed","炭化物(種子?)",NA,FALSE
+"Charred Seed","炭化物（種子？）",NA,FALSE
+"Other Charred Remains","炭化物(繊維状)(イネ属･ススキ属･ウシクサ属)",NA,FALSE
+"Other Charred Remains","炭化物(繊維状)(イネ科タケ亜科)",NA,FALSE
+"Charred Remain","炭化物(草本･イネ科稈)",NA,FALSE
+"Charred Remain","炭化物(草本?)",NA,FALSE
+"Charred Remain","炭化物(草本室茎)",NA,FALSE
+"Charred Remain","炭化物(草本類)",NA,FALSE
+"Other Charred Remains","炭化物(菌核?)",NA,FALSE
+"Other Charred Remains","炭化物(食物残渣)",NA,FALSE
+"Soil","炭化物を含むローム",NA,FALSE
+"Soil","炭化物を含む土",NA,FALSE
+"Soil","炭化物を含む土壌",NA,FALSE
+"Soil","炭化物混じりシルト",NA,FALSE
+"Soil","炭化物混じり土壌",NA,FALSE
+"Soil","炭化物混じり有機質土壌",NA,FALSE
+"Soil","炭化物混じり泥",NA,FALSE
+"Soil","炭化物混じり粘土",NA,FALSE
+"Soil","炭化物混り土壌",NA,FALSE
+"Soil","炭化物混土(№35)",NA,FALSE
+"Other Charred Remains","炭化物片",NA,FALSE
+"Other Charred Remains","炭化物粒",NA,FALSE
+"Charred Seed","炭化球果(マツ属複維管束亜属)",NA,FALSE
+"Charred Seed","炭化球根",NA,FALSE
+"Charred Seed","炭化球根(ユリ科ネギ属)",NA,FALSE
+"Wood","炭化稈(タケ亜科)",NA,FALSE
+"Charred Seed","炭化種子",NA,TRUE
+"Seed","炭化種子",NA,TRUE
+"Charred Seed","炭化種子　アズキ",NA,FALSE
+"Charred Seed","炭化種子　オオムギ",NA,FALSE
+"Charred Seed","炭化種子　クルミ核片",NA,FALSE
+"Charred Seed","炭化種子　クルミ殻片",NA,FALSE
+"Charred Seed","炭化種子　コナラ属",NA,FALSE
+"Charred Seed","炭化種子?",NA,FALSE
+"Charred Seed","炭化種子(アサ)",NA,FALSE
+"Charred Seed","炭化種子（アワまたはヒエの胚乳）",NA,FALSE
+"Charred Seed","炭化種子(イネ･玄米)",NA,FALSE
+"Charred Seed","炭化種子(イネ:玄米)",NA,FALSE
+"Charred Seed","炭化種子(イネ)",NA,FALSE
+"Charred Seed","炭化種子（イネ）",NA,FALSE
+"Charred Seed","炭化種子(オオムギ)",NA,FALSE
+"Charred Seed","炭化種子(オニグルミ?)",NA,FALSE
+"Charred Seed","炭化種子(オニグルミ)",NA,FALSE
+"Charred Seed","炭化種子(オニグルミ核)",NA,FALSE
+"Charred Seed","炭化種子(カキ)",NA,FALSE
+"Charred Seed","炭化種子（キハダ果実）",NA,FALSE
+"Charred Seed","炭化種子(クヌギの実)",NA,FALSE
+"Charred Seed","炭化種子(クヌギ子葉)",NA,FALSE
+"Charred Seed","炭化種子(クリ)",NA,FALSE
+"Charred Seed","炭化種子(クルミ)",NA,FALSE
+"Charred Seed","炭化種子（クルミ）",NA,FALSE
+"Charred Seed","炭化種子（クルミ内果皮）",NA,FALSE
+"Charred Seed","炭化種子（クルミ属）",NA,FALSE
+"Charred Seed","炭化種子（クルミ核）",NA,FALSE
+"Charred Seed","炭化種子(クルミ類の核)",NA,FALSE
+"Charred Seed","炭化種子（コナラ属）",NA,FALSE
+"Charred Seed","炭化種子(コナラ属子葉)",NA,FALSE
+"Charred Seed","炭化種子(コナラ属炭化子葉)",NA,FALSE
+"Charred Seed","炭化種子(コムギ)",NA,FALSE
+"Charred Seed","炭化種子(コムギ胚乳)",NA,FALSE
+"Charred Seed","炭化種子（サクラ属）",NA,FALSE
+"Charred Seed","炭化種子(ササゲ属アズキ亜属アズキ型)",NA,FALSE
+"Charred Seed","炭化種子(ササゲ属アズキ近似種)",NA,FALSE
+"Charred Seed","炭化種子(ササゲ属近似種)",NA,FALSE
+"Charred Seed","炭化種子（スモモ核）",NA,FALSE
+"Charred Seed","炭化種子(ソバ)",NA,FALSE
+"Charred Seed","炭化種子(トチノキ)",NA,FALSE
+"Charred Seed","炭化種子(トチノキ炭化子葉)",NA,FALSE
+"Charred Seed","炭化種子(トチノキ種子)",NA,FALSE
+"Charred Seed","炭化種子(ドングリ)",NA,FALSE
+"Charred Seed","炭化種子(ヒエあるいはアワ)",NA,FALSE
+"Charred Seed","炭化種子（ヒエ属）",NA,FALSE
+"Charred Seed","炭化種子(ブドウ属)",NA,FALSE
+"Charred Seed","炭化種子（ブドウ科）",NA,FALSE
+"Charred Seed","炭化種子(マメ類)",NA,FALSE
+"Charred Seed","炭化種子(モモ)",NA,TRUE
+"Seed","炭化種子(モモ)",NA,TRUE
+"Charred Seed","炭化種子(モモ核)",NA,FALSE
+"Charred Seed","炭化種子（不明）",NA,FALSE
+"Charred Seed","炭化種子（堅果）",NA,FALSE
+"Charred Seed","炭化種子(米)",NA,FALSE
+"Charred Seed","炭化種子(豆)",NA,FALSE
+"Charred Seed","炭化種子（鱗茎(球根)）",NA,FALSE
+"Peat","炭化種子混じり泥炭",NA,FALSE
+"Charred Seed","炭化種実",NA,TRUE
+"Seed","炭化種実",NA,TRUE
+"Charred Seed","炭化種実?",NA,FALSE
+"Charred Seed","炭化種実(アカガシ亜属)",NA,FALSE
+"Charred Seed","炭化種実(アサ)",NA,FALSE
+"Charred Seed","炭化種実(アズキ炭化種子)",NA,FALSE
+"Charred Seed","炭化種実(アズキ種子)",NA,FALSE
+"Charred Seed","炭化種実(アズキ類種子)",NA,FALSE
+"Charred Seed","炭化種実(アワ)",NA,FALSE
+"Charred Seed","炭化種実（アワ果実）",NA,FALSE
+"Charred Seed","炭化種実(アワ炭化種子)",NA,FALSE
+"Charred Seed","炭化種実(イチイガシ　子葉)",NA,FALSE
+"Charred Seed","炭化種実(イチイガシ)",NA,FALSE
+"Charred Seed","炭化種実(イチイガシ子葉)",NA,FALSE
+"Charred Seed","炭化種実(イチイガシ子葉片)",NA,FALSE
+"Charred Seed","炭化種実(イチイガシ果皮･子葉)",NA,FALSE
+"Charred Seed","炭化種実(イヌガヤ炭化種子)",NA,FALSE
+"Charred Seed","炭化種実(イネ･胚乳･穎)",NA,FALSE
+"Charred Seed","炭化種実(イネ･胚乳)",NA,FALSE
+"Charred Seed","炭化種実(イネ)",NA,FALSE
+"Charred Seed","炭化種実（イネ）",NA,FALSE
+"Charred Seed","炭化種実(イネ果実)",NA,FALSE
+"Charred Seed","炭化種実(イネ炭化種子)",NA,FALSE
+"Charred Seed","炭化種実(イネ炭化穎果)",NA,FALSE
+"Charred Seed","炭化種実(イネ炭化胚乳)",NA,FALSE
+"Seed","炭化種実(イネ科)",NA,FALSE
+"Charred Seed","炭化種実(イネ科イネ属)",NA,FALSE
+"Charred Seed","炭化種実(イネ種子)",NA,FALSE
+"Charred Seed","炭化種実(イネ穎果)",NA,FALSE
+"Charred Seed","炭化種実(イネ籾)",NA,FALSE
+"Charred Seed","炭化種実(イネ胚乳･アワ-ヒエ･マメ類)",NA,FALSE
+"Charred Seed","炭化種実(イネ胚乳)",NA,FALSE
+"Charred Seed","炭化種実(ウメ核･仁)",NA,FALSE
+"Charred Seed","炭化種実(オオムギ･胚乳)",NA,FALSE
+"Charred Seed","炭化種実(オオムギ?･胚乳)",NA,FALSE
+"Charred Seed","炭化種実(オオムギ)",NA,FALSE
+"Charred Seed","炭化種実（オオムギ）",NA,FALSE
+"Charred Seed","炭化種実(オオムギ穎･胚乳)",NA,FALSE
+"Charred Seed","炭化種実(オオムギ胚乳)",NA,FALSE
+"Charred Seed","炭化種実(オニグルミ)",NA,FALSE
+"Charred Seed","炭化種実(オニグルミ核)",NA,FALSE
+"Charred Seed","炭化種実(オニグルミ核破片1点)",NA,FALSE
+"Charred Seed","炭化種実（オニグルミ炭化核）",NA,FALSE
+"Charred Seed","炭化種実(カキノキ属　種子)",NA,FALSE
+"Charred Seed","炭化種実(ガマズミ属)",NA,FALSE
+"Charred Seed","炭化種実(カヤツリグサ科)",NA,FALSE
+"Charred Seed","炭化種実(カラスザンショウ種子)",NA,FALSE
+"Charred Seed","炭化種実（キビ果実）",NA,FALSE
+"Charred Seed","炭化種実(クマノミズキ)",NA,FALSE
+"Charred Seed","炭化種実(クリ　子葉)",NA,FALSE
+"Charred Seed","炭化種実(クリ)",NA,FALSE
+"Charred Seed","炭化種実(クリ子葉)",NA,FALSE
+"Charred Seed","炭化種実(クリ果実)",NA,FALSE
+"Charred Seed","炭化種実(クリ炭化子葉)",NA,FALSE
+"Charred Seed","炭化種実(クルミ)",NA,FALSE
+"Charred Seed","炭化種実（クルミ）",NA,FALSE
+"Charred Seed","炭化種実(コキンバイザサ)",NA,FALSE
+"Charred Seed","炭化種実(コナラ使用)",NA,FALSE
+"Charred Seed","炭化種実(コナラ属･子葉)",NA,FALSE
+"Charred Seed","炭化種実(コナラ属)",NA,FALSE
+"Charred Seed","炭化種実(コナラ属クヌギ節子葉)",NA,FALSE
+"Charred Seed","炭化種実(コナラ属堅果)",NA,FALSE
+"Charred Seed","炭化種実(コナラ属子葉)",NA,FALSE
+"Charred Seed","炭化種実(コムギ･胚乳)",NA,FALSE
+"Charred Seed","炭化種実(コムギ)",NA,FALSE
+"Charred Seed","炭化種実(コムギ種子)",NA,FALSE
+"Charred Seed","炭化種実(コムギ胚乳)",NA,FALSE
+"Charred Seed","炭化種実（コムギ胚乳）",NA,FALSE
+"Charred Seed","炭化種実(サクラ属核1点)",NA,FALSE
+"Charred Seed","炭化種実(ササゲ属)",NA,FALSE
+"Charred Seed","炭化種実(シソ属炭化果実)",NA,FALSE
+"Charred Seed","炭化種実(スモモの未熟核)",NA,FALSE
+"Charred Seed","炭化種実(ダイズ)",NA,FALSE
+"Charred Seed","炭化種実(タデ属)",NA,FALSE
+"Charred Seed","炭化種実(タデ属サナエタデ節)",NA,FALSE
+"Charred Seed","炭化種実（タデ属炭化子葉、６粒）",NA,FALSE
+"Charred Seed","炭化種実(タデ属炭化果実)",NA,FALSE
+"Charred Seed","炭化種実(ツブラジイ･子葉)",NA,FALSE
+"Charred Seed","炭化種実(ツブラジイ)",NA,FALSE
+"Charred Seed","炭化種実(ツブラジイ近似種･子葉)",NA,FALSE
+"Charred Seed","炭化種実(トチノキ?炭化種皮)",NA,FALSE
+"Charred Seed","炭化種実(トチノキ)",NA,FALSE
+"Charred Seed","炭化種実(トチノキ炭化子葉?)",NA,FALSE
+"Charred Seed","炭化種実(トチノキ炭化子葉)",NA,TRUE
+"Seed","炭化種実(トチノキ炭化子葉)",NA,TRUE
+"Charred Seed","炭化種実(トチノキ種子)",NA,FALSE
+"Charred Seed","炭化種実(ドングリ)",NA,FALSE
+"Charred Seed","炭化種実(ハマグリ･貝殻)",NA,FALSE
+"Charred Seed","炭化種実(バラ科)",NA,FALSE
+"Charred Seed","炭化種実(ヒエ果実)",NA,FALSE
+"Charred Seed","炭化種実(ヒシ属果実破片1点)",NA,FALSE
+"Charred Seed","炭化種実(ブドウ属)",NA,FALSE
+"Charred Seed","炭化種実(ブドウ属炭化種子)",NA,FALSE
+"Charred Seed","炭化種実(ブナ殻斗)",NA,FALSE
+"Charred Seed","炭化種実(マツ属毬果)",NA,FALSE
+"Charred Seed","炭化種実(マツ属球果)",NA,FALSE
+"Charred Seed","炭化種実（マメ科）",NA,FALSE
+"Charred Seed","炭化種実(マメ類･種子)",NA,FALSE
+"Charred Seed","炭化種実(マメ類)",NA,FALSE
+"Charred Seed","炭化種実(マメ類種子)",NA,FALSE
+"Charred Seed","炭化種実(ミズキ)",NA,FALSE
+"Charred Seed","炭化種実(ミズキ核)",NA,FALSE
+"Charred Seed","炭化種実(ムギ類)",NA,FALSE
+"Charred Seed","炭化種実（ムギ類）",NA,FALSE
+"Charred Seed","炭化種実(ムクロジ)",NA,FALSE
+"Charred Seed","炭化種実(モミ)",NA,FALSE
+"Charred Seed","炭化種実(モモ･サクラ属)",NA,FALSE
+"Charred Seed","炭化種実(モモ･内果皮)",NA,FALSE
+"Charred Seed","炭化種実(モモ･核)",NA,FALSE
+"Seed","炭化種実(モモ)",NA,TRUE
+"Charred Seed","炭化種実(モモ)",NA,TRUE
+"Charred Seed","炭化種実(モモ核)",NA,TRUE
+"Seed","炭化種実(モモ核)",NA,TRUE
+"Charred Seed","炭化種実(モモ炭化核)",NA,FALSE
+"Charred Seed","炭化種実(不明)",NA,FALSE
+"Charred Seed","炭化種実(単子葉類の球根)",NA,FALSE
+"Charred Seed","炭化種実（堅果）",NA,FALSE
+"Charred Seed","炭化種実（堅果片1片）",NA,FALSE
+"Charred Seed","炭化種実（堅果類）",NA,FALSE
+"Charred Seed","炭化種実(多数)",NA,FALSE
+"Charred Seed","炭化種実(炭化米)",NA,FALSE
+"Charred Seed","炭化穀物",NA,FALSE
+"Charred Seed","炭化穀類(イネ)",NA,FALSE
+"Charred Seed","炭化穎果(イネ)",NA,FALSE
+"Charred Seed","炭化米",NA,TRUE
+"Seed","炭化米",NA,TRUE
+"Charred Seed","炭化米(イネ)",NA,FALSE
+"Charred Seed","炭化米（イネ）",NA,FALSE
+"Charred Seed","炭化米(イネ胚乳)",NA,FALSE
+"Charred Seed","炭化米(マメ類種子)",NA,FALSE
+"Charred Seed","炭化米3粒",NA,FALSE
+"Charred Seed","炭化米4粒",NA,FALSE
+"Charred Seed","炭化米6粒",NA,FALSE
+"Charred Seed","炭化米8粒",NA,FALSE
+"Charred Remain","炭化粒",NA,FALSE
+"Charred Remain","炭化紐",NA,FALSE
+"Charred Remain","炭化繊維",NA,FALSE
+"Charred Seed","炭化胚乳(オオムギ)",NA,FALSE
+"Charred Remain","炭化草本",NA,FALSE
+"Charred Remain","炭化草本（イネ科）",NA,FALSE
+"Charred Remain","炭化草本類",NA,TRUE
+"Other Charred Remains","炭化草本類",NA,TRUE
+"Wood","炭化萱",NA,FALSE
+"Charred Remain","炭化葉(ウシクサ族)",NA,FALSE
+"Charred Seed","炭化鱗片",NA,FALSE
+"Charred Remain","炭化鱗茎",NA,TRUE
+"Charred Seed","炭化鱗茎",NA,TRUE
+"Soil","炭混じり黒色土",NA,FALSE
+"Charred Remain","炭片",NA,FALSE
+"Charred Remain","炭片(ヤナギ属)",NA,FALSE
+"Soil","炭質土",NA,FALSE
+"Other Charred Remains","炭質物",NA,FALSE
+"Soil","炭質物含有砂",NA,FALSE
+"Soil","焼土",NA,FALSE
+"Charred Remain","焼土内炭化物(不明広葉樹)",NA,FALSE
+"Soil","焼土塊",NA,FALSE
+"Human Bone","焼骨　ヒト頭蓋骨",NA,FALSE
+"Animal Bone","焼骨　哺乳類　四肢骨",NA,FALSE
+"Animal Bone","焼骨(哺乳類)",NA,FALSE
+"Other Charred Remains","煤",NA,FALSE
+"Animal Bone","牛歯",NA,FALSE
+"Animal Bone","牛科獣類の臼歯",NA,FALSE
+"Wood","独木舟(ニレ属)",NA,FALSE
+"Animal Bone","獣骨",NA,FALSE
+"Animal Bone","獣骨(ウマ?)",NA,FALSE
+"Animal Bone","獣骨（中柄）",NA,FALSE
+"Animal Bone","獣骨(歯)",NA,FALSE
+"Animal Bone","獣骨（歯）",NA,FALSE
+"Animal Bone","獣骨片",NA,FALSE
+"Seed","球果(トウヒ属バラモミ節)",NA,FALSE
+"Seed","球果(ヒメバラモミ)",NA,FALSE
+"Wood","生の植物遺体",NA,FALSE
+"Wood","生の植物遺体　(草本?)",NA,FALSE
+"Seed","生の種実",NA,FALSE
+"Seed","生の種実(イネ籾殻)",NA,FALSE
+"Seed","生の種実（オニグルミ核1点）",NA,FALSE
+"Seed","生の種実(ヒョウタン果皮)",NA,FALSE
+"Wood","生の草本",NA,FALSE
+"Wood","生の草本類",NA,FALSE
+"Wood","生の葉",NA,FALSE
+"Wood","生木",NA,FALSE
+"Wood","生木　1-5年輪（最終形成年輪）",NA,FALSE
+"Wood","生木　121-125年輪",NA,FALSE
+"Wood","生木　186-190年輪",NA,FALSE
+"Wood","生木　236-240年輪",NA,FALSE
+"Wood","生木(アジサイ属)",NA,FALSE
+"Wood","生木(アスナロ)",NA,FALSE
+"Wood","生木(イチイ)",NA,FALSE
+"Wood","生木(イネ科タケ亜科)",NA,FALSE
+"Wood","生木(ウルシ)",NA,FALSE
+"Wood","生木(エノキ属)",NA,FALSE
+"Wood","生木(オニグルミ)",NA,FALSE
+"Wood","生木(カエデ属)",NA,FALSE
+"Wood","生木(カヤ)",NA,FALSE
+"Wood","生木(カラマツ)",NA,FALSE
+"Wood","生木(クヌギ節)",NA,FALSE
+"Wood","生木(クリ)",NA,FALSE
+"Wood","生木(ケヤキ)",NA,FALSE
+"Wood","生木(コナラ属アカガシ亜属)",NA,FALSE
+"Wood","生木(コナラ属コナラ亜属クヌギ節)",NA,FALSE
+"Wood","生木(コナラ属コナラ亜属コナラ節)",NA,FALSE
+"Wood","生木(サクラ)",NA,FALSE
+"Wood","生木(スギ)",NA,FALSE
+"Wood","生木(タケ亜科)",NA,FALSE
+"Wood","生木(ツガ属)",NA,FALSE
+"Wood","生木(トウヒ属)",NA,FALSE
+"Wood","生木(トチノキ)",NA,FALSE
+"Wood","生木(トネリコ属)",NA,FALSE
+"Wood","生木(ニレ属)",NA,FALSE
+"Wood","生木(ハリギリ)",NA,FALSE
+"Wood","生木(ハンノキ属)",NA,FALSE
+"Wood","生木(ハンノキ属ハンノキ亜属)",NA,FALSE
+"Wood","生木(ヒノキ)",NA,FALSE
+"Wood","生木(ヒノキ属)",NA,FALSE
+"Wood","生木(ヒノキ科)",NA,FALSE
+"Wood","生木(ブナ属)",NA,FALSE
+"Wood","生木(マタタビ属)",NA,FALSE
+"Wood","生木(マツ属複維管束亜属)",NA,FALSE
+"Wood","生木(ムクロジ)",NA,FALSE
+"Wood","生木(モクレン)",NA,FALSE
+"Wood","生木(モクレン属)",NA,FALSE
+"Wood","生木(モミ属)",NA,FALSE
+"Wood","生木(ヤナギ属)",NA,FALSE
+"Wood","生木(ヤマグワ)、炭化材(クリ)",NA,FALSE
+"Wood","生木(ヤマザクラ)",NA,FALSE
+"Wood","生木（丸木）最終形成年輪",NA,FALSE
+"Wood","生木（最終形成年輪　外側5年輪分）",NA,FALSE
+"Wood","生木(散孔材)",NA,FALSE
+"Wood","生木(樹皮)",NA,FALSE
+"Wood","生木3点(コナラ節･クリ･トチノキ)",NA,FALSE
+"Wood","生木片",NA,FALSE
+"Wood","生材",NA,FALSE
+"Wood","生材･自然木(カエデ属)",NA,FALSE
+"Wood","生材(アカガシ亜属)",NA,FALSE
+"Wood","生材(アカマツ)",NA,FALSE
+"Wood","生材(アサダ)",NA,FALSE
+"Wood","生材(アスナロ)",NA,FALSE
+"Wood","生材(イヌガヤ)",NA,FALSE
+"Wood","生材(イヌマキ)",NA,FALSE
+"Wood","生材(ウルシ)",NA,FALSE
+"Wood","生材(エノキ属)",NA,FALSE
+"Wood","生材(オニグルミ)",NA,FALSE
+"Wood","生材(カエデ属)",NA,FALSE
+"Wood","生材(カエデ科カエデ属)",NA,FALSE
+"Wood","生材(カツラ)",NA,FALSE
+"Wood","生材(ガマズミ属)",NA,FALSE
+"Wood","生材(カマツカ)",NA,FALSE
+"Wood","生材(カヤ)",NA,FALSE
+"Wood","生材(カラマツ)",NA,FALSE
+"Wood","生材(キハダ)",NA,FALSE
+"Wood","生材（キハダ）",NA,FALSE
+"Wood","生材(クスノキ)",NA,FALSE
+"Wood","生材(クヌギ節)",NA,FALSE
+"Wood","生材(クマシデ属イヌシデ節)",NA,FALSE
+"Wood","生材(クリ)",NA,FALSE
+"Wood","生材（クリ）",NA,FALSE
+"Wood","生材(クワ属)",NA,FALSE
+"Wood","生材(クワ科クワ属)",NA,FALSE
+"Wood","生材(ケヤキ)",NA,FALSE
+"Wood","生材(ケンポナシ属)",NA,FALSE
+"Wood","生材(コウヤマキ)",NA,FALSE
+"Wood","生材(コナラ亜属)",NA,FALSE
+"Wood","生材(コナラ亜属)　",NA,FALSE
+"Wood","生材(コナラ属アカガシ亜属)",NA,FALSE
+"Wood","生材（コナラ属アカガシ亜属）",NA,FALSE
+"Wood","生材(コナラ属クヌギ節)",NA,FALSE
+"Wood","生材(コナラ属コナラ亜属クヌギ節)",NA,FALSE
+"Wood","生材(コナラ属コナラ節)",NA,FALSE
+"Wood","生材(コナラ節)",NA,FALSE
+"Wood","生材(サカキ)",NA,FALSE
+"Wood","生材(サクラ属)",NA,FALSE
+"Wood","生材(サクラ属)　",NA,FALSE
+"Wood","生材(サクラ属)　樹皮側",NA,FALSE
+"Wood","生材(サクラ属)樹芯側　",NA,FALSE
+"Wood","生材(サワラ)",NA,FALSE
+"Wood","生材(シイノキ属)",NA,FALSE
+"Wood","生材(シキミ)",NA,FALSE
+"Wood","生材（シナノキ属、繊維状）",NA,FALSE
+"Wood","生材(スギ?)",NA,FALSE
+"Wood","生材(スギ)",NA,FALSE
+"Wood","生材(タケ亜科)",NA,FALSE
+"Wood","生材(タケ亜科稈)",NA,FALSE
+"Wood","生材(ツガ属)",NA,FALSE
+"Wood","生材(ツバキ属)",NA,FALSE
+"Wood","生材(ツブラジイ)",NA,FALSE
+"Wood","生材(ツブラジイ根材)",NA,FALSE
+"Wood","生材(トウヒ属)",NA,FALSE
+"Wood","生材(トチノキ)",NA,FALSE
+"Wood","生材（トネリコ属、丸木）",NA,FALSE
+"Wood","生材（トネリコ属、表面加工）",NA,FALSE
+"Wood","生材(トネリコ属)",NA,FALSE
+"Wood","生材(トネリコ属シオジ節)",NA,FALSE
+"Wood","生材(トネリコ属トネリコ節)",NA,FALSE
+"Wood","生材(ニシキギ属)",NA,FALSE
+"Wood","生材(ネムノキ)",NA,FALSE
+"Wood","生材(ノブドウ属茎)",NA,FALSE
+"Wood","生材(ノリウツギ)",NA,FALSE
+"Wood","生材(ハリグワ)",NA,FALSE
+"Wood","生材（ハリハギ、板材）",NA,FALSE
+"Wood","生材(ハンノキ亜属)",NA,FALSE
+"Wood","生材(ハンノキ属)",NA,FALSE
+"Wood","生材(ハンノキ属ハンノキ亜属)",NA,FALSE
+"Wood","生材(ヒノキ)",NA,FALSE
+"Wood","生材(ヒノキ科)",NA,FALSE
+"Wood","生材(ヒノキ科アスナロ属)",NA,FALSE
+"Wood","生材(ヒバ)",NA,FALSE
+"Wood","生材(ブナ属)",NA,FALSE
+"Wood","生材(マキ属)",NA,FALSE
+"Wood","生材(マツ属)",NA,FALSE
+"Wood","生材(マツ属複維管束亜属",NA,FALSE
+"Wood","生材(マツ属複維管束亜属)",NA,FALSE
+"Wood","生材(ムクノキ)",NA,FALSE
+"Wood","生材（ムクロジ）",NA,FALSE
+"Wood","生材(モクレン属)",NA,FALSE
+"Wood","生材(モミ属)",NA,FALSE
+"Wood","生材(モモ)",NA,FALSE
+"Wood","生材（ヤナギ属、丸木）",NA,FALSE
+"Wood","生材(ヤナギ属)",NA,FALSE
+"Wood","生材(ヤナギ属根材)",NA,FALSE
+"Wood","生材(ヤナギ属樹皮)",NA,FALSE
+"Wood","生材(ヤナギ科ヤナギ属)",NA,FALSE
+"Wood","生材(ヤマウルシ)",NA,FALSE
+"Wood","生材(不明)",NA,FALSE
+"Wood","生材（最外年輪）",NA,FALSE
+"Wood","生材(外から11年〜15年輪目の5年分(中心は13年輪目))　モミ属",NA,FALSE
+"Wood","生材(外から11年輪目(1年輪分))　ケヤキ",NA,FALSE
+"Wood","生材(外から1年〜5年輪目の5年分(中心は3年輪目))　最外部年輪　モミ属",NA,FALSE
+"Wood","生材(外から21年〜25年輪目の5年分(中心は23年輪目))　モミ属",NA,FALSE
+"Wood","生材(外から21年輪目(1年輪分))　ケヤキ",NA,FALSE
+"Wood","生材(外から31年〜35年輪目の5年分(中心は33年輪目))　モミ属",NA,FALSE
+"Wood","生材(外から41年〜45年輪目の5年分(中心は43年輪目))　モミ属",NA,FALSE
+"Wood","生材(広葉樹･散孔材)",NA,FALSE
+"Wood","生材(広葉樹･環孔材)",NA,FALSE
+"Wood","生材(広葉樹)",NA,FALSE
+"Wood","生材(木杭)",NA,FALSE
+"Wood","生材(杭)",NA,FALSE
+"Wood","生材(枝)",NA,FALSE
+"Wood","生材（枝状）",NA,FALSE
+"Wood","生材(根)",NA,FALSE
+"Wood","生材(樹皮)",NA,FALSE
+"Wood","生材(樹皮の内側1年目(1年輪))　最外年輪　モミ属",NA,FALSE
+"Wood","生材(樹皮の内側1年輪目(1年輪分))　最外年輪　ケヤキ",NA,FALSE
+"Wood","生材(樹種不明)",NA,FALSE
+"Wood","生材(環孔材)",NA,FALSE
+"Wood","生材(自然木)",NA,FALSE
+"Wood","生材（部位不明）",NA,FALSE
+"Wood","生材(針葉樹)",NA,FALSE
+"Wood","生材試料(オニグルミ)",NA,FALSE
+"Lacquer","生漆",NA,FALSE
+"Lacquer","生漆片",NA,FALSE
+"Shell","生痕化石(ニオガイモドキ)",NA,FALSE
+"Seed","生種実",NA,FALSE
+"Seed","生種実(アカガシ)",NA,FALSE
+"Seed","生種実(イネ果実)",NA,FALSE
+"Seed","生種実(エゴノキ核)",NA,FALSE
+"Seed","生種実(オニグルミ核)",NA,TRUE
+"Charred Seed","生種実(オニグルミ核)",NA,TRUE
+"Seed","生種実(カヤ種子)",NA,FALSE
+"Seed","生種実(スモモ種子)",NA,FALSE
+"Seed","生種実(ツクバネガシ)",NA,FALSE
+"Seed","生種実(ツクバネガシ果実)",NA,FALSE
+"Seed","生種実(トチノキ種子)",NA,FALSE
+"Seed","生種実(ブナ果実)",NA,FALSE
+"Seed","生種実(マツ属球果)",NA,FALSE
+"Seed","生種実(モミ種子)",NA,FALSE
+"Seed","生種実(モモ核)",NA,FALSE
+"Wood","生竹",NA,FALSE
+"Wood","生試料･その他",NA,FALSE
+"Wood","生試料･その他(樹皮)",NA,FALSE
+"Wood","生試料･その他(繊維)",NA,FALSE
+"Wood","生試料･杉皮",NA,FALSE
+"Wood","生試料･材",NA,FALSE
+"Wood","生試料･材(アカマツ)",NA,FALSE
+"Wood","生試料･材(カエデ属)",NA,FALSE
+"Wood","生試料･材（カツラ）",NA,FALSE
+"Wood","生試料･材(クスノキ科シロダモ属)",NA,FALSE
+"Wood","生試料･材(クリ)",NA,FALSE
+"Wood","生試料･材(ケヤキ)",NA,FALSE
+"Wood","生試料･材(コナラ節)",NA,FALSE
+"Wood","生試料･材(スギ)",NA,FALSE
+"Wood","生試料･材(タケ亜科)",NA,FALSE
+"Wood","生試料･材(トネリコ属)",NA,FALSE
+"Wood","生試料･材（トネリコ属）",NA,FALSE
+"Wood","生試料･材（ニガキ）",NA,FALSE
+"Wood","生試料･材(ハンノキ属)",NA,FALSE
+"Wood","生試料･材(ヒノキ)",NA,FALSE
+"Wood","生試料･材(ブナ属)",NA,FALSE
+"Wood","生試料･材（ブナ属）",NA,FALSE
+"Wood","生試料･材(ブナ科シイ属)",NA,FALSE
+"Wood","生試料･材(ヤナギ属)",NA,FALSE
+"Wood","生試料･植物遺体",NA,FALSE
+"Wood","生試料・植物遺体　タケ亜科",NA,FALSE
+"Wood","生試料・植物遺体　草本植物",NA,FALSE
+"Wood","生試料･植物遺体　麻茎",NA,FALSE
+"Wood","生試料･植物遺体(不明胚珠または花柄)",NA,FALSE
+"Wood","生試料･植物遺体(葉など-タブノキ)",NA,FALSE
+"Seed","生試料･種子(ひょうたん)",NA,FALSE
+"Seed","生試料･種実",NA,FALSE
+"Seed","生試料･種実(アカメガシワ種子)",NA,FALSE
+"Seed","生試料･種実(エゴノキ核)",NA,FALSE
+"Seed","生試料･種実(オニグルミ)",NA,FALSE
+"Seed","生試料･種実(オニグルミ核)",NA,FALSE
+"Seed","生試料･種実(オニビシ果実)",NA,FALSE
+"Seed","生試料･種実(クリ果実)",NA,FALSE
+"Seed","生試料･種実(コナラ殻斗)",NA,FALSE
+"Seed","生試料･種実(トチノキ種子)",NA,FALSE
+"Seed","生試料･種実(ホオノキ種子)",NA,FALSE
+"Seed","生試料･種実(モモ核)",NA,FALSE
+"Wood","生試料･草本",NA,FALSE
+"Wood","生試料(タケ亜科)",NA,FALSE
+"Wood","生試料(植物遺体)",NA,FALSE
+"Other Charred Remains","畑跡フローテーションサンプル",NA,FALSE
+"Other unknown samples","石臼付着物",NA,FALSE
+"Charred Remain","砂岩板状礫（付着炭化材）（樹種不明・樹皮）",NA,FALSE
+"Soil","砂混じりシルト",NA,FALSE
+"Soil","砂混じり泥",NA,FALSE
+"Soil","砂混じり粘土",NA,FALSE
+"Soil","砂質シルト",NA,FALSE
+"Soil","砂質土",NA,FALSE
+"Peat","砂質泥炭",NA,FALSE
+"Soil","砂質粘土",NA,FALSE
+"Peat","砂質粘土〜粘土質砂層の材片など植物遺体の多い部分",NA,FALSE
+"Other Charred Remains","砥石付着炭化物",NA,FALSE
+"Other Charred Remains","礫付着炭化物",NA,FALSE
+"Soil","礫混じり砂質シルト",NA,FALSE
+"Seed","種",NA,FALSE
+"Seed","種子",NA,TRUE
+"Charred Seed","種子",NA,TRUE
+"Charred Seed","種子　クルミ",NA,FALSE
+"Charred Seed","種子・堅果類？",NA,FALSE
+"Seed","種子(アカガシ亜属殻斗)",NA,FALSE
+"Seed","種子(エゴノキ1個)",NA,FALSE
+"Seed","種子(オニクルミ)",NA,FALSE
+"Seed","種子(オニグルミ)",NA,FALSE
+"Seed","種子(オニグルミの殻)",NA,FALSE
+"Seed","種子(オニグルミ核)",NA,FALSE
+"Charred Seed","種子（キハダ属）",NA,FALSE
+"Seed","種子(クサギ)",NA,FALSE
+"Seed","種子(クスノキ)",NA,FALSE
+"Seed","種子(クリ)",NA,FALSE
+"Seed","種子(クルミ)",NA,FALSE
+"Seed","種子(クルミ殻)",NA,FALSE
+"Seed","種子(コムギ胚乳)",NA,FALSE
+"Seed","種子(シイ種実)",NA,FALSE
+"Seed","種子(チャンチンモドキ)",NA,FALSE
+"Seed","種子(トウガン)",NA,FALSE
+"Seed","種子(トチノキ)",NA,FALSE
+"Seed","種子(トチノキ果皮)",NA,FALSE
+"Seed","種子(トチノキ種皮)",NA,FALSE
+"Seed","種子(ドングリ",NA,FALSE
+"Seed","種子(ドングリ)",NA,FALSE
+"Seed","種子(ヒシ属果実)",NA,FALSE
+"Seed","種子(ヒョウタン果皮)",NA,FALSE
+"Seed","種子(ヒョウタン類の果皮)",NA,FALSE
+"Seed","種子(ブドウ属)",NA,FALSE
+"Seed","種子(ホタルイ-カンガレイ)",NA,FALSE
+"Seed","種子(マツ属複維管束亜属球果)",NA,FALSE
+"Seed","種子(モモ)",NA,FALSE
+"Seed","種子(モモ核)",NA,FALSE
+"Charred Seed","種子（ヤマブドウ）",NA,FALSE
+"Seed","種子(桃)",NA,FALSE
+"Seed","種子(梅)",NA,FALSE
+"Seed","種子(籾)",NA,FALSE
+"Seed","種子/果実",NA,FALSE
+"Seed","種子核(クルミ)",NA,FALSE
+"Charred Seed","種子殻",NA,FALSE
+"Peat","種子混じり泥炭",NA,FALSE
+"Seed","種実",NA,TRUE
+"Charred Seed","種実",NA,TRUE
+NA,"種実",NA,TRUE
+"Charred Seed","種実,",NA,TRUE
+"Seed","種実,",NA,TRUE
+"Seed","種実,アカガシ亜属,果皮",NA,FALSE
+"Seed","種実,アカメガシワ,",NA,FALSE
+"Charred Seed","種実,アワ,",NA,FALSE
+"Seed","種実,ウリ,",NA,FALSE
+"Charred Seed","種実,エゴ,",NA,FALSE
+"Seed","種実,エゴノキ,",NA,FALSE
+"Charred Seed","種実,オオムギ・コムギ,",NA,FALSE
+"Charred Remain","種実,オオムギ,",NA,TRUE
+"Charred Seed","種実,オオムギ,",NA,TRUE
+"Seed","種実,オニグルミ,",NA,TRUE
+"Charred Seed","種実,オニグルミ,",NA,TRUE
+"Seed","種実,オニグルミ,内果皮",NA,FALSE
+"Charred Remain","種実,オニグルミ,核",NA,TRUE
+"Charred Seed","種実,オニグルミ,核",NA,TRUE
+"Seed","種実,オニグルミ,核",NA,TRUE
+"Charred Seed","種実,カシ類（ドングリ）,",NA,FALSE
+"Seed","種実,カラスサンショウ,",NA,FALSE
+"Charred Seed","種実,キビ,",NA,FALSE
+"Charred Seed","種実,キビ属,",NA,FALSE
+"Charred Seed","種実,クリ,",NA,FALSE
+"Charred Seed","種実,クリ,子葉",NA,FALSE
+"Charred Seed","種実,クリ,子葉1/4",NA,FALSE
+"Charred Seed","種実,クリ？,",NA,FALSE
+"Charred Seed","種実,クルミ,",NA,TRUE
+"Seed","種実,クルミ,",NA,TRUE
+"Seed","種実,クルミ,半分",NA,FALSE
+"Charred Seed","種実,クルミ,核",NA,FALSE
+"Seed","種実,クルミ,殻",NA,FALSE
+"Charred Seed","種実,クルミ属,",NA,FALSE
+"Charred Seed","種実,コムギ,",NA,FALSE
+"Charred Remain","種実,コメ,",NA,TRUE
+"Charred Seed","種実,コメ,",NA,TRUE
+"Charred Seed","種実,コメ,3個",NA,FALSE
+"Charred Seed","種実,コメ,焼米",NA,FALSE
+"Charred Seed","種実,ササゲ属,",NA,FALSE
+"Seed","種実,サンショウ,",NA,FALSE
+"Charred Seed","種実,シイ,",NA,FALSE
+"Charred Seed","種実,ソバ,",NA,FALSE
+"Charred Seed","種実,ダイズ,",NA,FALSE
+"Charred Seed","種実,トチ,",NA,FALSE
+"Seed","種実,トチ,皮殻",NA,FALSE
+"Seed","種実,トチノキ,種皮",NA,FALSE
+"Charred Seed","種実,ドングリ,",NA,FALSE
+"Charred Seed","種実,ドングリ,子葉",NA,FALSE
+"Charred Seed","種実,ナラガシワ,果皮",NA,FALSE
+"Seed","種実,ニワトコ,",NA,FALSE
+"Charred Seed","種実,ヒエ属,",NA,FALSE
+"Seed","種実,ヒョウタン,",NA,FALSE
+"Seed","種実,ヒョウタン,片",NA,FALSE
+"Seed","種実,ヒョウタン？,果皮",NA,FALSE
+"Charred Seed","種実,ブドウ科,",NA,FALSE
+"Charred Seed","種実,ホルトノキ,",NA,FALSE
+"Charred Seed","種実,マメ,",NA,FALSE
+"Charred Seed","種実,マメ？,",NA,FALSE
+"Charred Seed","種実,マメ科,",NA,FALSE
+"Seed","種実,モモ,",NA,FALSE
+"Charred Seed","種実,モモ,核",NA,TRUE
+"Seed","種実,モモ,核",NA,TRUE
+"Charred Seed","種実,不明,",NA,FALSE
+"Charred Seed","種実,堅果？,子実",NA,FALSE
+"Charred Seed","種実,堅果類,",NA,FALSE
+"Charred Seed","種実？（クルミ片？）",NA,FALSE
+"Seed","種実(アカガシ-ツクバネガシ)",NA,FALSE
+"Seed","種実(アカガシ亜属)",NA,FALSE
+"Seed","種実(アカガシ亜属果実)",NA,FALSE
+"Seed","種実(アズキ)",NA,FALSE
+"Seed","種実(アブラチャン)",NA,FALSE
+"Seed","種実(アブラナ科)",NA,FALSE
+"Seed","種実(アラカシ果実)",NA,FALSE
+"Seed","種実(イチイガシ)",NA,FALSE
+"Seed","種実(イチイガシ）",NA,FALSE
+"Seed","種実(イチイガシ果実)",NA,FALSE
+"Seed","種実(イネ)",NA,FALSE
+"Seed","種実(イネ胚乳)",NA,FALSE
+"Seed","種実(エゴノキ)",NA,FALSE
+"Seed","種実(エゴノキ核)",NA,FALSE
+"Charred Seed","種実（エゾエンゴサク根茎・炭化植物遺体）",NA,FALSE
+"Charred Seed","種実（オオムギ炭化種子）",NA,FALSE
+"Charred Seed","種実（オオムギ種子・炭化植物遺体）",NA,FALSE
+"Charred Seed","種実（オオムギ穎果・炭化植物遺体（0.21g））",NA,FALSE
+"Seed","種実(オニグルミ)",NA,FALSE
+"Seed","種実（オニグルミ）",NA,FALSE
+"Seed","種実(オニグルミ内果皮)",NA,FALSE
+"Charred Seed","種実（オニグルミ堅果皮片・炭化植物遺体（0.52g））",NA,FALSE
+"Charred Seed","種実（オニグルミ堅果皮片・炭化植物遺体（0.56g））",NA,FALSE
+"Charred Seed","種実（オニグルミ堅果皮片・炭化植物遺体（0.59g））",NA,FALSE
+"Charred Seed","種実（オニグルミ堅果皮片・炭化植物遺体（0.6g））",NA,FALSE
+"Charred Seed","種実（オニグルミ堅果皮片・炭化植物遺体（1.01g））",NA,FALSE
+"Charred Seed","種実（オニグルミ堅果皮片・炭化植物遺体（1.07g））",NA,FALSE
+"Seed","種実(オニグルミ核)",NA,FALSE
+"Seed","種実(カボチャ近似種種子)",NA,FALSE
+"Charred Seed","種実（キビ塊片）",NA,FALSE
+"Seed","種実(クヌギ節)",NA,FALSE
+"Charred Seed","種実（クリ子葉）",NA,FALSE
+"Seed","種実(クリ果実破片)",NA,FALSE
+"Seed","種実(クルミ)",NA,FALSE
+"Charred Seed","種実（クルミ）",NA,FALSE
+"Charred Seed","種実（クルミ殻）",NA,FALSE
+"Charred Seed","種実（クルミ片）",NA,FALSE
+"Seed","種実(ココヤシ内果皮)",NA,FALSE
+"Seed","種実(コナラ属)",NA,FALSE
+"Seed","種実(コナラ属アカガシ亜属果実)",NA,FALSE
+"Seed","種実(コナラ属クヌギ節果実)",NA,FALSE
+"Seed","種実(コナラ属コナラ節幼果)",NA,FALSE
+"Seed","種実(コナラ果実)",NA,FALSE
+"Seed","種実(コムギ胚乳)",NA,FALSE
+"Seed","種実(ササゲ属炭化種子)",NA,FALSE
+"Seed","種実(センダン)",NA,FALSE
+"Seed","種実(ツブラジイ果皮)",NA,FALSE
+"Seed","種実(トチ)",NA,FALSE
+"Seed","種実(トチノキ)",NA,FALSE
+"Seed","種実(トチノキ炭化子葉)",NA,FALSE
+"Seed","種実(トチノキ種子)",NA,FALSE
+"Seed","種実(どんぐり)",NA,FALSE
+"Seed","種実(ドングリ)",NA,FALSE
+"Seed","種実(ナラガシワ果実)",NA,FALSE
+"Seed","種実(ハンノキ球果)",NA,FALSE
+"Seed","種実(ヒシ)",NA,FALSE
+"Seed","種実(ヒシ属)",NA,FALSE
+"Seed","種実(ヒョウタン果実破片1点）",NA,FALSE
+"Charred Seed","種実（ブドウ属種子・炭化植物遺体（0.12g））",NA,FALSE
+"Seed","種実(ブナ殻斗)",NA,FALSE
+"Seed","種実(マツ球果)",NA,FALSE
+"Seed","種実(ミズキ核)",NA,FALSE
+"Seed","種実(メロン仲間)",NA,FALSE
+"Seed","種実(モモ)",NA,FALSE
+"Seed","種実(モモ核)",NA,FALSE
+"Seed","種実(不明)",NA,FALSE
+"Charred Seed","種実（不明種子・炭化植物遺体）",NA,FALSE
+"Other Charred Remains","種実（草本茎・炭化植物遺体（0.51g））",NA,FALSE
+"Seed","種実2点(オニグルミ核)",NA,FALSE
+"Charred Seed","種実炭化物(チャンチンモドキ)",NA,FALSE
+"Charred Seed","種実炭化物(ブナ科)",NA,FALSE
+"Seed","種実片(ドングリ類)",NA,FALSE
+"Charred Seed","種実片(ムギ類)",NA,FALSE
+"Seed","種実破片(ヒョウタン類)",NA,FALSE
+"Seed","種実遺体",NA,FALSE
+"Seed","種実遺体?",NA,FALSE
+"Seed","種実遺体(イネ)",NA,FALSE
+"Seed","種実遺体(エゴノキ)",NA,FALSE
+"Seed","種実遺体(オニグルミ)",NA,FALSE
+"Seed","種実遺体(オニグルミ核)",NA,FALSE
+"Seed","種実遺体(オニグルミ核)＋土壌",NA,FALSE
+"Seed","種実遺体（カヤツリグサ）",NA,FALSE
+"Seed","種実遺体(コナラ属)",NA,FALSE
+"Seed","種実遺体(タデ属)",NA,FALSE
+"Seed","種実遺体(トチノキ)",NA,FALSE
+"Seed","種実遺体(トチノキ果実)",NA,FALSE
+"Seed","種実遺体(トチノキ種子)",NA,FALSE
+"Seed","種実遺体(トチノキ種皮)",NA,FALSE
+"Seed","種実遺体(ヒシ)",NA,FALSE
+"Seed","種実遺体(ヒョウタン類果実)",NA,FALSE
+"Seed","種実遺体(ブドウ種子)",NA,FALSE
+"Seed","種実遺体(ホオノキ種子)",NA,FALSE
+"Seed","種実遺体(ホタルイ属及びタデ属)",NA,FALSE
+"Seed","種実遺体(ムクロジ)",NA,FALSE
+"Seed","種実遺体(モモ核)",NA,FALSE
+"Seed","種実遺体(ヤブツバキ)",NA,FALSE
+"Charred Seed","種実遺体オニグルミ",NA,FALSE
+"Seed","種実類(針葉樹)",NA,FALSE
+"Seed","穀類(コメの塊)",NA,FALSE
+"Wood","竹",NA,FALSE
+"Wood","竹材",NA,FALSE
+"Wood","竹材（マダケ）",NA,FALSE
+"Wood","竹笹類",NA,FALSE
+"Wood","竹笹類?",NA,FALSE
+"Seed","第5号トチ塚　S10",NA,FALSE
+"Wood","笹類",NA,FALSE
+"Seed","米",NA,FALSE
+"Other Charred Remains","粒状炭化物",NA,FALSE
+"Soil","粘土",NA,FALSE
+"Soil","粘土質シルト",NA,FALSE
+"Wood","素材束",NA,FALSE
+"Soil","細砂混じりシルト",NA,FALSE
+"Animal Bone","絶滅大型シカ脛骨",NA,FALSE
+"Soil","続縄文時代の焼土",NA,FALSE
+"Soil","続縄文時代の焼土フローテーションサンプル",NA,FALSE
+"Other unknown samples","緑青",NA,FALSE
+"Other unknown samples","緑青錆",NA,FALSE
+"Wood","編物",NA,FALSE
+"Wood","編物(AM2250)",NA,FALSE
+"Wood","編物(ヒゴ材)",NA,FALSE
+"Wood","編物(ヒノキ科)",NA,FALSE
+"Wood","編物①",NA,FALSE
+"Wood","編物②",NA,FALSE
+"Wood","編物②(ムクロジ)",NA,FALSE
+"Wood","編物一括",NA,FALSE
+"Wood","編組製品(アカガシ亜属)",NA,FALSE
+"Wood","縄",NA,FALSE
+"Wood","縄(リョウメンシダ)",NA,FALSE
+"Organic Residue from Pottery","縄文晩期末緑ヶ丘式期土器付着物・内面（おこげ）",NA,FALSE
+"Organic Residue from Pottery","縄文晩期末緑ヶ丘式期土器付着物・内面（おこげ）　",NA,FALSE
+"Human Bone","肋骨",NA,TRUE
+NA,"肋骨",NA,TRUE
+"Human Bone","肩甲骨",NA,FALSE
+"Human Bone","脛骨",NA,FALSE
+"Humic substances ","腐植",NA,TRUE
+"Soil","腐植",NA,TRUE
+"Humic substances ","腐植化した植物遺体",NA,FALSE
+"Peat","腐植土",NA,TRUE
+"Soil","腐植土",NA,TRUE
+"Peat","腐植土壌",NA,TRUE
+"Soil","腐植土壌",NA,TRUE
+"Peat","腐植層",NA,TRUE
+"Soil","腐植層",NA,TRUE
+"Wood","腐植材",NA,FALSE
+"Peat","腐植混じり土壌",NA,FALSE
+"Peat","腐植物",NA,TRUE
+"Humic substances ","腐植物",NA,TRUE
+"Soil","腐植物",NA,TRUE
+"Humic substances ","腐植物片",NA,FALSE
+"Soil","腐植質シルト",NA,FALSE
+"Soil","腐植質シルト質粘土",NA,FALSE
+"Soil","腐植質土",NA,FALSE
+"Soil","腐植質土壌",NA,FALSE
+"Soil","腐植質堆積物",NA,FALSE
+"Soil","腐植質泥",NA,TRUE
+"Peat","腐植質泥",NA,TRUE
+"Soil","腐植質砂",NA,FALSE
+"Soil","腐植質砂層",NA,FALSE
+"Soil","腐植質砂質シルト",NA,FALSE
+"Soil","腐植質粘土",NA,FALSE
+"Humic substances ","腐植酸",NA,FALSE
+"Humic substances ","腐植酸を抽出分離した残渣",NA,FALSE
+"Soil","腐食した黒色土",NA,FALSE
+"Soil","腐食土",NA,FALSE
+"Soil","腐食土壌",NA,FALSE
+"Soil","腐食質土壌",NA,FALSE
+"Soil","腐食質砂層",NA,FALSE
+"Human Bone","腓骨",NA,FALSE
+"Wood","自然木",NA,FALSE
+"Wood","自然木(コナラ節)",NA,FALSE
+"Wood","自然木(サクラ属)",NA,FALSE
+"Wood","自然木(スダジイ)",NA,FALSE
+"Wood","自然木(トウヒ節)",NA,FALSE
+"Wood","自然木(トネリコ属)",NA,FALSE
+"Wood","自然木(ハンノキ属ハンノキ節)",NA,FALSE
+"Wood","自然木(モミsp)",NA,FALSE
+"Wood","自然木(モモ)",NA,FALSE
+"Wood","自然木(ヤナギ)",NA,FALSE
+"Wood","自然材(コナラ節)",NA,FALSE
+"Wood","自然材(ハンノキ亜属)",NA,FALSE
+"Animal Bone","臼歯(ナウマンゾウ)",NA,FALSE
+"Wood","草",NA,FALSE
+"Wood","草木(葉)",NA,FALSE
+"Peat","草木泥炭",NA,FALSE
+"Wood","草本",NA,TRUE
+NA,"草本",NA,TRUE
+"Wood","草本植物片",NA,FALSE
+"Wood","草本植物遺体",NA,FALSE
+"Peat","草本泥炭",NA,FALSE
+"Charred Remain","草本炭化物",NA,FALSE
+"Seed","草本炭化物(単子葉類)",NA,TRUE
+"Charred Seed","草本炭化物(単子葉類)",NA,TRUE
+"Charred Seed","草本炭化物(草本生単子葉類)",NA,FALSE
+"Peat","草本質泥炭",NA,FALSE
+"Charred Remain","草本質炭化物",NA,FALSE
+"Wood","草本遺体",NA,FALSE
+"Wood","草本類",NA,FALSE
+"Wood","草本類稈",NA,FALSE
+"Wood","葉",NA,FALSE
+"Other unknown samples","虫",NA,FALSE
+"Other unknown samples","虫体(イネノクロカメムシ)",NA,FALSE
+"Soil","褐灰色粘土",NA,FALSE
+"Animal Bone","象の臼歯",NA,FALSE
+"Shell","貝",NA,FALSE
+"Shell","貝,",NA,FALSE
+"Shell","貝,アサリ,",NA,FALSE
+"Shell","貝,アラスジケマンガイ,",NA,FALSE
+"Shell","貝,ウバガイ,",NA,FALSE
+"Shell","貝,オオノガイ？,",NA,FALSE
+"Shell","貝,カガミガイ,R",NA,FALSE
+"Shell","貝,カキ,",NA,FALSE
+"Terrestrial mollusc","貝,カラスガイ,",NA,FALSE
+"Terrestrial mollusc","貝,カワニナ,",NA,FALSE
+"Shell","貝,サラガイ,",NA,FALSE
+"Shell","貝,サルボウ,",NA,FALSE
+"Shell","貝,シオフキ,R",NA,FALSE
+"Shell","貝,シジミ,",NA,FALSE
+"Shell","貝,シャコガイ,",NA,FALSE
+"Terrestrial mollusc","貝,セタシジミ,",NA,FALSE
+"Terrestrial mollusc","貝,セタシジミ,中身",NA,FALSE
+"Terrestrial mollusc","貝,セタシジミ,貝殻",NA,FALSE
+"Shell","貝,チョウセンサザエ,",NA,FALSE
+"Terrestrial mollusc","貝,ナガタニシ,",NA,FALSE
+"Shell","貝,ハイガイ,",NA,FALSE
+"Shell","貝,ハマグリ,R",NA,FALSE
+"Shell","貝,ホタテガイ,破片",NA,FALSE
+"Shell","貝,マガキ,",NA,FALSE
+"Shell","貝,マガキガイ,",NA,FALSE
+"Terrestrial mollusc","貝,マシジミ,",NA,FALSE
+"Terrestrial mollusc","貝,ヤマトカワニナ,",NA,FALSE
+"Shell","貝,ヤマトシジミ,",NA,FALSE
+"Terrestrial mollusc","貝,陸産貝類,",NA,FALSE
+"Shell","貝？",NA,FALSE
+"Shell","貝(アカニシ)",NA,FALSE
+"Shell","貝(アサリ)",NA,FALSE
+"Shell","貝(アサリ）",NA,FALSE
+"Shell","貝(アワビ)",NA,FALSE
+"Shell","貝(イガイ)",NA,FALSE
+"Shell","貝(イシダタミガイ)",NA,FALSE
+"Shell","貝(イボキサゴ)",NA,FALSE
+"Shell","貝(イワガキ)",NA,FALSE
+"Shell","貝(ウメノハナガイ)",NA,FALSE
+"Shell","貝(オオノガイ)",NA,FALSE
+"Shell","貝(オキシジミ)",NA,FALSE
+"Shell","貝(カガミガイ)",NA,FALSE
+"Shell","貝(カキ)",NA,FALSE
+"Shell","貝(カシパン)",NA,FALSE
+"Shell","貝(キサゴ)",NA,FALSE
+"Shell","貝（コタマガイ右殻）殻の腹縁",NA,FALSE
+"Shell","貝(コベルトカニモリ)",NA,FALSE
+"Shell","貝(サルボウ)",NA,FALSE
+"Shell","貝(サルボウガイ)",NA,FALSE
+"Shell","貝(シオフキ)",NA,FALSE
+"Shell","貝(シジミ)",NA,FALSE
+"Shell","貝（シジミ殻皮）",NA,FALSE
+"Shell","貝(シジミ類)",NA,FALSE
+"Shell","貝(シラオガイ)",NA,FALSE
+"Shell","貝(スガイ)",NA,FALSE
+"Shell","貝(タマキガイ)",NA,FALSE
+"Shell","貝(ダンドクメンガイ)",NA,FALSE
+"Shell","貝(ツメタガイ)",NA,FALSE
+"Shell","貝(ツメタガイ）",NA,FALSE
+"Shell","貝(ナミマガシワガイ)",NA,FALSE
+"Shell","貝(バイ)",NA,FALSE
+"Shell","貝(ハイガイ)",NA,FALSE
+"Shell","貝(バカガイ)",NA,FALSE
+"Shell","貝(ハマグリ)",NA,FALSE
+"Shell","貝(ハマグリ右)",NA,FALSE
+"Shell","貝(ハマグリ左)",NA,FALSE
+"Shell","貝(ホソウミニナ)",NA,FALSE
+"Shell","貝(マガキ)",NA,FALSE
+"Shell","貝(マガキガイ)",NA,FALSE
+"Shell","貝(ミガキボラ)",NA,FALSE
+"Shell","貝(ヤマトシジミ)",NA,FALSE
+"Shell","貝(レイシガイ)",NA,FALSE
+"Shell","貝(汽水産:ヤマトシジミ)",NA,FALSE
+"Shell","貝(海水産:ハマグリ)",NA,FALSE
+"Shell","貝(海水産:マガキ)",NA,FALSE
+"Shell","貝(海洋性:サルボウ)",NA,FALSE
+"Shell","貝(海洋性)",NA,FALSE
+"Shell","貝化石",NA,FALSE
+"Shell","貝化石(カガミガイ)",NA,FALSE
+"Shell","貝化石(ハイガイ)",NA,FALSE
+"Shell","貝化石（マガキ）",NA,FALSE
+"Shell","貝化石(ヤマトシジミ)",NA,FALSE
+"Shell","貝柄(ハナグモリ)",NA,FALSE
+"Shell","貝殻",NA,FALSE
+"Shell","貝殻　ヤマトシジミ",NA,FALSE
+"Shell","貝殻(Ⅸ層)",NA,FALSE
+"Shell","貝殻(Ⅵ層)",NA,FALSE
+"Shell","貝殻(アカニシ芯)",NA,FALSE
+"Shell","貝殻(アゲマキ)",NA,FALSE
+"Shell","貝殻(イボキサゴ)",NA,FALSE
+"Shell","貝殻（ウバガイ）",NA,FALSE
+"Shell","貝殻(エゾタマキガイ)",NA,FALSE
+"Shell","貝殻（オオノガイ）",NA,FALSE
+"Shell","貝殻(オキシジミ)",NA,FALSE
+"Shell","貝殻(カキ)",NA,FALSE
+"Shell","貝殻(カキ①)",NA,FALSE
+"Shell","貝殻(カキ②)",NA,FALSE
+"Shell","貝殻(カキ③)",NA,FALSE
+"Shell","貝殻(カモノアシガキ)",NA,FALSE
+"Terrestrial mollusc","貝殻（カワシンジュガイ）",NA,FALSE
+"Shell","貝殻(キサゴ)",NA,FALSE
+"Shell","貝殻(コダマガイ)",NA,FALSE
+"Shell","貝殻(サルボウガイ)",NA,FALSE
+"Shell","貝殻(シジミ)",NA,FALSE
+"Shell","貝殻(シジミ属)",NA,FALSE
+"Shell","貝殻(スガイ)",NA,FALSE
+"Shell","貝殻(ダンベイキサゴ)",NA,FALSE
+"Shell","貝殻(ハイガイ)",NA,FALSE
+"Shell","貝殻(ハイガイ①)",NA,FALSE
+"Shell","貝殻(ハイガイ②)",NA,FALSE
+"Shell","貝殻(ハイガイ③)",NA,FALSE
+"Shell","貝殻(ハマグリ)",NA,FALSE
+"Shell","貝殻(ハマグリ）",NA,FALSE
+"Shell","貝殻(ハマグリ)　左殻",NA,FALSE
+"Shell","貝殻(フトヘナタリ)",NA,FALSE
+"Shell","貝殻(マガキ･ハイガイ･サルボウガイ)",NA,FALSE
+"Shell","貝殻(マガキ)",NA,FALSE
+"Shell","貝殻（マガキ）",NA,FALSE
+"Shell","貝殻(ヤマトシジミ)",NA,FALSE
+"Shell","貝殻(レイシガイ)",NA,FALSE
+"Shell","貝殻(微小二枚貝)",NA,FALSE
+"Shell","貝殻片",NA,FALSE
+"Shell","貝皮(淡水性)",NA,FALSE
+"Shell","貝試料",NA,FALSE
+"Shell","貝類",NA,FALSE
+"Shell","貝類(アカニシ)",NA,FALSE
+"Shell","貝類(アサリ)",NA,FALSE
+"Lacquer","赤ウルシ",NA,FALSE
+"Human Bone","踵骨",NA,FALSE
+"Charred Remain","遺構外採取炭化物　炭化材（クリ）",NA,FALSE
+"Charred Remain","遺構外採取炭化物　炭化材（コナラ節）",NA,FALSE
+"Metal","鉄",NA,FALSE
+"Metal","鉄塊",NA,FALSE
+"Metal","鉄滓",NA,FALSE
+"Organic Residue from Pottery","鉄滓付着炭化物",NA,FALSE
+"Metal","鉄製品",NA,FALSE
+"Soil","鉄鍋付着土壌",NA,FALSE
+"Charred Remain","銹着炭化材(モクレン属)",NA,FALSE
+"Lacquer","陶器付着物(漆の可能性)",NA,FALSE
+"Terrestrial mollusc","陸生貝(マイマイ)",NA,FALSE
+"Terrestrial mollusc","陸貝",NA,FALSE
+"Humic substances ","非加水分解性腐植",NA,FALSE
+"Human Bone","頭蓋骨",NA,FALSE
+"Human Bone","頭蓋骨片",NA,FALSE
+"Human Bone","頭頂骨",NA,FALSE
+"Human Bone","頭骨",NA,FALSE
+"Human Bone","頸椎",NA,FALSE
+"Animal Bone","馬歯",NA,FALSE
+"Animal Bone","馬歯　切歯",NA,FALSE
+"Animal Bone","馬骨",NA,FALSE
+"Animal Bone","馬骨　左脛骨片",NA,FALSE
+"Animal Bone","馬骨　骨コラーゲン",NA,FALSE
+"Animal Bone","馬骨(右尺骨･橈骨)",NA,FALSE
+"Human Bone","骨",NA,TRUE
+"Animal Bone","骨",NA,TRUE
+"Other unknown samples","骨",NA,TRUE
+NA,"骨",NA,TRUE
+"Fish bone","骨,アシカ,",NA,FALSE
+"Animal Bone","骨,イノシシ,",NA,FALSE
+"Animal Bone","骨,イノシシ,右橈骨",NA,FALSE
+"Animal Bone","骨,イノシシ,右踵骨",NA,FALSE
+"Fish bone","骨,イルカ,椎骨",NA,FALSE
+"Fish bone","骨,オットセイ,",NA,FALSE
+"Fish bone","骨,オットセイ,上腕骨R",NA,FALSE
+"Fish bone","骨,オットセイ,大腿骨R",NA,FALSE
+"Fish bone","骨,クジラ,",NA,FALSE
+"Fish bone","骨,コイ類,第一椎骨",NA,FALSE
+"Animal Bone","骨,シカ,右下上腕骨",NA,FALSE
+"Animal Bone","骨,シカ,右大腿骨",NA,FALSE
+"Animal Bone","骨,シカ,右距骨",NA,FALSE
+"Animal Bone","骨,シカ,右踵骨",NA,FALSE
+"Animal Bone","骨,シカ,基節骨",NA,FALSE
+"Animal Bone","骨,シカ,左距骨",NA,FALSE
+"Animal Bone","骨,シカ,距骨R",NA,FALSE
+"Fish bone","骨,ジュゴン,",NA,FALSE
+"Fish bone","骨,スズキ,右主鰓蓋骨",NA,FALSE
+"Fish bone","骨,スズキ,左主鰓蓋骨",NA,FALSE
+"Fish bone","骨,スズキ,歯骨R",NA,FALSE
+"Fish bone","骨,タラ,",NA,FALSE
+"Human Bone","骨,ヒト,",NA,FALSE
+"Human Bone","骨,ヒト,右中足骨2",NA,FALSE
+"Human Bone","骨,ヒト,右中足骨3",NA,FALSE
+"Human Bone","骨,ヒト,右中足骨4",NA,FALSE
+"Human Bone","骨,ヒト,右中足骨5",NA,FALSE
+"Human Bone","骨,ヒト,左脛骨中間部",NA,FALSE
+"Human Bone","骨,ヒト,指骨",NA,FALSE
+"Human Bone","骨,ヒト,肋骨",NA,FALSE
+"Human Bone","骨,ヒト,肋骨左7",NA,FALSE
+"Fish bone","骨,ブダイ,",NA,FALSE
+"Human Bone","骨,人骨・上腕",NA,FALSE
+"Human Bone","骨,人骨,助骨,SK-3-♀",NA,FALSE
+"Human Bone","骨,人骨,助骨,SK-30-♂",NA,FALSE
+"Human Bone","骨,人骨,助骨,SK-84-♀",NA,FALSE
+"Animal Bone","骨,獣骨,LM",NA,FALSE
+"Animal Bone","骨,獣骨,SM",NA,FALSE
+"Animal Bone","骨,獣骨,不明",NA,FALSE
+"Fish bone","骨,魚骨,椎骨",NA,FALSE
+"Fish bone","骨,魚骨,顎骨",NA,FALSE
+"Animal Bone","骨(イヌ)",NA,FALSE
+"Animal Bone","骨(イヌ右下顎骨)",NA,FALSE
+"Animal Bone","骨(イヌ右尺骨)",NA,FALSE
+"Animal Bone","骨(イヌ左尺骨)",NA,FALSE
+"Animal Bone","骨(イヌ左距骨)",NA,FALSE
+"Animal Bone","骨(イヌ肋骨)",NA,FALSE
+"Animal Bone","骨(イヌ軸椎)",NA,FALSE
+"Animal Bone","骨(イノシシ)",NA,FALSE
+"Animal Bone","骨(ウシ)",NA,FALSE
+"Animal Bone","骨(ウシ右下顎骨)",NA,FALSE
+"Animal Bone","骨(ウシ右中足骨)",NA,FALSE
+"Animal Bone","骨(ウシ右肩甲骨)",NA,FALSE
+"Animal Bone","骨(ウシ左上腕骨)",NA,FALSE
+"Animal Bone","骨(ウシ左下顎骨)",NA,FALSE
+"Animal Bone","骨(ウシ左肩甲骨)",NA,FALSE
+"Animal Bone","骨(ウマ)",NA,FALSE
+"Animal Bone","骨(ウマ仙椎)",NA,FALSE
+"Animal Bone","骨(ウマ右下顎骨)",NA,FALSE
+"Animal Bone","骨(ウマ右肩甲骨",NA,FALSE
+"Animal Bone","骨(ウマ右脛骨)",NA,FALSE
+"Animal Bone","骨(ウマ右距骨)",NA,FALSE
+"Animal Bone","骨(ウマ左中手骨)",NA,FALSE
+"Animal Bone","骨(ウマ左橈骨)",NA,FALSE
+"Animal Bone","骨(ウマ左肩甲骨)",NA,FALSE
+"Animal Bone","骨(ウマ左距骨)",NA,FALSE
+"Animal Bone","骨(コラーゲン)(牛)",NA,FALSE
+"Animal Bone","骨(コラーゲン)(馬歯)",NA,FALSE
+"Animal Bone","骨(シカ？)",NA,FALSE
+"Animal Bone","骨(シカ)",NA,FALSE
+"Animal Bone","骨（シカ右上顎後臼歯）",NA,FALSE
+"Animal Bone","骨(シカ右下顎後臼歯)",NA,FALSE
+"Animal Bone","骨（シカ右下顎骨）",NA,FALSE
+"Animal Bone","骨（シカ右前頭骨～角）",NA,FALSE
+"Animal Bone","骨(シカ右肩甲骨)",NA,FALSE
+"Animal Bone","骨(シカ左下顎骨)",NA,FALSE
+"Animal Bone","骨（シカ左下顎骨）",NA,FALSE
+"Animal Bone","骨(シカ左肩甲骨)",NA,FALSE
+"Animal Bone","骨（シカ左脛骨遠位端)",NA,FALSE
+"Animal Bone","骨(シカ左距骨)",NA,FALSE
+"Animal Bone","骨(ニホンジカ)",NA,FALSE
+"Animal Bone","骨(ネコ左上腕骨)",NA,FALSE
+"Animal Bone","骨(ネコ左下顎骨)",NA,FALSE
+"Animal Bone","骨（ヒグマ）頸骨",NA,FALSE
+"Human Bone","骨(ヒト、脛骨?）",NA,FALSE
+"Human Bone","骨(ヒト右下歯)",NA,FALSE
+"Human Bone","骨(ヒト右大腿骨)",NA,FALSE
+"Human Bone","骨(ヒト右脛骨)",NA,FALSE
+"Human Bone","骨(ヒト左上腕骨)",NA,FALSE
+"Human Bone","骨(ヒト歯)",NA,FALSE
+"Human Bone","骨(ヒト肋骨破片)",NA,FALSE
+"Human Bone","骨(ヒト部位不明破片)",NA,FALSE
+"Human Bone","骨（ヒト頭蓋骨片）",NA,FALSE
+"Human Bone","骨(ヒト頭蓋骨破片)",NA,FALSE
+"Human Bone","骨(乳歯:下左)",NA,FALSE
+"Human Bone","骨(歯；上顎右)",NA,FALSE
+"Human Bone","骨(歯:上左)",NA,FALSE
+"Human Bone","骨(歯:下左)",NA,FALSE
+"Human Bone","骨(歯:下顎左)",NA,FALSE
+"Animal Bone","骨(歯)　ウマ　歯牙片",NA,FALSE
+"Human Bone","骨(肋骨)",NA,FALSE
+"Human Bone","骨(長骨)",NA,FALSE
+"Human Bone","骨(頭蓋骨)",NA,FALSE
+"Human Bone","骨コラーゲン",NA,FALSE
+"Animal Bone","骨片",NA,TRUE
+"Human Bone","骨片",NA,TRUE
+"Animal Bone","骨片(動物骨)",NA,FALSE
+"Fish bone","魚類(大型)　椎骨",NA,FALSE
+"Seed","鱗片(ハンノキ)",NA,FALSE
+"Wood","麻布",NA,FALSE
+"Soil","黒シルト質粘土",NA,FALSE
+"Soil","黒ボク土",NA,FALSE
+"Soil","黒ボク様土壌",NA,FALSE
+"Soil","黒泥",NA,FALSE
+"Peat","黒泥混じり植物遺体",NA,FALSE
+"Soil","黒泥状粘土",NA,FALSE
+"Soil","黒灰色腐植質シルト",NA,FALSE
+"Soil","黒色シルト",NA,FALSE
+"Soil","黒色シルト質粘土",NA,FALSE
+"Soil","黒色シルト質粘土（有機物多い）",NA,FALSE
+"Soil","黒色土",NA,FALSE
+"Soil","黒色土（有機物含む）",NA,FALSE
+"Soil","黒色土(泥質)",NA,FALSE
+"Soil","黒色土壌",NA,FALSE
+"Soil","黒色帯土壌",NA,FALSE
+"Soil","黒色有機質粘土",NA,FALSE
+"Peat","黒色泥炭",NA,FALSE
+"Other unknown samples","黒色物質",NA,FALSE
+"Soil","黒色砂混じりシルト",NA,FALSE
+"Soil","黒色粘土",NA,FALSE
+"Soil","黒色粘土(7a層)",NA,FALSE
+"Soil","黒色粘土質シルト",NA,FALSE
+"Soil","黒褐色シルト",NA,FALSE
+"Soil","黒褐色の土壌",NA,FALSE
+"Soil","黒褐色土壌",NA,FALSE
+"Wood","黒褐色土層中の木片",NA,FALSE
+"Soil","黒褐色有機質シルト",NA,FALSE
+"Peat","黒褐色泥炭",NA,FALSE
+"Other unknown samples","黒鉛",NA,FALSE
+"Other unknown samples",NA,NA,FALSE
+"Peat",NA,NA,FALSE
+"Charred Remain",NA,NA,FALSE
+"Wood",NA,NA,FALSE

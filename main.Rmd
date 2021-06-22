@@ -17,6 +17,7 @@ library(NipponMap)
 library(mapdata)
 library(maptools)
 library(Nippon)
+library(here)
 ```
 
 # General Info
@@ -48,7 +49,7 @@ We first read the most up-to-date version of the raw data (currently `c14_raw_v2
 
 ```{r}
 options(warn=-1) #suppress warning
-c14raw=read_xlsx( "./raw/c14_raw_v210218.xlsx", skip=1) %>% as.data.frame(stringsAsFactor=FALSE)
+c14raw=read_xlsx(here('raw','c14_raw_v210218.xlsx'), skip=1) |> as.data.frame(stringsAsFactor=FALSE)
 ```
 
 and assign new names to the columns
@@ -152,7 +153,7 @@ labcodeIssues = unique(c(missingLabCodes.index,noNumbers.index,noCharacters.inde
 c14raw.labcodeissue = c14raw[labcodeIssues,]
 c14raw$retain[labcodeIssues] = FALSE 
 
-write.csv(c14raw.labcodeissue,"./reports/missingLabCodes.csv",row.names=FALSE) 
+write.csv(c14raw.labcodeissue,here('reports','missingLabCodes.csv'),row.names=FALSE) 
 ```
 
 We then check instances of duplicate Codes: 
@@ -193,7 +194,7 @@ for (i in 1:length(duplicates))
     duplicatedLabcodes=rbind.data.frame(duplicatedLabcodes,subset(c14raw[-labcodeIssues],LabCode==names(duplicates)[i]))
   }
 }
-write.csv(duplicatedLabcodes,"./reports/duplicateLabCodes.csv",row.names=FALSE) 
+write.csv(duplicatedLabcodes,here('reports','duplicateLabCodes.csv'),row.names=FALSE) 
 ```
 
 Finally the routine below goes through all cases of duplicates and:
@@ -249,20 +250,21 @@ c14raw$Longitude=as.numeric(c14raw$Longitude)
 
 ## Estimate Coordinates Using Site Address
 ```{r}
-source("./utility/extractCoordinates.R")
+source(here('utility','extractCoordinates.R'))
 unique.Addresses = unique(c14raw$SiteLocation)
 #Commented section below is for the first run
 #gmap.coord=extractCoordinates(unique.Addresses)
 #colnames(gmap.coord)=c("SiteLocation","Latitude.gmap","Longitude.gmap")
 #write.csv(gmap.coord,"./output/gmap.coord.csv",row.names = FALSE)
-gmap.coord=read.csv(file="./output/gmap.coord.csv",stringsAsFactors = FALSE)
+gmap.coord=read.csv(file=here('output','gmap.coord.csv'),stringsAsFactors = FALSE)
+
 if (sum(!unique.Addresses%in%gmap.coord$SiteLocation)>0)
 {
 missing.Addresses=unique.Addresses[which(!unique.Addresses%in%gmap.coord$SiteLocation)]
 gmap.coord.extra=extractCoordinates(missing.Addresses,api = 'AIzaSyBgQGevFZ4GhdUOoZOWYK8SM_b1b3WRo8I')
 colnames(gmap.coord.extra)=c("SiteLocation","Latitude.gmap","Longitude.gmap")
 gmap.coord=rbind.data.frame(gmap.coord,gmap.coord.extra)
-write.csv(gmap.coord,"./output/gmap.coord.csv",row.names = FALSE)
+write.csv(gmap.coord,here('output','gmap.coord.csv'),row.names = FALSE)
 }
 c14raw=left_join(c14raw,gmap.coord)
 ```
@@ -276,7 +278,6 @@ c14raw=left_join(c14raw,pref.lookup)
 ```
 
 
-
 ###CHECK002: Spatial Coordinates {#check_coordinates}
 
 ##### 0,0 and Missing Coordinates
@@ -286,7 +287,8 @@ Eliminate sites with missing coordinates and coordinates cannot be recovered fro
 ```{r}
 missing.coord.index = which(c14raw$Latitude==0 & c14raw$Longitude==0 & is.na(c14raw$Latitude.gmap)&is.na(c14raw$Longitude.gmap))
 c14raw$retain[missing.coord.index]=FALSE
-write.csv(c14raw[missing.coord.index,],"./reports/nocoordinates_and_noreliableaddress.csv",row.names=FALSE) 
+write.csv(c14raw[missing.coord.index,],here('reports','nocoordinates_and_noreliableaddress.csv'),row.names=FALSE) 
+
 ```
 
 ##### Mismatch with Prefectures
@@ -294,10 +296,11 @@ write.csv(c14raw[missing.coord.index,],"./reports/nocoordinates_and_noreliablead
 Check whether the coordinates fall within the designated prefectures using the utility function `checkPrefecture()`, and store them on designated fields:
 
 ```{r}
-source("./utility/checkPrefecture.R")
+source(here('utility','checkPrefecture.R'))
 original.coord.check = checkPrefecture(lat=c14raw$Latitude,lon=c14raw$Longitude,pref = c14raw$PrefectureNameEn)
 gmap.coord.check = checkPrefecture(lat=c14raw$Latitude.gmap,lon=c14raw$Longitude.gmap,pref = c14raw$PrefectureNameEn)
-save(original.coord.check,gmap.coord.check,file="./output/reverseGeocode.RData")
+save(original.coord.check,gmap.coord.check,file=here('output','reverseGeocode.RData'))
+
 c14raw$coord.check=original.coord.check
 c14raw$gmap.coord.check=gmap.coord.check
 ```
@@ -331,6 +334,13 @@ c14raw$coord.check[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[8]))]=FALSE
 # 北海道      山越4遺跡 (coodinate in Aichi)
 c14raw$coord.check[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[8]))]=FALSE
 ```
+
+Set Retain to FALSE for all cases where manual check was FALSE
+
+```{r}
+c14raw$retain[which(!c14raw$coord.check)]=FALSE
+```
+
 
 Now check the Google map coordinates
 
@@ -413,7 +423,8 @@ for (i in 1:length(dup.ids))
   }
 }
 
-write.csv(d,"./reports/samesite_differentcoordinates.csv",row.names=FALSE)
+write.csv(d,here('reports','samesite_differentcoordinates.csv'),row.names=FALSE)
+
 ```
 
 Set `$Retain` to FALSE when the coordinate mismatch is above 5km:
@@ -436,8 +447,6 @@ for (i in 1:length(RetainUpdateCoordinateIndex))
 ```
 
 
-
-
 # STEP 3: Translations
 
 ## Calibration
@@ -450,8 +459,9 @@ c14raw$Method_En[which(c14raw$Method=="不明")]=NA
 
 ## MatericalCode1 & MaterialCode2
 ```{r}
-matcode1 = read.csv("./lookup/materialGeneralCode.csv")
-matcode2 = read.csv("./lookup/materialDetailsCode.csv")
+matcode1 = read.csv(here('lookup','materialGeneralCode.csv'))
+matcode2 = read.csv(here('lookup','materialDetailsCode.csv'))
+
 
 c14raw=left_join(c14raw,matcode1,by=c("MaterialCode1"="Code"))
 c14raw=left_join(c14raw,matcode2,by=c("MaterialCode2"="Code"))
@@ -466,7 +476,7 @@ colnames(c14raw)[which(colnames(c14raw)=="Description.y")]="Material_Details"
 # periods = unique(data.frame(Period=c14db$Period,PeriodEN=NA))
 # periods = arrange(periods,Period)
 # write.csv(periods,file="./lookup/periods_toTranslate.csv",row.names=F)
-periods = unique(read.csv("./lookup/periods_translation.csv"))
+periods = unique(read.csv(here('lookup','periods_translation.csv')))
 
 # The following step updates the lookup table
 if (any(!unique(as.character(c14raw$Period))%in%periods$Period))
@@ -485,7 +495,7 @@ c14raw=left_join(x=c14raw,y=periods,by="Period")
 # phases = unique(data.frame(Phase=c14db$Phase,PhaseEN=NA))
 # phases = arrange(phases,Phase)
 # write.csv(phases,file="./lookup/phases_toTranslate.csv",row.names=F)
-phases = read.csv("./lookup/phases_translation.csv")
+phases = read.csv(here('lookup','phases_translation.csv'))
 
 
 if (any(!unique(as.character(c14raw$Phase))%in%phases$Phase))
@@ -503,9 +513,18 @@ c14raw=left_join(x=c14raw,y=phases,by="Phase")
 ## Material Details [In Progress]
 ```{r}
 # read translation lookup file, originally created with the following command:
-material_details = unique(data.frame(Material_Details_JPN=c14db$MaterialType,Material_Details2=NA))
-material_details = arrange(material_details,Material_Details_JPN)
-write.csv(material_details,file="./lookup/material_details_toTranslate.csv",row.names=F)
+# material_details = unique(data.frame(Material_Classification=c14db$Material_Details,Material_Details_JPN=c14db$MaterialType,Material_Details_EN=NA))
+# material_details = arrange(material_details,Material_Details_JPN)
+# # In some cases the same `Material_Details_JPN` (`MaterialType` in c14db) was assigned to different `Material_Classification` (`MaterialCode2` in c14db)
+# inconsistent_materials = names(which(table(material_details$Material_Details_JPN)>1))
+# material_details$inconsistent=FALSE
+# material_details$inconsistent[which(material_details$Material_Details_JPN%in%inconsistent_materials)]=TRUE
+# write.csv(material_details,file="./lookup/material_details.csv",row.names=F)
+material_details <- read.csv(here('lookup','material_details.csv'))
+
+# Final Column Names need to be Defined
+
+
 ```
 
 ## Period Codes
@@ -515,6 +534,7 @@ write.csv(material_details,file="./lookup/material_details_toTranslate.csv",row.
 # periodcode = arrange(periodcode,Code)
 # write.csv(periodcode,file="./lookup/periodcode.csv",row.names=F)
 periodcode = read.csv("./lookup/periodcode.csv")
+periodcode = read.csv(here('lookup','periodcode.csv'))
 
 if (any(!unique(as.character(c14raw$PeriodCode))%in%periodcode$Code))
 {
@@ -524,7 +544,7 @@ periodcode.tmp=left_join(code.tmp,periodcode,by="Code")
 write.csv(periodcode.tmp,file="./lookup/periodcode_to_do.csv",row.names=F)
 }
 
-c14raw=left_join(x=c14raw,y=periodcode,by=c("PeriodCode"="Code")
+c14raw=left_join(x=c14raw,y=periodcode,by=c("PeriodCode"="Code"))
 ```
 
 
@@ -534,8 +554,7 @@ c14raw=left_join(x=c14raw,y=periodcode,by=c("PeriodCode"="Code")
 Site names have been romanised by first using the Nabunken Site Report Database to automatically extract the _furigana_ of site names in _kanji_, followed by a manual check for fixing potential mismatch and missing _furigana_. Romanisation has been carried out using the `kana2roma()` function from the `Nippon` package. 
 ```{r}
 library(Nippon)
-source("./utility/siteNameTranscript.R")
-
+source(here('utility','siteNameTranscript.R'))
 ### The following block is executed only in the very first iteration:
 #siteList = unique(c14raw$SiteName)
 #sitenames=siteNameTranscript(siteList)
@@ -548,7 +567,8 @@ source("./utility/siteNameTranscript.R")
 
 ###This block is from second iteration onwards
 #Import manually edited file
-sitenames=read.csv("./lookup/sitenamesTranscript.csv",stringsAsFactors = FALSE)
+sitenames=read.csv(here('lookup','sitenamesTranscript.csv'),stringsAsFactors = FALSE)
+
 siteList = unique(c14raw$SiteName)
 
 # The following step updates the lookup table in case there are some missing sites
@@ -560,11 +580,11 @@ if (!all(unique(siteList)%in%sitenames$SiteName))
                                                       Furigana=additional_sitenames$Furigana,
                                                       ToCheck=TRUE,
                                                       Alternative=NA))
-  write.csv(sitenames,"./lookup/sitenamesTranscript.csv",row.names = FALSE)
+  write.csv(sitenames,here('lookup','sitenamesTranscript.csv'),row.names = FALSE)
 }
 
 # The section reads and merges the sitenames to the main data.frame
-sitenames=read.csv("./lookup/sitenamesTranscript.csv",stringsAsFactors = FALSE,na.strings = '')
+sitenames=read.csv(here('lookup','sitenamesTranscript.csv'),stringsAsFactors = FALSE,na.strings = '')
 
 ### Processing Site Type ####
 sitenames$SiteType=NA
@@ -618,7 +638,8 @@ c14raw=left_join(x=c14raw,y=sitenames,by="SiteName")
 if (any(!is.na(c14raw$Alternative)))
 {
  fix.names=subset(c14raw,!is.na(Alternative))
- write.csv(fix.names,file='./reports/sitenames_issues.csv')
+ write.csv(fix.names,file=here('reports','sitenames_issues.csv'))
+
 }
 
 
@@ -655,9 +676,9 @@ c14raw[which(c14raw$LabCode%in%c(dupllab))[c(1,3,5)],'retain']=FALSE
 
 ## Store Output 
 ```{r}
-write.csv(c14raw,file='japanc14db_v03.0(210218).csv')
+write.csv(c14raw,file='japanc14db_v03.1(210218).csv')
 c14db=c14raw
-save(c14db,file='japanc14db_v03.0(210218).RData')
+save(c14db,file='japanc14db_v03.1(210218).RData')
 ```
 
 
