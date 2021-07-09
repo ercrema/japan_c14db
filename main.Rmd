@@ -1,7 +1,7 @@
 ---
 title: "Japanese Radiocarbon Database Project"
 author: "E.Crema"
-date: "12 April 2021"
+date: "9 July 2021"
 output: html_document
 ---
 
@@ -45,11 +45,13 @@ The main workflow consists of three distinct processes: **consistency checks** (
 
 # STEP 1: Reading Data into R and Extracting Relevant Fields
 
-We first read the most up-to-date version of the raw data (currently `c14_raw_v210218.xlsx` corresponding to the original file `★＜公開中＞年代測定データベース学術・関東･東北・北陸・中部・九州・北海道・四国20210218.xlsx`):
+We first read the most up-to-date version of the raw data (currently `c14_raw_v210218.csv` corresponding to the original file `★＜公開中＞年代測定データベース学術・関東･東北・北陸・中部・九州・北海道・四国20210218.xlsx`, without the first row):
 
 ```{r}
 options(warn=-1) #suppress warning
-c14raw=read_xlsx(here('raw','c14_raw_v210218.xlsx'), skip=1) |> as.data.frame(stringsAsFactor=FALSE)
+# c14raw=read_xlsx(here('raw','c14_raw_v210218.xlsx'), skip=1) |> as.data.frame(stringsAsFactor=FALSE)
+c14raw=read.csv(here('raw','c14_raw_v210218.csv'),na.strings = '')
+
 ```
 
 and assign new names to the columns
@@ -139,6 +141,18 @@ and create a reference so that original input files can be easily identified
 ```{r}
 c14raw$originalRow = 2:(nrow(c14raw)+1)
 ```
+
+### FIX CorrectedC14Age Field
+The field has non-numeric entries so these needs to be converted into NAs.
+
+```{r}
+c14raw$CorrectedC14Age[grep('[^0-9.-]',c14raw$CorrectedC14Age)]=NA
+c14raw$CorrectedC14Age=as.numeric(c14raw$CorrectedC14Age)
+c14raw$CorrectedC14Error=as.numeric(c14raw$CorrectedC14Error)
+c14raw$CRA=as.numeric(c14raw$CRA)
+c14raw$CRAError=as.numeric(c14raw$CRAError)
+```
+
 
 ###CHECK001: LabCode and Unique Identifier 
 
@@ -510,21 +524,70 @@ write.csv(phases.tmp,file="./lookup/phases_translation_todo.csv",row.names=F)
 c14raw=left_join(x=c14raw,y=phases,by="Phase")
 ```
 
-## Material Details [In Progress]
+## Material Details
 ```{r}
-# read translation lookup file, originally created with the following command:
-# material_details = unique(data.frame(Material_Classification=c14db$Material_Details,Material_Details_JPN=c14db$MaterialType,Material_Details_EN=NA))
+# General Notes on File Names
+# material_details_before.csv... was the first original export
+# material_details_after... after CJS's translation
+# material_details_todo ... updated version with new entries, must be saved as 'material_details_after' after translations with fields: "MaterialTypeUniqueID"  "Material_Classification", "Material_Details_JPN" ,"inconsistent" ,"Materials_Details_EN","Materials_Detail_Identification_EN","Materials_Detail_Other_EN", and "Materials_Detail_Notes_EN"    
+
+# Initial Cleaning to facilitate merging
+c14raw$MaterialType = gsub("[\r\n]", "", c14raw$MaterialType) #Remove escapes
+c14raw$MaterialType = gsub("　", " ", c14raw$MaterialType) #Convert to half-width encoding
+c14raw$MaterialType = gsub("(^[[:space:]]+|[[:space:]]+$)", "", c14raw$MaterialType)
+
+# First time around: 
+# c14raw$MaterialTypeUniqueID = as.numeric(factor(c14raw$MaterialType)) #Add Unique Identifier
+# material_details = unique(data.frame(MaterialTypeUniqueID=c14raw$MaterialTypeUniqueID,Material_Classification=c14raw$Material_Details,Material_Details_JPN=c14raw$MaterialType,Material_Details_EN=NA)) #generate lookup table
 # material_details = arrange(material_details,Material_Details_JPN)
 # # In some cases the same `Material_Details_JPN` (`MaterialType` in c14db) was assigned to different `Material_Classification` (`MaterialCode2` in c14db)
 # inconsistent_materials = names(which(table(material_details$Material_Details_JPN)>1))
 # material_details$inconsistent=FALSE
 # material_details$inconsistent[which(material_details$Material_Details_JPN%in%inconsistent_materials)]=TRUE
-# write.csv(material_details,file="./lookup/material_details.csv",row.names=F)
-material_details <- read.csv(here('lookup','material_details.csv'))
+# # sort to facilitate
+# material_details=material_details[order( material_details$Material_Classification, material_details$Material_Details_JPN ),]
+# write.csv(material_details,file="./lookup/material_details_before.csv",row.names=F) #export to lookup table
 
-# Final Column Names need to be Defined
+# Second Time Around
+material_details_after=read.csv(here('lookup','material_details_after.csv')) #read file
+
+if (any(!unique(as.character(c14raw$MaterialType))%in%material_details_after$Material_Details_JPN))
+{
+  # Identify Mismatches
+  material_details_new = unique(data.frame(Material_Classification=c14raw$Material_Details,Material_Details_JPN=c14raw$MaterialType))
+  material_details_todo = left_join(x=material_details_new,y=material_details_after,by='Material_Details_JPN')
+  # Add Unique Identifier back to master DB to facilitate merge
+  c14raw=left_join(c14raw,material_details_after[c('MaterialTypeUniqueID','Material_Details_JPN')],c('MaterialType'='Material_Details_JPN'))
+  # Identify new cases and assign UniqueIDs
+  index=which(!is.na(material_details_todo$Material_Details_JPN)&is.na(material_details_todo$MaterialTypeUniqueID))
+  newIDs = (max(material_details_todo$MaterialTypeUniqueID,na.rm=TRUE)+1):(max(material_details_todo$MaterialTypeUniqueID,na.rm=TRUE)+length(index))
+  material_details_todo$MaterialTypeUniqueID[index]=newIDs
+  # Add the uniqueIDs also to the main c14raw
+  for (i in 1:length(index))
+  {
+    tmp.match=material_details_todo$Material_Details_JPN[index[i]]
+    c14raw$MaterialTypeUniqueID[which(c14raw$MaterialType==tmp.match)]=newIDs[i]
+  }
+  
+  material_details_todo = data.frame(MaterialTypeUniqueID=material_details_todo$MaterialTypeUniqueID,
+                                     Material_Classification=material_details_todo$Material_Classification.x,
+                                     Material_Details_JPN=material_details_todo$Material_Details_JPN,
+                                     inconsistent=material_details_todo$inconsistent,
+                                     Materials_Details_EN=material_details_todo$Materials_Details_EN,
+                                     Materials_Detail_Identification_EN=material_details_todo$Materials_Detail_Identification_EN,
+                                     Materials_Detail_Other_EN=material_details_todo$Materials_Detail_Other_EN,
+                                     Materials_Detail_Notes_EN=material_details_todo$Materials_Detail_Notes_EN)
+  write.csv(material_details_todo,file=here('lookup','material_details_todo.csv'),row.names=F) #export to lookup table
+  
+  #NOTE:
+  # * Make sure to save the current version of c14raw with the MaterialTypeUniqueID to facilitate merge back / check
+}
 
 
+# If no discrepancies join to main table
+tmp.for.join.materials = data.frame(Material_Details_JPN=material_details_after$Material_Details_JPN,
+                                    Material_Details2=material_details_after$Materials_Details_EN)
+c14raw = left_join(x=c14raw,y=tmp.for.join.materials,by=c("MaterialType"="Material_Details_JPN"))
 ```
 
 ## Period Codes
@@ -533,7 +596,6 @@ material_details <- read.csv(here('lookup','material_details.csv'))
 # periodcode = unique(data.frame(Code=c14db$PeriodCode,PeriodCodeEn=NA))
 # periodcode = arrange(periodcode,Code)
 # write.csv(periodcode,file="./lookup/periodcode.csv",row.names=F)
-periodcode = read.csv("./lookup/periodcode.csv")
 periodcode = read.csv(here('lookup','periodcode.csv'))
 
 if (any(!unique(as.character(c14raw$PeriodCode))%in%periodcode$Code))
@@ -674,11 +736,53 @@ c14raw[which(c14raw$LabCode%in%c(dupllab))[c(1,3,5)],'retain']=FALSE
 ```
 
 
+## Convert CRA into numeric
+
+```{r}
+c14raw$CRA=as.numeric(c14raw$CRA)
+c14raw$CRAError=as.numeric(c14raw$CRAError)
+c14raw$CorrectedC14Age=as.numeric(c14raw$CorrectedC14Age)
+c14raw$CorrectedC14Error=as.numeric(c14raw$CorrectedC14Error)
+
+c14raw$retain[which(c14raw$CRA<0)]=FALSE
+c14raw$retain[which(c14raw$CRA>55000)]=FALSE
+c14raw$retain[which(c14raw$CRAError<0)]=FALSE
+
+```
+
 ## Store Output 
 ```{r}
-write.csv(c14raw,file='japanc14db_v03.1(210218).csv')
+# For Analyses
+write.csv(c14raw,file='japanc14db_v03.2(210218).csv')
 c14db=c14raw
-save(c14db,file='japanc14db_v03.1(210218).RData')
+save(c14db,file='japanc14db_v03.2(210218).RData')
+
+c14db_fortrans = subset(c14db,retain==TRUE)
+
+# For Public Release
+c14translation = data.frame(LabCode=c14db_fortrans$LabCode,
+                            SiteName=c14db_fortrans$Romanised,
+                            SiteNameJP=c14db_fortrans$SiteName,
+                            SiteType = c14db_fortrans$SiteType,
+                            Prefecture=c14db_fortrans$PrefectureNameEn,
+                            Latitude=c14db_fortrans$Latitude,
+                            Longitude=c14db_fortrans$Longitude,
+                            MaterialDetails=c14db_fortrans$Material_Details2,
+                            MaterialClassification_lv1=c14db_fortrans$Material,
+                            MaterialClassification_lv2=c14db_fortrans$Material_Details,
+                            Period=c14db_fortrans$PeriodCodeEn,
+                            DatingMethod=c14db_fortrans$Method_En,
+                            C14Age=as.numeric(c14db_fortrans$CRA),
+                            C14AgeError=as.numeric(c14db_fortrans$CRAError),
+                            CorrectedC14Age=as.numeric(c14db_fortrans$CorrectedC14Age),
+                            CorrectedC14AgeError=as.numeric(c14db_fortrans$CorrectedC14Error),
+                            Delta13C_AMS=c14db_fortrans$Delta13C,
+                            Delta13C_AMSErr=c14db_fortrans$Delta13CError,
+                            Delta13C_IRMS=c14db_fortrans$Delta13CIRMS,
+                            OriginalReference=c14db_fortrans$Reference)
+
+save(c14translation,file='japanc14db_translation_v03.2(210218).RData')
+write.csv(c14translation,file='japanc14db_translation_v03.2(210218).csv')
 ```
 
 
