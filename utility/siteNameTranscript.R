@@ -13,7 +13,7 @@ CapStr <- function(y) {
 
 
 
-siteNameTranscript<-function(x,delay=1,ua="Contact Email: erc62@cam.ac.uk")
+siteNameTranscript<-function(x,delay=2,ua="Contact Email: erc62@cam.ac.uk")
 {
   
   require(rvest)
