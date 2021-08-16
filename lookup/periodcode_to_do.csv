@@ -40,7 +40,7 @@
 "C,D,E","Yayoi ~ Classical"
 "A,B,C,D,E","Palaeolithic ~ Classical"
 "B,F","Jomon; Medieval"
-" A,B,C,D,E",NA
+" A,B,C,D,E","Palaeolithic ~ Classical"
 "A,B,C,D,D,F","Palaeolithic ~ Medieval"
 "B,C,D,E","Jomon ~ Classical"
 "D,F,G","Kofun ~ Early Modern"
@@ -70,3 +70,5 @@
 "J,K,L","Satsumon Culture ~ Ainu Culture"
 "B,J,K,L","Jomon ~ Ainu Culture"
 "J,L","Satsumon Culture; Ainu Culture"
+"E.F",NA
+"B,C,E,F",NA
