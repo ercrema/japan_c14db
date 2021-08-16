@@ -1,7 +1,7 @@
 ---
 title: "Japanese Radiocarbon Database Project"
 author: "E.Crema"
-date: "9 July 2021"
+date: "16 August 2021"
 output: html_document
 ---
 
@@ -28,7 +28,7 @@ This R markdown file documents the cleaning and translation of the [Database of 
 
 ## Repository Structure
 
-The repository contains R scripts, raw data, and look-up translation tables that enables the creation of the final CSV file `japanc14db_v01(190801).csv`. The table below provides a description of each directory within the repository:
+The repository contains R scripts, raw data, and look-up translation tables that enables the creation of the final CSV file `japanc14db_v04(210715).csv`. The table below provides a description of each directory within the repository:
 
 | Directory Name |                                  Description                                  |
 |:---------------|:------------------------------------------------------------------------------|
@@ -45,12 +45,12 @@ The main workflow consists of three distinct processes: **consistency checks** (
 
 # STEP 1: Reading Data into R and Extracting Relevant Fields
 
-We first read the most up-to-date version of the raw data (currently `c14_raw_v210218.csv` corresponding to the original file `★＜公開中＞年代測定データベース学術・関東･東北・北陸・中部・九州・北海道・四国20210218.xlsx`, without the first row):
+We first read the most up-to-date version of the raw data (currently `c14_raw_v210715.csv` corresponding to the original file `★＜公開中＞年代測定データベース学術・関東･東北・北陸・中部・九州・北海道・四国・近畿20210715.xlsx`, without the first row):
 
 ```{r}
 options(warn=-1) #suppress warning
-# c14raw=read_xlsx(here('raw','c14_raw_v210218.xlsx'), skip=1) |> as.data.frame(stringsAsFactor=FALSE)
-c14raw=read.csv(here('raw','c14_raw_v210218.csv'),na.strings = '')
+# c14raw=read_xlsx(here('raw','c14_raw_v210715.xlsx'), skip=1) |> as.data.frame(stringsAsFactor=FALSE)
+c14raw=read.csv(here('raw','c14_raw_v210715.csv'),na.strings = '',skip=2)
 
 ```
 
@@ -192,7 +192,7 @@ c14raw.NonRekihakuProj = subset(c14raw,retain==TRUE&Reference!="弥生農耕の�
 all(c14raw.rekihakuProj$LabCode%in%c14raw.NonRekihakuProj$LabCode)
 ```
 
-which does not seem to be the case. Indeed the majority (`r length(which(!c14raw.rekihakuProj$LabCode%in%c14raw.NonRekihakuProj$LabCode))` vs `r length(which(c14raw.rekihakuProj$LabCode%in%c14raw.NonRekihakuProj$LabCode))`) seems to actually not be present amongst the rest of the database.
+which does not seem to be the case. Indeed the majority (`r length(which(!c14raw.rekihakuProj$LabCode%in%c14raw.NonRekihakuProj$LabCode))` vs `r length(which(c14raw.rekihakuProj$LabCode%in%c14raw.NonRekihakuProj$LabCode))`) seems to actually not be present in the rest of the database.
 
 The report `./reports/duplicateLabCodes.csv' contains all instances of duplicates:
 
@@ -286,6 +286,10 @@ c14raw=left_join(c14raw,gmap.coord)
 
 ## Translate Prefecture Names
 ```{r}
+# Remove 'Ken' and 'Fu'
+c14raw$Prefecture = str_remove(c14raw$Prefecture,'府')
+c14raw$Prefecture = str_remove(c14raw$Prefecture,'県')
+# Match to Lookup Table
 pref.lookup = read.csv("./lookup/prefectures_translations.csv",stringsAsFactors=FALSE)
 colnames(pref.lookup) = c("Prefecture","PrefectureNameEn","Region")
 c14raw=left_join(c14raw,pref.lookup)
@@ -343,10 +347,20 @@ c14raw$coord.check[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[5]))]=TRUE
 c14raw$coord.check[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[6]))]=FALSE
 # 北海道      山越4遺跡 is ok
 c14raw$coord.check[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[7]))]=TRUE
-# 北海道      山越4遺跡 (coodinate in Shizuoka)
+# 北海道      倉知川右岸遺跡 (coodinate in Shizuoka)
 c14raw$coord.check[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[8]))]=FALSE
-# 北海道      山越4遺跡 (coodinate in Aichi)
-c14raw$coord.check[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[8]))]=FALSE
+# 徳島       大谷尻遺跡 (coodinate in Aichi)
+c14raw$coord.check[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[9]))]=FALSE
+# 奈良       観音寺本馬遺跡 (coodinate in Yamagata)
+c14raw$coord.check[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[10]))]=FALSE
+# 和歌山       徳蔵地区遺跡 (coodinate in Wakayama)
+c14raw$coord.check[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[11]))]=TRUE
+# 和歌山       太田・黒田遺跡 (coodinate in Wakayama)
+c14raw$coord.check[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[12]))]=TRUE
+# 和歌山       丁ノ町・妙寺遺跡第2次 (coodinate in Wakayama)
+c14raw$coord.check[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[13]))]=TRUE
+# 和歌山       井辺遺跡 (coodinate in Wakayama)
+c14raw$coord.check[which(c14raw$SiteLocation%in%c(tmp$SiteLocation[14]))]=TRUE
 ```
 
 Set Retain to FALSE for all cases where manual check was FALSE
@@ -464,15 +478,18 @@ for (i in 1:length(RetainUpdateCoordinateIndex))
 
 ###CHECK003: C14ages
 
-The field `CRA` should contain rounded 14C ages after corrections for isotopic fractionation, whilst the field `UnroundedCRA` contains the same date without rounding. In theory the difference between the two dates should be small, but the list below suggests larger discrpancies suggestive of input error
+The field `CRA` should contain rounded 14C ages after corrections for isotopic fractionation, whilst the field `UnroundedCRA` contains the same date without rounding. In theory the difference between the two dates should be small, but the list below suggests larger discrepancies suggestive of input error
 
 
 ```{r}
+threshold = 50
 absDiff = abs(c14raw$CRA-c14raw$UnroundedCRA)
-ii=rev(which(sort(absDiff,TRUE)>10))[1] #discrepancies over 10 years
+ii=rev(which(sort(absDiff,TRUE)>threshold))[1] #discrepancies over threshold years
 largeDiscrep = c14raw[order(absDiff,decreasing = TRUE)[1:ii],]
 
 write.csv(largeDiscrep,here('reports','c14age_discrpancies.csv'),row.names=FALSE)
+
+c14raw$retain[which(absDiff>threshold)] = FALSE #set large discrepancies dates as retain=FALSE
 ```
 
 
