@@ -286,7 +286,7 @@ c14raw=left_join(c14raw,gmap.coord)
 
 ## Translate Prefecture Names
 ```{r}
-# Remove 'Ken' and 'Fu'
+# Remove '-ken' and '-fu'
 c14raw$Prefecture = str_remove(c14raw$Prefecture,'府')
 c14raw$Prefecture = str_remove(c14raw$Prefecture,'県')
 # Match to Lookup Table
@@ -582,8 +582,8 @@ c14raw$MaterialType = gsub("(^[[:space:]]+|[[:space:]]+$)", "", c14raw$MaterialT
 
 # Second Time Around
 #material_details_after=read.csv(here('lookup','material_details_after.csv')) #read file
-material_details_after=read.csv(here('lookup','material_details_from_chris_2021_07_13.csv')) #read file
-
+#material_details_after=read.csv(here('lookup','material_details_from_chris_2021_07_13.csv')) #read file
+material_details_after=read.csv(here('lookup','Material_details_2021_08_17_CJS.csv')) #read file
 
 if (any(!unique(as.character(c14raw$MaterialType))%in%material_details_after$Material_Details_JPN))
 {
@@ -787,9 +787,9 @@ c14raw$retain[which(c14raw$CRAError<0)]=FALSE
 ## Store Output 
 ```{r}
 # For Analyses
-write.csv(c14raw,file='japanc14db_v03.3(210218).csv')
+write.csv(c14raw,file='japanc14db_v04.0(210715).csv')
 c14db=c14raw
-save(c14db,file='japanc14db_v03.3(210218).RData')
+save(c14db,file='japanc14db_v04.0(210715).RData')
 
 c14db_fortrans = subset(c14db,retain==TRUE)
 
@@ -815,77 +815,6 @@ c14translation = data.frame(LabCode=c14db_fortrans$LabCode,
                             Delta13C_IRMS=c14db_fortrans$Delta13CIRMS,
                             OriginalReference=c14db_fortrans$Reference)
 
-save(c14translation,file='japanc14db_translation_v03.3(210218).RData')
-write.csv(c14translation,file='japanc14db_translation_v03.3(210218).csv')
+save(c14translation,file='japanc14db_translation_v04.0(210715).RData')
+write.csv(c14translation,file='japanc14db_translation_v04.0(210715).csv')
 ```
-
-
-<!-- This section is experimental and not working that well
-## STEP 4: Link to Nabunken URL
-
-The `refNabunkenLink()` scrapes and attempts to match references to the Nabunken Site Report Database, returning potential matching URLs and DOIs. These have been manually checked before being joined to the main database. 
-
-```{r,eval=fullMode,echo=fullMode}
-source("./utility/nabunkenLink.R")
-### The following block is executed only in the very first iteration:
-# c14raw.tmp = unique(data.frame(site=c14raw$SiteName,reference=c14raw$Reference))
-# nabunkenRes=refNabunkenLink(site=c14raw.tmp$site,reference=c14raw.tmp$reference)
-# nabunkenRes$toCheck=TRUE
-# write.csv(nabunkenRes,"./lookup/nabunkenURL_linker.csv",row.names = FALSE)
-
-###This block is from second iteration onwards
-#Import manually edited file
-nabunkenRes=read.csv("./lookup/nabunkenURL_linker.csv",stringsAsFactors = FALSE)
-#check if there are any new references TO FINISH
-c14raw.tmp = unique(data.frame(site=c14raw$SiteName,reference=c14raw$Reference,stringsAsFactors = FALSE))
-
-if (any(!c14raw.tmp$reference%in%nabunkenRes$reference))
-{
-  i=which((!c14raw.tmp$reference%in%nabunkenRes$reference))
-  nabunkenRes2add=refNabunkenLink(site=c14raw.tmp$site[i],reference=c14raw.tmp$reference[i])
-  nabunkenRes2add$toCheck=TRUE
-  nabunkenRes=rbind.data.frame(nabunkenRes,nabunkenRes2add)
-}
-write.csv(nabunkenRes,"./lookup/nabunkenURL_linker.csv",row.names = FALSE)
-
-
-nabunkenRes=read.csv("./lookup/nabunkenURL_linker.csv",stringsAsFactors = FALSE)
-c14raw=left_join(x=c14raw,y=nabunkenRes,by=c("Reference"="reference"))
-```
-
-```{r,eval=!fullMode,echo=!fullMode}
-source("./utility/nabunkenLink.R")
-### The following block is executed only in the very first iteration:
-# c14raw.tmp = unique(data.frame(site=c14raw$SiteName,reference=c14raw$Reference))
-# nabunkenRes=refNabunkenLink(site=c14raw.tmp$site,reference=c14raw.tmp$reference)
-# nabunkenRes$toCheck=TRUE
-# write.csv(nabunkenRes,"./lookup/nabunkenURL_linker.csv",row.names = FALSE)
-
-###This block is from second iteration onwards
-# #Import manually edited file
-# nabunkenRes=read.csv("./lookup/nabunkenURL_linker.csv",stringsAsFactors = FALSE)
-# #check if there are any new references TO FINISH
-# c14raw.tmp = unique(data.frame(site=c14raw$SiteName,reference=c14raw$Reference,stringsAsFactors = FALSE))
-# 
-# if (any(!c14raw.tmp$reference%in%nabunkenRes$reference))
-# {
-#   i=which((!c14raw.tmp$reference%in%nabunkenRes$reference))
-#   nabunkenRes2add=refNabunkenLink(site=c14raw.tmp$site[i],reference=c14raw.tmp$reference[i])
-#   nabunkenRes2add$toCheck=TRUE
-#   nabunkenRes=rbind.data.frame(nabunkenRes,nabunkenRes2add)
-# }
-# write.csv(nabunkenRes,"./lookup/nabunkenURL_linker.csv",row.names = FALSE)
-
-
-nabunkenRes=read.csv("./lookup/nabunkenURL_linker.csv",stringsAsFactors = FALSE)
-c14raw=left_join(x=c14raw,y=nabunkenRes,by=c("Reference"="reference"))
-```
-
--->
-
-
-
-
-
-
-
