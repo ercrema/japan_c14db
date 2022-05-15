@@ -504,7 +504,7 @@ source(here('translation','utility','siteNameTranscript.R'))
 
 ###This block is from second iteration onwards
 #Import manually edited file
-sitenames=read.csv(here('lookup','sitenamesTranscript.csv'),stringsAsFactors = FALSE)
+sitenames=read.csv(here('translation','input','sitenamesTranscript.csv'),stringsAsFactors = FALSE)
 
 siteList = unique(c14raw$SiteName)
 
