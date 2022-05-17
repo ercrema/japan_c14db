@@ -1,7 +1,7 @@
 ---
 title: "Japanese Radiocarbon Database Translation Project"
 author: "E.Crema"
-date: "15 May 2022"
+date: "17 May 2022"
 output: html_document
 ---
 
@@ -270,7 +270,7 @@ c14raw$toKeep[index.above.threshold] = FALSE
 c14raw$c14_issues[index.above.threshold] = paste("difference between unrounded and CRA >",threshold) 
 ```
 
-# STEP6 : Geographic Coordinates
+# STEP 6 : Geographic Coordinates
 
 Initial setup to record problematic cases
 
@@ -488,7 +488,6 @@ Site names have been romanised by first using the Nabunken Site Report Database 
 
 **NOTE**: A key decision to be made is whether site name should be reported verbatim (including e.g. excavation number) or should english name just extract the site name itself. The best option is to use the name as it is but point out in the JOAD paper that this should not be used as an analytical unit.  
 
-<!-- from here 11/5/2022-->
 ```{r}
 library(Nippon)
 source(here('translation','utility','siteNameTranscript.R'))
@@ -517,16 +516,66 @@ if (!all(unique(siteList)%in%sitenames$SiteName))
                                                       Furigana=additional_sitenames$Furigana,
                                                       ToCheck=TRUE,
                                                       Alternative=NA))
-  write.csv(sitenames,here('lookup','sitenamesTranscript.csv'),row.names = FALSE)
+  write.csv(sitenames,here('translation','output','sitenamesTranscript_toprocess.csv'),row.names = FALSE)
 }
 
 # The section reads and merges the sitenames to the main data.frame
-sitenames=read.csv(here('lookup','sitenamesTranscript.csv'),stringsAsFactors = FALSE,na.strings = '')
+sitenames=read.csv(here('translation','input','sitenamesTranscript.csv'),stringsAsFactors = FALSE)
+
+# Site Type
+sitenames$SiteType=NA
+# 遺跡群
+sitenames$SiteType[grep('いせきぐん',sitenames$Furigana)]='Site Cluster'
+# 遺跡
+sitenames$SiteType[which(is.na(sitenames$SiteType)&grepl('いせき',sitenames$Furigana))]='Site'
+sitenames$SiteType[which(is.na(sitenames$SiteType)&grepl('遺跡',sitenames$SiteName))]='Site'
+# 貝塚
+sitenames$SiteType[grep('かいづか',sitenames$Furigana)]='Shell Midden'
+sitenames$SiteType[grep('貝塚',sitenames$SiteName)]='Shell Midden'
+# 窯跡群
+sitenames$SiteType[grep('窯跡群',sitenames$SiteName)]='Kiln Cluster'
+# 窯跡
+sitenames$SiteType[which(is.na(sitenames$SiteType)&grepl('窯跡',sitenames$SiteName))]='Kiln'
+sitenames$SiteType[grep('窯跡群',sitenames$SiteName)]='Kiln'
+sitenames$SiteType[grep('窯',sitenames$SiteName)]='Kiln'
+# 館跡
+sitenames$SiteType[grep('館跡',sitenames$SiteName)]='Fort'
+# 城跡
+sitenames$SiteType[grep('城跡',sitenames$SiteName)]='Castle'
+# 古墳
+sitenames$SiteType[grep('古墳',sitenames$SiteName)]='Kofun'
+# 洞窟
+sitenames$SiteType[grep('洞窟',sitenames$SiteName)]='Cave'
+sitenames$SiteType[grep('洞穴',sitenames$SiteName)]='Cave'
+# 城
+sitenames$SiteType[grep('城',sitenames$SiteName)]='Castle'
+# 横穴
+sitenames$SiteType[grep('横穴',sitenames$SiteName)]='Side-Hole Burial'
+# 水田址
+sitenames$SiteType[grep('水田址',sitenames$SiteName)]='Paddy Field'
+# 寺跡
+sitenames$SiteType[grep('寺跡',sitenames$SiteName)]='Temple/Shrine'
+# 列石
+sitenames$SiteType[grep('列石',sitenames$SiteName)]='Standing Stones'
+# Everything Else
+sitenames$SiteType[which(is.na(sitenames$SiteType))]='Other'
+
+# Romanise #
+sitenames$Romanised = kana2roma(sitenames$Furigana)
+sitenames$Romanised = stringr::str_to_title(sitenames$Romanised)
+
+#Merge Back to Main DB
+c14raw=left_join(x=c14raw,y=sitenames,by="SiteName")
+
+#Add issues with SiteName
+c14raw$SiteNameIssues = NA
+ii = which(c14raw$Alternative!='')
+c14raw$SiteNameIssues[ii] = paste0('Site Name should be',c14raw$Alternative[ii])
 
 
 
-
-
+# STEP 8 : Material ----
+<!-- from here 17/5/2022-->
 
 
 
