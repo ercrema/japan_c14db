@@ -72,7 +72,8 @@ siteNameTranscript <- function(sitename=NULL,delay=1,n.attempts=100,ua="Contact 
 			index.transcript = index[grep('Site Name Transcription',names(curreport)[index])]
 			index.sitename = index.transcript - 1
 			candidate.names = curreport[index.sitename]
-			res$Furigana[s] = as.character(unlist(curreport[index.transcript][agrep(sitename[s],unlist(candidate.names))[1]]))
+			tmp = as.character(unlist(curreport[index.transcript][agrep(sitename[s],unlist(candidate.names))[1]]))
+			if(length(tmp)>0) {res$Furigana[s] = tmp}
 		}
 		if (length(index)==2)
 		{
