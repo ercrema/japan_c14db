@@ -576,8 +576,33 @@ c14raw$SiteNameIssues[ii] = paste0('Site Name should be',c14raw$Alternative[ii])
 
 # STEP 8 : Material ----
 <!-- from here 17/5/2022-->
+Three fields, two based on direct code translation and one based on taxa extraction. 
+First the code-based lookup table:
 
+```{r}
+# Read Lookup tables
+matcode1 = read.csv(here('translation','input','materialGeneralCode.csv'))
+matcode2 = read.csv(here('translation','input','materialDetailsCode.csv'))
 
+c14raw=left_join(c14raw,matcode1,by=c("MaterialCode1"="Code"))
+c14raw=left_join(c14raw,matcode2,by=c("MaterialCode2"="Code"))
+colnames(c14raw)[which(colnames(c14raw)=="Description.x")]="Material"
+colnames(c14raw)[which(colnames(c14raw)=="Description.y")]="Material_Details" 
+```
+
+We then generate a lookup table for the field "MaterialType" which will be used to extract the taxa information. 
+
+Material detail is translated by using a lookup table. First we clean the relevant field
+
+```{r}
+c14raw$MaterialType = gsub("[\r\n]", "", c14raw$MaterialType) #Remove escapes
+c14raw$MaterialType = gsub("　", " ", c14raw$MaterialType) #Convert to half-width encoding
+c14raw$MaterialType = gsub("(^[[:space:]]+|[[:space:]]+$)", "", c14raw$MaterialType) #remove trail space
+# We then create a data.frame with unique instances of `MaterialType`:
+material_taxa = data.frame(MaterialType=unique(c14raw$MaterialType),Taxa=NA)
+# And export
+write.csv(material_taxa,file=here('translation','output','material_taxa_todo.csv'),row.names=FALSE)
+```
 
 
 
