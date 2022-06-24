@@ -1,114 +1,132 @@
-#' @title Capitalise sting of characters
-CapStr <- function(y) {
-  c <- strsplit(y, " ")[[1]]
-  paste(toupper(substring(c, 1,1)), substring(c, 2),
-        sep="", collapse=" ")
-}
 
-
-
-#Scenario 1 ... site name is found directly, report SiteName, MatchName, Furigana, and Transliteration
-#Scenario 2 ... fuzzy match found with site name wihout -iski, report SiteName, PMatchName, Furigana, and Transliteration
-#Scneario 3 ... no match found
-
-
-
-siteNameTranscript<-function(x,delay=2,ua="Contact Email: erc62@cam.ac.uk")
+#'@title siteListExtractor
+#'@description get a list of report containing certain keyword
+#'@param URL
+#'@param keyword Keyword to be searched
+#'@param delay 
+#'@param n.attempts 
+#'@param ua 
+#'@param lim.sites
+siteNameTranscript <- function(sitename=NULL,delay=1,n.attempts=100,ua="Contact Email: erc62@cam.ac.uk")
 {
-  
-  require(rvest)
-  require(utils)
-  require(httr)
-  require(Nippon)
-  ua = user_agent(ua) #Define User Agent
-  
-  res = data.frame(SiteName=x,MatchedName=NA,Furigana=NA,Romanised=NA, Romanised2=NA)
-  pb <- txtProgressBar(min=1, max=length(x), style=3)
-  
-  
-  for (k in 1:length(x))
-  {
-    print(k)
-    candidateSiteName = x[k]
-    candidateSiteNameWithoutIseki=ifelse(grepl("遺跡",candidateSiteName),unlist(strsplit(x[k],"遺跡"))[1],NA)
-    candidateSiteNameWithoutIseki = gsub("\\[|\\]|\\(|\\)", "", candidateSiteNameWithoutIseki) #remove brackets
-    
-    scenario = 1
-    
-    # Try First with Scenario 1
-    setTxtProgressBar(pb, k)
-    Sys.sleep(delay)
-    webpage=read_html(html_session(URLencode(paste0("https://sitereports.nabunken.go.jp/en/search?all=",candidateSiteName)),ua))
+	require(rvest)
+	require(httr)
+	ua = user_agent(ua) #Define User Agent
+	res = data.frame(SiteName=sitename,Furigana=NA)
 
-    #extract first search result URL key
-    content <- html_nodes(webpage,'.document_list_item')
-    
-    
-    #if no match - try scenario 2
-    if (length(content)==0&!is.na(candidateSiteNameWithoutIseki))
-    {
-      scenario = 2
-      Sys.sleep(delay)
-      webpage=read_html(html_session(URLencode(paste0("https://sitereports.nabunken.go.jp/en/search?all=",candidateSiteNameWithoutIseki)),ua))
-      content <- html_nodes(webpage,'.document_list_item')
-    }
-    
-    if (length(content)==0){scenario = 3} #If no hit scenario 3
-    
-    # Scenario 1 & 2
-    if (length(content)>0)
-    {
-      #extract URL of the first 'hit'
-      firstRes = html_nodes(content,'a')
-      links = html_attr(firstRes,'href')
-      urlCode <- links[agrep("search/item",links)][1] #extract the first
-      Sys.sleep(delay)
-      webpage=read_html(html_session(URLencode(paste0("https://sitereports.nabunken.go.jp",urlCode)),ua))
-      
-      header <- html_nodes(webpage,'th')
-      header <- as.character(header)
-      header<-sapply(strsplit(header,"<th>"),function(x){x[2]})
-      header<-sapply(strsplit(header,"</th>"),function(x){x[1]})
-      
-      content <- html_nodes(webpage,'td')
-      content <- as.character(content)
-      content<-sapply(strsplit(content,"<td>"),function(x){x[2]})
-      content<-sapply(strsplit(content,"</td>"),function(x){x[1]})
-      content <- content[-2]
-      
-      #Extract Site Names
-      nsites = sum(header=="Site Name",na.rm=T)
-      SiteName = content[which(header=='Site Name')]
-    }
-      if (scenario == 1) #Scenario 1
-      {
-          i = which(SiteName%in%candidateSiteName) #identify match SiteName
-          if ((all(is.na(i))|length(i)==0)&!is.na(candidateSiteNameWithoutIseki)){i = grep(candidateSiteNameWithoutIseki,SiteName)} #fuzzy match
-          if (length(i)==0){scenario=3} #if this fails scneario 3
-          if (length(i)>1){i[1]} #if more than match, select first
-          MatchedName = SiteName[i]
-      }
-      if (scenario == 2) #Scenario 2
-      {
-        i = grep(candidateSiteNameWithoutIseki,SiteName) #Start with fuzzy match
-        if (length(i)==0|is.na(candidateSiteNameWithoutIseki)){scenario=3} #if this fails scneario 3
-        if (length(i)>1){i[1]} #if more than match, select first
-        MatchedName = SiteName[i]
-      }
-      if (scenario == 3)
-      {
-        res$MatchedName[k] = res$Furigana[k] = res$Romanised[k] = res$Romanised2[k] = NA
-      }
-        
-      
-      if (scenario%in%c(1,2))
-      {
-        res$MatchedName[k] = MatchedName
-        res$Furigana[k] = content[which(header=='Site Name Transcription')][i[1]]
-        res$Romanised[k] = kana2roma(res$Furigana[k])
-        res$Romanised2[k] = strsplit(res$Romanised[k],"iseki")[[1]][1]
-      }
+	for (s in 1:length(sitename))
+	{
+		print(paste(s,'of',length(sitename)))
+		retry=TRUE
+		attempt.count=0
+		while (retry)
+		{ 
+			if(attempt.count>0){print(paste0('Retrying Connection; Attempt No.: ',attempt.count))}
+			sessiondata=session(URLencode(paste0("https://sitereports.nabunken.go.jp/en/search?has_file=x&include_file=exclude&iseki=",sitename[s],"&translate=on")),ua)
+			Sys.sleep(delay)
+			if (attempt.count<=n.attempts)
+			{
+				if(sessiondata$response$status_code==200)
+				{
+					webpage=read_html(sessiondata)
+					x = sitename[s]
+					retry=FALSE 
+				} else if (sessiondata$response$status_code!=200)
+				{
+					attempt.count=attempt.count+1
+				}
+			}
+			if (attempt.count>=n.attempts)
+			{
+				warning('Repeated failure to access website, returning NULL values')
+			}
+		}
+
+
+		#Extract Number of Cases
+		n = html_text(html_elements(webpage,'.page-header .text-right'))
+		n <- as.numeric(regmatches(n, gregexpr("[[:digit:]]+", n)))
+		if (length(n)==0){next()}
+
+		#Extract Info from first hit
+		contentlist <- html_elements(webpage,'.document_list_item')
+		links = html_elements(contentlist,'.list_title a')
+		tmpaddress = html_attr(links[1],"href")
+		retry=TRUE
+		attempt.count=0
+		while (retry)
+		{ 
+			reportpage=NA
+			reportpage=tryCatch(read_html(session(URLencode(paste0("https://sitereports.nabunken.go.jp",tmpaddress)),ua)),error=function(i)return(NA))
+			if(is.na(reportpage)){
+				attempt.count=attempt.count+1
+				Sys.sleep(delay)
+			}
+			else retry=F
+		}
+
+		curreport=reportToList(reportpage,log=F)
+		index = grep('^Site Name',names(curreport))
+		if (length(index)>2)
+		{    
+			index.transcript = index[grep('Site Name Transcription',names(curreport)[index])]
+			index.sitename = index.transcript - 1
+			candidate.names = curreport[index.sitename]
+			tmp = as.character(unlist(curreport[index.transcript][agrep(sitename[s],unlist(candidate.names))[1]]))
+			if(length(tmp)>0) {res$Furigana[s] = tmp}
+		}
+		if (length(index)==2)
+		{
+			res$Furigana[s] = as.character(unlist(curreport[grep('Site Name Transcription',names(curreport))]))
+		}
+
+
+	}
+
+	return(res)
 }
-  close(pb) 
-  return(res)
+
+
+
+reportToList <- function(report,log=F){
+    maintable=html_element(report,'.table_data')
+    if(log)print(paste("retriving info from",html_attr(html_elements(reportpage,"link")[3],"href")))
+    alldata=list()
+    all_elmts=html_elements(maintable,"tr")
+    for(v in all_elmts){
+        th=html_element(v,"th")
+        td=html_element(v,"td")
+        dtitle = html_text2(th)
+        if(is.na(dtitle) || length(dtitle)==0 || dtitle=="") #missing or empty headers
+            dtitle=paste0("Untitled",as.character(length(alldata)+1))
+        if(length(dtitle)>1 )dtitle=dtitle[1]
+        cpt=1
+        btitle=dtitle
+        while(!is.null(alldata[[dtitle]])){
+            cpt=cpt+1
+            dtitle=paste0(btitle," ",cpt)
+        }
+        if(length(html_elements(td,"table"))>0) #check for embedded tables and ignore them
+            alldata[[dtitle]]="NA"
+        else if(length(html_children(td))>1 && length(html_elements(td,"br"))<length(html_children(td))) #rvest consider <br> as full child wich destroy the dataslot utility
+            alldata[[dtitle]]=lapply(html_children(td),dataslot)
+        else
+            alldata[[dtitle]]=dataslot(td)
+    }
+    if(log)print(paste("done.",length(alldata),"fields retrieved"))
+    return(alldata)
+}
+
+## from a final td html node extract link and text
+dataslot <- function(td_countainer){
+    results=c()
+    links=html_elements(td_countainer,"a")
+    if(length(links)>0){
+        l=sapply(links,html_attr,"href")
+        t=sapply(links,html_text2)
+        results=c(l,t)
+        #results=paste(l,t) #the oldschool way
+    }
+    results=c(results,html_text2(td_countainer))
+    return(unique(results))
 }

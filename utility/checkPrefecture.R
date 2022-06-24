@@ -1,10 +1,10 @@
-checkPrefecture <- function(lat,lon,pref)
+checkPrefecture <- function(lat,lon,pref,jwgs84,jjgd2000)
 {
   require(revgeo)
   require(dplyr)
   require(rgdal)
-  jwgs84 = readOGR(dsn="./gis",layer='japan_wgs84')
-  jjgd2000 = readOGR(dsn="./gis",layer='japan_jgd2000')
+#   jwgs84 = readOGR(dsn="./gis",layer='japan_wgs84')
+#   jjgd2000 = readOGR(dsn="./gis",layer='japan_jgd2000')
   proj4string(jwgs84) = CRS(SRS_string = "EPSG:4326")
   proj4string(jjgd2000) = CRS(SRS_string = "EPSG:4612")
   
