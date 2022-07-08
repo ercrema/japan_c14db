@@ -11,7 +11,7 @@
 
 <meta name="author" content="E.Crema" />
 
-<meta name="date" content="2022-06-24" />
+<meta name="date" content="2022-07-08" />
 
 <title>Japanese Radiocarbon Database Translation Project</title>
 
@@ -366,7 +366,7 @@ pre code {
 <h1 class="title toc-ignore">Japanese Radiocarbon Database Translation
 Project</h1>
 <h4 class="author">E.Crema</h4>
-<h4 class="date">24 June 2022</h4>
+<h4 class="date">8 July 2022</h4>
 
 </div>
 
@@ -935,11 +935,6 @@ names in <em>kanji</em>, followed by a manual check for fixing potential
 mismatch and missing <em>furigana</em>. Romanisation has been carried
 out using the <code>kana2roma()</code> function from the
 <code>Nippon</code> package.</p>
-<p><strong>NOTE</strong>: A key decision to be made is whether site name
-should be reported verbatim (including e.g. excavation number) or should
-english name just extract the site name itself. The best option is to
-use the name as it is but point out in the JOAD paper that this should
-not be used as an analytical unit.</p>
 <pre class="r"><code>library(Nippon)
 source(here(&#39;utility&#39;,&#39;siteNameTranscript.R&#39;))
 ### The following block is executed only in the very first iteration:
@@ -1022,6 +1017,9 @@ c14raw=left_join(x=c14raw,y=sitenames,by=&quot;SiteName&quot;)
 c14raw$siteName_issues = NA
 ii = which(c14raw$Alternative!=&#39;&#39;)
 c14raw$siteName_issues[ii] = paste0(&#39;Site Name should be&#39;,c14raw$Alternative[ii])</code></pre>
+<pre class="r"><code>i = which(c14raw$SiteName==&quot;&quot;|is.na(c14raw$SiteName))
+c14raw$toKeep[i] = FALSE
+c14raw$siteName_issues[i] = &quot;Site Name Missing&quot;</code></pre>
 </div>
 <div id="step-8-material--" class="section level1">
 <h1>STEP 8 : Material —-</h1>
@@ -1068,10 +1066,16 @@ write.csv(c14kudocheck,file=here(&#39;output&#39;,&#39;c14db_toCheck.csv&#39;),r
 </div>
 <div id="full-draft-version-for-pubblication" class="section level2">
 <h2>Full (Draft) version for pubblication</h2>
-<pre class="r"><code>c14db  &lt;- subset(c14raw,toKeep==TRUE)
+<pre class="r"><code># Subset dates samples to retain
+c14db  &lt;- subset(c14raw,toKeep==TRUE)
+c14db$CRA  &lt;- as.numeric(c14db$CRA)
+c14db$CRAError  &lt;- as.numeric(c14db$CRAError)
+c14db$UnroundedCRA  &lt;- as.numeric(c14db$UnroundedCRA)
+c14db$UnroundedCRAError  &lt;- as.numeric(c14db$UnroundedCRAError)
+
 c14db  &lt;- select(c14db,LabCode,PrefectureNameEn,Region,SiteNameJp=SiteName,SiteNameEn=Romanised,SiteType=SiteType,Latitude,Longitude,CRA,CRAError,UnroundedCRAError,UnroundedCRA,Delta13C,Delta13CError,Delta13CIRMS,Material,MaterialDetails=Material_Details,Taxa=Taxa,NabunkenURL=nabunkenURL,Reference=ReferenceCombined)
-write.csv(c14db,file=here(&#39;c14db_0.1.0.csv&#39;))
-saveRDS(c14db,file=here(&#39;c14db_0.1.0.Rds&#39;))</code></pre>
+write.csv(c14db,file=here(&#39;c14db_0.1.2.csv&#39;))
+saveRDS(c14db,file=here(&#39;c14db_0.1.2.Rds&#39;))</code></pre>
 </div>
 </div>
 
