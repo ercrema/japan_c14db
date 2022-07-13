@@ -61,7 +61,7 @@ c14raw=left_join(c14raw,pref.lookup)
 c14raw$ReferenceID = as.numeric(as.factor(c14raw$Reference))
 
 c14original = c14raw
-c14raw  <- select(c14raw,PrefectureNameEn,SetCode,SiteName,LabCode,Reference,nabunkenURL)
+c14raw  <- select(c14raw,PrefectureNameEn,SetCode,SiteName,LabCode,Reference,ReferenceID,nabunkenURL)
 c14searchset = subset(c14raw,!is.na(nabunkenURL)) |> select(SiteName,PrefectureNameEn,SetCode,Reference,ReferenceID) |> unique()
 c14searchset$LabCode = NA
 for (i in 1:nrow(c14searchset))
