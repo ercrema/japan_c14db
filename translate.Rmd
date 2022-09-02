@@ -1,14 +1,14 @@
 ---
 title: "Japanese Radiocarbon Database Translation Project"
 author: "E.Crema"
-date: "8 July 2022"
+date: "2 September 2022"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 # Load required R libraries
-library(tidyverse)
+library(dplyr)
 library(readxl)
 library(measurements)
 library(sp)
@@ -314,8 +314,8 @@ c14raw$Prefecture = str_remove(c14raw$Prefecture,'府')
 c14raw$Prefecture = str_remove(c14raw$Prefecture,'県')
 # Match to Lookup Table
 pref.lookup = read.csv(here('input','prefectures_translations.csv'),stringsAsFactors=FALSE)
-colnames(pref.lookup) = c("Prefecture","PrefectureNameEn","Region")
-c14raw=left_join(c14raw,pref.lookup)
+colnames(pref.lookup) = c("Prefecture","PrefectureNameEn","Region","NabunkenPrefCode")
+c14raw  <- left_join(c14raw,pref.lookup,by=c('Prefecture'))
 ```
 
 Check whether the coordinates fall within the designated prefectures using the utility function `checkPrefecture()`, and store them on designated fields:
@@ -632,15 +632,14 @@ material_taxa = data.frame(MaterialType=unique(c14raw$MaterialType),Taxa=NA)
 # And export
 write.csv(material_taxa,file=here('output','material_taxa_todo.csv'),row.names=FALSE)
 ```
-<!-- NEEDS COMPLETION BY CHRIS -->
 
 The `material_taxa_todo.csv` file is then read and merged back to the main database:
 
 ```{r}
 # Uncomment below once taxa lookup is completed
-# material_taxa_import  <- read.csv(here('input','material_taxa.csv'))
-# c14raw=left_join(x=c14raw,y=material_taxa_import,by="MaterialType")
-c14raw$Taxa = NA # These needs to be removed once the above is complete
+material_taxa_import  <- read.csv(here('input','material_taxa.csv'))
+c14raw=left_join(x=c14raw,y=material_taxa_import,by="MaterialType")
+c14raw$Taxa[which(c14raw$Taxa=="")] = NA
 ```
 
 # STEP 9 : Reorganise and export ----
@@ -670,6 +669,6 @@ c14db$UnroundedCRA  <- as.numeric(c14db$UnroundedCRA)
 c14db$UnroundedCRAError  <- as.numeric(c14db$UnroundedCRAError)
 
 c14db  <- select(c14db,LabCode,PrefectureNameEn,Region,SiteNameJp=SiteName,SiteNameEn=Romanised,SiteType=SiteType,Latitude,Longitude,CRA,CRAError,UnroundedCRAError,UnroundedCRA,Delta13C,Delta13CError,Delta13CIRMS,Material,MaterialDetails=Material_Details,Taxa=Taxa,NabunkenURL=nabunkenURL,Reference=ReferenceCombined)
-write.csv(c14db,file=here('c14db_0.1.3.csv'))
-saveRDS(c14db,file=here('c14db_0.1.3.Rds'))
+write.csv(c14db,file=here('c14db_0.2.0.csv'))
+saveRDS(c14db,file=here('c14db_0.2.0.Rds'))
 ```
