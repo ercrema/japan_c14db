@@ -1,7 +1,7 @@
 ---
 title: "Japanese Radiocarbon Database Translation Project"
 author: "E.Crema"
-date: "2 September 2022"
+date: "9 November 2022"
 output: html_document
 ---
 
@@ -685,7 +685,7 @@ c14db$CRAError  <- as.numeric(c14db$CRAError)
 c14db$UnroundedCRA  <- as.numeric(c14db$UnroundedCRA)
 c14db$UnroundedCRAError  <- as.numeric(c14db$UnroundedCRAError)
 
-c14db  <- select(c14db,LabCode,PrefectureNameEn,Region,SiteNameJp=SiteName,SiteNameEn=Romanised,SiteType=SiteType,Latitude,Longitude,CRA,CRAError,UnroundedCRAError,UnroundedCRA,Delta13C,Delta13CError,Delta13CIRMS,Material,MaterialDetails=Material_Details,Taxa=Taxa,NabunkenURL=nabunkenURL,Reference=ReferenceCombined)
-write.csv(c14db,file=here('c14db_0.2.0.csv'))
-saveRDS(c14db,file=here('c14db_0.2.0.Rds'))
+c14db  <- select(c14db,originalRow,LabCode,PrefectureNameEn,Region,SiteNameJp=SiteName,SiteNameEn=Romanised,SiteType=SiteType,Latitude,Longitude,CRA,CRAError,UnroundedCRAError,UnroundedCRA,Delta13C,Delta13CError,Delta13CIRMS,Material,MaterialDetails=Material_Details,Taxa=Taxa,NabunkenURL=nabunkenURL,Reference=ReferenceCombined)
+write.csv(c14db,file=here('c14db_0.2.1.csv'))
+saveRDS(c14db,file=here('c14db_0.2.1.Rds'))
 ```
