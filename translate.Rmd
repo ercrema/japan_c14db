@@ -145,7 +145,7 @@ c14raw$toKeep[unique(c(index.only.letters,index.only.numbers,index.questionmark,
 
 ```
 
-# STEP 3: Clean 14C Fields
+# STEP 3: Clean 14C and delta13 Fields 
 
 Several dates have non-numeric characters. These are mostly tailspaces:
 
@@ -187,6 +187,23 @@ index3 = which(!(!(is.na(c14raw$CRA)|is.na(c14raw$CRAError)) | !(is.na(c14raw$Un
 c14raw$c14_issues[index3] = 'Missing data for calibration'
 c14raw$toKeep[index3] = FALSE
 ```
+
+delta13C values for AMS dates are generally reliable:
+
+```{r}
+Delta13C <- gsub("[()]","",c14raw$Delta13C) |> as.numeric()
+Delta13CError <- gsub("[()]","",c14raw$Delta13CError) |> as.numeric()
+Delta13CIRMS <- gsub("[()]","",c14raw$Delta13CIRMS)
+Delta13CIRMS <- gsub("‰","",Delta13CIRMS)
+Delta13CIRMS[grep(",",Delta13CIRMS)] <- NA
+Delta13CIRMS <- as.numeric(Delta13CIRMS)
+Delta13C[which(Delta13C>0)] <- Delta13C[which(Delta13C>0)]*(-1)
+Delta13CIRMS[which(Delta13CIRMS>0)] <- Delta13CIRMS[which(Delta13CIRMS>0)]*(-1)
+Delta13C[which(Delta13C<(-35)|Delta13C>(-5))] <- NA
+Delta13CIRMS[which(Delta13CIRMS<(-35)|Delta13CIRMS>(-5))] <- NA
+```
+
+
 
 # STEP 4: Handle duplicates and references
 
