@@ -1,7 +1,7 @@
 ---
 title: "Japanese Radiocarbon Database Translation Project"
 author: "E.Crema"
-date: "9 November 2022"
+date: "17 Aprile 2023"
 output: html_document
 ---
 
@@ -188,6 +188,22 @@ c14raw$c14_issues[index3] = 'Missing data for calibration'
 c14raw$toKeep[index3] = FALSE
 ```
 
+Some dates have numeric values outside calibration range
+```{r}
+onlyDates = data.frame(CRA=as.numeric(c14raw$CRA),CRAError=as.numeric(c14raw$CRAError),UnroundedCRA=as.numeric(c14raw$UnroundedCRA),UnroundedCRAError=as.numeric(c14raw$UnroundedCRAError))
+onlyDates$C14Age=onlyDates$UnroundedCRA
+onlyDates$C14Age[which(is.na(onlyDates$C14Age))]=onlyDates$CRA[which(is.na(onlyDates$C14Age))]
+onlyDates$C14Error=onlyDates$UnroundedCRAError
+onlyDates$C14Error[which(is.na(onlyDates$C14Error))]=onlyDates$CRAError[which(is.na(onlyDates$C14Error))]
+
+index4 = which(as.numeric(onlyDates$C14Age)<0 | as.numeric(onlyDates$C14Age)>55000)
+
+c14raw$c14_issues[index4] = 'Dates outside calibration range'
+c14raw$toKeep[index4] = FALSE
+```
+
+
+
 delta13C values for AMS dates are generally reliable:
 
 ```{r}
@@ -201,6 +217,8 @@ Delta13C[which(Delta13C>0)] <- Delta13C[which(Delta13C>0)]*(-1)
 Delta13CIRMS[which(Delta13CIRMS>0)] <- Delta13CIRMS[which(Delta13CIRMS>0)]*(-1)
 Delta13C[which(Delta13C<(-35)|Delta13C>(-5))] <- NA
 Delta13CIRMS[which(Delta13CIRMS<(-35)|Delta13CIRMS>(-5))] <- NA
+c14raw$Delta13C = Delta13C
+c14raw$Delta13CIRMS = Delta13CIRMS
 ```
 
 
@@ -311,6 +329,7 @@ c14raw$Latitude[which(c14raw$Latitude=='不明')]=NA
 c14raw$Longitude[which(c14raw$Longitude=='不明')]=NA
 coordinate.na.index = which(is.na(c14raw$Latitude)|is.na(c14raw$Longitude))
 c14raw$coordinate_issues[coordinate.na.index] = 'Missing coordinates'
+# c14raw$toKeep[coordinate.na.index] = FALSE
 ```
 
 We then convert degree minute seconds into degree decimals:
@@ -366,14 +385,14 @@ c14raw$coord.prefecture.check[which(c14raw$SiteLocation%in%c(manual.prefecture.c
 ii = which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[3]))
 c14raw[ii,c('Prefecture','Latitude','Longitude')]
 c14raw$coordinate_issues[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[3]))[1]]="Site coordinate be in Kagoshima, Prefecture recorded as Kumamoto"
-c14raw$toKeep[ii] = FALSE #Eliminate site as wrong prefecture
+# c14raw$toKeep[ii] = FALSE #Eliminate site as wrong prefecture
 
 # 熊本       鞠智城跡 (coodinate in Hokkaido)
 c14raw$coord.prefecture.check[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[4]))]=FALSE
 ii = which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[4]))
 c14raw[ii,c('Prefecture','Latitude','Longitude')]
 c14raw$coordinate_issues[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[4]))]="Site coordinate in Hokkaido, Prefecture recored as Kumamoto"
-c14raw$toKeep[ii] = FALSE #Eliminate site as wrong prefecture
+# c14raw$toKeep[ii] = FALSE #Eliminate site as wrong prefecture
 
 # 北海道      山越2遺跡 is ok
 c14raw$coord.prefecture.check[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[5]))]=TRUE
@@ -383,7 +402,7 @@ c14raw$coord.prefecture.check[which(c14raw$SiteLocation%in%c(manual.prefecture.c
 ii = which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[6]))
 c14raw[ii,c('Prefecture','Latitude','Longitude')]
 c14raw$coordinate_issues[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[6]))]="Site coordinate in Aichi, Prefecture recorded as Hokkaido"
-c14raw$toKeep[ii] = FALSE #Eliminate site as wrong prefecture
+# c14raw$toKeep[ii] = FALSE #Eliminate site as wrong prefecture
 
 # 北海道      山越4遺跡 is ok
 c14raw$coord.prefecture.check[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[7]))]=TRUE
@@ -393,7 +412,7 @@ c14raw$coord.prefecture.check[which(c14raw$SiteLocation%in%c(manual.prefecture.c
 ii = which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[8]))
 c14raw[ii,c('Prefecture','Latitude','Longitude')]
 c14raw$coordinate_issues[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[8]))]="Site coordinate in Shizuoka but Prefecture recored as Hokkaido"
-c14raw$toKeep[ii] = FALSE #Eliminate site as wrong prefecture
+# c14raw$toKeep[ii] = FALSE #Eliminate site as wrong prefecture
 
 
 # 徳島       大谷尻遺跡 (coodinate in Aichi) ... correct coordinate is  34.0566 133.9768
@@ -401,14 +420,14 @@ c14raw$coord.prefecture.check[which(c14raw$SiteLocation%in%c(manual.prefecture.c
 ii = which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[9]))
 c14raw[ii,c('Prefecture','Latitude','Longitude')]
 c14raw$coordinate_issues[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[9]))]='Coordinate in Aichi but Prefecture recorded as Tokushima. Correct coordinate should be 34.0566 133.9768'
-c14raw$toKeep[ii] = FALSE #Eliminate site as wrong coordinates
+# c14raw$toKeep[ii] = FALSE #Eliminate site as wrong coordinates
 
 # 奈良       観音寺本馬遺跡 (coordinate in Yamagata)
 c14raw$coord.prefecture.check[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[10]))]=FALSE
 ii = which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[10]))
 c14raw[ii,c('Prefecture','Latitude','Longitude')]
 c14raw$coordinate_issues[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[10]))]='Coordinate in Yamagata but Prefecture recored as Nara'
-c14raw$toKeep[ii] = FALSE #Eliminate site as wrong prefecture
+# c14raw$toKeep[ii] = FALSE #Eliminate site as wrong prefecture
 
 
 # 鳥取  米子城跡(第33次調査) (coordinate in Tottori) ... correct coordinate is 35.424722 133.329166 (small discrepancy)
@@ -423,27 +442,27 @@ c14raw$coord.prefecture.check[which(c14raw$SiteLocation%in%c(manual.prefecture.c
 ii = which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[12]))
 c14raw[ii,c('Prefecture','Latitude','Longitude')]
 c14raw$coordinate_issues[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[12]))]='Coordinate in Gunma, Prefecture recorded as Shimane. Correct coordinate is 35.105833 132.380277'
-c14raw$toKeep[ii] = FALSE #Eliminate site as wrong coordinates
+# c14raw$toKeep[ii] = FALSE #Eliminate site as wrong coordinates
 
 
 # 鳥取  久見高丸遺跡 coordinate in Tottori ... correct coordinate is 36.330555 133.238888 (small discrepancy)
 c14raw$coord.prefecture.check[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[13]))]=TRUE
 c14raw$coordinate_issues[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[13]))]='Correct coordinate is 36.330555 133.23888'
-c14raw$toKeep[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[13]))] = FALSE #Eliminate site as wrong coordinates
+# c14raw$toKeep[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[13]))] = FALSE #Eliminate site as wrong coordinates
 
 # 新潟  堂屋敷遺跡 coordinate in Saitama 
 c14raw$coord.prefecture.check[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[14]))]=FALSE
 ii = which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[14]))
 c14raw[ii,c('Prefecture','Latitude','Longitude')]
 c14raw$coordinate_issues[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[14]))]='Coordinate in Saitama, Prefecture recored as Niigata'
-c14raw$toKeep[ii] = FALSE #Eliminate site as wrong prefecture
+# c14raw$toKeep[ii] = FALSE #Eliminate site as wrong prefecture
 
 # 長野  東峰遺跡 coordinate in Gunma
 c14raw$coord.prefecture.check[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[15]))]=FALSE
 ii = which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[15]))
 c14raw[ii,c('Prefecture','Latitude','Longitude')]
 c14raw$coordinate_issues[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[15]))]='Coordinate in Gunma, Prefecture recorded as Nagano'
-c14raw$toKeep[ii] = FALSE #Eliminate site as wrong prefecture
+# c14raw$toKeep[ii] = FALSE #Eliminate site as wrong prefecture
 
 
 # 長野  旭久保C遺跡 coordinate in Gunma
@@ -452,7 +471,7 @@ c14raw$coord.prefecture.check[which(c14raw$SiteLocation%in%c(manual.prefecture.c
 ii = which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[16]))
 c14raw[ii,c('Prefecture','Latitude','Longitude')]
 c14raw$coordinate_issues[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[16]))[5:6]]='Coordinate in Gunma but Prefecture recorded as Nagano'
-c14raw$toKeep[ii] = FALSE #Eliminate site as wrong prefecture
+# c14raw$toKeep[ii] = FALSE #Eliminate site as wrong prefecture
 ```
 
 
@@ -512,7 +531,7 @@ for (i in 1:length(dup.ids))
 		proj4string(tmp.df.sites)  <- "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0"
 		tmp.dist_mat  <- spDists(tmp.df.sites,longlat=TRUE) #inter-site distance matrix
 		c14raw$coordinate_issues[tmp.index] = paste0(c14raw$coordinate_issues[tmp.index],"; Same site name with different coordinates (dist=",round(max(tmp.dist_mat),2)," km)")
-		if (max(tmp.dist_mat) > dist_threshold) {c14raw$toKeep[tmp.index] = FALSE}
+# 		if (max(tmp.dist_mat) > dist_threshold) {c14raw$toKeep[tmp.index] = FALSE}
 		c14raw$same.site.max.d = max(tmp.dist_mat)
 	}
 
@@ -613,6 +632,7 @@ ii = which(c14raw$Alternative!='')
 c14raw$siteName_issues[ii] = paste0('Site Name should be',c14raw$Alternative[ii])
 ```
 
+Remove samples with no sitename
 ```{r}
 i = which(c14raw$SiteName==""|is.na(c14raw$SiteName))
 c14raw$toKeep[i] = FALSE
@@ -673,11 +693,18 @@ c14raw$issues =  FALSE
 c14raw$issues[which(!is.na(c14raw$labcode_issues)|!is.na(c14raw$c14_issues)|!is.na(c14raw$coordinate_issues)|!is.na(c14raw$siteName_issues))] = TRUE
 c14kudocheck = select(c14raw,originalRow,LabCode,PrefectureCode,Prefecture,SiteName,SiteLocation,SamplingLocation,MaterialType,MaterialCode1,MaterialCode2,Period,Phase,PeriodCode,Method,CRA,CRAError,UnroundedCRA,UnroundedCRAError,Delta13C,Delta13CError,Delta13CIRMS,AnalysedBy,Laboratory,PubblicationYear,ReportTitle,Page,Remarks,Reference,Publisher,Latitude,Longitude,nabunkenURL,labcode_issues,c14_issues,coordinate_issues,siteName_issues,IsDuplicate,issues,toKeep)
 write.csv(c14kudocheck,file=here('output','c14db_toCheck.csv'),row.names=FALSE)
+
 ```
 
 ## Full (Draft) version for pubblication
 
 ```{r}
+#Optional retain and clean instances with lat-long issues:
+coord.safe = which(!is.na(c14raw$coordinate_issues))
+c14raw$Latitude[coord.safe]=NA
+c14raw$Longitude[coord.safe]=NA
+
+
 # Subset dates samples to retain
 c14db  <- subset(c14raw,toKeep==TRUE)
 c14db$CRA  <- as.numeric(c14db$CRA)
@@ -685,7 +712,7 @@ c14db$CRAError  <- as.numeric(c14db$CRAError)
 c14db$UnroundedCRA  <- as.numeric(c14db$UnroundedCRA)
 c14db$UnroundedCRAError  <- as.numeric(c14db$UnroundedCRAError)
 
-c14db  <- select(c14db,originalRow,LabCode,PrefectureNameEn,Region,SiteNameJp=SiteName,SiteNameEn=Romanised,SiteType=SiteType,Latitude,Longitude,CRA,CRAError,UnroundedCRAError,UnroundedCRA,Delta13C,Delta13CError,Delta13CIRMS,Material,MaterialDetails=Material_Details,Taxa=Taxa,NabunkenURL=nabunkenURL,Reference=ReferenceCombined)
-write.csv(c14db,file=here('c14db_0.2.1.csv'))
-saveRDS(c14db,file=here('c14db_0.2.1.Rds'))
+c14db  <- select(c14db,LabCode,Prefecture=PrefectureNameEn,Region,SiteNameJp=SiteName,SiteNameEn=Romanised,SiteType=SiteType,Latitude,Longitude,CRA,CRAError,UnroundedCRAError,UnroundedCRA,Delta13C,Delta13CError,Delta13CIRMS,DatingMethod=Method,Material,MaterialDetails=Material_Details,MaterialTaxa=Taxa,NabunkenURL=nabunkenURL,Reference=ReferenceFinal)
+write.csv(c14db,file=here('c14db_0.2.2.csv'))
+saveRDS(c14db,file=here('c14db_0.2.2.Rds'))
 ```
