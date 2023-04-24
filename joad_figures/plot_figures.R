@@ -3,6 +3,8 @@ library(here)
 library(rcarbon)
 library(rnaturalearth)
 library(dplyr)
+library(elevatr)
+library(raster)
 library(sf)
 library(ggplot2)
 library(gridExtra)
@@ -17,25 +19,25 @@ load(file=here('joad_figures','spds.RData'))
 # Create Spatial Data ----
 
 # Site Locations
-c14db.locations <- select(c14db,Longitude,Latitude) |> unique() |> na.omit()
+c14db.locations <- dplyr::select(c14db,Longitude,Latitude) |> unique() |> na.omit()
 locations <- st_as_sf(c14db.locations,coords=c('Longitude','Latitude'),crs=4326)
 
 # Sampling Intensity
-datecounts <- aggregate(LabCode~Prefecture,length,data=c14db) |> left_join(x=_,y=unique(select(c14db,Prefecture,Region)))
+datecounts <- aggregate(LabCode~Prefecture,length,data=c14db) |> left_join(x=_,y=unique(dplyr::select(c14db,Prefecture,Region)))
 datecounts$Region2  <- datecounts$Region
 datecounts$Region2[which(datecounts$Prefecture%in%c("Ishikawa","Fukui","Niigata","Toyama"))] <- 'Hokuriku'
 datecounts$Region2[which(datecounts$Prefecture%in%c("Shizuoka","Aichi","Gifu","Mie"))] <- 'Tokai'
 datecounts$Region2[which(datecounts$Region=="Kansai")]  <- 'Kinki'
 win <- ne_states(country = "japan",returnclass = 'sf')
-win  <- left_join(win,datecounts,by=c('woe_name'='Prefecture')) |> select(woe_name,region=Region2,n=LabCode)
+win  <- left_join(win,datecounts,by=c('woe_name'='Prefecture')) |> dplyr::select(woe_name,region=Region2,n=LabCode)
 win$area  <- st_area(win)
 win$dens  <- as.numeric(win$n/(win$area/1e+6))
-win2  <- select(win,region) |> group_by(region) |> summarise()
+win2  <- dplyr::select(win,region) |> group_by(region) |> summarise()
 
 # Background Map
 world <- ne_countries(scale = "large", returnclass = "sf")
 # Hillshade Japan
-elevation <- elevatr::get_elev_raster(locations = win, z = 5,clip = "locations",src='aws')
+elevation <- get_elev_raster(locations = win, z = 5,clip = "locations",src='aws')
 slope  <- terrain(elevation,opt='slope')
 aspect  <- terrain(elevation,opt='aspect')
 hill  <- hillShade(slope,aspect,40,270)
@@ -61,6 +63,8 @@ g0 <-   ggplot() +
 	geom_sf(data=world,aes(),fill='grey65',show.legend=FALSE,lwd=0) +
 	annotation_custom(grob = grob.shade) +
 	geom_sf(data=locations,size=0.6,col='black',pch=21,fill='tomato') + 
+	xlab("Longitude") + 
+	ylab("Latitude") + 
 	xlim(124,146) + 
 	ylim(24.5,46)
 
