@@ -210,6 +210,10 @@ for (i in 1:length(duplicates))
 i = which(is.na(c14raw$ReferenceFinal))
 c14raw$ReferenceFinal[i] = c14raw$ReferenceCombined[i]
 
+# Check if there are still labcode dubplicates
+anyDuplicated(subset(c14raw,toKeep==TRUE)$LabCode)
+which(table(subset(c14raw,toKeep==TRUE)$LabCode)>1)
+
 # Handle 14C Rounding Issues ----
 # The field `CRA` should contain rounded 14C ages after corrections for isotopic fractionation, whilst the field `UnroundedCRA` contains the same date without rounding. In theory the difference between the two dates should be small, but the list below suggests larger discrepancies suggestive of input error
 
@@ -502,7 +506,7 @@ sitenames$Romanised <- kana2roma(sitenames$Furigana)
 sitenames$Romanised <- stringr::str_to_title(sitenames$Romanised)
 
 #Merge Back to Main DB
-c14raw<-left_join(x=c14raw,y=sitenames,by="SiteName")
+c14raw<-left_join(x=c14raw,y=sitenames,by=c("SiteName"="SiteName"))
 
 #Add issues with SiteName
 c14raw$siteName_issues  <-  NA
