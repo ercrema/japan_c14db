@@ -124,10 +124,13 @@ onlyDates <- data.frame(CRA=as.numeric(c14raw$CRA),CRAError=as.numeric(c14raw$CR
 onlyDates$C14Age <- onlyDates$UnroundedCRA
 onlyDates$C14Age[which(is.na(onlyDates$C14Age))] <- onlyDates$CRA[which(is.na(onlyDates$C14Age))]
 onlyDates$C14Error <- onlyDates$UnroundedCRAError
-onlyDates$C14Error[which(is.na(onlyDates$C14Error))] <- onlyDates$CRAError[which(is.na(onlyDates$C14Error))]
+onlyDates$C14Error[which(is.na(onlyDates$C14Error)|onlyDates$C14Error<=0)] <- onlyDates$CRAError[which(is.na(onlyDates$C14Error)|onlyDates$C14Error<=0)]
 index4 <- which(as.numeric(onlyDates$C14Age)<0 | as.numeric(onlyDates$C14Age)>55000)
 c14raw$c14_issues[index4] <- 'Dates outside calibration range'
 c14raw$toKeep[index4] <- FALSE
+index4b  <- which(as.numeric(onlyDates$C14Error)<=0) 
+c14raw$c14_issues[index4b] <- 'Incorrect c14 error'
+c14raw$toKeep[index4b] <- FALSE
 
 
 # Handle Delta13C Issues
