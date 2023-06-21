@@ -571,7 +571,7 @@ c14db$UnroundedCRA  <- as.numeric(c14db$UnroundedCRA)
 c14db$UnroundedCRAError  <- as.numeric(c14db$UnroundedCRAError)
 
 c14db  <- select(c14db,LabCode,Prefecture=PrefectureNameEn,Region,SiteNameJp=SiteName,SiteNameEn=Romanised,SiteType=SiteType,Latitude,Longitude,CRA,CRAError,UnroundedCRAError,UnroundedCRA,Delta13C,Delta13CError,Delta13CIRMS,DatingMethod=Method,Material,MaterialDetails=Material_Details,MaterialTaxa=Taxa,NabunkenURL=nabunkenURL,Reference=ReferenceFinal)
-write.csv(c14db,file=here('output','c14db_1.0.0.csv'))
+write.csv(c14db,file=here('output','c14db_1.0.0.csv'),row.names=FALSE)
 saveRDS(c14db,file=here('output','c14db_1.0.0.Rds'))
 
 # Full Internal Version ----
