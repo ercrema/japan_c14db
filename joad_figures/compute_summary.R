@@ -8,6 +8,7 @@ sum(c14db$CRA>30000,na.rm=T)
 nrow(c14db)
 
 44425-nrow(c14db)
+(44425-nrow(c14db))/44425
 
 table(c14db$Material)
 table(c14db$Material)/nrow(c14db)

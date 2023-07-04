@@ -75,6 +75,7 @@ c14raw$SiteName  <-   gsub(" ", "", fixed=TRUE, c14raw$SiteName)
 c14raw$Phase  <-  gsub("[\r\n]", "", c14raw$Phase)
 c14raw$Period  <-  gsub("[\r\n]", "", c14raw$Period)
 c14raw$SiteLocation  <-  gsub("[\r\n]", "", c14raw$SiteLocation)
+c14raw$LabCode  <- trimws(c14raw$LabCode)
 
 # Handle LabCodes ----
 
