@@ -1,12 +1,9 @@
-checkPrefecture <- function(lat,lon,pref,jwgs84,jjgd2000)
+checkPrefecture <- function(lat,lon,pref,map)
 {
   require(revgeo)
   require(dplyr)
-  require(rgdal)
-#   jwgs84 = readOGR(dsn="./gis",layer='japan_wgs84')
-#   jjgd2000 = readOGR(dsn="./gis",layer='japan_jgd2000')
-  proj4string(jwgs84) = CRS(SRS_string = "EPSG:4326")
-  proj4string(jjgd2000) = CRS(SRS_string = "EPSG:4612")
+  require(rnaturalearth)
+  require(sf)
   
   
   lat[which(is.na(lat))]=0
@@ -39,20 +36,16 @@ checkPrefecture <- function(lat,lon,pref,jwgs84,jjgd2000)
       }
     }
   }
+
   tmp.unique = unique(tmp.unique)
-  
-  
-  site_wgs84 = tmp.unique
-  site_jgd2000 = tmp.unique
-  coordinates(site_wgs84) <- c("lon","lat")
-  coordinates(site_jgd2000) <- c("lon","lat")
-  proj4string(site_wgs84) <- CRS(SRS_string = "EPSG:4326")
-  proj4string(site_jgd2000) <- CRS(SRS_string = "EPSG:4612")
-  
-  tmp.unique$extractedWGS84=over(site_wgs84,jwgs84)$prefecture
-  tmp.unique$extractedJGD2000=over(site_jgd2000,jjgd2000)$prefecture
-  
-  tmp.unique$check=(tmp.unique$pref==tmp.unique$extractedWGS84)& (tmp.unique$pref==tmp.unique$extractedJGD2000)
+  tmp.unique = st_as_sf(tmp.unique,coords=c('lon','lat'),crs=4326)
+  extracted = st_intersects(tmp.unique,map)
+  bin = lapply(extracted,length) |> unlist()
+  iii = which(bin==1)
+  tmp.unique$name = NA
+  tmp.unique$name[iii] = map$pref[unlist(extracted)]
+  tmp.unique$check = (tmp.unique$pref==tmp.unique$name)
+  tmp.unique$check[which(is.na(tmp.unique$name))]  <- NA
   tmp.input=left_join(tmp.input,tmp.unique,by='id')
   return(return(tmp.input$check))
 }
