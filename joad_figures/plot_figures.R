@@ -12,7 +12,7 @@ library(RColorBrewer)
 library(grDevices)
 
 # Load SPDs ----
-c14db  <- readRDS(here('output','c14db_1.0.0.Rds'))
+c14db  <- readRDS(here('output','c14db_1.1.0.Rds'))
 load(file=here('joad_figures','spds.RData'))
 
 

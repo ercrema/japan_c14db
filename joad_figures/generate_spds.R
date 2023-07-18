@@ -1,6 +1,6 @@
 library(rcarbon)
 library(here)
-c14db  <- readRDS(here('output','c14db_1.0.0.Rds'))
+c14db  <- readRDS(here('output','c14db_1.1.0.Rds'))
 c14db$C14Age = c14db$UnroundedCRA
 i = which(is.na(c14db$C14Age))
 c14db$C14Age[i] = c14db$CRA[i]
