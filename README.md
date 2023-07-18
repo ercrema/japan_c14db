@@ -16,6 +16,27 @@ Copies of the english version of the database can be found in this repository (`
  * `/utility` ... contains custom utility functions
  * `log.R` ... main R script for cleaning and translation.
 
+## R Session Info
+```
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] revgeo_0.15        here_1.0.1         Nippon_0.7.1       stringr_1.5.0     
+[5] sf_1.0-13          sp_1.6-1           measurements_1.5.1 readxl_1.4.2      
+[9] dplyr_1.1.2       
+
+loaded via a namespace (and not attached):
+ [1] compiler_4.3.1     tidyselect_1.2.0   Rcpp_1.0.11        bitops_1.0-7      
+ [5] lattice_0.21-8     R6_2.5.1           generics_0.1.3     classInt_0.4-9    
+ [9] tibble_3.2.1       units_0.8-2        rprojroot_2.0.3    DBI_1.1.3         
+[13] pillar_1.9.0       rlang_1.1.1        utf8_1.2.3         stringi_1.7.12    
+[17] RJSONIO_1.3-1.8    cli_3.6.1          magrittr_2.0.3     class_7.3-22      
+[21] grid_4.3.1         rstudioapi_0.14    lifecycle_1.0.3    vctrs_0.6.3       
+[25] KernSmooth_2.23-21 proxy_0.4-27       glue_1.6.2         cellranger_1.1.0  
+[29] RCurl_1.98-1.12    fansi_1.0.4        e1071_1.7-13       tools_4.3.1       
+[33] pkgconfig_2.0.3 
+```
 
 ## Funding
  * Research Funds for Database Development of the National Museum of Japanese History 国立歴史民俗博物館データベース開発経費 （工藤雄一郎・坂本稔・箱﨑真隆）
