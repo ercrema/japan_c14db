@@ -1,0 +1,22 @@
+FieldName,Type,Notes
+LabCode,character,Laboratory Code
+Prefecture,character,Prefecture of the sampling site
+Region,character,Region of the sampling site
+SiteNameJP,character,Site name (In Japanese)
+SiteNameEN,character,Site name romanisation
+SiteType,character,Site type
+Latitude,numeric,"Latitude in decimal degree, WGS84"
+Longitude,numeric,"Longitude in decimal degree, WGS84"
+CRA,numeric,14C Age
+CRAError,numeric,14C Age Error
+UnroundedCRA,numeric,Unrounded 14C Age
+UnroundedCRAError,numeric,Unrounded 14C Age Error
+Delta13C,numeric,Delta 13C
+Delta13CError,numeric,Delta 13C Error
+Detla13CIRMS,numeric,Delta 13C (IRMS)
+DatingMethod,character,Dating method (AMS or Beta)
+Material,character,"Broader standardised categorisation of dated sample (i.e. terrestrial, marine, others)"
+MaterialDetails,character,"Finer standardised categorisation of dated sample (e.g. bone, wood, seed, lacquer, etc..)"
+MaterialTaxa,character,Animal or Plant Taxa (where relevant).
+NabunkenURL,character,Url linked to the “Comprehensive Database of Archaeological Site Reports in Japan” (https://sitereports.nabunken.go.jp/ja)
+Reference,character,Reference (multiple entries separated by a double pipeline)
