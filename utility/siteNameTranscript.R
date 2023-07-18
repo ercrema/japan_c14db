@@ -7,7 +7,7 @@
 #'@param n.attempts 
 #'@param ua 
 #'@param lim.sites
-siteNameTranscript <- function(sitename=NULL,delay=1,n.attempts=100,ua="Contact Email: erc62@cam.ac.uk")
+siteNameTranscript <- function(sitename=NULL,delay=1,n.attempts=100,ua="Contact Email: xxxxxxxx")
 {
 	require(rvest)
 	require(httr)
