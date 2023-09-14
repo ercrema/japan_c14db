@@ -43,6 +43,9 @@ loaded via a namespace (and not attached):
  * JSPS KAKENHI Grant Number 22H00743, 18H00757, 15K02995.
  * ERC-Stg grant “Demography, Cultural Change, and the Diffusion of Rice and Millets during the Jomon-Yayoi transition in prehistoric Japan (ENCOUNTER)”, Project N. 801953
 
+## Licence
+CC-BY 4.0
+
 
 
 
