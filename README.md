@@ -1,12 +1,12 @@
 [![DOI](https://zenodo.org/badge/182769755.svg)](https://zenodo.org/badge/latestdoi/182769755)
 
 # Archaeological Radiocarbon Database of Japan
-This repository contains scripts and pipelines for the processing and the translation of the radiocarbon database of Japan hosted by the National Musuem of Japanese History (
+This repository contains scripts and pipelines for the processing and the translation of the radiocarbon database of Japan hosted by the National Museum of Japanese History (
 [遺跡発掘調査報告書放射性炭素年代測定データベース](https://www.rekihaku.ac.jp/up-cgi/login.pl?p=param/esrd/db_param)). The original database was created for the purpose of collating information from site reports, and as such it includes duplicates and inconsistencies from the original source material (i.e. site reports). The R scripts contained in this repository is designed to eliminate those issues and provide at the same time an English translation of the some of the fields. More details can be found on the following dedicated publication:
 
-Kudo, Y., Sakamoto, M., Hakozaki, M., Stevens, C.J., Crema, E.R (Submitted). An archaeological radiocarbon database of Japan. _Journal of Open Archaeology Data_.
+Kudo, Y., Sakamoto, M., Hakozaki, M., Stevens, C.J., Crema, E.R (2023). An archaeological radiocarbon database of Japan. _Journal of Open Archaeology Data_. DOI:10.5334/joad.115
 
-Copies of the english version of the database can be found in this repository (`output/c14db_1.1.0.csv`), on a [dedicated webpage of the National Musuem of Japanese History website](https://www.rekihaku.ac.jp/up-cgi/login.pl?p=param/esrd_en/db_param
+Copies of the English curated version of the database can be found in this repository (`output/c14db_1.1.0.csv`), on a [dedicated webpage of the National Musuem of Japanese History website](https://www.rekihaku.ac.jp/up-cgi/login.pl?p=param/esrd_en/db_param
 )
 
 ## Repository Structure
@@ -14,7 +14,7 @@ Copies of the english version of the database can be found in this repository (`
  * `/joad_figures` ... contains R scripts for generating figure and summary statistics for the Journal of Open Archaeology manuscript.
  * `/lookup_tables` ... contains lookup CSV tables to aid translation and romanisation
  * `/output` ... contains core output (flat table with all dates) generated using the R script `log.R`. The CSV table `c14db_1.1.0.csv` contains the translated and cleaned version of the database, whilst the `c14raw_1.1.0.csv` includes the full dataset (including problematic entries removed for `c14db_1.1.0.csv`).
- * `/raw` ... contains the expanded version of the original japanese database. The expanded version includes lat-long coordinates which are not available for download (but visible) in the National Musuem of Japanese History database.
+ * `/raw` ... contains the expanded version of the original Japanese database. The expanded version includes lat-long coordinates which are not available for download (but visible) in the National Museum of Japanese History database.
  * `/utility` ... contains custom utility functions
  * `log.R` ... main R script for cleaning and translation.
 
@@ -47,9 +47,3 @@ loaded via a namespace (and not attached):
 
 ## Licence
 CC-BY 4.0
-
-
-
-
-
-

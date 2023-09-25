@@ -29,6 +29,7 @@ datecounts$Region2[which(datecounts$Prefecture%in%c("Ishikawa","Fukui","Niigata"
 datecounts$Region2[which(datecounts$Prefecture%in%c("Shizuoka","Aichi","Gifu","Mie"))] <- 'Tokai'
 datecounts$Region2[which(datecounts$Region=="Kansai")]  <- 'Kinki'
 win <- ne_states(country = "japan",returnclass = 'sf')
+win$woe_name[which(win$woe_name=='Hyōgo')] <- 'Hyogo'
 win  <- left_join(win,datecounts,by=c('woe_name'='Prefecture')) |> dplyr::select(woe_name,region=Region2,n=LabCode)
 win$area  <- st_area(win)
 win$dens  <- as.numeric(win$n/(win$area/1e+6))
