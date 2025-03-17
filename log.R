@@ -4,13 +4,13 @@ library(readxl)
 library(measurements)
 library(sp)
 library(sf)
-library(Nippon)
+library(Nippon) #https://github.com/cran/Nippon
 library(here)
 
 # Read Original Database and Process Strings ----
 
 # Read most up-to-date version of the original database (published on 3rd March 2022)
-c14raw  <- read.csv(here('raw','c14_raw_v220303.csv'),na.strings = '',skip=2)
+c14raw  <- read.csv(here('raw','c14_raw_v240517.csv'),na.strings = '',skip=2)
 # Assign New Columns Names:
 colnames(c14raw) <-  c("PrefectureCode", #都道府県コード
                     "Prefecture", #都道府県
