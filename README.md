@@ -6,7 +6,7 @@ This repository contains scripts and pipelines for the processing and the transl
 
 Kudo, Y., Sakamoto, M., Hakozaki, M., Stevens, C.J., Crema, E.R (2023). An archaeological radiocarbon database of Japan. _Journal of Open Archaeology Data_. DOI:10.5334/joad.115
 
-Copies of the English curated version of the database can be found in this repository (`output/c14db_1.1.0.csv`), on a [dedicated webpage of the National Musuem of Japanese History website](https://www.rekihaku.ac.jp/up-cgi/login.pl?p=param/esrd_en/db_param
+Copies of the English curated version of the database can be found in this repository (`output/c14db_1.2.0.csv`), on a [dedicated webpage of the National Musuem of Japanese History website](https://www.rekihaku.ac.jp/up-cgi/login.pl?p=param/esrd_en/db_param
 )
 
 ## Repository Structure
