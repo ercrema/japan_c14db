@@ -1,4 +1,5 @@
 [![DOI](https://zenodo.org/badge/182769755.svg)](https://zenodo.org/badge/latestdoi/182769755)
+![GitHub Release](https://img.shields.io/github/v/release/ercrema/japan_c14db)
 
 # Archaeological Radiocarbon Database of Japan
 This repository contains scripts and pipelines for the processing and the translation of the radiocarbon database of Japan hosted by the National Museum of Japanese History (
