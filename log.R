@@ -510,6 +510,11 @@ c14raw$MaterialType <- gsub("　", " ", c14raw$MaterialType) #Convert to half-wi
 c14raw$MaterialType <- gsub("(^[[:space:]]+|[[:space:]]+$)", "", c14raw$MaterialType) #remove trail space
 # We then create a data.frame with unique instances of `MaterialType`:
 material_taxa  <-  data.frame(MaterialType=unique(c14raw$MaterialType),Taxa=NA)
+# Import current material_taxa
+material_taxa_import  <- read.csv(here('lookup_tables','material_taxa.csv'))
+# Merge two tables
+colnames(material_taxa_import)[2]<-'Taxa2'
+material_taxa <- left_join(material_taxa,material_taxa_import)
 # And export
 write.csv(material_taxa,file=here('lookup_tables','material_taxa_todo.csv'),row.names=FALSE)
 
@@ -542,13 +547,13 @@ c14db$UnroundedCRA  <- as.numeric(c14db$UnroundedCRA)
 c14db$UnroundedCRAError  <- as.numeric(c14db$UnroundedCRAError)
 
 c14db  <- select(c14db,LabCode,Prefecture=PrefectureNameEn,Region,SiteNameJp=SiteName,SiteNameEn=Romanised,SiteType=SiteType,Latitude,Longitude,CRA,CRAError,UnroundedCRAError,UnroundedCRA,Delta13C,Delta13CError,Delta13CIRMS,DatingMethod=Method,Material,MaterialDetails=Material_Details,MaterialTaxa=Taxa,NabunkenURL=nabunkenURL,Reference=ReferenceFinal)
-write.csv(c14db,file=here('output','c14db_1.1.0.csv'),row.names=FALSE)
-saveRDS(c14db,file=here('output','c14db_1.1.0.Rds'))
+write.csv(c14db,file=here('output','c14db_1.2.0.csv'),row.names=FALSE)
+saveRDS(c14db,file=here('output','c14db_1.2.0.Rds'))
 
 # Full Internal Version ----
 c14raw$CRA  <- as.numeric(c14raw$CRA)
 c14raw$CRAError  <- as.numeric(c14raw$CRAError)
 c14raw$UnroundedCRA  <- as.numeric(c14raw$UnroundedCRA)
 c14raw$UnroundedCRAError  <- as.numeric(c14raw$UnroundedCRAError)
-write.csv(c14raw,file=here('output','c14raw_1.1.0.csv'))
-saveRDS(c14raw,file=here('output','c14raw_1.1.0.Rds'))
+write.csv(c14raw,file=here('output','c14raw_1.2.0.csv'))
+saveRDS(c14raw,file=here('output','c14raw_1.2.0.Rds'))
