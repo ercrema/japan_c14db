@@ -1,6 +1,6 @@
 checkPrefecture <- function(lat,lon,pref,map)
 {
-  require(revgeo)
+#  require(revgeo) #no longer required
   require(dplyr)
   require(sf)
   

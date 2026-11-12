@@ -4,13 +4,14 @@ library(readxl)
 library(measurements)
 library(sp)
 library(sf)
-library(Nippon) #https://github.com/cran/Nippon
+library(stringr)
+library(audubon) #replace the Nippon package with the audubon package
 library(here)
 
 # Read Original Database and Process Strings ----
 
-# Read most up-to-date version of the original database (published on 3rd March 2022)
-c14raw  <- read.csv(here('raw','c14_raw_v240517.csv'),na.strings = '',skip=2)
+# Read most up-to-date version of the original database (published on 14th August 2026)
+c14raw  <- read.csv(here('raw','c14_raw_v260814.csv'),na.strings = '',skip=2)
 # Assign New Columns Names:
 colnames(c14raw) <-  c("PrefectureCode", #都道府県コード
                     "Prefecture", #都道府県
@@ -250,6 +251,7 @@ colnames(pref.lookup) <- c("Prefecture","PrefectureNameEn","Region","NabunkenPre
 c14raw  <- left_join(c14raw,pref.lookup,by=c('Prefecture'))
 
 # Check whether the coordinates fall within the designated prefectures using the utility function `checkPrefecture()`, and store them on designated fields:
+# Note: checkPrefecture() not working as revgeo no longer available
 
 source(here('utility','checkPrefecture.R'))
 japanMap  <- st_read(dsn=here('gis',layer='polbnda_jpn.shp'))
@@ -266,6 +268,7 @@ manual.prefecture.check  <- unique(manual.prefecture.check[,c("Prefecture","Site
 
 
 # Manual checks
+print(manual.prefecture.check)
 #神奈川   猿島洞穴遺跡 is ok
 c14raw$coord.prefecture.check[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[1]))]=TRUE
 
@@ -317,6 +320,7 @@ c14raw$coordinate_issues[which(c14raw$SiteLocation%in%c(manual.prefecture.check$
 # 鳥取  久見高丸遺跡 coordinate in Tottori ... correct coordinate is 36.330555 133.238888 (small discrepancy)
 c14raw$coord.prefecture.check[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[9]))]=TRUE
 c14raw$coordinate_issues[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[9]))]='Correct coordinate is 36.330555 133.23888'
+
 # 新潟  堂屋敷遺跡 coordinate in Saitama 
 c14raw$coord.prefecture.check[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[10]))]=FALSE
 ii = which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[10]))
@@ -335,6 +339,15 @@ c14raw$coord.prefecture.check[which(c14raw$SiteLocation%in%c(manual.prefecture.c
 ii = which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[12]))
 c14raw[ii,c('Prefecture','Latitude','Longitude')]
 c14raw$coordinate_issues[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[12]))[5:6]]='Coordinate in Gunma but Prefecture recorded as Nagano'
+
+# 小山田（３）遺跡 is correct
+c14raw$coord.prefecture.check[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[13]))]=TRUE
+# 龍渓寺跡 is correct
+c14raw$coord.prefecture.check[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[14]))]=TRUE
+# 石川原遺跡 is correct
+c14raw$coord.prefecture.check[which(c14raw$SiteLocation%in%c(manual.prefecture.check$SiteLocation[15]))]=TRUE
+
+
 
 # Site Duplicates:
 # The database does not provide unique identifier for sites. Thus several sites with different names might refer to the same site, but equally because coordinates were often derived from addresses, multiple sites with different names might have the same spatial coordinate as well. In some rare cases the same site might have also different coordinates in different publications. 
@@ -399,10 +412,14 @@ for (i in 1:length(dup.ids))
 
 # Site Name Romanisation and Site Typology ----
 
+# Note from v.1.3 onwards
+# Due to Nippon package not being available on CRAN and Nabunken website constrained by geo-restrictions the script below is deprecated.
+
+--
 # Site names have been romanised by first using the Nabunken Site Report Database to automatically extract the _furigana_ of site names in _kanji_, followed by a manual check for fixing potential mismatch and missing _furigana_. Romanisation has been carried out using the `kana2roma()` function from the `Nippon` package. 
 
-library(Nippon)
-source(here('utility','siteNameTranscript.R'))
+#library(Nippon)
+#source(here('utility','siteNameTranscript.R'))
 
 ### The following block is executed only in the very first iteration:
 #siteList = unique(c14raw$SiteName)
@@ -417,22 +434,19 @@ source(here('utility','siteNameTranscript.R'))
 ###This block is from second iteration onwards
 #Import manually edited file
 sitenames  <- read.csv(here('lookup_tables','sitenamesTranscript.csv'),stringsAsFactors = FALSE)
-siteList  <-  unique(c14raw$SiteName)
+sitenames  <- unique(sitenames)
+anyDuplicated(sitenames$SiteName) #Check for duplicates
 
-# The following step updates the lookup table in case there are some missing sites
-if (!all(unique(siteList)%in%sitenames$SiteName))
-{
-  missingSites = unique(siteList)[which(!unique(siteList)%in%sitenames$SiteName)]
-  additional_sitenames=siteNameTranscript(missingSites)
-  sitenames=rbind.data.frame(sitenames,data.frame(SiteName=additional_sitenames$SiteName,
-                                                      Furigana=additional_sitenames$Furigana,
-                                                      ToCheck=TRUE,
-                                                      Alternative=NA))
-  write.csv(sitenames,here('lookup_tables','sitenamesTranscript_toprocess.csv'),row.names = FALSE)
-}
+siteList  <-  unique(c14raw$SiteName)
+all(siteList %in% sitenames$SiteName) #Check if all site names are present in the lookup table. If TRUE no need to do anything. In version 1.2 this was FALSE so needs updating.
+which(!siteList %in% sitenames$SiteName) #Check which site names are missing from the lookup table. If any, add them to the lookup table and re-run the script.	
+sitenames <- rbind(sitenames,data.frame(SiteName=siteList[!siteList %in% sitenames$SiteName],Furigana=NA,ToCheck=TRUE,Alternative=NA))
+write.csv(sitenames,here('lookup_tables','sitenamesTranscript.csv'),row.names = FALSE) #Export the updated lookup table for manual editing
 
 # The section reads and merges the sitenames to the main data.frame
 sitenames  <- read.csv(here('lookup_tables','sitenamesTranscript.csv'),stringsAsFactors = FALSE)
+sitenames  <- unique(sitenames)
+anyDuplicated(sitenames$SiteName) #Check for duplicates
 
 # Define Site Type
 sitenames$SiteType<-NA
@@ -473,7 +487,7 @@ sitenames$SiteType[grep('列石',sitenames$SiteName)]<-'Standing Stones'
 sitenames$SiteType[which(is.na(sitenames$SiteType))]<-'Other'
 
 # Romanise #
-sitenames$Romanised <- kana2roma(sitenames$Furigana)
+sitenames$Romanised <- stringi::stri_trans_general(sitenames$Furigana, "Hira-Latin")
 sitenames$Romanised <- stringr::str_to_title(sitenames$Romanised)
 
 #Merge Back to Main DB
@@ -514,9 +528,12 @@ material_taxa  <-  data.frame(MaterialType=unique(c14raw$MaterialType),Taxa=NA)
 material_taxa_import  <- read.csv(here('lookup_tables','material_taxa.csv'))
 # Merge two tables
 colnames(material_taxa_import)[2]<-'Taxa2'
-material_taxa <- left_join(material_taxa,material_taxa_import)
+
+all(material_taxa_import$MaterialType%in%material_taxa$MaterialType) #Check if all material types are present in the lookup table. If TRUE no need to do anything. In version 1.2 this was FALSE so needs updating.
+
+material_taxa2 <- left_join(material_taxa,material_taxa_import,by=c("MaterialType"="MaterialType"))
 # And export
-write.csv(material_taxa,file=here('lookup_tables','material_taxa_todo.csv'),row.names=FALSE)
+write.csv(material_taxa2,file=here('lookup_tables','material_taxa_todo.csv'),row.names=FALSE)
 
 # `material_taxa_todo.csv` file is then read and merged back to the main database:
 material_taxa_import  <- read.csv(here('lookup_tables','material_taxa.csv'))
@@ -547,13 +564,31 @@ c14db$UnroundedCRA  <- as.numeric(c14db$UnroundedCRA)
 c14db$UnroundedCRAError  <- as.numeric(c14db$UnroundedCRAError)
 
 c14db  <- select(c14db,LabCode,Prefecture=PrefectureNameEn,Region,SiteNameJp=SiteName,SiteNameEn=Romanised,SiteType=SiteType,Latitude,Longitude,CRA,CRAError,UnroundedCRAError,UnroundedCRA,Delta13C,Delta13CError,Delta13CIRMS,DatingMethod=Method,Material,MaterialDetails=Material_Details,MaterialTaxa=Taxa,NabunkenURL=nabunkenURL,Reference=ReferenceFinal)
-write.csv(c14db,file=here('output','c14db_1.2.0.csv'),row.names=FALSE)
-saveRDS(c14db,file=here('output','c14db_1.2.0.Rds'))
+write.csv(c14db,file=here('output','c14db_1.3.0.csv'),row.names=FALSE)
+saveRDS(c14db,file=here('output','c14db_1.3.0.Rds'))
 
 # Full Internal Version ----
 c14raw$CRA  <- as.numeric(c14raw$CRA)
 c14raw$CRAError  <- as.numeric(c14raw$CRAError)
 c14raw$UnroundedCRA  <- as.numeric(c14raw$UnroundedCRA)
 c14raw$UnroundedCRAError  <- as.numeric(c14raw$UnroundedCRAError)
-write.csv(c14raw,file=here('output','c14raw_1.2.0.csv'))
-saveRDS(c14raw,file=here('output','c14raw_1.2.0.Rds'))
+write.csv(c14raw,file=here('output','c14raw_1.3.0.csv'))
+saveRDS(c14raw,file=here('output','c14raw_1.3.0.Rds'))
+
+
+# Checks compared to previous version (v.1.2 vs 1.3)
+previous  <- readRDS(here('output','c14db_1.2.0.Rds'))
+current  <- readRDS(here('output','c14db_1.3.0.Rds'))
+previousraw  <- readRDS(here('output','c14raw_1.2.0.Rds'))
+currentraw  <- readRDS(here('output','c14raw_1.3.0.Rds'))
+# Check if any new samples have been added
+nrow(previous)
+nrow(current)
+nrow(previousraw)
+nrow(currentraw)
+# Check dates are actually matching
+current  <- subset(current,LabCode%in%previous$LabCode)
+combined  <- left_join(previous,current,by="LabCode")
+all(combined$CRA.x==combined$CRA.y,na.rm=TRUE)
+all(combined$Latitutde.x==combined$Latitude.y,na.rm=TRUE)
+all(combined$SiteNameJp.x==combined$SiteNameJp.y,na.rm=TRUE)
